@@ -1,4 +1,4 @@
-﻿Public Class Form1
+﻿Public Class Kerangka
     Private Sub Label1_Click(sender As Object, e As EventArgs)
 
     End Sub

@@ -24,6 +24,7 @@ Partial Class Profile_Kucing
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Profile_Kucing))
         Panel1 = New Panel()
+        Button10 = New Button()
         Label10 = New Label()
         Label15 = New Label()
         Label14 = New Label()
@@ -45,7 +46,6 @@ Partial Class Profile_Kucing
         Button8 = New Button()
         Button7 = New Button()
         Button1 = New Button()
-        TextBox6 = New TextBox()
         TextBox5 = New TextBox()
         TextBox4 = New TextBox()
         TextBox3 = New TextBox()
@@ -57,7 +57,7 @@ Partial Class Profile_Kucing
         Label4 = New Label()
         Label3 = New Label()
         Label2 = New Label()
-        Button10 = New Button()
+        ComboBox1 = New ComboBox()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         Panel3.SuspendLayout()
@@ -86,10 +86,22 @@ Partial Class Profile_Kucing
         Panel1.Size = New Size(278, 606)
         Panel1.TabIndex = 3
         ' 
+        ' Button10
+        ' 
+        Button10.BackColor = Color.Thistle
+        Button10.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button10.ForeColor = Color.SeaShell
+        Button10.Location = New Point(31, 295)
+        Button10.Name = "Button10"
+        Button10.Size = New Size(207, 46)
+        Button10.TabIndex = 23
+        Button10.Text = "Reservasi"
+        Button10.UseVisualStyleBackColor = False
+        ' 
         ' Label10
         ' 
         Label10.AutoSize = True
-        Label10.Font = New Font("Segoe UI", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label10.Font = New Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label10.Image = CType(resources.GetObject("Label10.Image"), Image)
         Label10.Location = New Point(196, 63)
         Label10.Name = "Label10"
@@ -122,7 +134,7 @@ Partial Class Profile_Kucing
         ' Button6
         ' 
         Button6.BackColor = Color.Thistle
-        Button6.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button6.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button6.ForeColor = Color.SeaShell
         Button6.Location = New Point(31, 488)
         Button6.Name = "Button6"
@@ -134,7 +146,7 @@ Partial Class Profile_Kucing
         ' Button5
         ' 
         Button5.BackColor = Color.Thistle
-        Button5.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button5.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button5.ForeColor = Color.SeaShell
         Button5.Location = New Point(31, 427)
         Button5.Name = "Button5"
@@ -146,7 +158,7 @@ Partial Class Profile_Kucing
         ' Button4
         ' 
         Button4.BackColor = Color.Thistle
-        Button4.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button4.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button4.ForeColor = Color.SeaShell
         Button4.Location = New Point(31, 364)
         Button4.Name = "Button4"
@@ -158,8 +170,8 @@ Partial Class Profile_Kucing
         ' Button3
         ' 
         Button3.BackColor = Color.Thistle
-        Button3.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button3.ForeColor = Color.SeaShell
+        Button3.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button3.ForeColor = Color.FromArgb(CByte(128), CByte(94), CByte(125))
         Button3.Location = New Point(31, 229)
         Button3.Name = "Button3"
         Button3.Size = New Size(207, 46)
@@ -203,7 +215,7 @@ Partial Class Profile_Kucing
         ' Button2
         ' 
         Button2.BackColor = Color.Thistle
-        Button2.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button2.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button2.ForeColor = Color.SeaShell
         Button2.Location = New Point(31, 160)
         Button2.Name = "Button2"
@@ -215,7 +227,7 @@ Partial Class Profile_Kucing
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Font = New Font("Segoe UI", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label9.Font = New Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label9.Image = CType(resources.GetObject("Label9.Image"), Image)
         Label9.Location = New Point(177, 22)
         Label9.Name = "Label9"
@@ -226,7 +238,7 @@ Partial Class Profile_Kucing
         ' Label8
         ' 
         Label8.AutoSize = True
-        Label8.Font = New Font("Broadway", 36.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label8.Font = New Font("Broadway", 36F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label8.ForeColor = Color.Thistle
         Label8.Location = New Point(31, 36)
         Label8.Name = "Label8"
@@ -257,12 +269,12 @@ Partial Class Profile_Kucing
         ' Panel3
         ' 
         Panel3.BackColor = Color.Lavender
+        Panel3.Controls.Add(ComboBox1)
         Panel3.Controls.Add(DataGridView1)
         Panel3.Controls.Add(Button9)
         Panel3.Controls.Add(Button8)
         Panel3.Controls.Add(Button7)
         Panel3.Controls.Add(Button1)
-        Panel3.Controls.Add(TextBox6)
         Panel3.Controls.Add(TextBox5)
         Panel3.Controls.Add(TextBox4)
         Panel3.Controls.Add(TextBox3)
@@ -282,18 +294,18 @@ Partial Class Profile_Kucing
         ' DataGridView1
         ' 
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(40, 270)
+        DataGridView1.Location = New Point(39, 270)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.RowHeadersWidth = 51
-        DataGridView1.Size = New Size(789, 234)
+        DataGridView1.Size = New Size(798, 234)
         DataGridView1.TabIndex = 16
         ' 
         ' Button9
         ' 
         Button9.BackColor = SystemColors.Info
-        Button9.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button9.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button9.ForeColor = Color.DarkOliveGreen
-        Button9.Location = New Point(603, 196)
+        Button9.Location = New Point(611, 196)
         Button9.Name = "Button9"
         Button9.Size = New Size(131, 47)
         Button9.TabIndex = 15
@@ -303,9 +315,9 @@ Partial Class Profile_Kucing
         ' Button8
         ' 
         Button8.BackColor = SystemColors.Info
-        Button8.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button8.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button8.ForeColor = Color.DarkOliveGreen
-        Button8.Location = New Point(292, 196)
+        Button8.Location = New Point(300, 196)
         Button8.Name = "Button8"
         Button8.Size = New Size(131, 47)
         Button8.TabIndex = 14
@@ -315,9 +327,9 @@ Partial Class Profile_Kucing
         ' Button7
         ' 
         Button7.BackColor = SystemColors.Info
-        Button7.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button7.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button7.ForeColor = Color.DarkOliveGreen
-        Button7.Location = New Point(451, 196)
+        Button7.Location = New Point(459, 196)
         Button7.Name = "Button7"
         Button7.Size = New Size(131, 47)
         Button7.TabIndex = 13
@@ -327,53 +339,46 @@ Partial Class Profile_Kucing
         ' Button1
         ' 
         Button1.BackColor = SystemColors.Info
-        Button1.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button1.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.DarkOliveGreen
-        Button1.Location = New Point(137, 196)
+        Button1.Location = New Point(145, 196)
         Button1.Name = "Button1"
         Button1.Size = New Size(131, 47)
         Button1.TabIndex = 12
         Button1.Text = "Simpan"
         Button1.UseVisualStyleBackColor = False
         ' 
-        ' TextBox6
-        ' 
-        TextBox6.Location = New Point(634, 133)
-        TextBox6.Name = "TextBox6"
-        TextBox6.Size = New Size(195, 27)
-        TextBox6.TabIndex = 11
-        ' 
         ' TextBox5
         ' 
-        TextBox5.Location = New Point(634, 80)
+        TextBox5.Location = New Point(642, 80)
         TextBox5.Name = "TextBox5"
         TextBox5.Size = New Size(195, 27)
         TextBox5.TabIndex = 10
         ' 
         ' TextBox4
         ' 
-        TextBox4.Location = New Point(634, 31)
+        TextBox4.Location = New Point(642, 31)
         TextBox4.Name = "TextBox4"
         TextBox4.Size = New Size(195, 27)
         TextBox4.TabIndex = 9
         ' 
         ' TextBox3
         ' 
-        TextBox3.Location = New Point(217, 31)
+        TextBox3.Location = New Point(225, 31)
         TextBox3.Name = "TextBox3"
         TextBox3.Size = New Size(195, 27)
         TextBox3.TabIndex = 8
         ' 
         ' TextBox2
         ' 
-        TextBox2.Location = New Point(217, 79)
+        TextBox2.Location = New Point(225, 79)
         TextBox2.Name = "TextBox2"
         TextBox2.Size = New Size(195, 27)
         TextBox2.TabIndex = 7
         ' 
         ' TextBox1
         ' 
-        TextBox1.Location = New Point(217, 125)
+        TextBox1.Location = New Point(225, 125)
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(195, 27)
         TextBox1.TabIndex = 6
@@ -381,9 +386,9 @@ Partial Class Profile_Kucing
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label7.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label7.ForeColor = Color.DarkOliveGreen
-        Label7.Location = New Point(475, 129)
+        Label7.Location = New Point(483, 129)
         Label7.Name = "Label7"
         Label7.Size = New Size(139, 28)
         Label7.TabIndex = 5
@@ -392,9 +397,9 @@ Partial Class Profile_Kucing
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.DarkOliveGreen
-        Label6.Location = New Point(475, 27)
+        Label6.Location = New Point(483, 27)
         Label6.Name = "Label6"
         Label6.Size = New Size(107, 28)
         Label6.TabIndex = 4
@@ -403,9 +408,9 @@ Partial Class Profile_Kucing
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.DarkOliveGreen
-        Label5.Location = New Point(31, 121)
+        Label5.Location = New Point(39, 121)
         Label5.Name = "Label5"
         Label5.Size = New Size(180, 28)
         Label5.TabIndex = 3
@@ -414,9 +419,9 @@ Partial Class Profile_Kucing
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.DarkOliveGreen
-        Label4.Location = New Point(475, 79)
+        Label4.Location = New Point(483, 79)
         Label4.Name = "Label4"
         Label4.Size = New Size(114, 28)
         Label4.TabIndex = 2
@@ -425,9 +430,9 @@ Partial Class Profile_Kucing
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.DarkOliveGreen
-        Label3.Location = New Point(31, 75)
+        Label3.Location = New Point(39, 75)
         Label3.Name = "Label3"
         Label3.Size = New Size(128, 28)
         Label3.TabIndex = 1
@@ -436,36 +441,32 @@ Partial Class Profile_Kucing
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.DarkOliveGreen
-        Label2.Location = New Point(31, 27)
+        Label2.Location = New Point(39, 27)
         Label2.Name = "Label2"
         Label2.Size = New Size(129, 28)
         Label2.TabIndex = 0
         Label2.Text = "Nama Kucing"
         ' 
-        ' Button10
+        ' ComboBox1
         ' 
-        Button10.BackColor = Color.Thistle
-        Button10.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button10.ForeColor = Color.SeaShell
-        Button10.Location = New Point(31, 295)
-        Button10.Name = "Button10"
-        Button10.Size = New Size(207, 46)
-        Button10.TabIndex = 23
-        Button10.Text = "Reservasi"
-        Button10.UseVisualStyleBackColor = False
+        ComboBox1.FormattingEnabled = True
+        ComboBox1.Location = New Point(642, 125)
+        ComboBox1.Name = "ComboBox1"
+        ComboBox1.Size = New Size(195, 28)
+        ComboBox1.TabIndex = 17
         ' 
-        ' Form1
+        ' Profile_Kucing
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ButtonHighlight
         ClientSize = New Size(1167, 628)
         Controls.Add(Panel3)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
-        Name = "Form1"
+        Name = "Profile_Kucing"
         Text = "Form1"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
@@ -489,7 +490,6 @@ Partial Class Profile_Kucing
     Friend WithEvents Label4 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox6 As TextBox
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox3 As TextBox
@@ -512,5 +512,6 @@ Partial Class Profile_Kucing
     Friend WithEvents Button7 As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Button10 As Button
+    Friend WithEvents ComboBox1 As ComboBox
 
 End Class

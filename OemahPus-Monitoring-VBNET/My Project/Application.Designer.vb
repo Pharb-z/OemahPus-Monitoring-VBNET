@@ -28,7 +28,8 @@ Namespace My
 
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Form1
+            EnsureDatabaseSchema()
+            Me.MainForm = New FormDataPaketLayanan()
         End Sub
     End Class
 End Namespace

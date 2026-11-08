@@ -55,7 +55,7 @@ Public Class FormDataPaketLayanan
     ' ===================== COMBOBOX =====================
     ' Isi ComboBox = daftar bawaan + nilai yang sudah ada di tabel services
     Private Sub RefreshCombos()
-        FillCombo(cboJenis, {"Penitipan", "Grooming", "Antar-Jemput", "Lainnya"}, "service_type")
+        FillCombo(cboJenis, {}, "service_type")
         FillCombo(cboSatuan, {"Hari", "Kunjungan", "Sekali Antar", "Paket"}, "unit")
     End Sub
 
@@ -308,5 +308,9 @@ Public Class FormDataPaketLayanan
 
     Private Sub FormDataPaketLayanan_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         Application.Exit()
+    End Sub
+
+    Private Sub cboJenis_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboJenis.SelectedIndexChanged
+
     End Sub
 End Class

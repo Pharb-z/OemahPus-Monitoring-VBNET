@@ -44,7 +44,7 @@ Public Class FormCustomer
                 "ORDER BY customer_id DESC", P("@keyword", keyword))
 
             dgvCustomer.DataSource = table
-            SetHeader("customer_id", "No Customer")
+            SetHeader("customer_id", "ID")
             SetHeader("full_name", "Nama Lengkap")
             SetHeader("phone", "No Telepon")
             SetHeader("address", "Alamat")
@@ -237,5 +237,9 @@ Public Class FormCustomer
     Private Sub ShowGeneralError(ex As Exception)
         MessageBox.Show("Terjadi kesalahan: " & ex.Message, "Error",
                         MessageBoxButtons.OK, MessageBoxIcon.Error)
+    End Sub
+
+    Private Sub dgvCustomer_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvCustomer.CellContentClick
+
     End Sub
 End Class

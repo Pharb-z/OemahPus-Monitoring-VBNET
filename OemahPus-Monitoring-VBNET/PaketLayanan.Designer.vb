@@ -69,19 +69,21 @@ Partial Class FormDataPaketLayanan
         Panel1.Controls.Add(btnMenuCustomer)
         Panel1.Controls.Add(btnMenuLayanan)
         Panel1.Controls.Add(Label9)
-        Panel1.Location = New Point(12, 12)
+        Panel1.Location = New Point(10, 10)
+        Panel1.Margin = New Padding(2, 2, 2, 2)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(308, 798)
+        Panel1.Size = New Size(246, 638)
         Panel1.TabIndex = 0
         ' 
         ' btnMenuCustomer
         ' 
         btnMenuCustomer.BackColor = Color.Plum
-        btnMenuCustomer.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnMenuCustomer.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnMenuCustomer.ForeColor = Color.SeaShell
-        btnMenuCustomer.Location = New Point(48, 276)
+        btnMenuCustomer.Location = New Point(38, 221)
+        btnMenuCustomer.Margin = New Padding(2, 2, 2, 2)
         btnMenuCustomer.Name = "btnMenuCustomer"
-        btnMenuCustomer.Size = New Size(206, 46)
+        btnMenuCustomer.Size = New Size(165, 37)
         btnMenuCustomer.TabIndex = 2
         btnMenuCustomer.Text = "Customer"
         btnMenuCustomer.UseVisualStyleBackColor = False
@@ -89,11 +91,12 @@ Partial Class FormDataPaketLayanan
         ' btnMenuLayanan
         ' 
         btnMenuLayanan.BackColor = Color.Plum
-        btnMenuLayanan.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnMenuLayanan.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnMenuLayanan.ForeColor = Color.SeaShell
-        btnMenuLayanan.Location = New Point(48, 201)
+        btnMenuLayanan.Location = New Point(38, 161)
+        btnMenuLayanan.Margin = New Padding(2, 2, 2, 2)
         btnMenuLayanan.Name = "btnMenuLayanan"
-        btnMenuLayanan.Size = New Size(206, 46)
+        btnMenuLayanan.Size = New Size(165, 37)
         btnMenuLayanan.TabIndex = 1
         btnMenuLayanan.Text = "Paket Layanan"
         btnMenuLayanan.UseVisualStyleBackColor = False
@@ -101,11 +104,12 @@ Partial Class FormDataPaketLayanan
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Font = New Font("Snap ITC", 36.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label9.Font = New Font("Snap ITC", 36F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label9.ForeColor = Color.Plum
-        Label9.Location = New Point(36, 55)
+        Label9.Location = New Point(29, 44)
+        Label9.Margin = New Padding(2, 0, 2, 0)
         Label9.Name = "Label9"
-        Label9.Size = New Size(218, 93)
+        Label9.Size = New Size(181, 77)
         Label9.TabIndex = 0
         Label9.Text = "OMI"
         ' 
@@ -114,35 +118,39 @@ Partial Class FormDataPaketLayanan
         Panel2.BackColor = Color.LightYellow
         Panel2.Controls.Add(Label1)
         Panel2.Controls.Add(Panel3)
-        Panel2.Location = New Point(320, 12)
+        Panel2.Location = New Point(256, 10)
+        Panel2.Margin = New Padding(2, 2, 2, 2)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(1113, 105)
+        Panel2.Size = New Size(890, 84)
         Panel2.TabIndex = 1
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 16.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.DarkOliveGreen
-        Label1.Location = New Point(30, 29)
+        Label1.Location = New Point(24, 23)
+        Label1.Margin = New Padding(2, 0, 2, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(313, 45)
+        Label1.Size = New Size(270, 37)
         Label1.TabIndex = 1
         Label1.Text = "Data Paket Layanan"
         ' 
         ' Panel3
         ' 
         Panel3.Controls.Add(Panel4)
-        Panel3.Location = New Point(0, 104)
+        Panel3.Location = New Point(0, 83)
+        Panel3.Margin = New Padding(2, 2, 2, 2)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(904, 519)
+        Panel3.Size = New Size(723, 415)
         Panel3.TabIndex = 0
         ' 
         ' Panel4
         ' 
         Panel4.Location = New Point(0, 0)
+        Panel4.Margin = New Padding(2, 2, 2, 2)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(595, 326)
+        Panel4.Size = New Size(476, 261)
         Panel4.TabIndex = 0
         ' 
         ' Panel5
@@ -167,9 +175,10 @@ Partial Class FormDataPaketLayanan
         Panel5.Controls.Add(Label4)
         Panel5.Controls.Add(Label3)
         Panel5.Controls.Add(Label2)
-        Panel5.Location = New Point(320, 117)
+        Panel5.Location = New Point(256, 94)
+        Panel5.Margin = New Padding(2, 2, 2, 2)
         Panel5.Name = "Panel5"
-        Panel5.Size = New Size(1113, 693)
+        Panel5.Size = New Size(890, 554)
         Panel5.TabIndex = 2
         ' 
         ' dgvLayanan
@@ -177,10 +186,11 @@ Partial Class FormDataPaketLayanan
         dgvLayanan.BackgroundColor = Color.Thistle
         dgvLayanan.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvLayanan.Columns.AddRange(New DataGridViewColumn() {ID, Nama, Status, Jenis, Harga, Satuan})
-        dgvLayanan.Location = New Point(30, 395)
+        dgvLayanan.Location = New Point(24, 316)
+        dgvLayanan.Margin = New Padding(2, 2, 2, 2)
         dgvLayanan.Name = "dgvLayanan"
         dgvLayanan.RowHeadersWidth = 62
-        dgvLayanan.Size = New Size(1049, 278)
+        dgvLayanan.Size = New Size(839, 222)
         dgvLayanan.TabIndex = 18
         ' 
         ' ID
@@ -229,30 +239,33 @@ Partial Class FormDataPaketLayanan
         ' txtCari
         ' 
         txtCari.BackColor = Color.Snow
-        txtCari.Location = New Point(196, 331)
+        txtCari.Location = New Point(157, 265)
+        txtCari.Margin = New Padding(2, 2, 2, 2)
         txtCari.Name = "txtCari"
-        txtCari.Size = New Size(268, 31)
+        txtCari.Size = New Size(215, 27)
         txtCari.TabIndex = 17
         ' 
         ' Label8
         ' 
         Label8.AutoSize = True
-        Label8.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label8.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label8.ForeColor = Color.DarkOliveGreen
-        Label8.Location = New Point(30, 328)
+        Label8.Location = New Point(24, 262)
+        Label8.Margin = New Padding(2, 0, 2, 0)
         Label8.Name = "Label8"
-        Label8.Size = New Size(149, 32)
+        Label8.Size = New Size(122, 28)
         Label8.TabIndex = 16
         Label8.Text = "Cari Layanan"
         ' 
         ' btnKosongkan
         ' 
         btnKosongkan.BackColor = Color.LightYellow
-        btnKosongkan.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
+        btnKosongkan.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         btnKosongkan.ForeColor = Color.DarkOliveGreen
-        btnKosongkan.Location = New Point(967, 43)
+        btnKosongkan.Location = New Point(774, 34)
+        btnKosongkan.Margin = New Padding(2, 2, 2, 2)
         btnKosongkan.Name = "btnKosongkan"
-        btnKosongkan.Size = New Size(123, 34)
+        btnKosongkan.Size = New Size(98, 27)
         btnKosongkan.TabIndex = 15
         btnKosongkan.Text = "Kosongkan"
         btnKosongkan.UseVisualStyleBackColor = False
@@ -260,11 +273,12 @@ Partial Class FormDataPaketLayanan
         ' btnHapus
         ' 
         btnHapus.BackColor = Color.LightYellow
-        btnHapus.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
+        btnHapus.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         btnHapus.ForeColor = Color.DarkOliveGreen
-        btnHapus.Location = New Point(967, 210)
+        btnHapus.Location = New Point(774, 168)
+        btnHapus.Margin = New Padding(2, 2, 2, 2)
         btnHapus.Name = "btnHapus"
-        btnHapus.Size = New Size(112, 34)
+        btnHapus.Size = New Size(90, 27)
         btnHapus.TabIndex = 14
         btnHapus.Text = "Hapus"
         btnHapus.UseVisualStyleBackColor = False
@@ -272,11 +286,12 @@ Partial Class FormDataPaketLayanan
         ' btnUbah
         ' 
         btnUbah.BackColor = Color.LightYellow
-        btnUbah.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
+        btnUbah.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         btnUbah.ForeColor = Color.DarkOliveGreen
-        btnUbah.Location = New Point(829, 210)
+        btnUbah.Location = New Point(663, 168)
+        btnUbah.Margin = New Padding(2, 2, 2, 2)
         btnUbah.Name = "btnUbah"
-        btnUbah.Size = New Size(112, 34)
+        btnUbah.Size = New Size(90, 27)
         btnUbah.TabIndex = 13
         btnUbah.Text = "Ubah"
         btnUbah.UseVisualStyleBackColor = False
@@ -284,11 +299,12 @@ Partial Class FormDataPaketLayanan
         ' btnSimpan
         ' 
         btnSimpan.BackColor = Color.LightYellow
-        btnSimpan.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
+        btnSimpan.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         btnSimpan.ForeColor = Color.DarkOliveGreen
-        btnSimpan.Location = New Point(689, 212)
+        btnSimpan.Location = New Point(551, 170)
+        btnSimpan.Margin = New Padding(2, 2, 2, 2)
         btnSimpan.Name = "btnSimpan"
-        btnSimpan.Size = New Size(112, 34)
+        btnSimpan.Size = New Size(90, 27)
         btnSimpan.TabIndex = 12
         btnSimpan.Text = "Simpan"
         btnSimpan.UseVisualStyleBackColor = False
@@ -297,128 +313,139 @@ Partial Class FormDataPaketLayanan
         ' 
         cboStatus.BackColor = Color.Snow
         cboStatus.FormattingEnabled = True
-        cboStatus.Location = New Point(689, 96)
+        cboStatus.Location = New Point(551, 77)
+        cboStatus.Margin = New Padding(2, 2, 2, 2)
         cboStatus.Name = "cboStatus"
-        cboStatus.Size = New Size(229, 33)
+        cboStatus.Size = New Size(184, 28)
         cboStatus.TabIndex = 11
         ' 
         ' cboSatuan
         ' 
         cboSatuan.BackColor = Color.Snow
         cboSatuan.FormattingEnabled = True
-        cboSatuan.Location = New Point(689, 42)
+        cboSatuan.Location = New Point(551, 34)
+        cboSatuan.Margin = New Padding(2, 2, 2, 2)
         cboSatuan.Name = "cboSatuan"
-        cboSatuan.Size = New Size(229, 33)
+        cboSatuan.Size = New Size(184, 28)
         cboSatuan.TabIndex = 10
         ' 
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label7.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label7.ForeColor = Color.DarkOliveGreen
-        Label7.Location = New Point(568, 97)
+        Label7.Location = New Point(454, 78)
+        Label7.Margin = New Padding(2, 0, 2, 0)
         Label7.Name = "Label7"
-        Label7.Size = New Size(78, 32)
+        Label7.Size = New Size(65, 28)
         Label7.TabIndex = 9
         Label7.Text = "Status"
         ' 
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.DarkOliveGreen
-        Label6.Location = New Point(568, 43)
+        Label6.Location = New Point(454, 34)
+        Label6.Margin = New Padding(2, 0, 2, 0)
         Label6.Name = "Label6"
-        Label6.Size = New Size(87, 32)
+        Label6.Size = New Size(72, 28)
         Label6.TabIndex = 8
         Label6.Text = "Satuan"
         ' 
         ' txtHarga
         ' 
         txtHarga.BackColor = Color.Snow
-        txtHarga.Location = New Point(264, 215)
+        txtHarga.Location = New Point(211, 172)
+        txtHarga.Margin = New Padding(2, 2, 2, 2)
         txtHarga.Name = "txtHarga"
-        txtHarga.Size = New Size(231, 31)
+        txtHarga.Size = New Size(186, 27)
         txtHarga.TabIndex = 7
         ' 
         ' cboJenis
         ' 
         cboJenis.BackColor = Color.Snow
         cboJenis.FormattingEnabled = True
-        cboJenis.Location = New Point(264, 157)
+        cboJenis.Location = New Point(211, 126)
+        cboJenis.Margin = New Padding(2, 2, 2, 2)
         cboJenis.Name = "cboJenis"
-        cboJenis.Size = New Size(231, 33)
+        cboJenis.Size = New Size(186, 28)
         cboJenis.TabIndex = 6
         ' 
         ' txtNamaLayanan
         ' 
         txtNamaLayanan.BackColor = Color.Snow
-        txtNamaLayanan.Location = New Point(264, 100)
+        txtNamaLayanan.Location = New Point(211, 80)
+        txtNamaLayanan.Margin = New Padding(2, 2, 2, 2)
         txtNamaLayanan.Name = "txtNamaLayanan"
-        txtNamaLayanan.Size = New Size(231, 31)
+        txtNamaLayanan.Size = New Size(186, 27)
         txtNamaLayanan.TabIndex = 5
         ' 
         ' txtIdLayanan
         ' 
         txtIdLayanan.BackColor = Color.Snow
-        txtIdLayanan.Location = New Point(264, 46)
+        txtIdLayanan.Location = New Point(211, 37)
+        txtIdLayanan.Margin = New Padding(2, 2, 2, 2)
         txtIdLayanan.Name = "txtIdLayanan"
-        txtIdLayanan.Size = New Size(231, 31)
+        txtIdLayanan.Size = New Size(186, 27)
         txtIdLayanan.TabIndex = 4
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.DarkOliveGreen
-        Label5.Location = New Point(30, 212)
+        Label5.Location = New Point(24, 170)
+        Label5.Margin = New Padding(2, 0, 2, 0)
         Label5.Name = "Label5"
-        Label5.Size = New Size(126, 32)
+        Label5.Size = New Size(106, 28)
         Label5.TabIndex = 3
         Label5.Text = "Harga (Rp)"
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.DarkOliveGreen
-        Label4.Location = New Point(30, 154)
+        Label4.Location = New Point(24, 123)
+        Label4.Margin = New Padding(2, 0, 2, 0)
         Label4.Name = "Label4"
-        Label4.Size = New Size(160, 32)
+        Label4.Size = New Size(129, 28)
         Label4.TabIndex = 2
         Label4.Text = "Jenis Layanan"
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.DarkOliveGreen
-        Label3.Location = New Point(30, 97)
+        Label3.Location = New Point(24, 78)
+        Label3.Margin = New Padding(2, 0, 2, 0)
         Label3.Name = "Label3"
-        Label3.Size = New Size(171, 32)
+        Label3.Size = New Size(140, 28)
         Label3.TabIndex = 1
         Label3.Text = "Nama Layanan"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.DarkOliveGreen
-        Label2.Location = New Point(30, 43)
+        Label2.Location = New Point(24, 34)
+        Label2.Margin = New Padding(2, 0, 2, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(131, 32)
+        Label2.Size = New Size(107, 28)
         Label2.TabIndex = 0
         Label2.Text = "ID Layanan"
         ' 
         ' FormDataPaketLayanan
         ' 
-        AutoScaleDimensions = New SizeF(10.0F, 25.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1445, 822)
+        ClientSize = New Size(1156, 658)
         Controls.Add(Panel5)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
-        Margin = New Padding(4)
         Name = "FormDataPaketLayanan"
         Text = "FormDataPaketLayanan"
         Panel1.ResumeLayout(False)

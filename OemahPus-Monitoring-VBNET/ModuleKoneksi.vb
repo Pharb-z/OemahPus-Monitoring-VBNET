@@ -2,7 +2,7 @@
 
 Module ModuleKoneksi
     ' Connection String disesuaikan dengan host 127.0.0.1 dan port 3306
-    Public strKoneksi As String = "server=127.0.0.1;port=3306;user id=root;password=;database=db_oemahpus"
+    Public strKoneksi As String = "server=127.0.0.1;port=3306;user id=root;password=;database=OmiDB"
     Public koneksi As MySqlConnection
 
     ' Sub untuk membuka koneksi ke database

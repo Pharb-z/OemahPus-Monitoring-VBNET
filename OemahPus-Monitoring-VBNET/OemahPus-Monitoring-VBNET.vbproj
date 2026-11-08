@@ -4,12 +4,13 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net10.0-windows</TargetFramework>
     <RootNamespace>OemahPus_Monitoring_VBNET</RootNamespace>
-    <StartupObject>Sub Main</StartupObject>
+    <StartupObject>OemahPus_Monitoring_VBNET.My.MyApplication</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.2.0" />
     <PackageReference Include="MySql.Data" Version="9.5.0" />
   </ItemGroup>
 

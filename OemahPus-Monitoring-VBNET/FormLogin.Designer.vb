@@ -27,11 +27,12 @@ Partial Class FormLogin
         Label2 = New Label()
         Label3 = New Label()
         Label4 = New Label()
-        TextBox1 = New TextBox()
-        Panel1 = New Panel()
-        TextBox2 = New TextBox()
-        Button1 = New Button()
+        txtUsername = New TextBox()
+        txtPassword = New TextBox()
+        btnLogin = New Button()
         btnRegister = New Button()
+        Panel1 = New Panel()
+        chkShowPassword = New CheckBox()
         Panel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -41,7 +42,7 @@ Partial Class FormLogin
         Label1.Location = New Point(3015, 469)
         Label1.Margin = New Padding(15, 0, 15, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(676, 82)
+        Label1.Size = New Size(565, 68)
         Label1.TabIndex = 0
         Label1.Text = "Selamat Datang"
         ' 
@@ -49,9 +50,9 @@ Partial Class FormLogin
         ' 
         lblSelamatDatang.AutoSize = True
         lblSelamatDatang.ForeColor = Color.DarkSlateBlue
-        lblSelamatDatang.Location = New Point(620, 69)
+        lblSelamatDatang.Location = New Point(477, 30)
         lblSelamatDatang.Name = "lblSelamatDatang"
-        lblSelamatDatang.Size = New Size(191, 82)
+        lblSelamatDatang.Size = New Size(159, 68)
         lblSelamatDatang.TabIndex = 1
         lblSelamatDatang.Text = "OMI"
         ' 
@@ -60,9 +61,9 @@ Partial Class FormLogin
         Label2.AutoSize = True
         Label2.Font = New Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.DarkSlateBlue
-        Label2.Location = New Point(471, 142)
+        Label2.Location = New Point(347, 98)
         Label2.Name = "Label2"
-        Label2.Size = New Size(518, 45)
+        Label2.Size = New Size(431, 37)
         Label2.TabIndex = 2
         Label2.Text = "OemahPus Monitoring Information"
         ' 
@@ -70,9 +71,9 @@ Partial Class FormLogin
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(398, 172)
+        Label3.Location = New Point(308, 108)
         Label3.Name = "Label3"
-        Label3.Size = New Size(111, 30)
+        Label3.Size = New Size(97, 25)
         Label3.TabIndex = 3
         Label3.Text = "Username"
         ' 
@@ -80,51 +81,39 @@ Partial Class FormLogin
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(398, 259)
+        Label4.Location = New Point(306, 188)
         Label4.Name = "Label4"
-        Label4.Size = New Size(103, 30)
+        Label4.Size = New Size(91, 25)
         Label4.TabIndex = 4
         Label4.Text = "Password"
         ' 
-        ' TextBox1
+        ' txtUsername
         ' 
-        TextBox1.Font = New Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(547, 169)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(303, 37)
-        TextBox1.TabIndex = 5
+        txtUsername.Font = New Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtUsername.Location = New Point(308, 136)
+        txtUsername.Name = "txtUsername"
+        txtUsername.Size = New Size(356, 32)
+        txtUsername.TabIndex = 5
+        txtUsername.Tag = ""
         ' 
-        ' Panel1
+        ' txtPassword
         ' 
-        Panel1.BackColor = Color.LightGoldenrodYellow
-        Panel1.Controls.Add(btnRegister)
-        Panel1.Controls.Add(Button1)
-        Panel1.Controls.Add(TextBox2)
-        Panel1.Controls.Add(TextBox1)
-        Panel1.Controls.Add(Label4)
-        Panel1.Controls.Add(Label3)
-        Panel1.Location = New Point(73, 211)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1294, 555)
-        Panel1.TabIndex = 6
+        txtPassword.Font = New Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtPassword.Location = New Point(306, 216)
+        txtPassword.Name = "txtPassword"
+        txtPassword.Size = New Size(356, 32)
+        txtPassword.TabIndex = 6
+        txtPassword.UseSystemPasswordChar = True
         ' 
-        ' TextBox2
+        ' btnLogin
         ' 
-        TextBox2.Font = New Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox2.Location = New Point(547, 259)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(303, 37)
-        TextBox2.TabIndex = 6
-        ' 
-        ' Button1
-        ' 
-        Button1.Font = New Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button1.Location = New Point(633, 340)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(120, 40)
-        Button1.TabIndex = 7
-        Button1.Text = "Login"
-        Button1.UseVisualStyleBackColor = True
+        btnLogin.Font = New Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnLogin.Location = New Point(542, 294)
+        btnLogin.Name = "btnLogin"
+        btnLogin.Size = New Size(120, 40)
+        btnLogin.TabIndex = 7
+        btnLogin.Text = "Login"
+        btnLogin.UseVisualStyleBackColor = True
         ' 
         ' btnRegister
         ' 
@@ -136,12 +125,38 @@ Partial Class FormLogin
         btnRegister.Text = "Register"
         btnRegister.UseVisualStyleBackColor = True
         ' 
+        ' Panel1
+        ' 
+        Panel1.BackColor = Color.LightGoldenrodYellow
+        Panel1.Controls.Add(chkShowPassword)
+        Panel1.Controls.Add(btnRegister)
+        Panel1.Controls.Add(btnLogin)
+        Panel1.Controls.Add(txtPassword)
+        Panel1.Controls.Add(txtUsername)
+        Panel1.Controls.Add(Label4)
+        Panel1.Controls.Add(Label3)
+        Panel1.Location = New Point(100, 161)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(953, 440)
+        Panel1.TabIndex = 6
+        ' 
+        ' chkShowPassword
+        ' 
+        chkShowPassword.AutoSize = True
+        chkShowPassword.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        chkShowPassword.Location = New Point(308, 254)
+        chkShowPassword.Name = "chkShowPassword"
+        chkShowPassword.Size = New Size(163, 24)
+        chkShowPassword.TabIndex = 9
+        chkShowPassword.Text = "Tampilkan Password"
+        chkShowPassword.UseVisualStyleBackColor = True
+        ' 
         ' FormLogin
         ' 
-        AutoScaleDimensions = New SizeF(50F, 82F)
+        AutoScaleDimensions = New SizeF(42F, 68F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Lavender
-        ClientSize = New Size(1445, 822)
+        ClientSize = New Size(1156, 658)
         Controls.Add(Panel1)
         Controls.Add(Label2)
         Controls.Add(lblSelamatDatang)
@@ -149,6 +164,7 @@ Partial Class FormLogin
         Font = New Font("Broadway", 36F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Margin = New Padding(15, 10, 15, 10)
         Name = "FormLogin"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "FormLogin"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
@@ -161,9 +177,10 @@ Partial Class FormLogin
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents txtUsername As TextBox
+    Friend WithEvents txtPassword As TextBox
+    Friend WithEvents btnLogin As Button
     Friend WithEvents btnRegister As Button
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents chkShowPassword As CheckBox
 End Class

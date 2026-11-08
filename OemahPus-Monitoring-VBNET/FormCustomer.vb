@@ -37,10 +37,10 @@ Public Class FormCustomer
         Try
             Dim keyword As String = "%" & txtCari.Text.Trim() & "%"
             Dim table As DataTable = GetTable(
-                "SELECT customer_id, full_name, phone, address, username, email " &
+                "SELECT customer_id, full_name, phone, address, email " &
                 "FROM customers " &
                 "WHERE full_name LIKE @keyword OR phone LIKE @keyword OR " &
-                "username LIKE @keyword OR email LIKE @keyword " &
+                "email LIKE @keyword " &
                 "ORDER BY customer_id DESC", P("@keyword", keyword))
 
             dgvCustomer.DataSource = table
@@ -48,7 +48,6 @@ Public Class FormCustomer
             SetHeader("full_name", "Nama Lengkap")
             SetHeader("phone", "No Telepon")
             SetHeader("address", "Alamat")
-            SetHeader("username", "Nama Akun")
             SetHeader("email", "Email")
             dgvCustomer.ClearSelection()
             initDone = True
@@ -73,7 +72,6 @@ Public Class FormCustomer
         txtNamaLengkap.Text = CellText(row, "full_name")
         txtNoTelepon.Text = CellText(row, "phone")
         txtAlamat.Text = CellText(row, "address")
-        txtNamaAkun.Text = CellText(row, "username")
         txtEmail.Text = CellText(row, "email")
         ep.Clear()
         SetMode(True)
@@ -92,7 +90,6 @@ Public Class FormCustomer
         txtNamaLengkap.Clear()
         txtNoTelepon.Clear()
         txtAlamat.Clear()
-        txtNamaAkun.Clear()
         txtEmail.Clear()
         ep.Clear()
         dgvCustomer.ClearSelection()
@@ -110,7 +107,6 @@ Public Class FormCustomer
         ep.Clear()
         Dim valid As Boolean = True
         Dim fullName As String = txtNamaLengkap.Text.Trim()
-        Dim username As String = txtNamaAkun.Text.Trim()
         Dim email As String = txtEmail.Text.Trim()
 
         If fullName.Length < 3 Then
@@ -125,10 +121,6 @@ Public Class FormCustomer
             ep.SetError(txtAlamat, "Alamat wajib diisi.")
             valid = False
         End If
-        If username.Length < 3 Then
-            ep.SetError(txtNamaAkun, "Nama akun minimal 3 karakter.")
-            valid = False
-        End If
         If Not Regex.IsMatch(email, "^[^@\s]+@[^@\s]+\.[^@\s]+$") Then
             ep.SetError(txtEmail, "Format email tidak valid.")
             valid = False
@@ -136,10 +128,9 @@ Public Class FormCustomer
 
         If valid Then
             Dim duplicate As Integer = Convert.ToInt32(Scalar(
-                "SELECT COUNT(*) FROM customers WHERE (username=@username OR email=@email) AND customer_id<>@id",
-                P("@username", username), P("@email", email), P("@id", selectedId)))
+                "SELECT COUNT(*) FROM customers WHERE (email=@email) AND customer_id<>@id",
+                P("@email", email), P("@id", selectedId)))
             If duplicate > 0 Then
-                ep.SetError(txtNamaAkun, "Nama akun atau email sudah digunakan.")
                 ep.SetError(txtEmail, "Nama akun atau email sudah digunakan.")
                 valid = False
             End If
@@ -155,12 +146,11 @@ Public Class FormCustomer
     Private Sub btnSimpan_Click(sender As Object, e As EventArgs) Handles btnSimpan.Click
         If Not ValidateInput() Then Return
         Try
-            Exec("INSERT INTO customers (full_name, phone, address, username, email) " &
-                 "VALUES (@fullName, @phone, @address, @username, @email)",
+            Exec("INSERT INTO customers (full_name, phone, address, email) " &
+                 "VALUES (@fullName, @phone, @address, @email)",
                  P("@fullName", txtNamaLengkap.Text.Trim()),
                  P("@phone", txtNoTelepon.Text.Trim()),
                  P("@address", txtAlamat.Text.Trim()),
-                 P("@username", txtNamaAkun.Text.Trim()),
                  P("@email", txtEmail.Text.Trim()))
             MessageBox.Show("Customer berhasil disimpan.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
             LoadGrid()
@@ -177,11 +167,10 @@ Public Class FormCustomer
         If Not ValidateInput() Then Return
         Try
             Exec("UPDATE customers SET full_name=@fullName, phone=@phone, address=@address, " &
-                 "username=@username, email=@email WHERE customer_id=@id",
+                 "email=@email WHERE customer_id=@id",
                  P("@fullName", txtNamaLengkap.Text.Trim()),
                  P("@phone", txtNoTelepon.Text.Trim()),
                  P("@address", txtAlamat.Text.Trim()),
-                 P("@username", txtNamaAkun.Text.Trim()),
                  P("@email", txtEmail.Text.Trim()),
                  P("@id", selectedId))
             MessageBox.Show("Data customer berhasil diubah.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)

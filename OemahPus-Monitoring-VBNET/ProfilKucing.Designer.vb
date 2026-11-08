@@ -41,15 +41,15 @@ Partial Class ProfilKucing
         Panel2 = New Panel()
         Label1 = New Label()
         Panel3 = New Panel()
+        DateTimePicker1 = New DateTimePicker()
+        ComboBox1 = New ComboBox()
         DataGridView1 = New DataGridView()
         Button9 = New Button()
         Button8 = New Button()
         Button7 = New Button()
         Button1 = New Button()
-        TextBox5 = New TextBox()
         TextBox4 = New TextBox()
         TextBox3 = New TextBox()
-        TextBox2 = New TextBox()
         TextBox1 = New TextBox()
         Label7 = New Label()
         Label6 = New Label()
@@ -57,7 +57,7 @@ Partial Class ProfilKucing
         Label4 = New Label()
         Label3 = New Label()
         Label2 = New Label()
-        ComboBox1 = New ComboBox()
+        ComboBox2 = New ComboBox()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         Panel3.SuspendLayout()
@@ -269,16 +269,16 @@ Partial Class ProfilKucing
         ' Panel3
         ' 
         Panel3.BackColor = Color.Lavender
+        Panel3.Controls.Add(ComboBox2)
+        Panel3.Controls.Add(DateTimePicker1)
         Panel3.Controls.Add(ComboBox1)
         Panel3.Controls.Add(DataGridView1)
         Panel3.Controls.Add(Button9)
         Panel3.Controls.Add(Button8)
         Panel3.Controls.Add(Button7)
         Panel3.Controls.Add(Button1)
-        Panel3.Controls.Add(TextBox5)
         Panel3.Controls.Add(TextBox4)
         Panel3.Controls.Add(TextBox3)
-        Panel3.Controls.Add(TextBox2)
         Panel3.Controls.Add(TextBox1)
         Panel3.Controls.Add(Label7)
         Panel3.Controls.Add(Label6)
@@ -290,6 +290,21 @@ Partial Class ProfilKucing
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(874, 523)
         Panel3.TabIndex = 5
+        ' 
+        ' DateTimePicker1
+        ' 
+        DateTimePicker1.Location = New Point(642, 77)
+        DateTimePicker1.Name = "DateTimePicker1"
+        DateTimePicker1.Size = New Size(195, 27)
+        DateTimePicker1.TabIndex = 18
+        ' 
+        ' ComboBox1
+        ' 
+        ComboBox1.FormattingEnabled = True
+        ComboBox1.Location = New Point(642, 125)
+        ComboBox1.Name = "ComboBox1"
+        ComboBox1.Size = New Size(195, 28)
+        ComboBox1.TabIndex = 17
         ' 
         ' DataGridView1
         ' 
@@ -348,13 +363,6 @@ Partial Class ProfilKucing
         Button1.Text = "Simpan"
         Button1.UseVisualStyleBackColor = False
         ' 
-        ' TextBox5
-        ' 
-        TextBox5.Location = New Point(642, 80)
-        TextBox5.Name = "TextBox5"
-        TextBox5.Size = New Size(195, 27)
-        TextBox5.TabIndex = 10
-        ' 
         ' TextBox4
         ' 
         TextBox4.Location = New Point(642, 31)
@@ -368,13 +376,6 @@ Partial Class ProfilKucing
         TextBox3.Name = "TextBox3"
         TextBox3.Size = New Size(195, 27)
         TextBox3.TabIndex = 8
-        ' 
-        ' TextBox2
-        ' 
-        TextBox2.Location = New Point(225, 79)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(195, 27)
-        TextBox2.TabIndex = 7
         ' 
         ' TextBox1
         ' 
@@ -423,9 +424,9 @@ Partial Class ProfilKucing
         Label4.ForeColor = Color.DarkOliveGreen
         Label4.Location = New Point(483, 79)
         Label4.Name = "Label4"
-        Label4.Size = New Size(114, 28)
+        Label4.Size = New Size(127, 28)
         Label4.TabIndex = 2
-        Label4.Text = "Usia Kucing"
+        Label4.Text = "Tanggal Lahir"
         ' 
         ' Label3
         ' 
@@ -449,15 +450,15 @@ Partial Class ProfilKucing
         Label2.TabIndex = 0
         Label2.Text = "Nama Kucing"
         ' 
-        ' ComboBox1
+        ' ComboBox2
         ' 
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(642, 125)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(195, 28)
-        ComboBox1.TabIndex = 17
+        ComboBox2.FormattingEnabled = True
+        ComboBox2.Location = New Point(225, 79)
+        ComboBox2.Name = "ComboBox2"
+        ComboBox2.Size = New Size(195, 28)
+        ComboBox2.TabIndex = 19
         ' 
-        ' Profile_Kucing
+        ' ProfilKucing
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
@@ -466,7 +467,7 @@ Partial Class ProfilKucing
         Controls.Add(Panel3)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
-        Name = "Profile_Kucing"
+        Name = "ProfilKucing"
         Text = "Form1"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
@@ -490,10 +491,8 @@ Partial Class ProfilKucing
     Friend WithEvents Label4 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox5 As TextBox
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label11 As Label
@@ -513,5 +512,7 @@ Partial Class ProfilKucing
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Button10 As Button
     Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents ComboBox2 As ComboBox
 
 End Class

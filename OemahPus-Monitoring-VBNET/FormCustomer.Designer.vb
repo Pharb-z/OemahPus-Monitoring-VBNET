@@ -69,7 +69,7 @@ Partial Class FormCustomer
         ' btnMenuCustomer
         ' 
         btnMenuCustomer.BackColor = Color.Plum
-        btnMenuCustomer.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnMenuCustomer.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnMenuCustomer.ForeColor = Color.SeaShell
         btnMenuCustomer.Location = New Point(38, 222)
         btnMenuCustomer.Margin = New Padding(2, 2, 2, 2)
@@ -82,7 +82,7 @@ Partial Class FormCustomer
         ' btnMenuLayanan
         ' 
         btnMenuLayanan.BackColor = Color.Plum
-        btnMenuLayanan.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnMenuLayanan.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnMenuLayanan.ForeColor = Color.SeaShell
         btnMenuLayanan.Location = New Point(38, 161)
         btnMenuLayanan.Margin = New Padding(2, 2, 2, 2)
@@ -95,7 +95,7 @@ Partial Class FormCustomer
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Font = New Font("Snap ITC", 36F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label9.Font = New Font("Snap ITC", 36.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label9.ForeColor = Color.Plum
         Label9.Location = New Point(29, 44)
         Label9.Margin = New Padding(2, 0, 2, 0)
@@ -117,7 +117,7 @@ Partial Class FormCustomer
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Segoe UI", 16.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.DarkOliveGreen
         Label1.Location = New Point(36, 26)
         Label1.Margin = New Padding(2, 0, 2, 0)
@@ -157,7 +157,7 @@ Partial Class FormCustomer
         ' btnKosongkan
         ' 
         btnKosongkan.BackColor = Color.LightGoldenrodYellow
-        btnKosongkan.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnKosongkan.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnKosongkan.ForeColor = Color.DarkOliveGreen
         btnKosongkan.Location = New Point(780, 191)
         btnKosongkan.Margin = New Padding(2, 2, 2, 2)
@@ -170,7 +170,7 @@ Partial Class FormCustomer
         ' btnHapus
         ' 
         btnHapus.BackColor = Color.LightGoldenrodYellow
-        btnHapus.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnHapus.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnHapus.ForeColor = Color.DarkOliveGreen
         btnHapus.Location = New Point(676, 191)
         btnHapus.Margin = New Padding(2, 2, 2, 2)
@@ -183,7 +183,7 @@ Partial Class FormCustomer
         ' btnUbah
         ' 
         btnUbah.BackColor = Color.LightGoldenrodYellow
-        btnUbah.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnUbah.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnUbah.ForeColor = Color.DarkOliveGreen
         btnUbah.Location = New Point(574, 191)
         btnUbah.Margin = New Padding(2, 2, 2, 2)
@@ -196,7 +196,7 @@ Partial Class FormCustomer
         ' btnSimpan
         ' 
         btnSimpan.BackColor = Color.LightGoldenrodYellow
-        btnSimpan.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnSimpan.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnSimpan.ForeColor = Color.DarkOliveGreen
         btnSimpan.Location = New Point(464, 191)
         btnSimpan.Margin = New Padding(2, 2, 2, 2)
@@ -220,7 +220,7 @@ Partial Class FormCustomer
         ' Label8
         ' 
         Label8.AutoSize = True
-        Label8.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label8.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label8.ForeColor = Color.DarkOliveGreen
         Label8.Location = New Point(24, 217)
         Label8.Margin = New Padding(2, 0, 2, 0)
@@ -288,7 +288,7 @@ Partial Class FormCustomer
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Font = New Font("Segoe UI", 12F)
+        Label7.Font = New Font("Segoe UI", 12.0F)
         Label7.ForeColor = Color.DarkOliveGreen
         Label7.Location = New Point(483, 123)
         Label7.Margin = New Padding(2, 0, 2, 0)
@@ -300,7 +300,7 @@ Partial Class FormCustomer
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Segoe UI", 12F)
+        Label6.Font = New Font("Segoe UI", 12.0F)
         Label6.ForeColor = Color.DarkOliveGreen
         Label6.Location = New Point(483, 34)
         Label6.Margin = New Padding(2, 0, 2, 0)
@@ -312,7 +312,7 @@ Partial Class FormCustomer
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Font = New Font("Segoe UI", 12F)
+        Label5.Font = New Font("Segoe UI", 12.0F)
         Label5.ForeColor = Color.DarkOliveGreen
         Label5.Location = New Point(483, 78)
         Label5.Margin = New Padding(2, 0, 2, 0)
@@ -324,7 +324,7 @@ Partial Class FormCustomer
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI", 12F)
+        Label4.Font = New Font("Segoe UI", 12.0F)
         Label4.ForeColor = Color.DarkOliveGreen
         Label4.Location = New Point(24, 123)
         Label4.Margin = New Padding(2, 0, 2, 0)
@@ -336,7 +336,7 @@ Partial Class FormCustomer
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 12F)
+        Label3.Font = New Font("Segoe UI", 12.0F)
         Label3.ForeColor = Color.DarkOliveGreen
         Label3.Location = New Point(24, 78)
         Label3.Margin = New Padding(2, 0, 2, 0)
@@ -348,7 +348,7 @@ Partial Class FormCustomer
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 12F)
+        Label2.Font = New Font("Segoe UI", 12.0F)
         Label2.ForeColor = Color.DarkOliveGreen
         Label2.Location = New Point(24, 34)
         Label2.Margin = New Padding(2, 0, 2, 0)
@@ -359,7 +359,7 @@ Partial Class FormCustomer
         ' 
         ' FormCustomer
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1156, 658)
         Controls.Add(Panel3)

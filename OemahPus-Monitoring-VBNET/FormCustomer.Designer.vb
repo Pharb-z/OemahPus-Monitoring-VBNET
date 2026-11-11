@@ -46,6 +46,7 @@ Partial Class FormCustomer
         Label4 = New Label()
         Label3 = New Label()
         Label2 = New Label()
+        Button1 = New Button()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         Panel3.SuspendLayout()
@@ -55,13 +56,14 @@ Partial Class FormCustomer
         ' Panel1
         ' 
         Panel1.BackColor = Color.SeaShell
+        Panel1.Controls.Add(Button1)
         Panel1.Controls.Add(btnMenuCustomer)
         Panel1.Controls.Add(btnMenuLayanan)
         Panel1.Controls.Add(Label9)
-        Panel1.Location = New Point(10, 10)
+        Panel1.Location = New Point(12, 12)
         Panel1.Margin = New Padding(2)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(246, 638)
+        Panel1.Size = New Size(308, 798)
         Panel1.TabIndex = 0
         ' 
         ' btnMenuCustomer
@@ -69,10 +71,10 @@ Partial Class FormCustomer
         btnMenuCustomer.BackColor = Color.Plum
         btnMenuCustomer.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnMenuCustomer.ForeColor = Color.DarkOliveGreen
-        btnMenuCustomer.Location = New Point(38, 222)
+        btnMenuCustomer.Location = New Point(48, 278)
         btnMenuCustomer.Margin = New Padding(2)
         btnMenuCustomer.Name = "btnMenuCustomer"
-        btnMenuCustomer.Size = New Size(165, 37)
+        btnMenuCustomer.Size = New Size(206, 46)
         btnMenuCustomer.TabIndex = 2
         btnMenuCustomer.Text = "Customer"
         btnMenuCustomer.UseVisualStyleBackColor = False
@@ -82,10 +84,10 @@ Partial Class FormCustomer
         btnMenuLayanan.BackColor = Color.Plum
         btnMenuLayanan.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnMenuLayanan.ForeColor = Color.SeaShell
-        btnMenuLayanan.Location = New Point(38, 161)
+        btnMenuLayanan.Location = New Point(48, 201)
         btnMenuLayanan.Margin = New Padding(2)
         btnMenuLayanan.Name = "btnMenuLayanan"
-        btnMenuLayanan.Size = New Size(165, 37)
+        btnMenuLayanan.Size = New Size(206, 46)
         btnMenuLayanan.TabIndex = 1
         btnMenuLayanan.Text = "Paket Layanan"
         btnMenuLayanan.UseVisualStyleBackColor = False
@@ -95,10 +97,10 @@ Partial Class FormCustomer
         Label9.AutoSize = True
         Label9.Font = New Font("Snap ITC", 36F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label9.ForeColor = Color.Plum
-        Label9.Location = New Point(29, 44)
+        Label9.Location = New Point(36, 55)
         Label9.Margin = New Padding(2, 0, 2, 0)
         Label9.Name = "Label9"
-        Label9.Size = New Size(181, 77)
+        Label9.Size = New Size(218, 93)
         Label9.TabIndex = 0
         Label9.Text = "OMI"
         ' 
@@ -106,10 +108,10 @@ Partial Class FormCustomer
         ' 
         Panel2.BackColor = Color.LightGoldenrodYellow
         Panel2.Controls.Add(Label1)
-        Panel2.Location = New Point(256, 10)
+        Panel2.Location = New Point(320, 12)
         Panel2.Margin = New Padding(2)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(890, 84)
+        Panel2.Size = New Size(1112, 105)
         Panel2.TabIndex = 1
         ' 
         ' Label1
@@ -117,10 +119,10 @@ Partial Class FormCustomer
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.DarkOliveGreen
-        Label1.Location = New Point(36, 26)
+        Label1.Location = New Point(45, 32)
         Label1.Margin = New Padding(2, 0, 2, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(209, 37)
+        Label1.Size = New Size(243, 45)
         Label1.TabIndex = 0
         Label1.Text = "Data Customer"
         ' 
@@ -144,10 +146,10 @@ Partial Class FormCustomer
         Panel3.Controls.Add(Label4)
         Panel3.Controls.Add(Label3)
         Panel3.Controls.Add(Label2)
-        Panel3.Location = New Point(256, 94)
+        Panel3.Location = New Point(320, 118)
         Panel3.Margin = New Padding(2)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(890, 554)
+        Panel3.Size = New Size(1112, 692)
         Panel3.TabIndex = 2
         ' 
         ' btnKosongkan
@@ -155,10 +157,10 @@ Partial Class FormCustomer
         btnKosongkan.BackColor = Color.LightGoldenrodYellow
         btnKosongkan.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnKosongkan.ForeColor = Color.DarkOliveGreen
-        btnKosongkan.Location = New Point(769, 221)
+        btnKosongkan.Location = New Point(961, 276)
         btnKosongkan.Margin = New Padding(2)
         btnKosongkan.Name = "btnKosongkan"
-        btnKosongkan.Size = New Size(94, 27)
+        btnKosongkan.Size = New Size(118, 34)
         btnKosongkan.TabIndex = 18
         btnKosongkan.Text = "Kosongkan"
         btnKosongkan.UseVisualStyleBackColor = False
@@ -168,10 +170,10 @@ Partial Class FormCustomer
         btnHapus.BackColor = Color.LightGoldenrodYellow
         btnHapus.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnHapus.ForeColor = Color.DarkOliveGreen
-        btnHapus.Location = New Point(665, 221)
+        btnHapus.Location = New Point(831, 276)
         btnHapus.Margin = New Padding(2)
         btnHapus.Name = "btnHapus"
-        btnHapus.Size = New Size(90, 27)
+        btnHapus.Size = New Size(112, 34)
         btnHapus.TabIndex = 17
         btnHapus.Text = "Hapus"
         btnHapus.UseVisualStyleBackColor = False
@@ -181,10 +183,10 @@ Partial Class FormCustomer
         btnUbah.BackColor = Color.LightGoldenrodYellow
         btnUbah.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnUbah.ForeColor = Color.DarkOliveGreen
-        btnUbah.Location = New Point(563, 221)
+        btnUbah.Location = New Point(704, 276)
         btnUbah.Margin = New Padding(2)
         btnUbah.Name = "btnUbah"
-        btnUbah.Size = New Size(90, 27)
+        btnUbah.Size = New Size(112, 34)
         btnUbah.TabIndex = 16
         btnUbah.Text = "Ubah"
         btnUbah.UseVisualStyleBackColor = False
@@ -194,10 +196,10 @@ Partial Class FormCustomer
         btnSimpan.BackColor = Color.LightGoldenrodYellow
         btnSimpan.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnSimpan.ForeColor = Color.DarkOliveGreen
-        btnSimpan.Location = New Point(453, 221)
+        btnSimpan.Location = New Point(566, 276)
         btnSimpan.Margin = New Padding(2)
         btnSimpan.Name = "btnSimpan"
-        btnSimpan.Size = New Size(90, 27)
+        btnSimpan.Size = New Size(112, 34)
         btnSimpan.TabIndex = 15
         btnSimpan.Text = "Simpan"
         btnSimpan.UseVisualStyleBackColor = False
@@ -206,11 +208,11 @@ Partial Class FormCustomer
         ' 
         dgvCustomer.BackgroundColor = Color.Thistle
         dgvCustomer.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvCustomer.Location = New Point(24, 280)
+        dgvCustomer.Location = New Point(30, 350)
         dgvCustomer.Margin = New Padding(2)
         dgvCustomer.Name = "dgvCustomer"
         dgvCustomer.RowHeadersWidth = 62
-        dgvCustomer.Size = New Size(839, 249)
+        dgvCustomer.Size = New Size(1049, 311)
         dgvCustomer.TabIndex = 14
         ' 
         ' Label8
@@ -218,59 +220,59 @@ Partial Class FormCustomer
         Label8.AutoSize = True
         Label8.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label8.ForeColor = Color.DarkOliveGreen
-        Label8.Location = New Point(24, 217)
+        Label8.Location = New Point(30, 271)
         Label8.Margin = New Padding(2, 0, 2, 0)
         Label8.Name = "Label8"
-        Label8.Size = New Size(92, 28)
+        Label8.Size = New Size(111, 32)
         Label8.TabIndex = 13
         Label8.Text = "Cari Data"
         ' 
         ' txtCari
         ' 
-        txtCari.Location = New Point(138, 219)
+        txtCari.Location = New Point(172, 274)
         txtCari.Margin = New Padding(2)
         txtCari.Name = "txtCari"
-        txtCari.Size = New Size(221, 27)
+        txtCari.Size = New Size(275, 31)
         txtCari.TabIndex = 12
         ' 
         ' txtAlamat
         ' 
-        txtAlamat.Location = New Point(649, 128)
+        txtAlamat.Location = New Point(811, 160)
         txtAlamat.Margin = New Padding(2)
         txtAlamat.Name = "txtAlamat"
-        txtAlamat.Size = New Size(214, 27)
+        txtAlamat.Size = New Size(266, 31)
         txtAlamat.TabIndex = 11
         ' 
         ' txtEmail
         ' 
-        txtEmail.Location = New Point(649, 82)
+        txtEmail.Location = New Point(811, 102)
         txtEmail.Margin = New Padding(2)
         txtEmail.Name = "txtEmail"
-        txtEmail.Size = New Size(214, 27)
+        txtEmail.Size = New Size(266, 31)
         txtEmail.TabIndex = 10
         ' 
         ' txtNoTelepon
         ' 
-        txtNoTelepon.Location = New Point(211, 126)
+        txtNoTelepon.Location = New Point(264, 158)
         txtNoTelepon.Margin = New Padding(2)
         txtNoTelepon.Name = "txtNoTelepon"
-        txtNoTelepon.Size = New Size(221, 27)
+        txtNoTelepon.Size = New Size(275, 31)
         txtNoTelepon.TabIndex = 8
         ' 
         ' txtNamaLengkap
         ' 
-        txtNamaLengkap.Location = New Point(211, 80)
+        txtNamaLengkap.Location = New Point(264, 100)
         txtNamaLengkap.Margin = New Padding(2)
         txtNamaLengkap.Name = "txtNamaLengkap"
-        txtNamaLengkap.Size = New Size(221, 27)
+        txtNamaLengkap.Size = New Size(275, 31)
         txtNamaLengkap.TabIndex = 7
         ' 
         ' txtIdCustomer
         ' 
-        txtIdCustomer.Location = New Point(211, 37)
+        txtIdCustomer.Location = New Point(264, 46)
         txtIdCustomer.Margin = New Padding(2)
         txtIdCustomer.Name = "txtIdCustomer"
-        txtIdCustomer.Size = New Size(221, 27)
+        txtIdCustomer.Size = New Size(275, 31)
         txtIdCustomer.TabIndex = 6
         ' 
         ' Label7
@@ -278,10 +280,10 @@ Partial Class FormCustomer
         Label7.AutoSize = True
         Label7.Font = New Font("Segoe UI", 12F)
         Label7.ForeColor = Color.DarkOliveGreen
-        Label7.Location = New Point(508, 125)
+        Label7.Location = New Point(635, 156)
         Label7.Margin = New Padding(2, 0, 2, 0)
         Label7.Name = "Label7"
-        Label7.Size = New Size(74, 28)
+        Label7.Size = New Size(88, 32)
         Label7.TabIndex = 5
         Label7.Text = "Alamat"
         ' 
@@ -290,10 +292,10 @@ Partial Class FormCustomer
         Label5.AutoSize = True
         Label5.Font = New Font("Segoe UI", 12F)
         Label5.ForeColor = Color.DarkOliveGreen
-        Label5.Location = New Point(508, 80)
+        Label5.Location = New Point(635, 100)
         Label5.Margin = New Padding(2, 0, 2, 0)
         Label5.Name = "Label5"
-        Label5.Size = New Size(59, 28)
+        Label5.Size = New Size(71, 32)
         Label5.TabIndex = 3
         Label5.Text = "Email"
         ' 
@@ -302,10 +304,10 @@ Partial Class FormCustomer
         Label4.AutoSize = True
         Label4.Font = New Font("Segoe UI", 12F)
         Label4.ForeColor = Color.DarkOliveGreen
-        Label4.Location = New Point(24, 123)
+        Label4.Location = New Point(30, 154)
         Label4.Margin = New Padding(2, 0, 2, 0)
         Label4.Name = "Label4"
-        Label4.Size = New Size(112, 28)
+        Label4.Size = New Size(138, 32)
         Label4.TabIndex = 2
         Label4.Text = "No Telepon"
         ' 
@@ -314,10 +316,10 @@ Partial Class FormCustomer
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI", 12F)
         Label3.ForeColor = Color.DarkOliveGreen
-        Label3.Location = New Point(24, 78)
+        Label3.Location = New Point(30, 98)
         Label3.Margin = New Padding(2, 0, 2, 0)
         Label3.Name = "Label3"
-        Label3.Size = New Size(143, 28)
+        Label3.Size = New Size(174, 32)
         Label3.TabIndex = 1
         Label3.Text = "Nama Lengkap"
         ' 
@@ -326,18 +328,27 @@ Partial Class FormCustomer
         Label2.AutoSize = True
         Label2.Font = New Font("Segoe UI", 12F)
         Label2.ForeColor = Color.DarkOliveGreen
-        Label2.Location = New Point(24, 34)
+        Label2.Location = New Point(30, 42)
         Label2.Margin = New Padding(2, 0, 2, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(128, 28)
+        Label2.Size = New Size(156, 32)
         Label2.TabIndex = 0
         Label2.Text = "No Customer"
         ' 
+        ' Button1
+        ' 
+        Button1.Location = New Point(48, 370)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(206, 39)
+        Button1.TabIndex = 3
+        Button1.Text = "Medis Kucing"
+        Button1.UseVisualStyleBackColor = True
+        ' 
         ' FormCustomer
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1156, 658)
+        ClientSize = New Size(1445, 822)
         Controls.Add(Panel3)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
@@ -379,4 +390,5 @@ Partial Class FormCustomer
     Friend WithEvents Label9 As Label
     Friend WithEvents btnMenuLayanan As Button
     Friend WithEvents btnMenuCustomer As Button
+    Friend WithEvents Button1 As Button
 End Class

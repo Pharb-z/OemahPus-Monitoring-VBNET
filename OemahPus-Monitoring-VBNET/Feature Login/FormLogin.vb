@@ -100,6 +100,19 @@ Public Class FormLogin
                 Return
             End If
 
+            ' Menyimpan informasi pengguna ke UserSession
+            UserSession.CurrentUserId =
+            Convert.ToInt32(user("user_id"))
+
+            UserSession.CurrentUsername =
+            user("username").ToString()
+
+            UserSession.CurrentRole =
+            user("role").ToString()
+
+            UserSession.CurrentFullName =
+            user("full_name").ToString()
+
             ' Memeriksa role pengguna
             If role = "Owner" Then
 
@@ -139,6 +152,8 @@ Public Class FormLogin
 
         End Try
 
+
+
     End Sub
 
     ' Menampilkan pesan kesalahan database
@@ -165,12 +180,5 @@ Public Class FormLogin
         )
     End Sub
 
-    Private Sub btnGenerateHash_Click(sender As Object, e As EventArgs)
-        Dim password = "Owner123"
 
-        Dim hash =
-            BCrypt.Net.BCrypt.HashPassword(password)
-
-        MessageBox.Show(hash)
-    End Sub
 End Class

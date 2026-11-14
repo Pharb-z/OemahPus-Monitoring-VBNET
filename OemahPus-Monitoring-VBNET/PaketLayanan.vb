@@ -313,4 +313,16 @@ Public Class FormDataPaketLayanan
     Private Sub cboJenis_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboJenis.SelectedIndexChanged
 
     End Sub
+
+    Private Sub btnPemeriksaanKucing_Click(sender As Object, e As EventArgs) Handles btnPemeriksaanKucing.Click
+        Dim formMedis As Form = Navigator.GetRegistered("medis")
+
+        If formMedis Is Nothing Then
+            formMedis = New FormMedisKucing()
+            Navigator.Register("medis", formMedis)
+        End If
+
+        formMedis.Show()
+        Me.Hide()
+    End Sub
 End Class

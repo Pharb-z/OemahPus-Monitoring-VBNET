@@ -1,4 +1,4 @@
-﻿Public Class Reservasi_Penitipan
+﻿Public Class FormReservasi
     Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
 
     End Sub

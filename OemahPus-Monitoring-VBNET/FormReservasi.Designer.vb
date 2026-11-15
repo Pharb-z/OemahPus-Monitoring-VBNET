@@ -29,8 +29,6 @@ Partial Class FormReservasi
         Label11 = New Label()
         Label10 = New Label()
         Label9 = New Label()
-        PictureBox2 = New PictureBox()
-        PictureBox1 = New PictureBox()
         btnRiwayat = New Button()
         btnReservasi = New Button()
         btnProfil = New Button()
@@ -65,8 +63,6 @@ Partial Class FormReservasi
         Label3 = New Label()
         TextBox1 = New TextBox()
         Panel1.SuspendLayout()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
         Panel3.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
@@ -81,14 +77,12 @@ Partial Class FormReservasi
         Panel1.Controls.Add(Label11)
         Panel1.Controls.Add(Label10)
         Panel1.Controls.Add(Label9)
-        Panel1.Controls.Add(PictureBox2)
-        Panel1.Controls.Add(PictureBox1)
         Panel1.Controls.Add(btnRiwayat)
         Panel1.Controls.Add(btnReservasi)
         Panel1.Controls.Add(btnProfil)
         Panel1.Controls.Add(btnHome)
         Panel1.Location = New Point(10, 10)
-        Panel1.Margin = New Padding(2, 2, 2, 2)
+        Panel1.Margin = New Padding(2)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(269, 624)
         Panel1.TabIndex = 0
@@ -97,7 +91,7 @@ Partial Class FormReservasi
         ' 
         Label14.AutoSize = True
         Label14.BackColor = Color.FromArgb(CByte(255), CByte(244), CByte(238))
-        Label14.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label14.Font = New Font("Segoe UI", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label14.ForeColor = Color.Thistle
         Label14.Location = New Point(171, 557)
         Label14.Margin = New Padding(2, 0, 2, 0)
@@ -110,7 +104,7 @@ Partial Class FormReservasi
         ' 
         Label13.AutoSize = True
         Label13.BackColor = Color.FromArgb(CByte(255), CByte(244), CByte(238))
-        Label13.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label13.Font = New Font("Segoe UI", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label13.ForeColor = Color.Thistle
         Label13.Location = New Point(116, 557)
         Label13.Margin = New Padding(2, 0, 2, 0)
@@ -123,7 +117,7 @@ Partial Class FormReservasi
         ' 
         Label12.AutoSize = True
         Label12.BackColor = Color.FromArgb(CByte(255), CByte(244), CByte(238))
-        Label12.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label12.Font = New Font("Segoe UI", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label12.ForeColor = Color.Thistle
         Label12.Location = New Point(57, 558)
         Label12.Margin = New Padding(2, 0, 2, 0)
@@ -136,7 +130,7 @@ Partial Class FormReservasi
         ' 
         Label11.AutoSize = True
         Label11.BackColor = Color.FromArgb(CByte(255), CByte(244), CByte(238))
-        Label11.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label11.Font = New Font("Segoe UI", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label11.ForeColor = Color.Thistle
         Label11.Location = New Point(142, 114)
         Label11.Margin = New Padding(2, 0, 2, 0)
@@ -149,7 +143,7 @@ Partial Class FormReservasi
         ' 
         Label10.AutoSize = True
         Label10.BackColor = Color.FromArgb(CByte(255), CByte(244), CByte(238))
-        Label10.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label10.Font = New Font("Segoe UI", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label10.ForeColor = Color.Thistle
         Label10.Location = New Point(104, 114)
         Label10.Margin = New Padding(2, 0, 2, 0)
@@ -161,7 +155,7 @@ Partial Class FormReservasi
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Font = New Font("Broadway", 36F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label9.Font = New Font("Broadway", 36.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label9.ForeColor = Color.Thistle
         Label9.Location = New Point(25, 36)
         Label9.Margin = New Padding(2, 0, 2, 0)
@@ -170,33 +164,13 @@ Partial Class FormReservasi
         Label9.TabIndex = 1
         Label9.Text = "OMI"
         ' 
-        ' PictureBox2
-        ' 
-        PictureBox2.Image = My.Resources.Resources.paw__1_
-        PictureBox2.Location = New Point(198, 70)
-        PictureBox2.Margin = New Padding(2, 2, 2, 2)
-        PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(27, 30)
-        PictureBox2.TabIndex = 24
-        PictureBox2.TabStop = False
-        ' 
-        ' PictureBox1
-        ' 
-        PictureBox1.Image = My.Resources.Resources.paw__1_
-        PictureBox1.Location = New Point(182, 36)
-        PictureBox1.Margin = New Padding(2, 2, 2, 2)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(27, 30)
-        PictureBox1.TabIndex = 18
-        PictureBox1.TabStop = False
-        ' 
         ' btnRiwayat
         ' 
         btnRiwayat.BackColor = Color.Thistle
-        btnRiwayat.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnRiwayat.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnRiwayat.ForeColor = Color.SeaShell
         btnRiwayat.Location = New Point(38, 366)
-        btnRiwayat.Margin = New Padding(2, 2, 2, 2)
+        btnRiwayat.Margin = New Padding(2)
         btnRiwayat.Name = "btnRiwayat"
         btnRiwayat.Size = New Size(194, 36)
         btnRiwayat.TabIndex = 21
@@ -206,10 +180,10 @@ Partial Class FormReservasi
         ' btnReservasi
         ' 
         btnReservasi.BackColor = Color.Thistle
-        btnReservasi.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnReservasi.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnReservasi.ForeColor = Color.SeaShell
         btnReservasi.Location = New Point(38, 294)
-        btnReservasi.Margin = New Padding(2, 2, 2, 2)
+        btnReservasi.Margin = New Padding(2)
         btnReservasi.Name = "btnReservasi"
         btnReservasi.Size = New Size(194, 37)
         btnReservasi.TabIndex = 20
@@ -219,10 +193,10 @@ Partial Class FormReservasi
         ' btnProfil
         ' 
         btnProfil.BackColor = Color.Thistle
-        btnProfil.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnProfil.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnProfil.ForeColor = Color.SeaShell
         btnProfil.Location = New Point(38, 226)
-        btnProfil.Margin = New Padding(2, 2, 2, 2)
+        btnProfil.Margin = New Padding(2)
         btnProfil.Name = "btnProfil"
         btnProfil.Size = New Size(194, 37)
         btnProfil.TabIndex = 19
@@ -232,10 +206,10 @@ Partial Class FormReservasi
         ' btnHome
         ' 
         btnHome.BackColor = Color.Thistle
-        btnHome.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnHome.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnHome.ForeColor = Color.SeaShell
         btnHome.Location = New Point(38, 159)
-        btnHome.Margin = New Padding(2, 2, 2, 2)
+        btnHome.Margin = New Padding(2)
         btnHome.Name = "btnHome"
         btnHome.Size = New Size(194, 37)
         btnHome.TabIndex = 18
@@ -247,7 +221,7 @@ Partial Class FormReservasi
         Panel2.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(218))
         Panel2.Controls.Add(Label1)
         Panel2.Location = New Point(283, 10)
-        Panel2.Margin = New Padding(2, 2, 2, 2)
+        Panel2.Margin = New Padding(2)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(862, 69)
         Panel2.TabIndex = 1
@@ -255,7 +229,7 @@ Partial Class FormReservasi
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Segoe UI", 20.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.DarkOliveGreen
         Label1.Location = New Point(16, 16)
         Label1.Margin = New Padding(2, 0, 2, 0)
@@ -285,7 +259,7 @@ Partial Class FormReservasi
         Panel3.Controls.Add(Label2)
         Panel3.Controls.Add(Label3)
         Panel3.Location = New Point(283, 83)
-        Panel3.Margin = New Padding(2, 2, 2, 2)
+        Panel3.Margin = New Padding(2)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(862, 550)
         Panel3.TabIndex = 2
@@ -296,7 +270,7 @@ Partial Class FormReservasi
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridView1.Columns.AddRange(New DataGridViewColumn() {reservation_id, cat_name, customer_name, check_in, check_out, status, update, hapus})
         DataGridView1.Location = New Point(46, 267)
-        DataGridView1.Margin = New Padding(2, 2, 2, 2)
+        DataGridView1.Margin = New Padding(2)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.RowHeadersWidth = 62
         DataGridView1.Size = New Size(778, 255)
@@ -377,10 +351,10 @@ Partial Class FormReservasi
         ' btnSimpan
         ' 
         btnSimpan.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(218))
-        btnSimpan.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        btnSimpan.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
         btnSimpan.ForeColor = Color.DarkOliveGreen
         btnSimpan.Location = New Point(732, 212)
-        btnSimpan.Margin = New Padding(2, 2, 2, 2)
+        btnSimpan.Margin = New Padding(2)
         btnSimpan.Name = "btnSimpan"
         btnSimpan.Size = New Size(93, 39)
         btnSimpan.TabIndex = 17
@@ -390,10 +364,10 @@ Partial Class FormReservasi
         ' btnTambahReservasi
         ' 
         btnTambahReservasi.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(218))
-        btnTambahReservasi.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        btnTambahReservasi.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
         btnTambahReservasi.ForeColor = Color.DarkOliveGreen
         btnTambahReservasi.Location = New Point(48, 36)
-        btnTambahReservasi.Margin = New Padding(2, 2, 2, 2)
+        btnTambahReservasi.Margin = New Padding(2)
         btnTambahReservasi.Name = "btnTambahReservasi"
         btnTambahReservasi.Size = New Size(176, 27)
         btnTambahReservasi.TabIndex = 16
@@ -405,7 +379,7 @@ Partial Class FormReservasi
         cbStatus.FormattingEnabled = True
         cbStatus.Items.AddRange(New Object() {"Sedang Dilayani", "Sudah Dilayani"})
         cbStatus.Location = New Point(173, 220)
-        cbStatus.Margin = New Padding(2, 2, 2, 2)
+        cbStatus.Margin = New Padding(2)
         cbStatus.Name = "cbStatus"
         cbStatus.Size = New Size(234, 28)
         cbStatus.TabIndex = 15
@@ -413,7 +387,7 @@ Partial Class FormReservasi
         ' txtRawatInap
         ' 
         txtRawatInap.Location = New Point(173, 184)
-        txtRawatInap.Margin = New Padding(2, 2, 2, 2)
+        txtRawatInap.Margin = New Padding(2)
         txtRawatInap.Name = "txtRawatInap"
         txtRawatInap.ReadOnly = True
         txtRawatInap.Size = New Size(234, 27)
@@ -422,7 +396,7 @@ Partial Class FormReservasi
         ' dtmCheckOut
         ' 
         dtmCheckOut.Location = New Point(592, 119)
-        dtmCheckOut.Margin = New Padding(2, 2, 2, 2)
+        dtmCheckOut.Margin = New Padding(2)
         dtmCheckOut.Name = "dtmCheckOut"
         dtmCheckOut.Size = New Size(234, 27)
         dtmCheckOut.TabIndex = 13
@@ -430,7 +404,7 @@ Partial Class FormReservasi
         ' dtmCheckIn
         ' 
         dtmCheckIn.Location = New Point(592, 86)
-        dtmCheckIn.Margin = New Padding(2, 2, 2, 2)
+        dtmCheckIn.Margin = New Padding(2)
         dtmCheckIn.Name = "dtmCheckIn"
         dtmCheckIn.Size = New Size(234, 27)
         dtmCheckIn.TabIndex = 12
@@ -438,7 +412,7 @@ Partial Class FormReservasi
         ' txtNamaPemilik
         ' 
         txtNamaPemilik.Location = New Point(173, 152)
-        txtNamaPemilik.Margin = New Padding(2, 2, 2, 2)
+        txtNamaPemilik.Margin = New Padding(2)
         txtNamaPemilik.Name = "txtNamaPemilik"
         txtNamaPemilik.Size = New Size(234, 27)
         txtNamaPemilik.TabIndex = 11
@@ -446,7 +420,7 @@ Partial Class FormReservasi
         ' txtNamaKucing
         ' 
         txtNamaKucing.Location = New Point(173, 119)
-        txtNamaKucing.Margin = New Padding(2, 2, 2, 2)
+        txtNamaKucing.Margin = New Padding(2)
         txtNamaKucing.Name = "txtNamaKucing"
         txtNamaKucing.Size = New Size(234, 27)
         txtNamaKucing.TabIndex = 9
@@ -454,7 +428,7 @@ Partial Class FormReservasi
         ' txtIDReservasi
         ' 
         txtIDReservasi.Location = New Point(173, 85)
-        txtIDReservasi.Margin = New Padding(2, 2, 2, 2)
+        txtIDReservasi.Margin = New Padding(2)
         txtIDReservasi.Name = "txtIDReservasi"
         txtIDReservasi.ReadOnly = True
         txtIDReservasi.Size = New Size(234, 27)
@@ -463,7 +437,7 @@ Partial Class FormReservasi
         ' Label8
         ' 
         Label8.AutoSize = True
-        Label8.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        Label8.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
         Label8.ForeColor = Color.DarkOliveGreen
         Label8.Location = New Point(46, 220)
         Label8.Margin = New Padding(2, 0, 2, 0)
@@ -475,7 +449,7 @@ Partial Class FormReservasi
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        Label7.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
         Label7.ForeColor = Color.DarkOliveGreen
         Label7.Location = New Point(46, 185)
         Label7.Margin = New Padding(2, 0, 2, 0)
@@ -487,7 +461,7 @@ Partial Class FormReservasi
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        Label6.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
         Label6.ForeColor = Color.DarkOliveGreen
         Label6.Location = New Point(471, 118)
         Label6.Margin = New Padding(2, 0, 2, 0)
@@ -499,7 +473,7 @@ Partial Class FormReservasi
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        Label5.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
         Label5.ForeColor = Color.DarkOliveGreen
         Label5.Location = New Point(471, 85)
         Label5.Margin = New Padding(2, 0, 2, 0)
@@ -511,7 +485,7 @@ Partial Class FormReservasi
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        Label4.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
         Label4.ForeColor = Color.DarkOliveGreen
         Label4.Location = New Point(46, 152)
         Label4.Margin = New Padding(2, 0, 2, 0)
@@ -523,7 +497,7 @@ Partial Class FormReservasi
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        Label2.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
         Label2.ForeColor = Color.DarkOliveGreen
         Label2.Location = New Point(48, 118)
         Label2.Margin = New Padding(2, 0, 2, 0)
@@ -535,7 +509,7 @@ Partial Class FormReservasi
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        Label3.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
         Label3.ForeColor = Color.DarkOliveGreen
         Label3.Location = New Point(48, 86)
         Label3.Margin = New Padding(2, 0, 2, 0)
@@ -553,19 +527,17 @@ Partial Class FormReservasi
         ' 
         ' FormReservasi
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1153, 643)
         Controls.Add(Panel3)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
-        Margin = New Padding(2, 2, 2, 2)
+        Margin = New Padding(2)
         Name = "FormReservasi"
         Text = " "
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
         Panel3.ResumeLayout(False)
@@ -601,8 +573,6 @@ Partial Class FormReservasi
     Friend WithEvents btnReservasi As Button
     Friend WithEvents btnProfil As Button
     Friend WithEvents btnRiwayat As Button
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label9 As Label
     Friend WithEvents reservation_id As DataGridViewTextBoxColumn
     Friend WithEvents cat_name As DataGridViewTextBoxColumn

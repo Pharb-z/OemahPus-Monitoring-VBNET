@@ -12,3 +12,6 @@
 # Temporary files
 *.tmp
 *.log
+
+# Materi kuliah (bukan bagian aplikasi)
+Materi/

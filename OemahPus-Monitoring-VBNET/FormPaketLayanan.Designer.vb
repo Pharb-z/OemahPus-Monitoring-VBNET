@@ -23,8 +23,11 @@ Partial Class FormDataPaketLayanan
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Panel1 = New Panel()
+        btnMenuReservasi = New Button()
+        btnMenuPemeriksaanKucing = New Button()
         btnMenuCustomer = New Button()
         btnMenuLayanan = New Button()
+        btnMenuLaporan = New Button()
         Label9 = New Label()
         Panel2 = New Panel()
         Label1 = New Label()
@@ -56,7 +59,7 @@ Partial Class FormDataPaketLayanan
         Label4 = New Label()
         Label3 = New Label()
         Label2 = New Label()
-        btnPemeriksaanKucing = New Button()
+        btnMenuLaporan = New Button()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         Panel3.SuspendLayout()
@@ -67,7 +70,9 @@ Partial Class FormDataPaketLayanan
         ' Panel1
         ' 
         Panel1.BackColor = Color.SeaShell
-        Panel1.Controls.Add(btnPemeriksaanKucing)
+        Panel1.Controls.Add(btnMenuLaporan)
+        Panel1.Controls.Add(btnMenuReservasi)
+        Panel1.Controls.Add(btnMenuPemeriksaanKucing)
         Panel1.Controls.Add(btnMenuCustomer)
         Panel1.Controls.Add(btnMenuLayanan)
         Panel1.Controls.Add(Label9)
@@ -76,6 +81,45 @@ Partial Class FormDataPaketLayanan
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(246, 638)
         Panel1.TabIndex = 0
+        ' 
+        ' btnMenuReservasi
+        ' 
+        btnMenuReservasi.BackColor = Color.Plum
+        btnMenuReservasi.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnMenuReservasi.ForeColor = Color.SeaShell
+        btnMenuReservasi.Location = New Point(38, 340)
+        btnMenuReservasi.Margin = New Padding(2)
+        btnMenuReservasi.Name = "btnMenuReservasi"
+        btnMenuReservasi.Size = New Size(165, 37)
+        btnMenuReservasi.TabIndex = 34
+        btnMenuReservasi.Text = "Reservasi"
+        btnMenuReservasi.UseVisualStyleBackColor = False
+        ' 
+        ' btnMenuLaporan
+        ' 
+        btnMenuLaporan.BackColor = Color.Plum
+        btnMenuLaporan.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnMenuLaporan.ForeColor = Color.SeaShell
+        btnMenuLaporan.Location = New Point(38, 400)
+        btnMenuLaporan.Margin = New Padding(2)
+        btnMenuLaporan.Name = "btnMenuLaporan"
+        btnMenuLaporan.Size = New Size(165, 37)
+        btnMenuLaporan.TabIndex = 35
+        btnMenuLaporan.Text = "Laporan"
+        btnMenuLaporan.UseVisualStyleBackColor = False
+        ' 
+        ' btnMenuPemeriksaanKucing
+        ' 
+        btnMenuPemeriksaanKucing.BackColor = Color.Plum
+        btnMenuPemeriksaanKucing.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnMenuPemeriksaanKucing.ForeColor = Color.SeaShell
+        btnMenuPemeriksaanKucing.Location = New Point(38, 280)
+        btnMenuPemeriksaanKucing.Margin = New Padding(2)
+        btnMenuPemeriksaanKucing.Name = "btnMenuPemeriksaanKucing"
+        btnMenuPemeriksaanKucing.Size = New Size(165, 37)
+        btnMenuPemeriksaanKucing.TabIndex = 3
+        btnMenuPemeriksaanKucing.Text = "Pemeriksaan Kucing"
+        btnMenuPemeriksaanKucing.UseVisualStyleBackColor = False
         ' 
         ' btnMenuCustomer
         ' 
@@ -129,12 +173,12 @@ Partial Class FormDataPaketLayanan
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
         Label1.ForeColor = Color.DarkOliveGreen
-        Label1.Location = New Point(24, 23)
+        Label1.Location = New Point(16, 16)
         Label1.Margin = New Padding(2, 0, 2, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(270, 37)
+        Label1.Size = New Size(331, 46)
         Label1.TabIndex = 1
         Label1.Text = "Data Paket Layanan"
         ' 
@@ -440,18 +484,18 @@ Partial Class FormDataPaketLayanan
         Label2.TabIndex = 0
         Label2.Text = "ID Layanan"
         ' 
-        ' btnPemeriksaanKucing
+        ' btnMenuLaporan
         ' 
-        btnPemeriksaanKucing.BackColor = Color.Plum
-        btnPemeriksaanKucing.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnPemeriksaanKucing.ForeColor = Color.SeaShell
-        btnPemeriksaanKucing.Location = New Point(38, 280)
-        btnPemeriksaanKucing.Margin = New Padding(2)
-        btnPemeriksaanKucing.Name = "btnPemeriksaanKucing"
-        btnPemeriksaanKucing.Size = New Size(165, 37)
-        btnPemeriksaanKucing.TabIndex = 3
-        btnPemeriksaanKucing.Text = "Pemeriksaan Kucing"
-        btnPemeriksaanKucing.UseVisualStyleBackColor = False
+        btnMenuLaporan.BackColor = Color.Plum
+        btnMenuLaporan.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnMenuLaporan.ForeColor = Color.SeaShell
+        btnMenuLaporan.Location = New Point(38, 400)
+        btnMenuLaporan.Margin = New Padding(2)
+        btnMenuLaporan.Name = "btnMenuLaporan"
+        btnMenuLaporan.Size = New Size(165, 37)
+        btnMenuLaporan.TabIndex = 35
+        btnMenuLaporan.Text = "Laporan"
+        btnMenuLaporan.UseVisualStyleBackColor = False
         ' 
         ' FormDataPaketLayanan
         ' 
@@ -509,6 +553,8 @@ Partial Class FormDataPaketLayanan
     Friend WithEvents Label9 As Label
     Friend WithEvents btnMenuLayanan As Button
     Friend WithEvents btnMenuCustomer As Button
-    Friend WithEvents btnPemeriksaanKucing As Button
+    Friend WithEvents btnMenuPemeriksaanKucing As Button
+    Friend WithEvents btnMenuReservasi As Button
+    Friend WithEvents btnMenuLaporan As Button
 
 End Class

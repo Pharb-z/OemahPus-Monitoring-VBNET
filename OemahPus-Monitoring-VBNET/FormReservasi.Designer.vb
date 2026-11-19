@@ -23,37 +23,25 @@ Partial Class FormReservasi
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Panel1 = New Panel()
-        Label14 = New Label()
-        Label13 = New Label()
-        Label12 = New Label()
-        Label11 = New Label()
-        Label10 = New Label()
+        btnMenuReservasi = New Button()
+        btnMenuLaporan = New Button()
         Label9 = New Label()
-        btnRiwayat = New Button()
-        btnReservasi = New Button()
-        btnProfil = New Button()
-        btnHome = New Button()
+        btnMenuPemeriksaanKucing = New Button()
+        btnMenuCustomer = New Button()
+        btnMenuLayanan = New Button()
         Panel2 = New Panel()
         Label1 = New Label()
         Panel3 = New Panel()
-        DataGridView1 = New DataGridView()
-        reservation_id = New DataGridViewTextBoxColumn()
-        cat_name = New DataGridViewTextBoxColumn()
-        customer_name = New DataGridViewTextBoxColumn()
-        check_in = New DataGridViewTextBoxColumn()
-        check_out = New DataGridViewTextBoxColumn()
-        status = New DataGridViewTextBoxColumn()
-        update = New DataGridViewButtonColumn()
-        hapus = New DataGridViewButtonColumn()
+        cmbNamaKucing = New ComboBox()
+        dgvReservasi = New DataGridView()
         btnSimpan = New Button()
-        btnTambahReservasi = New Button()
-        cbStatus = New ComboBox()
-        txtRawatInap = New TextBox()
-        dtmCheckOut = New DateTimePicker()
-        dtmCheckIn = New DateTimePicker()
+        btnTambah = New Button()
+        cmbStatus = New ComboBox()
+        txtLamaInap = New TextBox()
+        dtpCheckOut = New DateTimePicker()
+        dtpCheckIn = New DateTimePicker()
         txtNamaPemilik = New TextBox()
-        txtNamaKucing = New TextBox()
-        txtIDReservasi = New TextBox()
+        txtIdReservasi = New TextBox()
         Label8 = New Label()
         Label7 = New Label()
         Label6 = New Label()
@@ -65,171 +53,115 @@ Partial Class FormReservasi
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         Panel3.SuspendLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(dgvReservasi, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
         ' 
         Panel1.BackColor = Color.FromArgb(CByte(255), CByte(244), CByte(238))
-        Panel1.Controls.Add(Label14)
-        Panel1.Controls.Add(Label13)
-        Panel1.Controls.Add(Label12)
-        Panel1.Controls.Add(Label11)
-        Panel1.Controls.Add(Label10)
+        Panel1.Controls.Add(btnMenuLaporan)
+        Panel1.Controls.Add(btnMenuReservasi)
         Panel1.Controls.Add(Label9)
-        Panel1.Controls.Add(btnRiwayat)
-        Panel1.Controls.Add(btnReservasi)
-        Panel1.Controls.Add(btnProfil)
-        Panel1.Controls.Add(btnHome)
+        Panel1.Controls.Add(btnMenuPemeriksaanKucing)
+        Panel1.Controls.Add(btnMenuCustomer)
+        Panel1.Controls.Add(btnMenuLayanan)
         Panel1.Location = New Point(10, 10)
         Panel1.Margin = New Padding(2)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(269, 624)
+        Panel1.Size = New Size(246, 638)
         Panel1.TabIndex = 0
         ' 
-        ' Label14
+        ' btnMenuReservasi
         ' 
-        Label14.AutoSize = True
-        Label14.BackColor = Color.FromArgb(CByte(255), CByte(244), CByte(238))
-        Label14.Font = New Font("Segoe UI", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label14.ForeColor = Color.Thistle
-        Label14.Location = New Point(171, 557)
-        Label14.Margin = New Padding(2, 0, 2, 0)
-        Label14.Name = "Label14"
-        Label14.Size = New Size(32, 41)
-        Label14.TabIndex = 28
-        Label14.Text = "*"
+        btnMenuReservasi.BackColor = Color.Plum
+        btnMenuReservasi.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnMenuReservasi.ForeColor = Color.DarkOliveGreen
+        btnMenuReservasi.Location = New Point(38, 340)
+        btnMenuReservasi.Margin = New Padding(2)
+        btnMenuReservasi.Name = "btnMenuReservasi"
+        btnMenuReservasi.Size = New Size(165, 37)
+        btnMenuReservasi.TabIndex = 33
+        btnMenuReservasi.Text = "Reservasi"
+        btnMenuReservasi.UseVisualStyleBackColor = False
         ' 
-        ' Label13
+        ' btnMenuLaporan
         ' 
-        Label13.AutoSize = True
-        Label13.BackColor = Color.FromArgb(CByte(255), CByte(244), CByte(238))
-        Label13.Font = New Font("Segoe UI", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label13.ForeColor = Color.Thistle
-        Label13.Location = New Point(116, 557)
-        Label13.Margin = New Padding(2, 0, 2, 0)
-        Label13.Name = "Label13"
-        Label13.Size = New Size(32, 41)
-        Label13.TabIndex = 27
-        Label13.Text = "*"
-        ' 
-        ' Label12
-        ' 
-        Label12.AutoSize = True
-        Label12.BackColor = Color.FromArgb(CByte(255), CByte(244), CByte(238))
-        Label12.Font = New Font("Segoe UI", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label12.ForeColor = Color.Thistle
-        Label12.Location = New Point(57, 558)
-        Label12.Margin = New Padding(2, 0, 2, 0)
-        Label12.Name = "Label12"
-        Label12.Size = New Size(32, 41)
-        Label12.TabIndex = 26
-        Label12.Text = "*"
-        ' 
-        ' Label11
-        ' 
-        Label11.AutoSize = True
-        Label11.BackColor = Color.FromArgb(CByte(255), CByte(244), CByte(238))
-        Label11.Font = New Font("Segoe UI", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label11.ForeColor = Color.Thistle
-        Label11.Location = New Point(142, 114)
-        Label11.Margin = New Padding(2, 0, 2, 0)
-        Label11.Name = "Label11"
-        Label11.Size = New Size(32, 41)
-        Label11.TabIndex = 25
-        Label11.Text = "*"
-        ' 
-        ' Label10
-        ' 
-        Label10.AutoSize = True
-        Label10.BackColor = Color.FromArgb(CByte(255), CByte(244), CByte(238))
-        Label10.Font = New Font("Segoe UI", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label10.ForeColor = Color.Thistle
-        Label10.Location = New Point(104, 114)
-        Label10.Margin = New Padding(2, 0, 2, 0)
-        Label10.Name = "Label10"
-        Label10.Size = New Size(32, 41)
-        Label10.TabIndex = 1
-        Label10.Text = "*"
+        btnMenuLaporan.BackColor = Color.Plum
+        btnMenuLaporan.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnMenuLaporan.ForeColor = Color.SeaShell
+        btnMenuLaporan.Location = New Point(38, 400)
+        btnMenuLaporan.Margin = New Padding(2)
+        btnMenuLaporan.Name = "btnMenuLaporan"
+        btnMenuLaporan.Size = New Size(165, 37)
+        btnMenuLaporan.TabIndex = 34
+        btnMenuLaporan.Text = "Laporan"
+        btnMenuLaporan.UseVisualStyleBackColor = False
         ' 
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Font = New Font("Broadway", 36.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label9.ForeColor = Color.Thistle
-        Label9.Location = New Point(25, 36)
+        Label9.Font = New Font("Snap ITC", 36F)
+        Label9.ForeColor = Color.Plum
+        Label9.Location = New Point(29, 50)
         Label9.Margin = New Padding(2, 0, 2, 0)
         Label9.Name = "Label9"
-        Label9.Size = New Size(159, 68)
-        Label9.TabIndex = 1
+        Label9.Size = New Size(181, 77)
+        Label9.TabIndex = 32
         Label9.Text = "OMI"
         ' 
-        ' btnRiwayat
+        ' btnMenuPemeriksaanKucing
         ' 
-        btnRiwayat.BackColor = Color.Thistle
-        btnRiwayat.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnRiwayat.ForeColor = Color.SeaShell
-        btnRiwayat.Location = New Point(38, 366)
-        btnRiwayat.Margin = New Padding(2)
-        btnRiwayat.Name = "btnRiwayat"
-        btnRiwayat.Size = New Size(194, 36)
-        btnRiwayat.TabIndex = 21
-        btnRiwayat.Text = "Riwayat Penitipan"
-        btnRiwayat.UseVisualStyleBackColor = False
+        btnMenuPemeriksaanKucing.BackColor = Color.Plum
+        btnMenuPemeriksaanKucing.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnMenuPemeriksaanKucing.ForeColor = Color.SeaShell
+        btnMenuPemeriksaanKucing.Location = New Point(38, 280)
+        btnMenuPemeriksaanKucing.Margin = New Padding(2)
+        btnMenuPemeriksaanKucing.Name = "btnMenuPemeriksaanKucing"
+        btnMenuPemeriksaanKucing.Size = New Size(165, 37)
+        btnMenuPemeriksaanKucing.TabIndex = 31
+        btnMenuPemeriksaanKucing.Text = "Pemeriksaan Kucing"
+        btnMenuPemeriksaanKucing.UseVisualStyleBackColor = False
         ' 
-        ' btnReservasi
+        ' btnMenuCustomer
         ' 
-        btnReservasi.BackColor = Color.Thistle
-        btnReservasi.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnReservasi.ForeColor = Color.SeaShell
-        btnReservasi.Location = New Point(38, 294)
-        btnReservasi.Margin = New Padding(2)
-        btnReservasi.Name = "btnReservasi"
-        btnReservasi.Size = New Size(194, 37)
-        btnReservasi.TabIndex = 20
-        btnReservasi.Text = "Reservasi"
-        btnReservasi.UseVisualStyleBackColor = False
+        btnMenuCustomer.BackColor = Color.Plum
+        btnMenuCustomer.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnMenuCustomer.ForeColor = Color.SeaShell
+        btnMenuCustomer.Location = New Point(38, 220)
+        btnMenuCustomer.Margin = New Padding(2)
+        btnMenuCustomer.Name = "btnMenuCustomer"
+        btnMenuCustomer.Size = New Size(165, 37)
+        btnMenuCustomer.TabIndex = 30
+        btnMenuCustomer.Text = "Customer"
+        btnMenuCustomer.UseVisualStyleBackColor = False
         ' 
-        ' btnProfil
+        ' btnMenuLayanan
         ' 
-        btnProfil.BackColor = Color.Thistle
-        btnProfil.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnProfil.ForeColor = Color.SeaShell
-        btnProfil.Location = New Point(38, 226)
-        btnProfil.Margin = New Padding(2)
-        btnProfil.Name = "btnProfil"
-        btnProfil.Size = New Size(194, 37)
-        btnProfil.TabIndex = 19
-        btnProfil.Text = "Profil Kucing"
-        btnProfil.UseVisualStyleBackColor = False
-        ' 
-        ' btnHome
-        ' 
-        btnHome.BackColor = Color.Thistle
-        btnHome.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnHome.ForeColor = Color.SeaShell
-        btnHome.Location = New Point(38, 159)
-        btnHome.Margin = New Padding(2)
-        btnHome.Name = "btnHome"
-        btnHome.Size = New Size(194, 37)
-        btnHome.TabIndex = 18
-        btnHome.Text = "Home"
-        btnHome.UseVisualStyleBackColor = False
+        btnMenuLayanan.BackColor = Color.Plum
+        btnMenuLayanan.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnMenuLayanan.ForeColor = Color.SeaShell
+        btnMenuLayanan.Location = New Point(38, 160)
+        btnMenuLayanan.Margin = New Padding(2)
+        btnMenuLayanan.Name = "btnMenuLayanan"
+        btnMenuLayanan.Size = New Size(165, 37)
+        btnMenuLayanan.TabIndex = 29
+        btnMenuLayanan.Text = "Paket Layanan"
+        btnMenuLayanan.UseVisualStyleBackColor = False
         ' 
         ' Panel2
         ' 
         Panel2.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(218))
         Panel2.Controls.Add(Label1)
-        Panel2.Location = New Point(283, 10)
+        Panel2.Location = New Point(260, 10)
         Panel2.Margin = New Padding(2)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(862, 69)
+        Panel2.Size = New Size(890, 84)
         Panel2.TabIndex = 1
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 20.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.DarkOliveGreen
         Label1.Location = New Point(16, 16)
         Label1.Margin = New Padding(2, 0, 2, 0)
@@ -241,16 +173,16 @@ Partial Class FormReservasi
         ' Panel3
         ' 
         Panel3.BackColor = Color.FromArgb(CByte(229), CByte(222), CByte(239))
-        Panel3.Controls.Add(DataGridView1)
+        Panel3.Controls.Add(cmbNamaKucing)
+        Panel3.Controls.Add(dgvReservasi)
         Panel3.Controls.Add(btnSimpan)
-        Panel3.Controls.Add(btnTambahReservasi)
-        Panel3.Controls.Add(cbStatus)
-        Panel3.Controls.Add(txtRawatInap)
-        Panel3.Controls.Add(dtmCheckOut)
-        Panel3.Controls.Add(dtmCheckIn)
+        Panel3.Controls.Add(btnTambah)
+        Panel3.Controls.Add(cmbStatus)
+        Panel3.Controls.Add(txtLamaInap)
+        Panel3.Controls.Add(dtpCheckOut)
+        Panel3.Controls.Add(dtpCheckIn)
         Panel3.Controls.Add(txtNamaPemilik)
-        Panel3.Controls.Add(txtNamaKucing)
-        Panel3.Controls.Add(txtIDReservasi)
+        Panel3.Controls.Add(txtIdReservasi)
         Panel3.Controls.Add(Label8)
         Panel3.Controls.Add(Label7)
         Panel3.Controls.Add(Label6)
@@ -258,100 +190,36 @@ Partial Class FormReservasi
         Panel3.Controls.Add(Label4)
         Panel3.Controls.Add(Label2)
         Panel3.Controls.Add(Label3)
-        Panel3.Location = New Point(283, 83)
+        Panel3.Location = New Point(260, 98)
         Panel3.Margin = New Padding(2)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(862, 550)
+        Panel3.Size = New Size(890, 554)
         Panel3.TabIndex = 2
         ' 
-        ' DataGridView1
+        ' cmbNamaKucing
         ' 
-        DataGridView1.BackgroundColor = SystemColors.ControlLightLight
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Columns.AddRange(New DataGridViewColumn() {reservation_id, cat_name, customer_name, check_in, check_out, status, update, hapus})
-        DataGridView1.Location = New Point(46, 267)
-        DataGridView1.Margin = New Padding(2)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.RowHeadersWidth = 62
-        DataGridView1.Size = New Size(778, 255)
-        DataGridView1.TabIndex = 3
+        cmbNamaKucing.DropDownStyle = ComboBoxStyle.DropDownList
+        cmbNamaKucing.FormattingEnabled = True
+        cmbNamaKucing.Location = New Point(173, 117)
+        cmbNamaKucing.Name = "cmbNamaKucing"
+        cmbNamaKucing.Size = New Size(234, 28)
+        cmbNamaKucing.TabIndex = 18
         ' 
-        ' reservation_id
+        ' dgvReservasi
         ' 
-        reservation_id.HeaderText = "ID Reservasi"
-        reservation_id.MinimumWidth = 8
-        reservation_id.Name = "reservation_id"
-        reservation_id.ReadOnly = True
-        reservation_id.Width = 90
-        ' 
-        ' cat_name
-        ' 
-        cat_name.HeaderText = "Nama Kucing"
-        cat_name.MinimumWidth = 8
-        cat_name.Name = "cat_name"
-        cat_name.ReadOnly = True
-        cat_name.Width = 170
-        ' 
-        ' customer_name
-        ' 
-        customer_name.HeaderText = "Nama Pemilik"
-        customer_name.MinimumWidth = 8
-        customer_name.Name = "customer_name"
-        customer_name.ReadOnly = True
-        customer_name.Width = 170
-        ' 
-        ' check_in
-        ' 
-        check_in.HeaderText = "Check-In"
-        check_in.MinimumWidth = 8
-        check_in.Name = "check_in"
-        check_in.ReadOnly = True
-        check_in.Width = 150
-        ' 
-        ' check_out
-        ' 
-        check_out.HeaderText = "Check-Out"
-        check_out.MinimumWidth = 8
-        check_out.Name = "check_out"
-        check_out.ReadOnly = True
-        check_out.Width = 150
-        ' 
-        ' status
-        ' 
-        status.HeaderText = "Status"
-        status.MinimumWidth = 8
-        status.Name = "status"
-        status.ReadOnly = True
-        status.Width = 120
-        ' 
-        ' update
-        ' 
-        update.HeaderText = "Update"
-        update.MinimumWidth = 8
-        update.Name = "update"
-        update.ReadOnly = True
-        update.Resizable = DataGridViewTriState.True
-        update.SortMode = DataGridViewColumnSortMode.Automatic
-        update.Text = "Update"
-        update.UseColumnTextForButtonValue = True
-        update.Width = 80
-        ' 
-        ' hapus
-        ' 
-        hapus.HeaderText = "Hapus"
-        hapus.MinimumWidth = 8
-        hapus.Name = "hapus"
-        hapus.ReadOnly = True
-        hapus.Resizable = DataGridViewTriState.True
-        hapus.SortMode = DataGridViewColumnSortMode.Automatic
-        hapus.Text = "Hapus"
-        hapus.UseColumnTextForButtonValue = True
-        hapus.Width = 80
+        dgvReservasi.BackgroundColor = SystemColors.ControlLightLight
+        dgvReservasi.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvReservasi.Location = New Point(46, 267)
+        dgvReservasi.Margin = New Padding(2)
+        dgvReservasi.Name = "dgvReservasi"
+        dgvReservasi.RowHeadersWidth = 62
+        dgvReservasi.Size = New Size(778, 255)
+        dgvReservasi.TabIndex = 3
         ' 
         ' btnSimpan
         ' 
         btnSimpan.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(218))
-        btnSimpan.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
+        btnSimpan.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
         btnSimpan.ForeColor = Color.DarkOliveGreen
         btnSimpan.Location = New Point(732, 212)
         btnSimpan.Margin = New Padding(2)
@@ -361,83 +229,77 @@ Partial Class FormReservasi
         btnSimpan.Text = "Simpan"
         btnSimpan.UseVisualStyleBackColor = False
         ' 
-        ' btnTambahReservasi
+        ' btnTambah
         ' 
-        btnTambahReservasi.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(218))
-        btnTambahReservasi.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
-        btnTambahReservasi.ForeColor = Color.DarkOliveGreen
-        btnTambahReservasi.Location = New Point(48, 36)
-        btnTambahReservasi.Margin = New Padding(2)
-        btnTambahReservasi.Name = "btnTambahReservasi"
-        btnTambahReservasi.Size = New Size(176, 27)
-        btnTambahReservasi.TabIndex = 16
-        btnTambahReservasi.Text = "+ Tambah Reservasi"
-        btnTambahReservasi.UseVisualStyleBackColor = False
+        btnTambah.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(218))
+        btnTambah.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        btnTambah.ForeColor = Color.DarkOliveGreen
+        btnTambah.Location = New Point(48, 36)
+        btnTambah.Margin = New Padding(2)
+        btnTambah.Name = "btnTambah"
+        btnTambah.Size = New Size(176, 33)
+        btnTambah.TabIndex = 16
+        btnTambah.Text = "+ Tambah Reservasi"
+        btnTambah.UseVisualStyleBackColor = False
         ' 
-        ' cbStatus
+        ' cmbStatus
         ' 
-        cbStatus.FormattingEnabled = True
-        cbStatus.Items.AddRange(New Object() {"Sedang Dilayani", "Sudah Dilayani"})
-        cbStatus.Location = New Point(173, 220)
-        cbStatus.Margin = New Padding(2)
-        cbStatus.Name = "cbStatus"
-        cbStatus.Size = New Size(234, 28)
-        cbStatus.TabIndex = 15
+        cmbStatus.DropDownStyle = ComboBoxStyle.DropDownList
+        cmbStatus.FormattingEnabled = True
+        cmbStatus.Items.AddRange(New Object() {"Sedang Dilayani", "Sudah Dilayani"})
+        cmbStatus.Location = New Point(173, 220)
+        cmbStatus.Margin = New Padding(2)
+        cmbStatus.Name = "cmbStatus"
+        cmbStatus.Size = New Size(234, 28)
+        cmbStatus.TabIndex = 15
         ' 
-        ' txtRawatInap
+        ' txtLamaInap
         ' 
-        txtRawatInap.Location = New Point(173, 184)
-        txtRawatInap.Margin = New Padding(2)
-        txtRawatInap.Name = "txtRawatInap"
-        txtRawatInap.ReadOnly = True
-        txtRawatInap.Size = New Size(234, 27)
-        txtRawatInap.TabIndex = 14
+        txtLamaInap.Location = New Point(173, 184)
+        txtLamaInap.Margin = New Padding(2)
+        txtLamaInap.Name = "txtLamaInap"
+        txtLamaInap.ReadOnly = True
+        txtLamaInap.Size = New Size(234, 27)
+        txtLamaInap.TabIndex = 14
         ' 
-        ' dtmCheckOut
+        ' dtpCheckOut
         ' 
-        dtmCheckOut.Location = New Point(592, 119)
-        dtmCheckOut.Margin = New Padding(2)
-        dtmCheckOut.Name = "dtmCheckOut"
-        dtmCheckOut.Size = New Size(234, 27)
-        dtmCheckOut.TabIndex = 13
+        dtpCheckOut.Location = New Point(592, 119)
+        dtpCheckOut.Margin = New Padding(2)
+        dtpCheckOut.Name = "dtpCheckOut"
+        dtpCheckOut.Size = New Size(234, 27)
+        dtpCheckOut.TabIndex = 13
         ' 
-        ' dtmCheckIn
+        ' dtpCheckIn
         ' 
-        dtmCheckIn.Location = New Point(592, 86)
-        dtmCheckIn.Margin = New Padding(2)
-        dtmCheckIn.Name = "dtmCheckIn"
-        dtmCheckIn.Size = New Size(234, 27)
-        dtmCheckIn.TabIndex = 12
+        dtpCheckIn.Location = New Point(592, 86)
+        dtpCheckIn.Margin = New Padding(2)
+        dtpCheckIn.Name = "dtpCheckIn"
+        dtpCheckIn.Size = New Size(234, 27)
+        dtpCheckIn.TabIndex = 12
         ' 
         ' txtNamaPemilik
         ' 
         txtNamaPemilik.Location = New Point(173, 152)
         txtNamaPemilik.Margin = New Padding(2)
         txtNamaPemilik.Name = "txtNamaPemilik"
+        txtNamaPemilik.ReadOnly = True
         txtNamaPemilik.Size = New Size(234, 27)
         txtNamaPemilik.TabIndex = 11
         ' 
-        ' txtNamaKucing
+        ' txtIdReservasi
         ' 
-        txtNamaKucing.Location = New Point(173, 119)
-        txtNamaKucing.Margin = New Padding(2)
-        txtNamaKucing.Name = "txtNamaKucing"
-        txtNamaKucing.Size = New Size(234, 27)
-        txtNamaKucing.TabIndex = 9
-        ' 
-        ' txtIDReservasi
-        ' 
-        txtIDReservasi.Location = New Point(173, 85)
-        txtIDReservasi.Margin = New Padding(2)
-        txtIDReservasi.Name = "txtIDReservasi"
-        txtIDReservasi.ReadOnly = True
-        txtIDReservasi.Size = New Size(234, 27)
-        txtIDReservasi.TabIndex = 8
+        txtIdReservasi.Location = New Point(173, 85)
+        txtIdReservasi.Margin = New Padding(2)
+        txtIdReservasi.Name = "txtIdReservasi"
+        txtIdReservasi.ReadOnly = True
+        txtIdReservasi.Size = New Size(234, 27)
+        txtIdReservasi.TabIndex = 8
         ' 
         ' Label8
         ' 
         Label8.AutoSize = True
-        Label8.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
+        Label8.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
         Label8.ForeColor = Color.DarkOliveGreen
         Label8.Location = New Point(46, 220)
         Label8.Margin = New Padding(2, 0, 2, 0)
@@ -449,7 +311,7 @@ Partial Class FormReservasi
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
+        Label7.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
         Label7.ForeColor = Color.DarkOliveGreen
         Label7.Location = New Point(46, 185)
         Label7.Margin = New Padding(2, 0, 2, 0)
@@ -461,7 +323,7 @@ Partial Class FormReservasi
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
+        Label6.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
         Label6.ForeColor = Color.DarkOliveGreen
         Label6.Location = New Point(471, 118)
         Label6.Margin = New Padding(2, 0, 2, 0)
@@ -473,7 +335,7 @@ Partial Class FormReservasi
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
+        Label5.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
         Label5.ForeColor = Color.DarkOliveGreen
         Label5.Location = New Point(471, 85)
         Label5.Margin = New Padding(2, 0, 2, 0)
@@ -485,7 +347,7 @@ Partial Class FormReservasi
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
+        Label4.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
         Label4.ForeColor = Color.DarkOliveGreen
         Label4.Location = New Point(46, 152)
         Label4.Margin = New Padding(2, 0, 2, 0)
@@ -497,7 +359,7 @@ Partial Class FormReservasi
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
+        Label2.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
         Label2.ForeColor = Color.DarkOliveGreen
         Label2.Location = New Point(48, 118)
         Label2.Margin = New Padding(2, 0, 2, 0)
@@ -509,7 +371,7 @@ Partial Class FormReservasi
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
+        Label3.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
         Label3.ForeColor = Color.DarkOliveGreen
         Label3.Location = New Point(48, 86)
         Label3.Margin = New Padding(2, 0, 2, 0)
@@ -527,14 +389,15 @@ Partial Class FormReservasi
         ' 
         ' FormReservasi
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1153, 643)
+        ClientSize = New Size(1156, 658)
         Controls.Add(Panel3)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
         Margin = New Padding(2)
         Name = "FormReservasi"
+        StartPosition = FormStartPosition.CenterScreen
         Text = " "
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
@@ -542,7 +405,7 @@ Partial Class FormReservasi
         Panel2.PerformLayout()
         Panel3.ResumeLayout(False)
         Panel3.PerformLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(dgvReservasi, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -555,36 +418,24 @@ Partial Class FormReservasi
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents txtNamaKucing As TextBox
-    Friend WithEvents txtIDReservasi As TextBox
+    Friend WithEvents txtIdReservasi As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents txtRawatInap As TextBox
-    Friend WithEvents dtmCheckOut As DateTimePicker
-    Friend WithEvents dtmCheckIn As DateTimePicker
+    Friend WithEvents txtLamaInap As TextBox
+    Friend WithEvents dtpCheckOut As DateTimePicker
+    Friend WithEvents dtpCheckIn As DateTimePicker
     Friend WithEvents txtNamaPemilik As TextBox
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents cbStatus As ComboBox
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents cmbStatus As ComboBox
+    Friend WithEvents dgvReservasi As DataGridView
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents btnTambahReservasi As Button
+    Friend WithEvents btnTambah As Button
     Friend WithEvents btnSimpan As Button
-    Friend WithEvents btnHome As Button
-    Friend WithEvents btnReservasi As Button
-    Friend WithEvents btnProfil As Button
-    Friend WithEvents btnRiwayat As Button
+    Friend WithEvents btnMenuPemeriksaanKucing As Button
+    Friend WithEvents btnMenuCustomer As Button
+    Friend WithEvents btnMenuLayanan As Button
     Friend WithEvents Label9 As Label
-    Friend WithEvents reservation_id As DataGridViewTextBoxColumn
-    Friend WithEvents cat_name As DataGridViewTextBoxColumn
-    Friend WithEvents customer_name As DataGridViewTextBoxColumn
-    Friend WithEvents check_in As DataGridViewTextBoxColumn
-    Friend WithEvents check_out As DataGridViewTextBoxColumn
-    Friend WithEvents status As DataGridViewTextBoxColumn
-    Friend WithEvents update As DataGridViewButtonColumn
-    Friend WithEvents hapus As DataGridViewButtonColumn
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label11 As Label
+    Friend WithEvents btnMenuReservasi As Button
+    Friend WithEvents btnMenuLaporan As Button
+    Friend WithEvents cmbNamaKucing As ComboBox
 End Class

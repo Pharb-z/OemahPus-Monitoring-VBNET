@@ -588,4 +588,27 @@ Public Class FormMedisKucing
 
     End Sub
 
+    ' =========================
+    ' NAVIGASI SIDEBAR
+    ' =========================
+    Private Sub btnMenuLayanan_Click(sender As Object, e As EventArgs) Handles btnMenuLayanan.Click
+        Navigator.Go(Me, "layanan", Function() New FormDataPaketLayanan())
+    End Sub
+
+    Private Sub btnMenuCustomer_Click(sender As Object, e As EventArgs) Handles btnMenuCustomer.Click
+        Navigator.Go(Me, "customer", Function() New FormCustomer())
+    End Sub
+
+    Private Sub btnMenuPemeriksaanKucing_Click(sender As Object, e As EventArgs) Handles btnMenuPemeriksaanKucing.Click
+        Navigator.Go(Me, "medis", Function() New FormMedisKucing())
+    End Sub
+
+    Private Sub btnMenuReservasi_Click(sender As Object, e As EventArgs) Handles btnMenuReservasi.Click
+        Navigator.Go(Me, "reservasi", Function() New FormReservasi())
+    End Sub
+
+    Private Sub btnMenuLaporan_Click(sender As Object, e As EventArgs) Handles btnMenuLaporan.Click
+        Navigator.Go(Me, "laporan", Function() New FormReport())
+    End Sub
+
 End Class

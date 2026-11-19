@@ -296,14 +296,19 @@ Public Class FormDataPaketLayanan
 
     ' ===================== NAVIGASI SIDEBAR =====================
     Private Sub btnMenuLayanan_Click(sender As Object, e As EventArgs) Handles btnMenuLayanan.Click
-        Navigator.NavigateTo(Me, "layanan")
+        Navigator.Go(Me, "layanan", Function() New FormDataPaketLayanan())
     End Sub
 
     Private Sub btnMenuCustomer_Click(sender As Object, e As EventArgs) Handles btnMenuCustomer.Click
-        If Navigator.GetRegistered("customer") Is Nothing Then
-            Navigator.Register("customer", New FormCustomer())
-        End If
-        Navigator.NavigateTo(Me, "customer")
+        Navigator.Go(Me, "customer", Function() New FormCustomer())
+    End Sub
+
+    Private Sub btnMenuReservasi_Click(sender As Object, e As EventArgs) Handles btnMenuReservasi.Click
+        Navigator.Go(Me, "reservasi", Function() New FormReservasi())
+    End Sub
+
+    Private Sub btnMenuLaporan_Click(sender As Object, e As EventArgs) Handles btnMenuLaporan.Click
+        Navigator.Go(Me, "laporan", Function() New FormReport())
     End Sub
 
     Private Sub FormDataPaketLayanan_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
@@ -314,15 +319,7 @@ Public Class FormDataPaketLayanan
 
     End Sub
 
-    Private Sub btnPemeriksaanKucing_Click(sender As Object, e As EventArgs) Handles btnPemeriksaanKucing.Click
-        Dim formMedis As Form = Navigator.GetRegistered("medis")
-
-        If formMedis Is Nothing Then
-            formMedis = New FormMedisKucing()
-            Navigator.Register("medis", formMedis)
-        End If
-
-        formMedis.Show()
-        Me.Hide()
+    Private Sub btnPemeriksaanKucing_Click(sender As Object, e As EventArgs) Handles btnMenuPemeriksaanKucing.Click
+        Navigator.Go(Me, "medis", Function() New FormMedisKucing())
     End Sub
 End Class

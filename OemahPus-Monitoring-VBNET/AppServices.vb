@@ -2,45 +2,17 @@ Imports System.Data
 Imports System.Windows.Forms
 Imports MySql.Data.MySqlClient
 
+''' <summary>
+''' Helper akses database. Skema tabel dikelola lewat script
+''' backup_OMIDB.sql (bukan dibuat otomatis oleh aplikasi), sehingga
+''' di sini hanya tersedia fungsi query.
+''' </summary>
 Module DatabaseHelper
     Private Function OpenConnection() As MySqlConnection
         Dim connection As New MySqlConnection(ModuleKoneksi.strKoneksi)
         connection.Open()
         Return connection
     End Function
-
-    Public Sub EnsureDatabaseSchema()
-        Using connection As MySqlConnection = OpenConnection()
-            Using command As New MySqlCommand(
-                "CREATE TABLE IF NOT EXISTS customers (" &
-                "customer_id INT NOT NULL AUTO_INCREMENT, " &
-                "full_name VARCHAR(100) NOT NULL, " &
-                "phone VARCHAR(25) NOT NULL, " &
-                "address VARCHAR(255) NOT NULL, " &
-                "username VARCHAR(50) NOT NULL, " &
-                "email VARCHAR(120) NOT NULL, " &
-                "PRIMARY KEY (customer_id), " &
-                "UNIQUE KEY uq_customers_username (username), " &
-                "UNIQUE KEY uq_customers_email (email)" &
-                ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", connection)
-                command.ExecuteNonQuery()
-            End Using
-
-            Using command As New MySqlCommand(
-                "CREATE TABLE IF NOT EXISTS services (" &
-                "service_id INT NOT NULL AUTO_INCREMENT, " &
-                "service_name VARCHAR(100) NOT NULL, " &
-                "service_type VARCHAR(50) NOT NULL, " &
-                "price DECIMAL(15,2) NOT NULL DEFAULT 0, " &
-                "unit VARCHAR(50) NOT NULL, " &
-                "is_active TINYINT(1) NOT NULL DEFAULT 1, " &
-                "PRIMARY KEY (service_id), " &
-                "UNIQUE KEY uq_services_name (service_name)" &
-                ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", connection)
-                command.ExecuteNonQuery()
-            End Using
-        End Using
-    End Sub
 
     Public Function P(name As String, value As Object) As MySqlParameter
         Return New MySqlParameter(name, If(value Is Nothing, DBNull.Value, value))
@@ -74,6 +46,7 @@ End Module
 
 Module Navigator
     Private ReadOnly forms As New Dictionary(Of String, Form)()
+    Private _suppressRefresh As String = String.Empty
 
     Public Sub Register(key As String, form As Form)
         If String.IsNullOrWhiteSpace(key) OrElse form Is Nothing Then Return
@@ -87,11 +60,61 @@ Module Navigator
         Return Nothing
     End Function
 
+    ''' <summary>
+    ''' Menandai bahwa form tujuan baru saja dinavigasi dari form sumber,
+    ''' sehingga form sumber tidak perlu memuat ulang datanya saat kembali.
+    ''' </summary>
+    Public Sub MarkNavigatedFrom(sourceKey As String)
+        _suppressRefresh = If(sourceKey, String.Empty)
+    End Sub
+
+    ''' <summary>
+    ''' Dipanggil form saat kembali terlihat. Mengembalikan True jika form ini
+    ''' adalah tujuan navigasi terakhir dan datanya sebaiknya tidak di-refresh.
+    ''' </summary>
+    Public Function ConsumeSuppressRefresh(forKey As String) As Boolean
+        If _suppressRefresh = String.Empty Then Return False
+        Dim suppress As Boolean = String.Equals(_suppressRefresh, forKey, StringComparison.Ordinal)
+        _suppressRefresh = String.Empty
+        Return suppress
+    End Function
+
     Public Sub NavigateTo(current As Form, key As String)
         Dim target As Form = GetRegistered(key)
         If target Is Nothing Then Return
         If target Is current Then Return
         target.Show()
         current.Hide()
+    End Sub
+
+    Public Sub Go(current As Form, key As String, create As Func(Of Form))
+        Go(current, key, create, String.Empty)
+    End Sub
+
+    ''' <summary>
+    ''' Menampilkan form tujuan. Jika form belum terdaftar, form dibuat lewat
+    ''' <paramref name="create"/> lalu didaftarkan (sebelum ditampilkan), sehingga
+    ''' pemanggil tetap bisa mengisi data form terlebih dahulu.
+    ''' </summary>
+    Public Sub Go(current As Form, key As String, create As Func(Of Form), sourceKey As String)
+        Dim target As Form = GetRegistered(key)
+        If target Is Nothing Then
+            target = create()
+            Register(key, target)
+        End If
+        If target Is current Then Return
+        target.Show()
+        If current IsNot Nothing Then current.Hide()
+        If Not String.IsNullOrWhiteSpace(sourceKey) Then MarkNavigatedFrom(sourceKey)
+    End Sub
+
+    ''' <summary>Menampilkan form yang sudah dibuat/diisi tanpa membuat ulang.</summary>
+    Public Sub GoWithInstance(current As Form, key As String, target As Form, sourceKey As String)
+        If target Is Nothing Then Return
+        Register(key, target)
+        If target Is current Then Return
+        target.Show()
+        If current IsNot Nothing Then current.Hide()
+        If Not String.IsNullOrWhiteSpace(sourceKey) Then MarkNavigatedFrom(sourceKey)
     End Sub
 End Module

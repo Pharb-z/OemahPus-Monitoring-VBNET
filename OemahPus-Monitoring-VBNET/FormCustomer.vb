@@ -13,6 +13,7 @@ Public Class FormCustomer
         txtIdCustomer.ReadOnly = True
         LoadGrid()
         ClearForm()
+        initDone = True
     End Sub
 
     Private Sub FormCustomer_VisibleChanged(sender As Object, e As EventArgs) Handles MyBase.VisibleChanged
@@ -50,7 +51,6 @@ Public Class FormCustomer
             SetHeader("address", "Alamat")
             SetHeader("email", "Email")
             dgvCustomer.ClearSelection()
-            initDone = True
         Catch ex As Exception
             MessageBox.Show("Gagal memuat data customer: " & ex.Message, "Error",
                             MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -131,7 +131,7 @@ Public Class FormCustomer
                 "SELECT COUNT(*) FROM customers WHERE (email=@email) AND customer_id<>@id",
                 P("@email", email), P("@id", selectedId)))
             If duplicate > 0 Then
-                ep.SetError(txtEmail, "Nama akun atau email sudah digunakan.")
+                ep.SetError(txtEmail, "Email sudah dipakai customer lain.")
                 valid = False
             End If
         End If
@@ -208,14 +208,23 @@ Public Class FormCustomer
     End Sub
 
     Private Sub btnMenuLayanan_Click(sender As Object, e As EventArgs) Handles btnMenuLayanan.Click
-        If Navigator.GetRegistered("layanan") Is Nothing Then
-            Navigator.Register("layanan", New FormDataPaketLayanan())
-        End If
-        Navigator.NavigateTo(Me, "layanan")
+        Navigator.Go(Me, "layanan", Function() New FormDataPaketLayanan())
     End Sub
 
     Private Sub btnMenuCustomer_Click(sender As Object, e As EventArgs) Handles btnMenuCustomer.Click
-        Show()
+        Navigator.Go(Me, "customer", Function() New FormCustomer())
+    End Sub
+
+    Private Sub btnMenuPemeriksaanKucing_Click(sender As Object, e As EventArgs) Handles btnMenuPemeriksaanKucing.Click
+        Navigator.Go(Me, "medis", Function() New FormMedisKucing())
+    End Sub
+
+    Private Sub btnMenuReservasi_Click(sender As Object, e As EventArgs) Handles btnMenuReservasi.Click
+        Navigator.Go(Me, "reservasi", Function() New FormReservasi())
+    End Sub
+
+    Private Sub btnMenuLaporan_Click(sender As Object, e As EventArgs) Handles btnMenuLaporan.Click
+        Navigator.Go(Me, "laporan", Function() New FormReport())
     End Sub
 
     Private Sub ShowDatabaseError(ex As MySqlException)

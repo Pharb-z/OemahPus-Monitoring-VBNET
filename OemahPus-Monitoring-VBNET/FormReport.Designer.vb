@@ -23,228 +23,393 @@ Partial Class FormReport
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Panel1 = New Panel()
-        Panel2 = New Panel()
-        Panel3 = New Panel()
+        btnMenuLaporan = New Button()
+        btnMenuReservasi = New Button()
+        btnMenuPemeriksaanKucing = New Button()
+        btnMenuCustomer = New Button()
+        btnMenuLayanan = New Button()
         Label1 = New Label()
-        Button1 = New Button()
-        Button2 = New Button()
-        Button3 = New Button()
-        Button4 = New Button()
+        Panel2 = New Panel()
         Label2 = New Label()
-        ComboBox1 = New ComboBox()
-        DataGridView1 = New DataGridView()
-        TextBox1 = New TextBox()
-        Button5 = New Button()
-        Button6 = New Button()
-        IDReservasi = New DataGridViewTextBoxColumn()
-        NamaCustomer = New DataGridViewTextBoxColumn()
-        TanggalReservasi = New DataGridViewTextBoxColumn()
-        TotalTagihan = New DataGridViewTextBoxColumn()
-        StatusPembayaran = New DataGridViewTextBoxColumn()
+        Panel3 = New Panel()
+        lblTotalCaption = New Label()
+        lblGrandTotal = New Label()
+        lblJumlahCaption = New Label()
+        lblJumlahReservasi = New Label()
+        lblRingkasanCaption = New Label()
+        lblRingkasanNilai = New Label()
+        btnExport = New Button()
+        btnCetak = New Button()
+        btnReset = New Button()
+        lblPeriodeCaption = New Label()
+        dtpDari = New DateTimePicker()
+        lblSampai = New Label()
+        dtpSampai = New DateTimePicker()
+        lblCariCaption = New Label()
+        txtCari = New TextBox()
+        cmbJenis = New ComboBox()
+        dgvLaporan = New DataGridView()
+        lblStatus = New Label()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         Panel3.SuspendLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(dgvLaporan, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
         ' 
         Panel1.BackColor = Color.SeaShell
-        Panel1.Controls.Add(Button4)
-        Panel1.Controls.Add(Button3)
-        Panel1.Controls.Add(Button2)
-        Panel1.Controls.Add(Button1)
+        Panel1.Controls.Add(btnMenuLaporan)
+        Panel1.Controls.Add(btnMenuReservasi)
+        Panel1.Controls.Add(btnMenuPemeriksaanKucing)
+        Panel1.Controls.Add(btnMenuCustomer)
+        Panel1.Controls.Add(btnMenuLayanan)
         Panel1.Controls.Add(Label1)
-        Panel1.Location = New Point(12, 12)
+        Panel1.Location = New Point(10, 10)
+        Panel1.Margin = New Padding(2)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(308, 798)
+        Panel1.Size = New Size(246, 638)
         Panel1.TabIndex = 0
+        ' 
+        ' btnMenuLaporan
+        ' 
+        btnMenuLaporan.BackColor = Color.Plum
+        btnMenuLaporan.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnMenuLaporan.ForeColor = Color.DarkOliveGreen
+        btnMenuLaporan.Location = New Point(38, 400)
+        btnMenuLaporan.Margin = New Padding(2)
+        btnMenuLaporan.Name = "btnMenuLaporan"
+        btnMenuLaporan.Size = New Size(165, 37)
+        btnMenuLaporan.TabIndex = 5
+        btnMenuLaporan.Text = "Laporan"
+        btnMenuLaporan.UseVisualStyleBackColor = False
+        ' 
+        ' btnMenuReservasi
+        ' 
+        btnMenuReservasi.BackColor = Color.Plum
+        btnMenuReservasi.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnMenuReservasi.ForeColor = Color.SeaShell
+        btnMenuReservasi.Location = New Point(38, 340)
+        btnMenuReservasi.Margin = New Padding(2)
+        btnMenuReservasi.Name = "btnMenuReservasi"
+        btnMenuReservasi.Size = New Size(165, 37)
+        btnMenuReservasi.TabIndex = 4
+        btnMenuReservasi.Text = "Reservasi"
+        btnMenuReservasi.UseVisualStyleBackColor = False
+        ' 
+        ' btnMenuPemeriksaanKucing
+        ' 
+        btnMenuPemeriksaanKucing.BackColor = Color.Plum
+        btnMenuPemeriksaanKucing.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnMenuPemeriksaanKucing.ForeColor = Color.SeaShell
+        btnMenuPemeriksaanKucing.Location = New Point(38, 280)
+        btnMenuPemeriksaanKucing.Margin = New Padding(2)
+        btnMenuPemeriksaanKucing.Name = "btnMenuPemeriksaanKucing"
+        btnMenuPemeriksaanKucing.Size = New Size(165, 37)
+        btnMenuPemeriksaanKucing.TabIndex = 3
+        btnMenuPemeriksaanKucing.Text = "Pemeriksaan Kucing"
+        btnMenuPemeriksaanKucing.UseVisualStyleBackColor = False
+        ' 
+        ' btnMenuCustomer
+        ' 
+        btnMenuCustomer.BackColor = Color.Plum
+        btnMenuCustomer.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnMenuCustomer.ForeColor = Color.SeaShell
+        btnMenuCustomer.Location = New Point(38, 220)
+        btnMenuCustomer.Margin = New Padding(2)
+        btnMenuCustomer.Name = "btnMenuCustomer"
+        btnMenuCustomer.Size = New Size(165, 37)
+        btnMenuCustomer.TabIndex = 2
+        btnMenuCustomer.Text = "Customer"
+        btnMenuCustomer.UseVisualStyleBackColor = False
+        ' 
+        ' btnMenuLayanan
+        ' 
+        btnMenuLayanan.BackColor = Color.Plum
+        btnMenuLayanan.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnMenuLayanan.ForeColor = Color.SeaShell
+        btnMenuLayanan.Location = New Point(38, 160)
+        btnMenuLayanan.Margin = New Padding(2)
+        btnMenuLayanan.Name = "btnMenuLayanan"
+        btnMenuLayanan.Size = New Size(165, 37)
+        btnMenuLayanan.TabIndex = 1
+        btnMenuLayanan.Text = "Paket Layanan"
+        btnMenuLayanan.UseVisualStyleBackColor = False
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Snap ITC", 36F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.ForeColor = Color.Plum
+        Label1.Location = New Point(29, 50)
+        Label1.Margin = New Padding(2, 0, 2, 0)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(181, 77)
+        Label1.TabIndex = 0
+        Label1.Text = "OMI"
         ' 
         ' Panel2
         ' 
         Panel2.BackColor = Color.LightGoldenrodYellow
         Panel2.Controls.Add(Label2)
-        Panel2.Location = New Point(320, 12)
+        Panel2.Location = New Point(256, 10)
+        Panel2.Margin = New Padding(2)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(1112, 105)
+        Panel2.Size = New Size(890, 84)
         Panel2.TabIndex = 1
-        ' 
-        ' Panel3
-        ' 
-        Panel3.BackColor = Color.Thistle
-        Panel3.Controls.Add(Button6)
-        Panel3.Controls.Add(Button5)
-        Panel3.Controls.Add(TextBox1)
-        Panel3.Controls.Add(DataGridView1)
-        Panel3.Controls.Add(ComboBox1)
-        Panel3.Location = New Point(320, 118)
-        Panel3.Name = "Panel3"
-        Panel3.Size = New Size(1112, 692)
-        Panel3.TabIndex = 2
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Snap ITC", 36F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.ForeColor = Color.Plum
-        Label1.Location = New Point(36, 62)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(221, 93)
-        Label1.TabIndex = 0
-        Label1.Text = "OMI"
-        ' 
-        ' Button1
-        ' 
-        Button1.BackColor = Color.Plum
-        Button1.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button1.Location = New Point(48, 200)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(206, 46)
-        Button1.TabIndex = 1
-        Button1.Text = "Paket Layanan"
-        Button1.UseVisualStyleBackColor = False
-        ' 
-        ' Button2
-        ' 
-        Button2.BackColor = Color.Plum
-        Button2.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button2.Location = New Point(48, 275)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(206, 46)
-        Button2.TabIndex = 2
-        Button2.Text = "Customer"
-        Button2.UseVisualStyleBackColor = False
-        ' 
-        ' Button3
-        ' 
-        Button3.BackColor = Color.Plum
-        Button3.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button3.Location = New Point(48, 350)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(206, 46)
-        Button3.TabIndex = 3
-        Button3.Text = "Pemeriksaan Kucing"
-        Button3.UseVisualStyleBackColor = False
-        ' 
-        ' Button4
-        ' 
-        Button4.BackColor = Color.Plum
-        Button4.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button4.Location = New Point(48, 427)
-        Button4.Name = "Button4"
-        Button4.Size = New Size(206, 46)
-        Button4.TabIndex = 4
-        Button4.Text = "Laporan"
-        Button4.UseVisualStyleBackColor = False
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
         Label2.ForeColor = Color.DarkOliveGreen
-        Label2.Location = New Point(35, 36)
+        Label2.Location = New Point(16, 16)
+        Label2.Margin = New Padding(2, 0, 2, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(151, 45)
+        Label2.Size = New Size(151, 46)
         Label2.TabIndex = 0
         Label2.Text = "Laporan "
         ' 
-        ' ComboBox1
+        ' Panel3
         ' 
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(31, 54)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(290, 33)
-        ComboBox1.TabIndex = 0
+        Panel3.BackColor = Color.Thistle
+        Panel3.Controls.Add(lblStatus)
+        Panel3.Controls.Add(dgvLaporan)
+        Panel3.Controls.Add(lblCariCaption)
+        Panel3.Controls.Add(txtCari)
+        Panel3.Controls.Add(cmbJenis)
+        Panel3.Controls.Add(lblPeriodeCaption)
+        Panel3.Controls.Add(dtpDari)
+        Panel3.Controls.Add(lblSampai)
+        Panel3.Controls.Add(dtpSampai)
+        Panel3.Controls.Add(btnReset)
+        Panel3.Controls.Add(lblTotalCaption)
+        Panel3.Controls.Add(lblGrandTotal)
+        Panel3.Controls.Add(lblJumlahCaption)
+        Panel3.Controls.Add(lblJumlahReservasi)
+        Panel3.Controls.Add(lblRingkasanCaption)
+        Panel3.Controls.Add(lblRingkasanNilai)
+        Panel3.Controls.Add(btnExport)
+        Panel3.Controls.Add(btnCetak)
+        Panel3.Location = New Point(256, 94)
+        Panel3.Margin = New Padding(2)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(890, 554)
+        Panel3.TabIndex = 2
         ' 
-        ' DataGridView1
+        ' lblCariCaption
         ' 
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Columns.AddRange(New DataGridViewColumn() {IDReservasi, NamaCustomer, TanggalReservasi, TotalTagihan, StatusPembayaran})
-        DataGridView1.Location = New Point(31, 218)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.RowHeadersWidth = 62
-        DataGridView1.Size = New Size(1049, 446)
-        DataGridView1.TabIndex = 1
+        lblCariCaption.AutoSize = True
+        lblCariCaption.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        lblCariCaption.ForeColor = Color.DarkOliveGreen
+        lblCariCaption.Location = New Point(316, 22)
+        lblCariCaption.Name = "lblCariCaption"
+        lblCariCaption.Size = New Size(36, 20)
+        lblCariCaption.TabIndex = 20
+        lblCariCaption.Text = "Cari"
         ' 
-        ' TextBox1
+        ' txtCari
         ' 
-        TextBox1.Location = New Point(338, 56)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(233, 31)
-        TextBox1.TabIndex = 2
+        txtCari.Location = New Point(358, 20)
+        txtCari.Margin = New Padding(2)
+        txtCari.Name = "txtCari"
+        txtCari.PlaceholderText = "kata kunci..."
+        txtCari.Size = New Size(233, 27)
+        txtCari.TabIndex = 2
         ' 
-        ' Button5
+        ' cmbJenis
         ' 
-        Button5.BackColor = Color.LightGoldenrodYellow
-        Button5.Location = New Point(925, 155)
-        Button5.Name = "Button5"
-        Button5.Size = New Size(139, 34)
-        Button5.TabIndex = 3
-        Button5.Text = "Export CSV"
-        Button5.UseVisualStyleBackColor = False
+        cmbJenis.DropDownStyle = ComboBoxStyle.DropDownList
+        cmbJenis.FormattingEnabled = True
+        cmbJenis.Location = New Point(24, 20)
+        cmbJenis.Margin = New Padding(2)
+        cmbJenis.Name = "cmbJenis"
+        cmbJenis.Size = New Size(270, 28)
+        cmbJenis.TabIndex = 1
         ' 
-        ' Button6
+        ' lblPeriodeCaption
         ' 
-        Button6.BackColor = Color.LightGoldenrodYellow
-        Button6.Location = New Point(781, 155)
-        Button6.Name = "Button6"
-        Button6.Size = New Size(127, 34)
-        Button6.TabIndex = 4
-        Button6.Text = "Cetak"
-        Button6.UseVisualStyleBackColor = False
+        lblPeriodeCaption.AutoSize = True
+        lblPeriodeCaption.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        lblPeriodeCaption.ForeColor = Color.DarkOliveGreen
+        lblPeriodeCaption.Location = New Point(24, 62)
+        lblPeriodeCaption.Name = "lblPeriodeCaption"
+        lblPeriodeCaption.Size = New Size(56, 20)
+        lblPeriodeCaption.TabIndex = 22
+        lblPeriodeCaption.Text = "Periode"
         ' 
-        ' IDReservasi
+        ' dtpDari
         ' 
-        IDReservasi.HeaderText = "ID"
-        IDReservasi.MinimumWidth = 8
-        IDReservasi.Name = "IDReservasi"
-        IDReservasi.Width = 150
+        dtpDari.Format = DateTimePickerFormat.Short
+        dtpDari.Location = New Point(90, 58)
+        dtpDari.Name = "dtpDari"
+        dtpDari.Size = New Size(150, 27)
+        dtpDari.TabIndex = 3
         ' 
-        ' NamaCustomer
+        ' lblSampai
         ' 
-        NamaCustomer.HeaderText = "Nama"
-        NamaCustomer.MinimumWidth = 8
-        NamaCustomer.Name = "NamaCustomer"
-        NamaCustomer.Width = 150
+        lblSampai.AutoSize = True
+        lblSampai.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        lblSampai.ForeColor = Color.DarkOliveGreen
+        lblSampai.Location = New Point(252, 62)
+        lblSampai.Name = "lblSampai"
+        lblSampai.Size = New Size(21, 20)
+        lblSampai.TabIndex = 24
+        lblSampai.Text = "s/d"
         ' 
-        ' TanggalReservasi
+        ' dtpSampai
         ' 
-        TanggalReservasi.HeaderText = "Tanggal"
-        TanggalReservasi.MinimumWidth = 8
-        TanggalReservasi.Name = "TanggalReservasi"
-        TanggalReservasi.Width = 150
+        dtpSampai.Format = DateTimePickerFormat.Short
+        dtpSampai.Location = New Point(282, 58)
+        dtpSampai.Name = "dtpSampai"
+        dtpSampai.Size = New Size(150, 27)
+        dtpSampai.TabIndex = 4
         ' 
-        ' TotalTagihan
+        ' btnReset
         ' 
-        TotalTagihan.HeaderText = "Total Tagihan"
-        TotalTagihan.MinimumWidth = 8
-        TotalTagihan.Name = "TotalTagihan"
-        TotalTagihan.Width = 150
+        btnReset.BackColor = Color.LightGoldenrodYellow
+        btnReset.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        btnReset.ForeColor = Color.DarkOliveGreen
+        btnReset.Location = New Point(450, 58)
+        btnReset.Margin = New Padding(2)
+        btnReset.Name = "btnReset"
+        btnReset.Size = New Size(110, 29)
+        btnReset.TabIndex = 5
+        btnReset.Text = "Reset Filter"
+        btnReset.UseVisualStyleBackColor = False
         ' 
-        ' StatusPembayaran
+        ' lblTotalCaption
         ' 
-        StatusPembayaran.HeaderText = "Status"
-        StatusPembayaran.MinimumWidth = 8
-        StatusPembayaran.Name = "StatusPembayaran"
-        StatusPembayaran.Width = 150
+        lblTotalCaption.AutoSize = True
+        lblTotalCaption.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        lblTotalCaption.ForeColor = Color.DarkOliveGreen
+        lblTotalCaption.Location = New Point(24, 100)
+        lblTotalCaption.Name = "lblTotalCaption"
+        lblTotalCaption.Size = New Size(135, 23)
+        lblTotalCaption.TabIndex = 7
+        lblTotalCaption.Text = "Total Pendapatan"
+        ' 
+        ' lblGrandTotal
+        ' 
+        lblGrandTotal.AutoSize = True
+        lblGrandTotal.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        lblGrandTotal.ForeColor = Color.MediumVioletRed
+        lblGrandTotal.Location = New Point(24, 124)
+        lblGrandTotal.Name = "lblGrandTotal"
+        lblGrandTotal.Size = New Size(41, 23)
+        lblGrandTotal.TabIndex = 8
+        lblGrandTotal.Text = "Rp 0"
+        ' 
+        ' lblJumlahCaption
+        ' 
+        lblJumlahCaption.AutoSize = True
+        lblJumlahCaption.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        lblJumlahCaption.ForeColor = Color.DarkOliveGreen
+        lblJumlahCaption.Location = New Point(260, 100)
+        lblJumlahCaption.Name = "lblJumlahCaption"
+        lblJumlahCaption.Size = New Size(99, 23)
+        lblJumlahCaption.TabIndex = 9
+        lblJumlahCaption.Text = "Jumlah Data"
+        ' 
+        ' lblJumlahReservasi
+        ' 
+        lblJumlahReservasi.AutoSize = True
+        lblJumlahReservasi.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        lblJumlahReservasi.ForeColor = Color.MediumVioletRed
+        lblJumlahReservasi.Location = New Point(260, 124)
+        lblJumlahReservasi.Name = "lblJumlahReservasi"
+        lblJumlahReservasi.Size = New Size(18, 23)
+        lblJumlahReservasi.TabIndex = 10
+        lblJumlahReservasi.Text = "0"
+        ' 
+        ' lblRingkasanCaption
+        ' 
+        lblRingkasanCaption.AutoSize = True
+        lblRingkasanCaption.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        lblRingkasanCaption.ForeColor = Color.DarkOliveGreen
+        lblRingkasanCaption.Location = New Point(450, 100)
+        lblRingkasanCaption.Name = "lblRingkasanCaption"
+        lblRingkasanCaption.Size = New Size(120, 23)
+        lblRingkasanCaption.TabIndex = 26
+        lblRingkasanCaption.Text = "Ringkasan"
+        ' 
+        ' lblRingkasanNilai
+        ' 
+        lblRingkasanNilai.AutoSize = True
+        lblRingkasanNilai.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        lblRingkasanNilai.ForeColor = Color.MediumVioletRed
+        lblRingkasanNilai.Location = New Point(450, 124)
+        lblRingkasanNilai.Name = "lblRingkasanNilai"
+        lblRingkasanNilai.Size = New Size(18, 23)
+        lblRingkasanNilai.TabIndex = 27
+        lblRingkasanNilai.Text = "-"
+        ' 
+        ' btnExport
+        ' 
+        btnExport.BackColor = Color.LightGoldenrodYellow
+        btnExport.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        btnExport.ForeColor = Color.DarkOliveGreen
+        btnExport.Location = New Point(650, 100)
+        btnExport.Margin = New Padding(2)
+        btnExport.Name = "btnExport"
+        btnExport.Size = New Size(100, 32)
+        btnExport.TabIndex = 6
+        btnExport.Text = "Export"
+        btnExport.UseVisualStyleBackColor = False
+        ' 
+        ' btnCetak
+        ' 
+        btnCetak.BackColor = Color.LightGoldenrodYellow
+        btnCetak.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        btnCetak.ForeColor = Color.DarkOliveGreen
+        btnCetak.Location = New Point(762, 100)
+        btnCetak.Margin = New Padding(2)
+        btnCetak.Name = "btnCetak"
+        btnCetak.Size = New Size(100, 32)
+        btnCetak.TabIndex = 7
+        btnCetak.Text = "Cetak"
+        btnCetak.UseVisualStyleBackColor = False
+        ' 
+        ' dgvLaporan
+        ' 
+        dgvLaporan.BackgroundColor = Color.Thistle
+        dgvLaporan.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvLaporan.Location = New Point(24, 160)
+        dgvLaporan.Margin = New Padding(2)
+        dgvLaporan.Name = "dgvLaporan"
+        dgvLaporan.RowHeadersWidth = 51
+        dgvLaporan.Size = New Size(838, 344)
+        dgvLaporan.TabIndex = 8
+        ' 
+        ' lblStatus
+        ' 
+        lblStatus.AutoSize = True
+        lblStatus.Font = New Font("Segoe UI", 9F, FontStyle.Italic)
+        lblStatus.ForeColor = Color.DarkOliveGreen
+        lblStatus.Location = New Point(24, 516)
+        lblStatus.Name = "lblStatus"
+        lblStatus.Size = New Size(0, 20)
+        lblStatus.TabIndex = 28
         ' 
         ' FormReport
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1445, 822)
+        ClientSize = New Size(1156, 658)
         Controls.Add(Panel3)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
+        Margin = New Padding(2)
         Name = "FormReport"
-        Text = "FormReport"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "Laporan"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
         Panel3.ResumeLayout(False)
         Panel3.PerformLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(dgvLaporan, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -252,19 +417,29 @@ Partial Class FormReport
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnMenuLaporan As Button
+    Friend WithEvents btnMenuReservasi As Button
+    Friend WithEvents btnMenuPemeriksaanKucing As Button
+    Friend WithEvents btnMenuCustomer As Button
+    Friend WithEvents btnMenuLayanan As Button
     Friend WithEvents Label2 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Button5 As Button
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button6 As Button
-    Friend WithEvents IDReservasi As DataGridViewTextBoxColumn
-    Friend WithEvents NamaCustomer As DataGridViewTextBoxColumn
-    Friend WithEvents TanggalReservasi As DataGridViewTextBoxColumn
-    Friend WithEvents TotalTagihan As DataGridViewTextBoxColumn
-    Friend WithEvents StatusPembayaran As DataGridViewTextBoxColumn
+    Friend WithEvents cmbJenis As ComboBox
+    Friend WithEvents dgvLaporan As DataGridView
+    Friend WithEvents btnExport As Button
+    Friend WithEvents txtCari As TextBox
+    Friend WithEvents btnCetak As Button
+    Friend WithEvents lblTotalCaption As Label
+    Friend WithEvents lblGrandTotal As Label
+    Friend WithEvents lblJumlahCaption As Label
+    Friend WithEvents lblJumlahReservasi As Label
+    Friend WithEvents lblRingkasanCaption As Label
+    Friend WithEvents lblRingkasanNilai As Label
+    Friend WithEvents btnReset As Button
+    Friend WithEvents lblPeriodeCaption As Label
+    Friend WithEvents dtpDari As DateTimePicker
+    Friend WithEvents lblSampai As Label
+    Friend WithEvents dtpSampai As DateTimePicker
+    Friend WithEvents lblCariCaption As Label
+    Friend WithEvents lblStatus As Label
+
 End Class

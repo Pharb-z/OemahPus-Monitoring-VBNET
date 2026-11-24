@@ -9,6 +9,8 @@ Public Class FormCustomer
     Private Sub FormCustomer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ep.ContainerControl = Me
         Navigator.Register("customer", Me)
+        ApplyMenuAccess(btnMenuLayanan, btnMenuCustomer, btnMenuPemeriksaanKucing,
+                        btnMenuReservasi, btnMenuLaporan, btnMenuDashboard)
         ConfigureGrid()
         txtIdCustomer.ReadOnly = True
         LoadGrid()
@@ -205,6 +207,10 @@ Public Class FormCustomer
 
     Private Sub txtCari_TextChanged(sender As Object, e As EventArgs) Handles txtCari.TextChanged
         If initDone Then LoadGrid()
+    End Sub
+
+    Private Sub btnMenuDashboard_Click(sender As Object, e As EventArgs) Handles btnMenuDashboard.Click
+        Navigator.Go(Me, "dashboard", Function() New FormDashboard())
     End Sub
 
     Private Sub btnMenuLayanan_Click(sender As Object, e As EventArgs) Handles btnMenuLayanan.Click

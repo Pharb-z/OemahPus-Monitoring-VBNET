@@ -56,6 +56,7 @@ Public Class FormLogin
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error
                 )
+                txtPassword.Clear()
 
                 Return
             End If
@@ -64,9 +65,6 @@ Public Class FormLogin
 
             Dim passwordHash As String =
                 user("password_hash").ToString()
-
-            Dim role As String =
-                user("role").ToString()
 
             Dim isActive As Boolean =
                 Convert.ToBoolean(user("is_active"))
@@ -83,6 +81,7 @@ Public Class FormLogin
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error
                 )
+                txtPassword.Clear()
 
                 Return
             End If
@@ -96,6 +95,7 @@ Public Class FormLogin
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning
                 )
+                txtPassword.Clear()
 
                 Return
             End If
@@ -113,34 +113,10 @@ Public Class FormLogin
             UserSession.CurrentFullName =
             user("full_name").ToString()
 
-            ' Memeriksa role pengguna
-            If role = "Owner" Then
-
-                MessageBox.Show(
-                    "Selamat datang di OMI, " &
-                    user("full_name").ToString() & "!",
-                    "Login Berhasil",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information
-                )
-
-                ' Membuka Dashboard Owner
-                Dim dashboard As New FormDataPaketLayanan()
-                dashboard.Show()
-
-                Me.Hide()
-
-            Else
-
-                MessageBox.Show(
-                    "Dashboard untuk role " & role &
-                    " belum tersedia.",
-                    "Informasi",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information
-                )
-
-            End If
+            ' BCrypt dipakai sebagai pengganti SHA-256 modul Week 13 (lebih kuat, salted).
+            ' Semua role aktif masuk ke FormDashboard; RBAC mengatur menu yang terlihat.
+            txtPassword.Clear()
+            Navigator.Go(Me, "dashboard", Function() New FormDashboard())
 
         Catch ex As MySqlException
 

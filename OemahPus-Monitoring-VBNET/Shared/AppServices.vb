@@ -60,6 +60,20 @@ Module Navigator
         Return Nothing
     End Function
 
+    ''' <summary>Menutup dan membuang semua form cache saat logout.</summary>
+    Public Sub Clear()
+        _suppressRefresh = String.Empty
+        Dim keys As New System.Collections.Generic.List(Of String)(forms.Keys)
+        For Each key As String In keys
+            Dim form As Form = Nothing
+            If forms.TryGetValue(key, form) Then
+                forms.Remove(key)
+                If form IsNot Nothing AndAlso Not form.IsDisposed Then form.Close()
+            End If
+        Next
+        forms.Clear()
+    End Sub
+
     ''' <summary>
     ''' Menandai bahwa form tujuan baru saja dinavigasi dari form sumber,
     ''' sehingga form sumber tidak perlu memuat ulang datanya saat kembali.

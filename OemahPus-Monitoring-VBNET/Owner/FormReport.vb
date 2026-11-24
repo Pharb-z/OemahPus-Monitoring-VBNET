@@ -18,6 +18,8 @@ Public Class FormReport
     ' ===== FORM LOAD =====
     Private Sub FormReport_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Navigator.Register("laporan", Me)
+        ApplyMenuAccess(btnMenuLayanan, btnMenuCustomer, btnMenuPemeriksaanKucing,
+                        btnMenuReservasi, btnMenuLaporan, btnMenuDashboard)
 
         ConfigureComboBox()
         ConfigureGrid()
@@ -546,6 +548,10 @@ Public Class FormReport
     ' =====================
     ' NAVIGASI SIDEBAR
     ' =====================
+
+    Private Sub btnMenuDashboard_Click(sender As Object, e As EventArgs) Handles btnMenuDashboard.Click
+        Navigator.Go(Me, "dashboard", Function() New FormDashboard())
+    End Sub
 
     Private Sub btnMenuLayanan_Click(sender As Object, e As EventArgs) Handles btnMenuLayanan.Click
         Navigator.Go(Me, "layanan", Function() New FormDataPaketLayanan())

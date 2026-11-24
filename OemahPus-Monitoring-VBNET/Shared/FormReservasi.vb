@@ -3,6 +3,10 @@ Imports MySql.Data.MySqlClient
 
 Public Class FormReservasi
 
+    ' StafAntarJemput hanya melihat jadwal reservasi.
+    <System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)>
+    Friend Property ReadOnlyMode As Boolean = False
+
     ' Menyimpan status apakah form sedang dalam mode tambah
     Private modeTambah As Boolean = False
 
@@ -13,7 +17,10 @@ Public Class FormReservasi
     Private Sub FormReservasi_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Navigator.Register("reservasi", Me)
+        ApplyMenuAccess(btnMenuLayanan, btnMenuCustomer, btnMenuPemeriksaanKucing,
+                        btnMenuReservasi, btnMenuLaporan, btnMenuDashboard)
 
+        btnTambah.Enabled = Not ReadOnlyMode
         SetInputEnabled(False)
 
         txtIdReservasi.ReadOnly = True
@@ -38,11 +45,12 @@ Public Class FormReservasi
     ' =========================
     Private Sub SetInputEnabled(status As Boolean)
 
-        cmbNamaKucing.Enabled = status
-        cmbStatus.Enabled = status
-        dtpCheckIn.Enabled = status
-        dtpCheckOut.Enabled = status
-        btnSimpan.Enabled = status
+        Dim enabled As Boolean = status AndAlso Not ReadOnlyMode
+        cmbNamaKucing.Enabled = enabled
+        cmbStatus.Enabled = enabled
+        dtpCheckIn.Enabled = enabled
+        dtpCheckOut.Enabled = enabled
+        btnSimpan.Enabled = enabled
 
     End Sub
 
@@ -357,6 +365,10 @@ Public Class FormReservasi
     ' =========================
     ' NAVIGASI SIDEBAR
     ' =========================
+    Private Sub btnMenuDashboard_Click(sender As Object, e As EventArgs) Handles btnMenuDashboard.Click
+        Navigator.Go(Me, "dashboard", Function() New FormDashboard())
+    End Sub
+
     Private Sub btnMenuLayanan_Click(sender As Object, e As EventArgs) Handles btnMenuLayanan.Click
         Navigator.Go(Me, "layanan", Function() New FormDataPaketLayanan())
     End Sub

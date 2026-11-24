@@ -27,6 +27,7 @@ Partial Class FormReport
         btnMenuReservasi = New Button()
         btnMenuPemeriksaanKucing = New Button()
         btnMenuCustomer = New Button()
+        btnMenuDashboard = New Button()
         btnMenuLayanan = New Button()
         Label1 = New Label()
         Panel2 = New Panel()
@@ -63,6 +64,7 @@ Partial Class FormReport
         Panel1.Controls.Add(btnMenuReservasi)
         Panel1.Controls.Add(btnMenuPemeriksaanKucing)
         Panel1.Controls.Add(btnMenuCustomer)
+        Panel1.Controls.Add(btnMenuDashboard)
         Panel1.Controls.Add(btnMenuLayanan)
         Panel1.Controls.Add(Label1)
         Panel1.Location = New Point(10, 10)
@@ -76,7 +78,7 @@ Partial Class FormReport
         btnMenuLaporan.BackColor = Color.Plum
         btnMenuLaporan.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnMenuLaporan.ForeColor = Color.DarkOliveGreen
-        btnMenuLaporan.Location = New Point(38, 400)
+        btnMenuLaporan.Location = New Point(38, 460)
         btnMenuLaporan.Margin = New Padding(2)
         btnMenuLaporan.Name = "btnMenuLaporan"
         btnMenuLaporan.Size = New Size(165, 37)
@@ -89,7 +91,7 @@ Partial Class FormReport
         btnMenuReservasi.BackColor = Color.Plum
         btnMenuReservasi.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnMenuReservasi.ForeColor = Color.SeaShell
-        btnMenuReservasi.Location = New Point(38, 340)
+        btnMenuReservasi.Location = New Point(38, 400)
         btnMenuReservasi.Margin = New Padding(2)
         btnMenuReservasi.Name = "btnMenuReservasi"
         btnMenuReservasi.Size = New Size(165, 37)
@@ -102,7 +104,7 @@ Partial Class FormReport
         btnMenuPemeriksaanKucing.BackColor = Color.Plum
         btnMenuPemeriksaanKucing.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnMenuPemeriksaanKucing.ForeColor = Color.SeaShell
-        btnMenuPemeriksaanKucing.Location = New Point(38, 280)
+        btnMenuPemeriksaanKucing.Location = New Point(38, 340)
         btnMenuPemeriksaanKucing.Margin = New Padding(2)
         btnMenuPemeriksaanKucing.Name = "btnMenuPemeriksaanKucing"
         btnMenuPemeriksaanKucing.Size = New Size(165, 37)
@@ -115,7 +117,7 @@ Partial Class FormReport
         btnMenuCustomer.BackColor = Color.Plum
         btnMenuCustomer.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnMenuCustomer.ForeColor = Color.SeaShell
-        btnMenuCustomer.Location = New Point(38, 220)
+        btnMenuCustomer.Location = New Point(38, 280)
         btnMenuCustomer.Margin = New Padding(2)
         btnMenuCustomer.Name = "btnMenuCustomer"
         btnMenuCustomer.Size = New Size(165, 37)
@@ -125,10 +127,21 @@ Partial Class FormReport
         ' 
         ' btnMenuLayanan
         ' 
+        ' btnMenuDashboard
+        btnMenuDashboard.BackColor = Color.Plum
+        btnMenuDashboard.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnMenuDashboard.ForeColor = Color.SeaShell
+        btnMenuDashboard.Location = New Point(38, 160)
+        btnMenuDashboard.Margin = New Padding(2)
+        btnMenuDashboard.Name = "btnMenuDashboard"
+        btnMenuDashboard.Size = New Size(165, 37)
+        btnMenuDashboard.TabIndex = 36
+        btnMenuDashboard.Text = "Dashboard"
+        btnMenuDashboard.UseVisualStyleBackColor = False
         btnMenuLayanan.BackColor = Color.Plum
         btnMenuLayanan.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnMenuLayanan.ForeColor = Color.SeaShell
-        btnMenuLayanan.Location = New Point(38, 160)
+        btnMenuLayanan.Location = New Point(38, 220)
         btnMenuLayanan.Margin = New Padding(2)
         btnMenuLayanan.Name = "btnMenuLayanan"
         btnMenuLayanan.Size = New Size(165, 37)
@@ -421,6 +434,7 @@ Partial Class FormReport
     Friend WithEvents btnMenuReservasi As Button
     Friend WithEvents btnMenuPemeriksaanKucing As Button
     Friend WithEvents btnMenuCustomer As Button
+    Friend WithEvents btnMenuDashboard As Button
     Friend WithEvents btnMenuLayanan As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents cmbJenis As ComboBox

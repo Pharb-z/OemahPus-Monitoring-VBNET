@@ -12,6 +12,8 @@ Public Class FormDataPaketLayanan
     Private Sub FormDataPaketLayanan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ep.ContainerControl = Me
         Navigator.Register("layanan", Me)
+        ApplyMenuAccess(btnMenuLayanan, btnMenuCustomer, btnMenuPemeriksaanKucing,
+                        btnMenuReservasi, btnMenuLaporan, btnMenuDashboard)
         SetupGrid()
 
         cboJenis.DropDownStyle = ComboBoxStyle.DropDownList
@@ -295,6 +297,10 @@ Public Class FormDataPaketLayanan
     End Sub
 
     ' ===================== NAVIGASI SIDEBAR =====================
+    Private Sub btnMenuDashboard_Click(sender As Object, e As EventArgs) Handles btnMenuDashboard.Click
+        Navigator.Go(Me, "dashboard", Function() New FormDashboard())
+    End Sub
+
     Private Sub btnMenuLayanan_Click(sender As Object, e As EventArgs) Handles btnMenuLayanan.Click
         Navigator.Go(Me, "layanan", Function() New FormDataPaketLayanan())
     End Sub
@@ -309,10 +315,6 @@ Public Class FormDataPaketLayanan
 
     Private Sub btnMenuLaporan_Click(sender As Object, e As EventArgs) Handles btnMenuLaporan.Click
         Navigator.Go(Me, "laporan", Function() New FormReport())
-    End Sub
-
-    Private Sub FormDataPaketLayanan_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
-        Application.Exit()
     End Sub
 
     Private Sub cboJenis_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboJenis.SelectedIndexChanged

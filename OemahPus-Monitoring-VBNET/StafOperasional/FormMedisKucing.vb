@@ -15,6 +15,8 @@ Public Class FormMedisKucing
         ep.ContainerControl = Me
 
         Navigator.Register("medis", Me)
+        ApplyMenuAccess(btnMenuLayanan, btnMenuCustomer, btnMenuPemeriksaanKucing,
+                        btnMenuReservasi, btnMenuLaporan, btnMenuDashboard)
 
         ConfigureGrid()
         ConfigureComboBox()
@@ -591,6 +593,10 @@ Public Class FormMedisKucing
     ' =========================
     ' NAVIGASI SIDEBAR
     ' =========================
+    Private Sub btnMenuDashboard_Click(sender As Object, e As EventArgs) Handles btnMenuDashboard.Click
+        Navigator.Go(Me, "dashboard", Function() New FormDashboard())
+    End Sub
+
     Private Sub btnMenuLayanan_Click(sender As Object, e As EventArgs) Handles btnMenuLayanan.Click
         Navigator.Go(Me, "layanan", Function() New FormDataPaketLayanan())
     End Sub

@@ -4,10 +4,10 @@ Public Class FormRiwayat
 
     Private Sub FormRiwayat_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Navigator.Register("riwayat", Me)
-        PelangganNav.Wire(Me, btnMenuDashboard, btnMenuProfil, btnMenuReservasiPelanggan,
-                          btnMenuRiwayat, btnMenuAkun, btnLogout)
-        ApplyMenuAccess(btnMenuDashboard, btnMenuProfil, btnMenuReservasiPelanggan,
-                        btnMenuRiwayat, btnMenuAkun)
+        PelangganNav.Wire(Me, btnMenuDashboard, btnMenuProfil, btnMenuTracking,
+                          btnMenuReservasiPelanggan, btnMenuRiwayat, btnMenuAkun, btnLogout)
+        ApplyMenuAccess(btnMenuDashboard, btnMenuProfil, btnMenuTracking,
+                        btnMenuReservasiPelanggan, btnMenuRiwayat, btnMenuAkun)
         LoadData()
     End Sub
 

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pembayaran QRIS — OMI</title>
+  <meta name="description" content="Simulasi pembayaran QRIS untuk reservasi penitipan.">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/pembayaran.css">
+</head>
+<body>
+
+  <!-- Frame 11 Pembayaran QRIS (node 139:406) -->
+  <header id="omi-navbar"></header>
+
+  <main class="omi-page">
+
+    <div class="omi-header-row">
+      <h1 class="omi-page-title">Pembayaran QRIS</h1>
+    </div>
+
+    <section class="omi-card omi-qris">
+
+      <p class="omi-qris-label">Reservasi</p>
+      <p class="omi-fw-semibold" id="qris-nama">—</p>
+
+      <div class="omi-qris-frame" id="qris-frame"></div>
+
+      <p class="omi-qris-amount" id="qris-nominal">IDR. 0</p>
+
+      <p class="omi-qris-note">
+        Pindai kode QR di bawah untuk melakukan pembayaran
+      </p>
+
+      <p class="omi-timer" id="qris-timer">23:55</p>
+
+      <p class="omi-alert omi-alert--danger omi-hidden omi-mt-16" id="qris-kedaluwarsa">
+        Waktu pembayaran habis. Silakan buat ulang pembayaran.
+      </p>
+
+      <p class="omi-alert omi-alert--warning omi-mt-24">
+        <strong>Mode simulasi.</strong> Kode QR di atas hanya ilustrasi dari
+        desain dan tidak dapat dipindai. Prototipe ini tidak terhubung ke
+        penyedia pembayaran mana pun.
+      </p>
+
+      <div class="omi-flex omi-flex-col omi-gap-12 omi-mt-24">
+        <button class="omi-btn omi-btn--primary omi-btn--lg omi-btn--block" id="btn-simulasi-bayar">
+          Simulasikan Pembayaran Berhasil
+        </button>
+        <button class="omi-btn omi-btn--ghost omi-btn--block" id="btn-unduh-qr">
+          Unduh Kode QR
+        </button>
+        <a class="omi-btn omi-btn--ghost omi-btn--block" href="riwayat.html">Kembali ke Riwayat</a>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/page-pembayaran.js"></script>
+</body>
+</html>

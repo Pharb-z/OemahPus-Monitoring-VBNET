@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riwayat Reservasi — OMI</title>
+  <meta name="description" content="Riwayat reservasi pet hotel OMI.">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+  <!-- Frame 19 Admin - Riwayat Reservasi (node 153:735) -->
+  <header id="omi-navbar"></header>
+
+  <main class="omi-page">
+
+    <h1 class="omi-page-title">Riwayat</h1>
+
+    <nav class="omi-tabs" aria-label="Jenis riwayat">
+      <a class="omi-tab is-active" href="admin-riwayat-reservasi.html">Riwayat Reservasi</a>
+      <a class="omi-tab" href="admin-riwayat-pembayaran.html">Riwayat Pembayaran</a>
+      <a class="omi-tab" href="admin-riwayat-medis.html">Riwayat Pemeriksaan Medis</a>
+    </nav>
+
+    <section class="omi-card omi-table-card">
+      <div class="omi-table-wrap">
+        <table class="omi-table">
+          <thead>
+            <tr>
+              <th>ID Reservasi</th>
+              <th>Pemilik</th>
+              <th>Kucing</th>
+              <th>Paket</th>
+              <th>Tanggal</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="admin-reservasi-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/page-admin.js"></script>
+</body>
+</html>

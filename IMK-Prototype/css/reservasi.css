@@ -1,0 +1,328 @@
+/* ==========================================================================
+   OMI — Gaya Alur Reservasi (frame 08, 09)
+   Dua langkah: Data & Paket → Konfirmasi.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Kartu pilih kucing (langkah 1)
+   Figma: kartu 233px dengan foto gradien 134x79 di atas.
+   -------------------------------------------------------------------------- */
+.omi-pick-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.omi-pick {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.omi-pick input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.omi-pick-body {
+  background: var(--omi-bg-card);
+  border: 1.5px solid var(--omi-border);
+  border-radius: var(--omi-r-2xl);
+  box-shadow: var(--omi-shadow-card);
+  padding: 16px;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.omi-pick:hover .omi-pick-body {
+  border-color: var(--omi-primary-mid);
+}
+
+.omi-pick input:checked + .omi-pick-body {
+  border-color: var(--omi-primary);
+  box-shadow: 0 0 0 3px rgba(242, 107, 33, 0.14), var(--omi-shadow-card);
+}
+
+.omi-pick-photo {
+  height: 79px;
+  border-radius: var(--omi-r-xl);
+  background: linear-gradient(149.18deg, var(--omi-bg-gradient-from) 0%, var(--omi-bg-gradient-to) 71.43%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  color: var(--omi-primary-mid);
+  margin-bottom: 14px;
+}
+
+.omi-pick-name {
+  font-size: var(--omi-fs-15);
+  font-weight: var(--omi-fw-semibold);
+  color: var(--omi-text);
+}
+
+.omi-pick-meta {
+  font-size: var(--omi-fs-13);
+  color: var(--omi-text-muted);
+  margin-top: 4px;
+}
+
+/* Tanda centang saat terpilih */
+.omi-pick-check {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--omi-primary);
+  color: #fff;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--omi-fs-13);
+  font-weight: var(--omi-fw-bold);
+  z-index: 2;
+}
+
+.omi-pick input:checked + .omi-pick-body .omi-pick-check {
+  display: flex;
+}
+
+/* --------------------------------------------------------------------------
+   Kartu pilih paket (langkah 1, section full-width)
+   Figma: 2 kartu sejajar (Reguler & Premium), masing-masing ~588px.
+   -------------------------------------------------------------------------- */
+.omi-pkg-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.omi-pkg-pick {
+  position: relative;
+  cursor: pointer;
+  display: block;
+}
+
+.omi-pkg-pick input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.omi-pkg-pick .omi-pkg-card {
+  height: 100%;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.omi-pkg-pick:hover .omi-pkg-card {
+  border-color: var(--omi-primary-mid);
+}
+
+.omi-pkg-pick input:checked + .omi-pkg-card {
+  border-color: var(--omi-primary);
+  box-shadow: 0 0 0 3px rgba(242, 107, 33, 0.14), var(--omi-shadow-card);
+}
+
+.omi-pkg-pick input:checked + .omi-pkg-card .omi-pkg-badge {
+  display: inline-flex;
+}
+
+.omi-pkg-badge {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--omi-fs-12);
+  font-weight: var(--omi-fw-bold);
+  color: var(--omi-primary-dark);
+  background: var(--omi-primary-light);
+  padding: 4px 12px;
+  border-radius: var(--omi-r-2xl);
+  margin-bottom: 12px;
+  width: fit-content;
+}
+
+/* --------------------------------------------------------------------------
+   Add-on opsional (langkah 1) — layanan antar jemput
+   Bukan paket, jadi pakai checkbox (bisa digabung) bukan radio.
+   -------------------------------------------------------------------------- */
+.omi-addon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  background: var(--omi-bg-card);
+  border: 1.5px solid var(--omi-border);
+  border-radius: var(--omi-r-2xl);
+  box-shadow: var(--omi-shadow-card);
+  cursor: pointer;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.omi-addon:hover {
+  border-color: var(--omi-primary-mid);
+}
+
+.omi-addon input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.omi-addon-box {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--omi-border-input);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: var(--omi-fs-13);
+  font-weight: var(--omi-fw-bold);
+  transition: background .15s ease, border-color .15s ease;
+}
+
+.omi-addon-box::after {
+  content: "✓";
+  opacity: 0;
+}
+
+.omi-addon input:checked + .omi-addon-box {
+  background: var(--omi-primary);
+  border-color: var(--omi-primary);
+}
+
+.omi-addon input:checked + .omi-addon-box::after {
+  opacity: 1;
+}
+
+.omi-addon input:checked ~ .omi-addon-price {
+  color: var(--omi-primary-dark);
+}
+
+.omi-addon-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.omi-addon-title {
+  font-size: var(--omi-fs-16);
+  font-weight: var(--omi-fw-semibold);
+  color: var(--omi-text);
+}
+
+.omi-addon-desc {
+  font-size: var(--omi-fs-14);
+  color: var(--omi-text-muted);
+}
+
+.omi-addon-price {
+  font-size: var(--omi-fs-18);
+  font-weight: var(--omi-fw-bold);
+  color: var(--omi-primary);
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   Langkah konfirmasi (frame 09)
+   Kiri: kalender + rincian biaya. Kanan: status reservasi.
+   -------------------------------------------------------------------------- */
+.omi-confirm-grid {
+  display: grid;
+  grid-template-columns: 380px minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.omi-confirm-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.omi-date-fields {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.omi-date-fields .omi-field {
+  flex: 1 1 160px;
+}
+
+/* Kotak status pengajuan */
+.omi-status-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px 20px;
+  border-radius: var(--omi-r-lg);
+  background: var(--omi-warning-bg);
+  color: var(--omi-warning);
+  font-size: var(--omi-fs-14);
+  font-weight: var(--omi-fw-medium);
+}
+
+.omi-status-box-icon {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+/* --------------------------------------------------------------------------
+   Footer aksi langkah
+   -------------------------------------------------------------------------- */
+.omi-step-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 34px;
+  padding-top: 26px;
+  border-top: 1px solid var(--omi-border);
+  flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------------
+   Responsif
+   -------------------------------------------------------------------------- */
+@media (max-width: 1280px) {
+  .omi-confirm-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 820px) {
+  .omi-pick-grid,
+  .omi-pkg-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .omi-step-footer {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .omi-step-footer .omi-btn {
+    width: 100%;
+  }
+
+  .omi-date-fields {
+    flex-direction: column;
+  }
+
+  .omi-addon {
+    flex-wrap: wrap;
+  }
+
+  .omi-addon-price {
+    width: 100%;
+    padding-left: 38px;
+  }
+}

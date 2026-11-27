@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Tracking — OMI</title>
+  <meta name="description" content="Pantau kondisi kucing yang sedang dititipkan.">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/tracking.css">
+</head>
+<body>
+
+  <!-- Frame 07 Pet Tracking (node 136:267) -->
+  <header id="omi-navbar"></header>
+
+  <main class="omi-page">
+
+    <div class="omi-header-row">
+      <div>
+        <h1 class="omi-page-title">Pet Tracking</h1>
+        <p class="omi-page-subtitle">Pantau kondisi kucingmu selama dititipkan di OMI.</p>
+      </div>
+    </div>
+
+    <div class="omi-tracking-grid" id="tracking-grid"></div>
+
+    <div class="omi-empty omi-hidden" id="tracking-kosong">
+      <div class="omi-empty-icon">🐾</div>
+      <p class="omi-fw-semibold">Belum ada kucing yang dititipkan</p>
+      <p class="omi-text-sm omi-mt-8">Buat reservasi untuk mulai memantau kucingmu.</p>
+      <a class="omi-btn omi-btn--primary omi-mt-24" href="reservasi-data.html">Reservasi Sekarang</a>
+    </div>
+
+    <section class="omi-card omi-mt-32">
+      <h2 class="omi-card-title omi-mb-16">Laporan Harian Terbaru</h2>
+      <div class="omi-table-wrap">
+        <table class="omi-table">
+          <thead>
+            <tr>
+              <th>Tanggal</th>
+              <th>Kucing</th>
+              <th>Kandang</th>
+              <th>Makan</th>
+              <th>Kondisi</th>
+              <th>Catatan</th>
+            </tr>
+          </thead>
+          <tbody id="tracking-laporan-body"></tbody>
+        </table>
+      </div>
+      <p class="omi-help omi-mt-16">
+        Catatan kejujuran: laporan pada prototipe ini adalah data contoh dan
+        tidak diperbarui secara real-time.
+      </p>
+    </section>
+
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/page-tracking.js"></script>
+</body>
+</html>

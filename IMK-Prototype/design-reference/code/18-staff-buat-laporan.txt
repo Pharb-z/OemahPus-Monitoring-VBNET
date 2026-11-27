@@ -1,0 +1,167 @@
+﻿export default function Component18StaffBuatLaporan() {
+  return (
+    <div className="bg-[#fff8f2] relative size-full" data-node-id="71:813" data-name="18 Staff - Buat Laporan">
+      <div className="absolute bg-white h-[92px] left-0 shadow-[0px_4px_14px_0px_rgba(115,56,13,0.05)] top-0 w-[1440px]" data-node-id="71:814" data-name="Navbar" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:ExtraBold'] font-extrabold leading-[normal] left-[106px] text-[#f26b21] text-[26px] top-[29.5px] whitespace-nowrap" data-node-id="71:815">
+        OMI
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[calc(66.67%+48px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:816">{`Check In & Out`}</p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[calc(83.33%-49px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:817">
+        Riwayat Layanan
+      </p>
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[0] left-[calc(91.67%-14px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:818">
+        <p className="leading-[normal]">Akun Saya</p>
+      </a>
+      <div className="absolute bg-[#ffebd9] h-[34px] left-[calc(58.33%+26px)] rounded-[16px] top-[29px] w-[122px]" data-node-id="71:819" data-name="Nav aktif" />
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[0] left-[calc(58.33%+42px)] text-[#f26b21] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:820">
+        <p className="leading-[normal]">Daily Report</p>
+      </a>
+      <div className="absolute bg-white border border-[#eedfd1] border-solid h-[256.25px] left-[120px] rounded-[16px] shadow-[0px_6px_18px_0px_rgba(115,56,13,0.07)] top-[277.5px] w-[581.944px]" data-node-id="71:821" data-name="Card" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[normal] left-[120px] text-[#1e2a3b] text-[32px] top-[208.75px] whitespace-nowrap" data-node-id="71:822">
+        Laporan Harian
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[151.94px] text-[#1e2a3b] text-[24px] top-[300px] whitespace-nowrap" data-node-id="71:823">
+        Mochi
+      </p>
+      <div className="absolute bg-[#f6ece2] h-[497.5px] left-[61.67px] rounded-[8px] top-[300px] w-[16px]" data-node-id="71:824" data-name="Scrollbar" />
+      <div className="absolute bg-[#f9b27c] h-[139.3px] left-[63.67px] rounded-[6px] top-[302px] w-[12px]" data-node-id="71:825" data-name="Scroll thumb" />
+      <div className="absolute bg-white border border-[#e3d3c4] border-solid h-[42px] left-[calc(33.33%+52.89px)] rounded-[21px] top-[211px] w-[352px]" data-node-id="71:826" data-name="SearchBox" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(33.33%+66.89px)] text-[#94a3b8] text-[13px] top-[224px] whitespace-nowrap" data-node-id="71:827">
+        Search
+      </p>
+      <div className="absolute bg-[#f26b21] left-[60px] rounded-[10px] size-[36px] top-[28px]" data-node-id="71:828" data-name="Image" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[69px] text-[18px] text-white top-[37px] whitespace-nowrap" data-node-id="71:829">
+        ð¾
+      </p>
+      <div className="absolute bg-[#f26b21] content-stretch drop-shadow-[0px_6px_7px_rgba(242,107,33,0.3)] flex h-[38px] items-center justify-center left-[calc(25%+121.44px)] rounded-[10px] top-[470px] w-[139px]" data-node-id="71:830" data-name="Btn: Buat Laporan">
+        <p className="[word-break:break-word] font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[16px] text-center text-white whitespace-nowrap" data-node-id="71:831">
+          Buat Laporan
+        </p>
+      </div>
+      <div className="absolute h-[114px] left-[156.11px] rounded-[14px] top-[374.25px] w-[143px]" data-node-id="71:832" style={{ backgroundImage: "linear-gradient(141.43804951499843deg, rgb(255, 227, 204) 0%, rgb(255, 243, 232) 71.429%)" }} data-name="Image" />
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[227.61px] text-[#f5a56b] text-[45.6px] text-center top-[408.25px] w-[143px]" data-node-id="71:833">
+        ð¾
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(25%+51.67px)] text-[#64748b] text-[14px] top-[355.5px] w-[243.056px]" data-node-id="71:834">
+        Kandang B-04 Â· Paket Premium
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(25%+127.89px)] text-[#64748b] text-[14px] top-[407.5px] w-[175px]" data-node-id="71:835">
+        Check-in: 10 Nov 2026
+      </p>
+      <div className="absolute bg-white border border-[#eedfd1] border-solid h-[256.25px] left-[calc(50%+18.06px)] rounded-[16px] shadow-[0px_6px_18px_0px_rgba(115,56,13,0.07)] top-[277.5px] w-[581.944px]" data-node-id="71:836" data-name="Card" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(50%+50px)] text-[#1e2a3b] text-[24px] top-[300px] whitespace-nowrap" data-node-id="71:837">
+        Luna
+      </p>
+      <div className="absolute bg-[#f26b21] content-stretch drop-shadow-[0px_6px_7px_rgba(242,107,33,0.3)] flex h-[38px] items-center justify-center left-[calc(75%+19.5px)] rounded-[10px] top-[470px] w-[139px]" data-node-id="71:838" data-name="Btn: Buat Laporan">
+        <p className="[word-break:break-word] font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[16px] text-center text-white whitespace-nowrap" data-node-id="71:839">
+          Buat Laporan
+        </p>
+      </div>
+      <div className="absolute h-[114px] left-[calc(50%+54.17px)] rounded-[14px] top-[374.25px] w-[143px]" data-node-id="71:840" style={{ backgroundImage: "linear-gradient(141.43804951499843deg, rgb(255, 227, 204) 0%, rgb(255, 243, 232) 71.429%)" }} data-name="Image" />
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(50%+125.67px)] text-[#f5a56b] text-[45.6px] text-center top-[408.25px] w-[143px]" data-node-id="71:841">
+        ð¾
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(75%-50.28px)] text-[#64748b] text-[14px] top-[355.5px] w-[243.056px]" data-node-id="71:842">
+        Kandang A-02 Â· Paket Reguler
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(75%-50.28px)] text-[#64748b] text-[14px] top-[406.25px] w-[243.056px]" data-node-id="71:843">
+        Check-in: 11 Nov 2026
+      </p>
+      <div className="absolute bg-white border border-[#eedfd1] border-solid h-[256.25px] left-[120px] rounded-[16px] shadow-[0px_6px_18px_0px_rgba(115,56,13,0.07)] top-[553.75px] w-[581.944px]" data-node-id="71:844" data-name="Card" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[151.94px] text-[#1e2a3b] text-[24px] top-[576.25px] whitespace-nowrap" data-node-id="71:845">
+        Ayen
+      </p>
+      <div className="absolute bg-[#f26b21] content-stretch drop-shadow-[0px_6px_7px_rgba(242,107,33,0.3)] flex h-[38px] items-center justify-center left-[calc(25%+121.44px)] rounded-[10px] top-[746.25px] w-[139px]" data-node-id="71:846" data-name="Btn: Buat Laporan">
+        <p className="[word-break:break-word] font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[16px] text-center text-white whitespace-nowrap" data-node-id="71:847">
+          Buat Laporan
+        </p>
+      </div>
+      <div className="absolute h-[114px] left-[156.11px] rounded-[14px] top-[650.5px] w-[143px]" data-node-id="71:848" style={{ backgroundImage: "linear-gradient(141.43804951499843deg, rgb(255, 227, 204) 0%, rgb(255, 243, 232) 71.429%)" }} data-name="Image" />
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[227.61px] text-[#f5a56b] text-[45.6px] text-center top-[684.5px] w-[143px]" data-node-id="71:849">
+        ð¾
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(25%+51.67px)] text-[#64748b] text-[14px] top-[631.75px] w-[243.056px]" data-node-id="71:850">
+        Kandang B-01 Â· Paket Premium
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(25%+51.67px)] text-[#64748b] text-[14px] top-[682.5px] w-[243.056px]" data-node-id="71:851">
+        Check-in: 9 Nov 2026
+      </p>
+      <div className="absolute bg-white border border-[#eedfd1] border-solid h-[256.25px] left-[calc(50%+18.06px)] rounded-[16px] shadow-[0px_6px_18px_0px_rgba(115,56,13,0.07)] top-[556.25px] w-[581.944px]" data-node-id="71:852" data-name="Card" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(50%+50px)] text-[#1e2a3b] text-[24px] top-[578.75px] whitespace-nowrap" data-node-id="71:853">
+        Miku
+      </p>
+      <div className="absolute bg-[#f26b21] content-stretch drop-shadow-[0px_6px_7px_rgba(242,107,33,0.3)] flex h-[38px] items-center justify-center left-[calc(75%+19.5px)] rounded-[10px] top-[748.75px] w-[139px]" data-node-id="71:854" data-name="Btn: Buat Laporan">
+        <p className="[word-break:break-word] font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[16px] text-center text-white whitespace-nowrap" data-node-id="71:855">
+          Buat Laporan
+        </p>
+      </div>
+      <div className="absolute h-[114px] left-[calc(50%+54.17px)] rounded-[14px] top-[653px] w-[143px]" data-node-id="71:856" style={{ backgroundImage: "linear-gradient(141.43804951499843deg, rgb(255, 227, 204) 0%, rgb(255, 243, 232) 71.429%)" }} data-name="Image" />
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(50%+125.67px)] text-[#f5a56b] text-[45.6px] text-center top-[687px] w-[143px]" data-node-id="71:857">
+        ð¾
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(75%-50.28px)] text-[#64748b] text-[14px] top-[634.25px] w-[243.056px]" data-node-id="71:858">
+        Kandang B-04 Â· Paket Premium
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(75%-50.28px)] text-[#64748b] text-[14px] top-[685px] w-[243.056px]" data-node-id="71:859">
+        Check-in: 10 Nov 2026
+      </p>
+      <a className="absolute bg-[#1e2a3b] block cursor-pointer h-[1024px] left-0 opacity-45 top-0 w-[1440px]" data-node-id="71:860" data-name="Scrim" />
+      <div className="absolute bg-white border border-[#eedfd1] border-solid h-[415px] left-[calc(16.67%+107.78px)] rounded-[16px] shadow-[0px_16px_48px_0px_rgba(115,56,13,0.25)] top-[306.25px] w-[730.556px]" data-node-id="71:861" data-name="Card" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(25%+57.22px)] text-[#1e2a3b] text-[16px] top-[327.5px] whitespace-nowrap" data-node-id="71:862">
+        Nama Kucing
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(25%+45px)] text-[#1e2a3b] text-[16px] top-[376px] whitespace-nowrap" data-node-id="71:863">
+        Tanggal Laporan
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(25%+48.11px)] text-[#1e2a3b] text-[16px] top-[524.75px] whitespace-nowrap" data-node-id="71:864">
+        Harga
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(25%+50.86px)] text-[#1e2a3b] text-[16px] top-[616.25px] whitespace-nowrap" data-node-id="71:865">
+        Satuan
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(66.67%-42.44px)] text-[#1e2a3b] text-[16px] top-[327.5px] whitespace-nowrap" data-node-id="71:866">
+        Nama Kandang
+      </p>
+      <div className="absolute bg-white border border-[#e3d3c4] border-solid h-[42px] left-[calc(16.67%+160.56px)] rounded-[10px] top-[550px] w-[250px]" data-node-id="71:867" data-name="Input" />
+      <div className="absolute bg-white border border-[#e3d3c4] border-solid h-[42px] left-[calc(16.67%+160.56px)] rounded-[10px] top-[649.63px] w-[250px]" data-node-id="71:868" data-name="Input" />
+      <a className="absolute bg-[#f26b21] content-stretch cursor-pointer drop-shadow-[0px_6px_7px_rgba(242,107,33,0.3)] flex h-[38px] items-center justify-center left-[calc(66.67%-15.28px)] rounded-[10px] top-[651.63px] w-[95px]" data-node-id="71:869" data-name="Btn: Simpan">
+        <p className="[word-break:break-word] font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[16px] text-center text-white whitespace-nowrap" data-node-id="71:870">
+          Simpan
+        </p>
+      </a>
+      <div className="absolute bg-white border border-[#e3d3c4] border-solid h-[42px] left-[calc(83.33%-62px)] rounded-[10px] top-[213.75px] w-[182px]" data-node-id="71:871" data-name="ComboBox" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(83.33%-54px)] text-[#1e2a3b] text-[15px] top-[226.25px] whitespace-nowrap" data-node-id="71:872">
+        Kamis, 12 November 2026
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(91.67%-20px)] text-[#94a3b8] text-[14px] top-[226.25px] whitespace-nowrap" data-node-id="71:873">
+        â¾
+      </p>
+      <div className="absolute bg-white border border-[#e3d3c4] border-solid h-[42px] left-[calc(16.67%+161px)] rounded-[10px] top-[401px] w-[250px]" data-node-id="71:874" data-name="ComboBox" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(25%+56px)] text-[#1e2a3b] text-[15px] top-[412px] whitespace-nowrap" data-node-id="71:875">
+        Kamis, 12 November 2026
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(41.67%+63.89px)] text-[#94a3b8] text-[14px] top-[414px] whitespace-nowrap" data-node-id="71:876">
+        â¾
+      </p>
+      <div className="absolute bg-[#eedfd1] h-px left-0 top-[92px] w-[1440px]" data-node-id="71:877" data-name="Nav divider" />
+    </div>
+  );
+}
+
+/* --- */
+
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+
+/* --- */
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+
+/* --- */
+
+The generated code contains image and SVG URL constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

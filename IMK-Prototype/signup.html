@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar — OMI</title>
+  <meta name="description" content="Buat akun OMI untuk mengelola penitipan kucing Anda.">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="omi-auth-body">
+
+  <!-- Frame 02 Sign Up (node 143:558) -->
+  <main class="omi-auth">
+
+    <section class="omi-auth-form omi-auth-form--signup">
+
+      <a class="omi-btn omi-btn--outline omi-auth-switch" href="index.html">Sign In</a>
+
+      <div class="omi-auth-head">
+        <div class="omi-auth-logo">🐾</div>
+        <h1 class="omi-auth-title">Welcome!</h1>
+        <p class="omi-auth-sub">Best Pet Hotel Experience</p>
+      </div>
+
+      <form id="form-signup" novalidate>
+        <div class="omi-field">
+          <label class="omi-label" for="email">Email</label>
+          <input class="omi-input" type="email" id="email" name="email"
+                 autocomplete="email" placeholder="nama@email.com">
+        </div>
+
+        <div class="omi-field">
+          <label class="omi-label" for="telepon">Phone Number</label>
+          <input class="omi-input" type="tel" id="telepon" name="telepon"
+                 autocomplete="tel" placeholder="0812-3456-7890">
+        </div>
+
+        <div class="omi-field">
+          <label class="omi-label" for="username">Username</label>
+          <input class="omi-input" type="text" id="username" name="username"
+                 autocomplete="username" placeholder="Minimal 3 karakter">
+        </div>
+
+        <div class="omi-field">
+          <label class="omi-label" for="password">Password</label>
+          <input class="omi-input" type="password" id="password" name="password"
+                 autocomplete="new-password" placeholder="Minimal 6 karakter">
+        </div>
+
+        <div class="omi-field">
+          <label class="omi-label" for="konfirmasi">Confirm Password</label>
+          <input class="omi-input" type="password" id="konfirmasi" name="konfirmasi"
+                 autocomplete="new-password" placeholder="Ulangi password">
+        </div>
+
+        <p class="omi-alert omi-alert--danger omi-hidden omi-mt-16" id="signup-error" role="alert"></p>
+        <p class="omi-alert omi-alert--success omi-hidden omi-mt-16" id="signup-success" role="status"></p>
+
+        <button class="omi-btn omi-btn--primary omi-btn--lg omi-btn--block omi-mt-24" type="submit">
+          Sign Up
+        </button>
+      </form>
+    </section>
+
+    <aside class="omi-auth-brand" aria-hidden="true">
+      <div class="omi-auth-brand-logo">🐾</div>
+      <div class="omi-auth-brand-word">OMI</div>
+      <div class="omi-auth-brand-sub">Oemahpus</div>
+      <div class="omi-auth-brand-tag">Monitoring &amp; Information</div>
+    </aside>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

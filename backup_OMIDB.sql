@@ -430,7 +430,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'owner','$2a$11$2fYyscurJLeEaxTtixPmveKvz8oW82b99VvUNlorQh5h.8gTZcUtO','Owner OemahPus','Owner',1,'2026-10-29 16:53:29'),(2,'staf01','GANTI_DENGAN_HASH','Staf Operasional 1','StafOperasional',1,'2026-10-29 16:53:29'),(3,'driver01','GANTI_DENGAN_HASH','Staf Antar Jemput 1','StafAntarJemput',1,'2026-10-29 16:53:29');
+INSERT INTO `users` VALUES (1,'owner','$2a$11$2fYyscurJLeEaxTtixPmveKvz8oW82b99VvUNlorQh5h.8gTZcUtO','Owner OemahPus','Owner',1,'2026-10-29 16:53:29'),(2,'staf01','$2a$11$OnZen6UTcsRayPjkNc6m3uKnVqhlPHjnNOP23NuW797d4UCkoFwG2','Staf Operasional 1','StafOperasional',1,'2026-10-29 16:53:29'),(3,'driver01','$2a$11$mLzI.r2ibVXDrJeRQEpFUOAQWiu1kt2vUh8C/PT0tYkMb/nYwmhRy','Staf Antar Jemput 1','StafAntarJemput',1,'2026-10-29 16:53:29');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 

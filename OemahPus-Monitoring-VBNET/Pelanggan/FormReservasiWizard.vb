@@ -6,10 +6,18 @@ Public Class FormReservasiWizard
 
     Private Sub FormReservasiWizard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Navigator.Register("reservasiPelanggan", Me)
-        PelangganNav.Wire(Me, btnMenuDashboard, btnMenuProfil, btnMenuReservasiPelanggan,
-                          btnMenuRiwayat, btnMenuAkun, btnLogout)
-        ApplyMenuAccess(btnMenuDashboard, btnMenuProfil, btnMenuReservasiPelanggan,
-                        btnMenuRiwayat, btnMenuAkun)
+        PelangganNav.Wire(Me, btnMenuDashboard, btnMenuProfil, btnMenuTracking,
+                          btnMenuReservasiPelanggan, btnMenuRiwayat, btnMenuAkun, btnLogout)
+        ApplyMenuAccess(btnMenuDashboard, btnMenuProfil, btnMenuTracking,
+                        btnMenuReservasiPelanggan, btnMenuRiwayat, btnMenuAkun)
+
+        ' Data pemesan diambil dari tabel customers, bukan diketik manual.
+        txtNamaPemesan.ReadOnly = True
+        txtTelepon.ReadOnly = True
+        txtAlamat.ReadOnly = True
+        txtNamaPemesan.BackColor = Color.Gainsboro
+        txtTelepon.BackColor = Color.Gainsboro
+        txtAlamat.BackColor = Color.Gainsboro
 
         txtAlamat.Multiline = True
         txtCatatan.Multiline = True
@@ -19,7 +27,8 @@ Public Class FormReservasiWizard
         ConfigureGrid()
 
         Try
-            customerId = EnsureCustomerId()
+            customerId = CustomerService.EnsureCustomerId()
+            LoadCustomer()
             LoadCats()
             LoadServices()
         Catch ex As Exception
@@ -30,24 +39,55 @@ Public Class FormReservasiWizard
         ShowStep(1)
     End Sub
 
-    Private Function EnsureCustomerId() As Integer
-        Dim found As Object = Scalar(
-            "SELECT customer_id FROM customers WHERE user_id=@uid",
-            P("@uid", UserSession.CurrentUserId))
-        If found IsNot Nothing AndAlso found IsNot DBNull.Value Then Return Convert.ToInt32(found)
+    ' Navigator menyimpan instance form, jadi Load hanya jalan sekali.
+    ' Refresh daftar kucing tiap form muncul lagi (misal habis tambah kucing di Profil).
+    Private Sub FormReservasiWizard_VisibleChanged(sender As Object, e As EventArgs) Handles MyBase.VisibleChanged
+        If Not Me.Visible Then Return
+        Try
+            customerId = CustomerService.EnsureCustomerId()
+            LoadCustomer()
+            LoadCats()
+        Catch ex As Exception
+            MessageBox.Show("Gagal memuat data pelanggan/kucing: " & ex.Message, "Error",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
 
-        Exec("INSERT INTO customers (user_id, full_name, phone) VALUES (@uid, @nama, '-')",
-             P("@uid", UserSession.CurrentUserId), P("@nama", UserSession.CurrentFullName))
-        Return Convert.ToInt32(Scalar("SELECT LAST_INSERT_ID()"))
-    End Function
+    Private Sub LoadCustomer()
+        Dim table As DataTable = GetTable(
+            "SELECT full_name, phone, address FROM customers WHERE customer_id=@cid",
+            P("@cid", customerId))
+        If table.Rows.Count = 0 Then Return
+        Dim row As DataRow = table.Rows(0)
+        txtNamaPemesan.Text = Convert.ToString(row("full_name"))
+        txtTelepon.Text = Convert.ToString(row("phone"))
+        txtAlamat.Text = Convert.ToString(row("address"))
+    End Sub
 
     Private Sub LoadCats()
+        Dim previousId As Integer = 0
+        If cmbKucing.SelectedValue IsNot Nothing AndAlso cmbKucing.SelectedValue IsNot DBNull.Value Then
+            Integer.TryParse(cmbKucing.SelectedValue.ToString(), previousId)
+        End If
+
         Dim table As DataTable = GetTable(
             "SELECT cat_id, cat_name FROM cats WHERE customer_id=@cid ORDER BY cat_name",
             P("@cid", customerId))
         cmbKucing.DataSource = table
         cmbKucing.DisplayMember = "cat_name"
         cmbKucing.ValueMember = "cat_id"
+
+        If previousId > 0 AndAlso table.Select("cat_id=" & previousId).Length > 0 Then
+            cmbKucing.SelectedValue = previousId
+        Else
+            cmbKucing.SelectedIndex = -1
+        End If
+
+        If table.Rows.Count = 0 Then
+            lblStep1.Text = "Langkah 1 / 3 - Data Pemesan (belum ada kucing, tambah dulu di Profil Kucing)"
+        Else
+            lblStep1.Text = "Langkah 1 / 3 - Data Pemesan"
+        End If
     End Sub
 
     Private Sub ConfigureGrid()
@@ -70,6 +110,20 @@ Public Class FormReservasiWizard
         Dim table As DataTable = GetTable(
             "SELECT service_id, service_name, price, 1 AS qty FROM services WHERE is_active=1 ORDER BY service_name")
         dgvLayanan.DataSource = table
+    End Sub
+
+    ' Setelah reservasi berhasil dikirim, kembalikan wizard ke langkah 1.
+    ' Instance form di-cache Navigator, jadi Load (yang memanggil ShowStep(1)) tidak jalan lagi.
+    Private Sub ResetWizard()
+        ReservationDraft.Current.Reset()
+        txtCatatan.Clear()
+        chkPickup.Checked = False
+        dtpCheckIn.Value = Date.Today
+        dtpCheckOut.Value = Date.Today.AddDays(1)
+        txtRingkasan.Clear()
+        cmbKucing.SelectedIndex = -1
+        LoadServices()          ' reload DataSource: checkbox pilih mati, qty kembali 1
+        ShowStep(1)
     End Sub
 
     Private Sub ShowStep(n As Integer)
@@ -133,9 +187,13 @@ Public Class FormReservasiWizard
 
     Private Sub btnNext1_Click(sender As Object, e As EventArgs) Handles btnNext1.Click
         If String.IsNullOrWhiteSpace(txtNamaPemesan.Text) OrElse
-           String.IsNullOrWhiteSpace(txtTelepon.Text) OrElse
-           String.IsNullOrWhiteSpace(txtAlamat.Text) Then
-            MessageBox.Show("Nama, telepon, dan alamat wajib diisi.", "Validasi",
+           String.IsNullOrWhiteSpace(txtTelepon.Text) Then
+            MessageBox.Show("Data pemesan belum tersedia.", "Validasi",
+                            MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+        If String.IsNullOrWhiteSpace(txtAlamat.Text) Then
+            MessageBox.Show("Alamat belum diisi. Lengkapi dulu di menu Akun Saya.", "Validasi",
                             MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
         End If
@@ -225,7 +283,7 @@ Public Class FormReservasiWizard
             Dim target As New FormPembayaran()
             target.ReservationNo = no
             target.Amount = total
-            ReservationDraft.Current.Reset()
+            ResetWizard()
             Navigator.GoWithInstance(Me, "pembayaran", target, String.Empty)
         Catch ex As Exception
             MessageBox.Show("Gagal mengajukan reservasi: " & ex.Message, "Error",

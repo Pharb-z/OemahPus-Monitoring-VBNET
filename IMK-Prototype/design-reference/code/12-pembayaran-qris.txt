@@ -1,0 +1,67 @@
+﻿export default function Component12PembayaranQris() {
+  return (
+    <div className="bg-[#fff8f2] relative size-full" data-node-id="71:552" data-name="12 Pembayaran QRIS">
+      <div className="absolute bg-white h-[92px] left-0 shadow-[0px_4px_14px_0px_rgba(115,56,13,0.05)] top-0 w-[1440px]" data-node-id="71:553" data-name="Navbar" />
+      <div className="absolute bg-[#ffebd9] h-[34px] left-[calc(83.33%-5px)] rounded-[16px] top-[29px] w-[91px]" data-node-id="71:554" data-name="Nav aktif" />
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[0] left-[calc(83.33%+11px)] text-[#f26b21] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:555">
+        <p className="leading-[normal]">Riwayat</p>
+      </a>
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[0] left-[calc(75%+26px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:556">
+        <p className="leading-[normal]">Reservasi</p>
+      </a>
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[0] left-[calc(91.67%-14px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:557">
+        <p className="leading-[normal]">Akun Saya</p>
+      </a>
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[0] left-[calc(58.33%+60px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:558">
+        <p className="leading-[normal]">Home</p>
+      </a>
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[0] left-[calc(66.67%+20px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:559">
+        <p className="leading-[normal]">Profil Kucing</p>
+      </a>
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:ExtraBold'] font-extrabold leading-[0] left-[106px] text-[#f26b21] text-[26px] top-[29.5px] whitespace-nowrap" data-node-id="71:560">
+        <p className="leading-[normal]">OMI</p>
+      </a>
+      <div className="absolute bg-[#f26b21] left-[60px] rounded-[10px] size-[36px] top-[28px]" data-node-id="71:561" data-name="Image" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[69px] text-[18px] text-white top-[37px] whitespace-nowrap" data-node-id="71:562">
+        ð¾
+      </p>
+      <div className="absolute h-[262px] left-[calc(33.33%+57.75px)] rounded-[14px] top-[331.5px] w-[378px]" data-node-id="71:563" style={{ backgroundImage: "linear-gradient(145.2733306416293deg, rgb(255, 227, 204) 0%, rgb(255, 243, 232) 71.429%)" }} data-name="Image" />
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(33.33%+246.75px)] text-[#f5a56b] text-[48px] text-center top-[438.5px] w-[378px]" data-node-id="71:564">
+        ð¾
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(25%+97.5px)] text-[#1e2a3b] text-[20px] top-[178.75px] whitespace-nowrap" data-node-id="71:565">
+        Pindai Kode QR di bawah untuk melakukan pembayaran
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[normal] left-[calc(41.67%+92px)] text-[#1e2a3b] text-[28px] top-[664.75px] whitespace-nowrap" data-node-id="71:566">
+        23:55
+      </p>
+      <a className="absolute bg-[#f26b21] content-stretch cursor-pointer drop-shadow-[0px_6px_7px_rgba(242,107,33,0.3)] flex h-[53px] items-center justify-center left-[calc(33.33%+101.25px)] rounded-[10px] top-[748.25px] w-[324px]" data-node-id="71:567" data-name="Btn: Unduh Kode QR">
+        <p className="[word-break:break-word] font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[16px] text-center text-white whitespace-nowrap" data-node-id="71:568">
+          Unduh Kode QR
+        </p>
+      </a>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[normal] left-[calc(41.67%+46px)] text-[#f26b21] text-[28px] top-[236.25px] whitespace-nowrap" data-node-id="71:569">
+        IDR. 140.000
+      </p>
+      <div className="absolute bg-[#eedfd1] h-px left-0 top-[92px] w-[1440px]" data-node-id="71:570" data-name="Nav divider" />
+    </div>
+  );
+}
+
+/* --- */
+
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+
+/* --- */
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+
+/* --- */
+
+The generated code contains image and SVG URL constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

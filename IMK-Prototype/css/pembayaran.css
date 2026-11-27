@@ -1,0 +1,177 @@
+/* ==========================================================================
+   OMI — Gaya Modul Pembayaran (frame 11, 12, 13)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Pilihan metode pembayaran
+   -------------------------------------------------------------------------- */
+.omi-metode-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.omi-metode {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.omi-metode input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.omi-metode-body {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border: 1.5px solid var(--omi-border);
+  border-radius: var(--omi-r-lg);
+  background: #fff;
+  transition: border-color .15s ease, box-shadow .15s ease;
+  height: 100%;
+}
+
+.omi-metode:hover .omi-metode-body {
+  border-color: var(--omi-primary-mid);
+}
+
+.omi-metode input:checked + .omi-metode-body {
+  border-color: var(--omi-primary);
+  box-shadow: 0 0 0 3px rgba(242, 107, 33, 0.12);
+}
+
+.omi-metode-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.omi-metode-body strong {
+  display: block;
+  font-size: var(--omi-fs-15);
+  font-weight: var(--omi-fw-semibold);
+  color: var(--omi-text);
+}
+
+.omi-metode-body small {
+  display: block;
+  font-size: var(--omi-fs-12);
+  color: var(--omi-text-muted);
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
+/* --------------------------------------------------------------------------
+   Halaman QRIS (frame 12)
+   -------------------------------------------------------------------------- */
+.omi-qris-note {
+  font-size: var(--omi-fs-16);
+  color: var(--omi-text-muted);
+  max-width: 320px;
+  margin: 0 auto 24px;
+  line-height: 1.6;
+}
+
+.omi-qris-label {
+  font-size: var(--omi-fs-13);
+  color: var(--omi-text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+
+/* Placeholder pola QR sederhana (bukan QR sungguhan) */
+.omi-qr-pattern {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  gap: 3px;
+  padding: 14px;
+  background: #fff;
+}
+
+.omi-qr-pattern span {
+  border-radius: 2px;
+  background: var(--omi-text);
+  opacity: 0.9;
+}
+
+.omi-qr-pattern span.is-off {
+  background: transparent;
+}
+
+/* Tiga kotak penanda sudut khas QR */
+.omi-qr-pattern span.is-corner {
+  background: var(--omi-text);
+  border-radius: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   Halaman Sukses (frame 13)
+   -------------------------------------------------------------------------- */
+.omi-sukses-icon {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: var(--omi-success-bg);
+  color: var(--omi-success);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  margin: 0 auto 24px;
+}
+
+.omi-sukses-title {
+  font-size: var(--omi-fs-28);
+  font-weight: var(--omi-fw-bold);
+  color: var(--omi-text);
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.omi-sukses-sub {
+  text-align: center;
+  color: var(--omi-text-muted);
+  font-size: var(--omi-fs-15);
+  margin-bottom: 32px;
+}
+
+/* Baris rincian dua kolom untuk halaman sukses */
+.omi-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 32px;
+}
+
+.omi-detail-grid dt {
+  font-size: var(--omi-fs-13);
+  color: var(--omi-text-muted);
+  margin-bottom: 4px;
+}
+
+.omi-detail-grid dd {
+  margin: 0;
+  font-size: var(--omi-fs-15);
+  font-weight: var(--omi-fw-semibold);
+  color: var(--omi-text);
+}
+
+/* --------------------------------------------------------------------------
+   Responsif
+   -------------------------------------------------------------------------- */
+@media (max-width: 820px) {
+  .omi-metode-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .omi-detail-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+}

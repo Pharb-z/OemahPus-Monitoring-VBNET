@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservasi — Konfirmasi — OMI</title>
+  <meta name="description" content="Langkah 2 reservasi: pilih tanggal penginapan dan tinjau rincian biaya.">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/reservasi.css">
+</head>
+<body>
+
+  <!-- Frame 09 Reservasi Konfirmasi (node 137:348) -->
+  <header id="omi-navbar"></header>
+
+  <main class="omi-page">
+
+    <div class="omi-header-row">
+      <h1 class="omi-page-title">Konfirmasi Ajuan Reservasi</h1>
+    </div>
+
+    <div id="omi-stepper"></div>
+
+    <form id="form-konfirmasi" novalidate>
+
+      <div class="omi-confirm-grid">
+
+        <!-- Kiri: kalender + rincian biaya -->
+        <div class="omi-flex omi-flex-col omi-gap-24">
+
+          <section class="omi-card">
+            <h2 class="omi-card-title omi-mb-16">Pilih Tanggal Penginapan</h2>
+            <p class="omi-text-sm omi-text-muted omi-mb-16">
+              Klik tanggal masuk, lalu klik tanggal keluar.
+            </p>
+            <div id="kalender"></div>
+
+            <div class="omi-date-fields">
+              <div class="omi-field">
+                <label class="omi-label" for="tanggal-masuk">Check In</label>
+                <input class="omi-input" type="text" id="tanggal-masuk" readonly placeholder="Belum dipilih">
+              </div>
+              <div class="omi-field">
+                <label class="omi-label" for="tanggal-keluar">Check Out</label>
+                <input class="omi-input" type="text" id="tanggal-keluar" readonly placeholder="Belum dipilih">
+              </div>
+            </div>
+          </section>
+
+          <section class="omi-card">
+            <h2 class="omi-card-title omi-mb-16">Rincian Biaya Reservasi</h2>
+            <dl class="omi-summary">
+              <div class="omi-summary-row">
+                <dt>Harga Paket</dt>
+                <dd id="biaya-paket">IDR. 0</dd>
+              </div>
+              <div class="omi-summary-row">
+                <dt>Jumlah Malam</dt>
+                <dd id="biaya-malam">-</dd>
+              </div>
+              <div class="omi-summary-row">
+                <dt>Layanan Tambahan</dt>
+                <dd id="biaya-tambahan">IDR. 0</dd>
+              </div>
+              <div class="omi-summary-row omi-summary-total">
+                <dt>Total</dt>
+                <dd id="biaya-total">IDR. 0</dd>
+              </div>
+            </dl>
+          </section>
+        </div>
+
+        <!-- Kanan: status pengajuan + ringkasan -->
+        <div class="omi-flex omi-flex-col omi-gap-24">
+
+          <section class="omi-card">
+            <h2 class="omi-card-title omi-mb-16">Status Reservasi</h2>
+            <div class="omi-status-box">
+              <span class="omi-status-box-icon" aria-hidden="true">⏳</span>
+              <span>Pengajuan Sedang Ditinjau.</span>
+            </div>
+            <p class="omi-text-sm omi-text-muted omi-mt-16">
+              Setelah diajukan, pengajuan akan diperiksa oleh pengelola. Kamu
+              dapat memantau perubahan status di halaman Riwayat.
+            </p>
+          </section>
+
+          <section class="omi-card">
+            <h2 class="omi-card-title omi-mb-16">Ringkasan</h2>
+            <div id="ringkasan-identitas"></div>
+          </section>
+        </div>
+      </div>
+
+      <p class="omi-alert omi-alert--danger omi-hidden omi-mt-24" id="form-error" role="alert"></p>
+
+      <div class="omi-step-footer">
+        <a class="omi-btn omi-btn--ghost" href="reservasi-data.html">Kembali</a>
+        <button class="omi-btn omi-btn--primary omi-btn--lg" type="submit">Ajukan</button>
+      </div>
+    </form>
+
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/page-reservasi.js"></script>
+</body>
+</html>

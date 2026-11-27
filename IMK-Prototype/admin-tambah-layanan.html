@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tambah Layanan — OMI</title>
+  <meta name="description" content="Tambahkan atau ubah paket layanan pet hotel OMI.">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+  <!-- Frame 17 Admin - Tambah Layanan (node 153:545) -->
+  <header id="omi-navbar"></header>
+
+  <main class="omi-page">
+
+    <div class="omi-header-row">
+      <div>
+        <h1 class="omi-page-title" id="form-judul">Tambah Layanan</h1>
+        <p class="omi-page-subtitle">Lengkapi data paket layanan yang akan ditawarkan.</p>
+      </div>
+    </div>
+
+    <form class="omi-card omi-layanan-form" id="form-layanan" novalidate>
+      <div class="omi-form-grid">
+
+        <div class="omi-field">
+          <label class="omi-label" for="nama">Nama Layanan</label>
+          <input class="omi-input" type="text" id="nama" name="nama" placeholder="Contoh: Paket Reguler">
+        </div>
+
+        <div class="omi-field">
+          <label class="omi-label" for="jenis">Jenis Layanan</label>
+          <select class="omi-select" id="jenis" name="jenis">
+            <option value="">Pilih jenis layanan</option>
+            <option value="Penitipan">Penitipan</option>
+            <option value="Grooming">Grooming</option>
+            <option value="Antar Jemput">Antar Jemput</option>
+            <option value="Tambahan">Tambahan</option>
+          </select>
+        </div>
+
+        <div class="omi-field">
+          <label class="omi-label" for="harga">Harga (Rupiah)</label>
+          <input class="omi-input" type="number" id="harga" name="harga" min="0" step="1000" placeholder="Contoh: 70000">
+        </div>
+
+        <div class="omi-field">
+          <label class="omi-label" for="satuan">Satuan</label>
+          <input class="omi-input" type="text" id="satuan" name="satuan" placeholder="Contoh: malam, trip, hari">
+        </div>
+
+        <div class="omi-field" style="grid-column: 1 / -1;">
+          <label class="omi-label" for="deskripsi">Deskripsi</label>
+          <textarea class="omi-textarea" id="deskripsi" name="deskripsi"
+                    placeholder="Jelaskan fasilitas yang didapat pada paket ini."></textarea>
+        </div>
+      </div>
+
+      <p class="omi-alert omi-alert--danger omi-hidden omi-mt-24" id="form-error" role="alert"></p>
+
+      <div class="omi-layanan-form-footer">
+        <button type="button" class="omi-btn omi-btn--ghost" id="btn-batal">Batal</button>
+        <button type="submit" class="omi-btn omi-btn--primary omi-btn--lg">Simpan</button>
+      </div>
+    </form>
+
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/page-admin.js"></script>
+</body>
+</html>

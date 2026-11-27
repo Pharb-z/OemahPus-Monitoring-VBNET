@@ -1,0 +1,235 @@
+﻿const imgEllipse = "https://www.figma.com/api/mcp/asset/281ddd18-7dfd-418c-9a92-a9198fd1e95a.svg";
+const imgEllipse1 = "https://www.figma.com/api/mcp/asset/0576d24c-3cb9-4225-8385-fa3837d30d4d.svg";
+const imgEllipse2 = "https://www.figma.com/api/mcp/asset/ff495edf-d688-4b90-b5ba-1242c0e874dc.svg";
+
+export default function Component09ReservasiKonfirmasi() {
+  return (
+    <div className="bg-[#fff8f2] relative size-full" data-node-id="71:364" data-name="09 Reservasi - Konfirmasi">
+      <div className="absolute bg-white h-[92px] left-0 shadow-[0px_4px_14px_0px_rgba(115,56,13,0.05)] top-0 w-[1440px]" data-node-id="71:365" data-name="Navbar" />
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:ExtraBold'] font-extrabold leading-[0] left-[106px] text-[#f26b21] text-[26px] top-[29.5px] whitespace-nowrap" data-node-id="71:366">
+        <p className="leading-[normal]">OMI</p>
+      </a>
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[0] left-[calc(83.33%+13px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:367">
+        <p className="leading-[normal]">Riwayat</p>
+      </a>
+      <div className="absolute bg-[#ffebd9] h-[34px] left-[calc(75%+11px)] rounded-[16px] top-[29px] w-[102px]" data-node-id="71:368" data-name="Nav aktif" />
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[0] left-[calc(75%+27px)] text-[#f26b21] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:369">
+        <p className="leading-[normal]">Reservasi</p>
+      </a>
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[0] left-[calc(91.67%-14px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:370">
+        <p className="leading-[normal]">Akun Saya</p>
+      </a>
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[0] left-[calc(58.33%+61px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:371">
+        <p className="leading-[normal]">Home</p>
+      </a>
+      <div className="absolute bg-[#f26b21] left-[60px] rounded-[10px] size-[36px] top-[28px]" data-node-id="71:372" data-name="Image" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[69px] text-[18px] text-white top-[37px] whitespace-nowrap" data-node-id="71:373">
+        ð¾
+      </p>
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[0] left-[calc(66.67%+21px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:374">
+        <p className="leading-[normal]">Profil Kucing</p>
+      </a>
+      <a className="absolute bg-[#f26b21] content-stretch cursor-pointer drop-shadow-[0px_6px_7px_rgba(242,107,33,0.3)] flex h-[38px] items-center justify-center left-[calc(83.33%-65.57px)] rounded-[10px] top-[838.75px] w-[134px]" data-node-id="71:375" data-name="Btn: Ajukan">
+        <p className="[word-break:break-word] font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[16px] text-center text-white whitespace-nowrap" data-node-id="71:376">
+          Ajukan
+        </p>
+      </a>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[normal] left-[189.69px] text-[#1e2a3b] text-[28px] top-[161.25px] whitespace-nowrap" data-node-id="71:377">
+        Konfirmasi Ajuan Reservasi
+      </p>
+      <div className="absolute bg-white border border-[#eedfd1] border-solid h-[280px] left-[198.05px] rounded-[16px] shadow-[0px_8px_24px_0px_rgba(115,56,13,0.12)] top-[258.75px] w-[723.345px]" data-node-id="71:378" data-name="Calendar" />
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(8.33%+439.72px)] text-[#1e2a3b] text-[15px] text-center top-[272.05px] w-[519px] whitespace-pre-wrap" data-node-id="71:379">{`â   November 2026   â¶`}</p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(8.33%+139.27px)] text-[#94a3b8] text-[12px] text-center top-[311.02px] w-[71.857px]" data-node-id="71:380">
+        S
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(16.67%+119.42px)] text-[#94a3b8] text-[12px] text-center top-[311.02px] w-[71.857px]" data-node-id="71:381">
+        M
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(25%+99.57px)] text-[#94a3b8] text-[12px] text-center top-[311.02px] w-[71.857px]" data-node-id="71:382">
+        T
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(33.33%+79.72px)] text-[#94a3b8] text-[12px] text-center top-[311.02px] w-[71.857px]" data-node-id="71:383">
+        W
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(41.67%+59.87px)] text-[#94a3b8] text-[12px] text-center top-[311.02px] w-[71.857px]" data-node-id="71:384">
+        T
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(50%+40.02px)] text-[#94a3b8] text-[12px] text-center top-[311.02px] w-[71.857px]" data-node-id="71:385">
+        F
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(58.33%+20.17px)] text-[#94a3b8] text-[12px] text-center top-[311.02px] w-[71.857px]" data-node-id="71:386">
+        S
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[calc(8.33%+139.27px)] text-[#334155] text-[16px] text-center top-[342.86px] w-[71.857px]" data-node-id="71:387">
+        1
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[calc(16.67%+119.42px)] text-[#334155] text-[16px] text-center top-[342.86px] w-[71.857px]" data-node-id="71:388">
+        2
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[calc(25%+99.57px)] text-[#334155] text-[16px] text-center top-[342.86px] w-[71.857px]" data-node-id="71:389">
+        3
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[calc(33.33%+79.72px)] text-[#334155] text-[16px] text-center top-[342.86px] w-[71.857px]" data-node-id="71:390">
+        4
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[calc(41.67%+59.87px)] text-[#334155] text-[16px] text-center top-[342.86px] w-[71.857px]" data-node-id="71:391">
+        5
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[calc(50%+40.02px)] text-[#334155] text-[16px] text-center top-[342.86px] w-[71.857px]" data-node-id="71:392">
+        6
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[calc(58.33%+20.17px)] text-[#334155] text-[16px] text-center top-[342.86px] w-[71.857px]" data-node-id="71:393">
+        7
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[calc(8.33%+139.27px)] text-[#334155] text-[16px] text-center top-[375.21px] w-[71.857px]" data-node-id="71:394">
+        8
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[calc(16.67%+119.42px)] text-[#334155] text-[16px] text-center top-[375.21px] w-[71.857px]" data-node-id="71:395">
+        9
+      </p>
+      <div className="absolute bg-[#f26b21] h-[30px] left-[calc(25%+82.57px)] rounded-[10px] top-[370.21px] w-[34px]" data-node-id="71:396" data-name="Date selected" />
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(25%+99.57px)] text-[16px] text-center text-white top-[375.21px] w-[71.857px]" data-node-id="71:397">
+        10
+      </p>
+      <div className="absolute bg-[#f26b21] h-[30px] left-[calc(33.33%+62.72px)] rounded-[10px] top-[370.21px] w-[34px]" data-node-id="71:398" data-name="Date selected" />
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(33.33%+79.72px)] text-[16px] text-center text-white top-[375.21px] w-[71.857px]" data-node-id="71:399">
+        11
+      </p>
+      <div className="absolute bg-[#f26b21] h-[30px] left-[calc(41.67%+42.87px)] rounded-[10px] top-[370.21px] w-[34px]" data-node-id="71:400" data-name="Date selected" />
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(41.67%+59.87px)] text-[16px] text-center text-white top-[375.21px] w-[71.857px]" data-node-id="71:401">
+        12
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[calc(50%+40.02px)] text-[#334155] text-[16px] text-center top-[375.21px] w-[71.857px]" data-node-id="71:402">
+        13
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[calc(58.33%+20.17px)] text-[#334155] text-[16px] text-center top-[375.21px] w-[71.857px]" data-node-id="71:403">
+        14
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[calc(8.33%+139.27px)] text-[#334155] text-[16px] text-center top-[407.55px] w-[71.857px]" data-node-id="71:404">
+        15
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[calc(16.67%+119.42px)] text-[#334155] text-[16px] text-center top-[407.55px] w-[71.857px]" data-node-id="71:405">
+        16
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[calc(25%+99.57px)] text-[#334155] text-[16px] text-center top-[407.55px] w-[71.857px]" data-node-id="71:406">
+        17
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[calc(33.33%+79.72px)] text-[#334155] text-[16px] text-center top-[407.55px] w-[71.857px]" data-node-id="71:407">
+        18
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[calc(41.67%+59.87px)] text-[#334155] text-[16px] text-center top-[407.55px] w-[71.857px]" data-node-id="71:408">
+        19
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[calc(50%+40.02px)] text-[#334155] text-[16px] text-center top-[407.55px] w-[71.857px]" data-node-id="71:409">
+        20
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[calc(58.33%+20.17px)] text-[#334155] text-[16px] text-center top-[407.55px] w-[71.857px]" data-node-id="71:410">
+        21
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[calc(8.33%+139.27px)] text-[#334155] text-[16px] text-center top-[439.89px] w-[71.857px]" data-node-id="71:411">
+        22
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[calc(16.67%+119.42px)] text-[#334155] text-[16px] text-center top-[439.89px] w-[71.857px]" data-node-id="71:412">
+        23
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[calc(25%+99.57px)] text-[#334155] text-[16px] text-center top-[439.89px] w-[71.857px]" data-node-id="71:413">
+        24
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[calc(33.33%+79.72px)] text-[#334155] text-[16px] text-center top-[439.89px] w-[71.857px]" data-node-id="71:414">
+        25
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[calc(41.67%+59.87px)] text-[#334155] text-[16px] text-center top-[439.89px] w-[71.857px]" data-node-id="71:415">
+        26
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[calc(50%+40.02px)] text-[#334155] text-[16px] text-center top-[439.89px] w-[71.857px]" data-node-id="71:416">
+        27
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[calc(58.33%+20.17px)] text-[#334155] text-[16px] text-center top-[439.89px] w-[71.857px]" data-node-id="71:417">
+        28
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[calc(8.33%+139.27px)] text-[#334155] text-[16px] text-center top-[472.24px] w-[71.857px]" data-node-id="71:418">
+        29
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[calc(16.67%+119.42px)] text-[#334155] text-[16px] text-center top-[472.24px] w-[71.857px]" data-node-id="71:419">
+        30
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[198.05px] text-[#1e2a3b] text-[20px] top-[212.5px] whitespace-nowrap" data-node-id="71:420">
+        Pillih Tanggal Penginapan
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(75%-15.45px)] text-[#1e2a3b] text-[20px] top-[212.5px] whitespace-nowrap" data-node-id="71:421">
+        Rincian Biaya Reservasi
+      </p>
+      <div className="absolute bg-white border border-[#eedfd1] border-solid h-[256.25px] left-[calc(66.67%+22.72px)] rounded-[16px] shadow-[0px_6px_18px_0px_rgba(115,56,13,0.07)] top-[273.75px] w-[337.282px]" data-node-id="71:422" data-name="Card" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[198.05px] text-[#1e2a3b] text-[20px] top-[578px] whitespace-nowrap" data-node-id="71:423">
+        Status Reservasi
+      </p>
+      <div className="absolute bg-[#f9c9a5] h-px left-[calc(8.33%+139px)] rounded-[2px] top-[683.5px] w-[904px]" data-node-id="71:424" data-name="HRule" />
+      <div className="absolute left-[calc(8.33%+105px)] size-[38px] top-[664.5px]" data-node-id="71:425" data-name="Ellipse">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse} />
+      </div>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Bold'] font-bold h-[27px] leading-[normal] left-[calc(8.33%+117px)] text-[16px] text-white top-[670.5px] w-[18px]" data-node-id="71:426">
+        â
+      </p>
+      <div className="absolute left-[calc(41.67%+91px)] size-[38px] top-[666.5px]" data-node-id="71:427" data-name="Ellipse">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse1} />
+      </div>
+      <div className="absolute left-[calc(83.33%-55px)] size-[38px] top-[664.5px]" data-node-id="71:428" data-name="Ellipse">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse2} />
+      </div>
+      <div className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium h-[53px] leading-[0] left-[246px] text-[#334155] text-[16px] text-center top-[729.5px] w-[206px]" data-node-id="71:429">
+        <p className="leading-[normal] mb-0">Pengajuan</p>
+        <p className="leading-[normal]">Sukses.</p>
+      </div>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium h-[53px] leading-[normal] left-[calc(41.67%+114px)] text-[#334155] text-[16px] text-center top-[737.5px] w-[206px]" data-node-id="71:430">
+        Pengajuan Sedang Ditinjau.
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium h-[54px] leading-[normal] left-[calc(75%+86px)] text-[#334155] text-[16px] text-center top-[739.5px] w-[206px]" data-node-id="71:431">
+        Pengajuan Disetujui.
+      </p>
+      <div className="absolute bg-[#eedfd1] h-px left-0 top-[92px] w-[1440px]" data-node-id="71:432" data-name="Nav divider" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(66.67%+44.72px)] text-[#64748b] text-[14px] top-[299.75px] whitespace-nowrap" data-node-id="71:433">
+        Harga Paket
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(83.33%+14px)] text-[#1e2a3b] text-[14px] top-[299.75px] whitespace-nowrap" data-node-id="71:434">
+        IDR. 70.000
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(66.67%+44.72px)] text-[#64748b] text-[14px] top-[339.75px] whitespace-nowrap" data-node-id="71:435">
+        Jumlah Malam
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(91.67%-79px)] text-[#1e2a3b] text-[14px] top-[339.75px] whitespace-nowrap" data-node-id="71:436">
+        2 malam
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(66.67%+44.72px)] text-[#64748b] text-[14px] top-[379.75px] whitespace-nowrap" data-node-id="71:437">
+        Layanan Tambahan
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(83.33%+14px)] text-[#1e2a3b] text-[14px] top-[379.75px] whitespace-nowrap" data-node-id="71:438">
+        IDR. 20.000
+      </p>
+      <div className="absolute bg-[#eedfd1] h-px left-[calc(66.67%+44.72px)] top-[458px] w-[293.282px]" data-node-id="71:439" data-name="Rectangle" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[normal] left-[calc(66.67%+44.72px)] text-[#1e2a3b] text-[16px] top-[478px] whitespace-nowrap" data-node-id="71:440">
+        Total
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:ExtraBold'] font-extrabold leading-[normal] left-[calc(83.33%-34px)] text-[#f26b21] text-[20px] top-[476px] whitespace-nowrap" data-node-id="71:441">
+        IDR. 160.000
+      </p>
+    </div>
+  );
+}
+
+/* --- */
+
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+
+/* --- */
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+
+/* --- */
+
+The generated code contains image and SVG URL constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

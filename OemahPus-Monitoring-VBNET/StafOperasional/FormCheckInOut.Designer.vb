@@ -24,10 +24,12 @@ Partial Class FormCheckInOut
         Me.btnMenuPemeriksaanKucing = New Button()
         Me.btnMenuReservasi = New Button()
         Me.btnMenuLaporan = New Button()
+        Me.btnMenuAkun = New Button()
         Me.btnLogout = New Button()
         Me.Panel2 = New Panel()
         Me.Label2 = New Label()
         Me.Panel3 = New Panel()
+        Me.pnlCard = New Panel()
         Me.Label3 = New Label()
         Me.cmbMode = New ComboBox()
         Me.Label4 = New Label()
@@ -51,6 +53,7 @@ Partial Class FormCheckInOut
         Me.Panel1.BackColor = Color.SeaShell
         Me.Panel1.Controls.Add(Me.btnLogout)
         Me.Panel1.Controls.Add(Me.btnMenuLaporan)
+        Me.Panel1.Controls.Add(Me.btnMenuAkun)
         Me.Panel1.Controls.Add(Me.btnMenuReservasi)
         Me.Panel1.Controls.Add(Me.btnMenuPemeriksaanKucing)
         Me.Panel1.Controls.Add(Me.btnMenuCustomer)
@@ -72,7 +75,7 @@ Partial Class FormCheckInOut
         Me.Label1.Margin = New Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New Size(181, 77)
-        Me.Label1.TabIndex = 0
+        Me.Label1.TabIndex = 1
         Me.Label1.Text = "OMI"
         '
         ' btnMenuDashboard
@@ -84,7 +87,7 @@ Partial Class FormCheckInOut
         Me.btnMenuDashboard.Margin = New Padding(2)
         Me.btnMenuDashboard.Name = "btnMenuDashboard"
         Me.btnMenuDashboard.Size = New Size(165, 37)
-        Me.btnMenuDashboard.TabIndex = 1
+        Me.btnMenuDashboard.TabIndex = 2
         Me.btnMenuDashboard.Text = "Dashboard"
         Me.btnMenuDashboard.UseVisualStyleBackColor = False
         '
@@ -97,7 +100,7 @@ Partial Class FormCheckInOut
         Me.btnMenuLayanan.Margin = New Padding(2)
         Me.btnMenuLayanan.Name = "btnMenuLayanan"
         Me.btnMenuLayanan.Size = New Size(165, 37)
-        Me.btnMenuLayanan.TabIndex = 2
+        Me.btnMenuLayanan.TabIndex = 3
         Me.btnMenuLayanan.Text = "Riwayat Layanan"
         Me.btnMenuLayanan.UseVisualStyleBackColor = False
         '
@@ -110,7 +113,7 @@ Partial Class FormCheckInOut
         Me.btnMenuCustomer.Margin = New Padding(2)
         Me.btnMenuCustomer.Name = "btnMenuCustomer"
         Me.btnMenuCustomer.Size = New Size(165, 37)
-        Me.btnMenuCustomer.TabIndex = 3
+        Me.btnMenuCustomer.TabIndex = 4
         Me.btnMenuCustomer.Text = "Customer"
         Me.btnMenuCustomer.UseVisualStyleBackColor = False
         '
@@ -123,7 +126,7 @@ Partial Class FormCheckInOut
         Me.btnMenuPemeriksaanKucing.Margin = New Padding(2)
         Me.btnMenuPemeriksaanKucing.Name = "btnMenuPemeriksaanKucing"
         Me.btnMenuPemeriksaanKucing.Size = New Size(165, 37)
-        Me.btnMenuPemeriksaanKucing.TabIndex = 4
+        Me.btnMenuPemeriksaanKucing.TabIndex = 5
         Me.btnMenuPemeriksaanKucing.Text = "Pemeriksaan Kucing"
         Me.btnMenuPemeriksaanKucing.UseVisualStyleBackColor = False
         '
@@ -136,7 +139,7 @@ Partial Class FormCheckInOut
         Me.btnMenuReservasi.Margin = New Padding(2)
         Me.btnMenuReservasi.Name = "btnMenuReservasi"
         Me.btnMenuReservasi.Size = New Size(165, 37)
-        Me.btnMenuReservasi.TabIndex = 5
+        Me.btnMenuReservasi.TabIndex = 6
         Me.btnMenuReservasi.Text = "Reservasi"
         Me.btnMenuReservasi.UseVisualStyleBackColor = False
         '
@@ -149,20 +152,33 @@ Partial Class FormCheckInOut
         Me.btnMenuLaporan.Margin = New Padding(2)
         Me.btnMenuLaporan.Name = "btnMenuLaporan"
         Me.btnMenuLaporan.Size = New Size(165, 37)
-        Me.btnMenuLaporan.TabIndex = 6
+        Me.btnMenuLaporan.TabIndex = 7
         Me.btnMenuLaporan.Text = "Laporan Harian"
         Me.btnMenuLaporan.UseVisualStyleBackColor = False
+        '
+        ' btnMenuAkun
+        '
+        Me.btnMenuAkun.BackColor = Color.Plum
+        Me.btnMenuAkun.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Me.btnMenuAkun.ForeColor = Color.SeaShell
+        Me.btnMenuAkun.Location = New Point(38, 520)
+        Me.btnMenuAkun.Margin = New Padding(2)
+        Me.btnMenuAkun.Name = "btnMenuAkun"
+        Me.btnMenuAkun.Size = New Size(165, 37)
+        Me.btnMenuAkun.TabIndex = 8
+        Me.btnMenuAkun.Text = "Akun Saya"
+        Me.btnMenuAkun.UseVisualStyleBackColor = False
         '
         ' btnLogout
         '
         Me.btnLogout.BackColor = Color.Plum
         Me.btnLogout.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Me.btnLogout.ForeColor = Color.SeaShell
-        Me.btnLogout.Location = New Point(38, 520)
+        Me.btnLogout.Location = New Point(38, 580)
         Me.btnLogout.Margin = New Padding(2)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New Size(165, 37)
-        Me.btnLogout.TabIndex = 7
+        Me.btnLogout.TabIndex = 9
         Me.btnLogout.Text = "Logout"
         Me.btnLogout.UseVisualStyleBackColor = False
         '
@@ -174,7 +190,7 @@ Partial Class FormCheckInOut
         Me.Panel2.Margin = New Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New Size(890, 84)
-        Me.Panel2.TabIndex = 1
+        Me.Panel2.TabIndex = 10
         '
         ' Label2
         '
@@ -185,7 +201,7 @@ Partial Class FormCheckInOut
         Me.Label2.Margin = New Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New Size(400, 46)
-        Me.Label2.TabIndex = 0
+        Me.Label2.TabIndex = 11
         Me.Label2.Text = "Check In / Check Out"
         '
         ' Panel3
@@ -204,11 +220,21 @@ Partial Class FormCheckInOut
         Me.Panel3.Controls.Add(Me.Label4)
         Me.Panel3.Controls.Add(Me.cmbMode)
         Me.Panel3.Controls.Add(Me.Label3)
+        Me.Panel3.Controls.Add(Me.pnlCard)
         Me.Panel3.Location = New Point(256, 94)
         Me.Panel3.Margin = New Padding(2)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New Size(890, 554)
-        Me.Panel3.TabIndex = 2
+        Me.Panel3.TabIndex = 12
+        ' 
+        ' pnlCard
+        ' 
+        Me.pnlCard.BackColor = Color.White
+        Me.pnlCard.BorderStyle = BorderStyle.FixedSingle
+        Me.pnlCard.Location = New Point(16, 16)
+        Me.pnlCard.Name = "pnlCard"
+        Me.pnlCard.Size = New Size(858, 522)
+        Me.pnlCard.TabIndex = 13
         '
         ' Label3
         '
@@ -218,7 +244,7 @@ Partial Class FormCheckInOut
         Me.Label3.Location = New Point(24, 20)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New Size(200, 23)
-        Me.Label3.TabIndex = 0
+        Me.Label3.TabIndex = 14
         Me.Label3.Text = "Mode"
         '
         ' cmbMode
@@ -229,7 +255,7 @@ Partial Class FormCheckInOut
         Me.cmbMode.Location = New Point(24, 48)
         Me.cmbMode.Name = "cmbMode"
         Me.cmbMode.Size = New Size(240, 30)
-        Me.cmbMode.TabIndex = 0
+        Me.cmbMode.TabIndex = 15
         '
         ' Label4
         '
@@ -239,7 +265,7 @@ Partial Class FormCheckInOut
         Me.Label4.Location = New Point(24, 100)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New Size(240, 23)
-        Me.Label4.TabIndex = 0
+        Me.Label4.TabIndex = 16
         Me.Label4.Text = "Reservasi"
         '
         ' cmbReservasi
@@ -250,7 +276,7 @@ Partial Class FormCheckInOut
         Me.cmbReservasi.Location = New Point(24, 128)
         Me.cmbReservasi.Name = "cmbReservasi"
         Me.cmbReservasi.Size = New Size(540, 30)
-        Me.cmbReservasi.TabIndex = 0
+        Me.cmbReservasi.TabIndex = 17
         '
         ' Label5
         '
@@ -260,7 +286,7 @@ Partial Class FormCheckInOut
         Me.Label5.Location = New Point(24, 180)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New Size(200, 23)
-        Me.Label5.TabIndex = 0
+        Me.Label5.TabIndex = 18
         Me.Label5.Text = "Berat (kg)"
         '
         ' txtBerat
@@ -271,7 +297,7 @@ Partial Class FormCheckInOut
         Me.txtBerat.Location = New Point(24, 208)
         Me.txtBerat.Name = "txtBerat"
         Me.txtBerat.Size = New Size(180, 30)
-        Me.txtBerat.TabIndex = 0
+        Me.txtBerat.TabIndex = 19
         Me.txtBerat.Text = ""
         '
         ' Label6
@@ -282,7 +308,7 @@ Partial Class FormCheckInOut
         Me.Label6.Location = New Point(230, 180)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New Size(200, 23)
-        Me.Label6.TabIndex = 0
+        Me.Label6.TabIndex = 20
         Me.Label6.Text = "Suhu (Â°C)"
         '
         ' txtSuhu
@@ -293,7 +319,7 @@ Partial Class FormCheckInOut
         Me.txtSuhu.Location = New Point(230, 208)
         Me.txtSuhu.Name = "txtSuhu"
         Me.txtSuhu.Size = New Size(180, 30)
-        Me.txtSuhu.TabIndex = 0
+        Me.txtSuhu.TabIndex = 21
         Me.txtSuhu.Text = ""
         '
         ' chkParasit
@@ -304,7 +330,7 @@ Partial Class FormCheckInOut
         Me.chkParasit.Location = New Point(440, 208)
         Me.chkParasit.Name = "chkParasit"
         Me.chkParasit.Size = New Size(200, 24)
-        Me.chkParasit.TabIndex = 0
+        Me.chkParasit.TabIndex = 22
         Me.chkParasit.Text = "Ada parasit"
         Me.chkParasit.UseVisualStyleBackColor = True
         '
@@ -316,7 +342,7 @@ Partial Class FormCheckInOut
         Me.Label7.Location = New Point(24, 260)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New Size(280, 23)
-        Me.Label7.TabIndex = 0
+        Me.Label7.TabIndex = 23
         Me.Label7.Text = "Catatan Kesehatan"
         '
         ' txtCatatan
@@ -327,7 +353,7 @@ Partial Class FormCheckInOut
         Me.txtCatatan.Location = New Point(24, 288)
         Me.txtCatatan.Name = "txtCatatan"
         Me.txtCatatan.Size = New Size(620, 90)
-        Me.txtCatatan.TabIndex = 0
+        Me.txtCatatan.TabIndex = 24
         Me.txtCatatan.Text = ""
         '
         ' lblInfo
@@ -338,19 +364,19 @@ Partial Class FormCheckInOut
         Me.lblInfo.Location = New Point(24, 392)
         Me.lblInfo.Name = "lblInfo"
         Me.lblInfo.Size = New Size(620, 30)
-        Me.lblInfo.TabIndex = 0
+        Me.lblInfo.TabIndex = 25
         Me.lblInfo.Text = ""
         '
         ' btnProses
         '
-        Me.btnProses.BackColor = Color.LightGoldenrodYellow
+        Me.btnProses.BackColor = Color.MediumVioletRed
         Me.btnProses.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Me.btnProses.ForeColor = Color.DarkOliveGreen
+        Me.btnProses.ForeColor = Color.SeaShell
         Me.btnProses.Location = New Point(24, 448)
         Me.btnProses.Margin = New Padding(2)
         Me.btnProses.Name = "btnProses"
-        Me.btnProses.Size = New Size(220, 37)
-        Me.btnProses.TabIndex = 0
+        Me.btnProses.Size = New Size(220, 40)
+        Me.btnProses.TabIndex = 26
         Me.btnProses.Text = "Proses Check In"
         Me.btnProses.UseVisualStyleBackColor = False
         '
@@ -363,6 +389,9 @@ Partial Class FormCheckInOut
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Margin = New Padding(2)
+        Me.FormBorderStyle = FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "FormCheckInOut"
         Me.StartPosition = FormStartPosition.CenterScreen
         Me.Text = "Check In / Check Out"
@@ -378,6 +407,7 @@ Partial Class FormCheckInOut
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
+    Friend WithEvents pnlCard As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents btnMenuDashboard As Button
@@ -386,6 +416,7 @@ Partial Class FormCheckInOut
     Friend WithEvents btnMenuPemeriksaanKucing As Button
     Friend WithEvents btnMenuReservasi As Button
     Friend WithEvents btnMenuLaporan As Button
+    Friend WithEvents btnMenuAkun As Button
     Friend WithEvents btnLogout As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents cmbMode As ComboBox

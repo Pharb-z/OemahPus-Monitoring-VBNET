@@ -12,18 +12,17 @@ Public Class FormPembayaran
 
     Private Sub FormPembayaran_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Navigator.Register("pembayaran", Me)
-        PelangganNav.Wire(Me, btnMenuDashboard, btnMenuProfil, btnMenuReservasiPelanggan,
-                          btnMenuRiwayat, btnMenuAkun, btnLogout)
-        ApplyMenuAccess(btnMenuDashboard, btnMenuProfil, btnMenuReservasiPelanggan,
-                        btnMenuRiwayat, btnMenuAkun)
+        PelangganNav.Wire(Me, btnMenuDashboard, btnMenuProfil, btnMenuTracking,
+                          btnMenuReservasiPelanggan, btnMenuRiwayat, btnMenuAkun, btnLogout)
+        ApplyMenuAccess(btnMenuDashboard, btnMenuProfil, btnMenuTracking,
+                        btnMenuReservasiPelanggan, btnMenuRiwayat, btnMenuAkun)
 
         txtRincian.Multiline = True
         txtRincian.ReadOnly = True
         cmbMetode.DropDownStyle = ComboBoxStyle.DropDownList
         cmbMetode.Items.Clear()
         cmbMetode.Items.Add("QRIS")
-        cmbMetode.Items.Add("Transfer")
-        cmbMetode.Items.Add("Tunai")
+        cmbMetode.Items.Add("Tunai di Lokasi")
         cmbMetode.SelectedIndex = 0
 
         If String.IsNullOrWhiteSpace(ReservationNo) Then
@@ -40,6 +39,10 @@ Public Class FormPembayaran
 
     Private Sub btnBayar_Click(sender As Object, e As EventArgs) Handles btnBayar.Click
         If String.IsNullOrWhiteSpace(ReservationNo) Then Return
+        If cmbMetode.SelectedIndex < 0 Then
+            MessageBox.Show("Pilih metode pembayaran.", "Validasi", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
         Dim resId As Object = Scalar("SELECT reservation_id FROM reservations WHERE reservation_no=@no", P("@no", ReservationNo))
         If resId Is Nothing OrElse resId Is DBNull.Value Then
             MessageBox.Show("Reservasi tidak ditemukan.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -48,18 +51,32 @@ Public Class FormPembayaran
 
         Try
             paymentNo = "PAY" & DateTime.Now.ToString("yyyyMMddHHmmssfff")
-            ' Pembayaran QRIS di prototipe murni simulasi: langsung ditandai Valid.
+            Dim metode As String = cmbMetode.Text
+            Dim isQris As Boolean = String.Equals(metode, "QRIS", StringComparison.OrdinalIgnoreCase)
+            ' QRIS menunggu simulasi; tunai langsung valid.
+            Dim status As String = If(isQris, "Menunggu", "Valid")
             Exec("INSERT INTO payments (payment_no, reservation_id, payment_type, method, amount, status) " &
-                 "VALUES (@no, @rid, 'DP', @method, @amount, 'Valid')",
+                 "VALUES (@no, @rid, 'DP', @method, @amount, @status)",
                  P("@no", paymentNo), P("@rid", Convert.ToInt32(resId)),
-                 P("@method", cmbMetode.Text), P("@amount", Amount))
+                 P("@method", metode), P("@amount", Amount), P("@status", status))
 
-            lblStatus.Text = "Status: Valid (simulasi berhasil)"
-            txtRincian.Text &= Environment.NewLine & "No. Pembayaran: " & paymentNo &
-                               Environment.NewLine & "Metode: " & cmbMetode.Text &
-                               Environment.NewLine & "Bukti ini hanya simulasi, bukan bukti sah."
+            lblStatus.Text = "Status: " & If(isQris, "Menunggu pembayaran (QRIS)", "Valid (tunai di lokasi)")
             btnBayar.Enabled = False
-            MessageBox.Show("Pembayaran simulasi berhasil.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            If isQris Then
+                Dim qris As New FormPembayaranQris()
+                qris.PaymentNo = paymentNo
+                qris.ReservationNo = ReservationNo
+                qris.Amount = Amount
+                Navigator.GoWithInstance(Me, "pembayaranQris", qris, String.Empty)
+            Else
+                Dim sukses As New FormPembayaranSukses()
+                sukses.PaymentNo = paymentNo
+                sukses.ReservationNo = ReservationNo
+                sukses.Amount = Amount
+                sukses.Method = metode
+                Navigator.GoWithInstance(Me, "pembayaranSukses", sukses, String.Empty)
+            End If
         Catch ex As Exception
             MessageBox.Show("Gagal menyimpan pembayaran: " & ex.Message, "Error",
                             MessageBoxButtons.OK, MessageBoxIcon.Error)

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservasi — Data & Paket — OMI</title>
+  <meta name="description" content="Langkah 1 reservasi: isi data pemesan, pilih kucing, dan pilih paket layanan.">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/reservasi.css">
+</head>
+<body>
+
+  <!-- Frame 08 Reservasi Data (node 137:208) -->
+  <header id="omi-navbar"></header>
+
+  <main class="omi-page">
+
+    <div class="omi-header-row">
+      <h1 class="omi-page-title">Reservasi Penginapan</h1>
+    </div>
+
+    <div id="omi-stepper"></div>
+
+    <form id="form-reservasi-data" novalidate>
+
+      <div class="omi-split">
+
+        <!-- Kolom kiri: data pemesan -->
+        <section class="omi-card omi-form-stack">
+          <div class="omi-field">
+            <label class="omi-label omi-label--lg" for="nama">Nama</label>
+            <input class="omi-input" type="text" id="nama" name="nama" placeholder="Nama lengkap pemesan">
+          </div>
+
+          <div class="omi-field">
+            <label class="omi-label omi-label--lg" for="telepon">No. HP</label>
+            <input class="omi-input" type="tel" id="telepon" name="telepon" placeholder="0812-3456-7890">
+          </div>
+
+          <div class="omi-field">
+            <label class="omi-label omi-label--lg" for="alamat">Alamat</label>
+            <input class="omi-input" type="text" id="alamat" name="alamat" placeholder="Alamat lengkap">
+          </div>
+
+          <div class="omi-field">
+            <label class="omi-label omi-label--lg" for="catatan">Catatan Kesehatan</label>
+            <textarea class="omi-textarea" id="catatan" name="catatan"
+                      placeholder="Kondisi khusus kucing, alergi, atau catatan lain. Kosongkan jika tidak ada."></textarea>
+          </div>
+        </section>
+
+        <!-- Kolom kanan: pilih kucing -->
+        <section class="omi-card">
+          <h2 class="omi-card-title omi-mb-24">Pilih Kucing</h2>
+          <div class="omi-pick-grid" id="pilih-kucing"></div>
+        </section>
+      </div>
+
+      <!-- Section full-width: pilih paket layanan -->
+      <section class="omi-mt-32">
+        <h2 class="omi-card-title omi-mb-24">Pilih Paket Layanan</h2>
+        <div class="omi-pkg-grid" id="pilih-paket"></div>
+
+        <p class="omi-alert omi-alert--info omi-mt-24">
+          Harga paket pada prototipe ini adalah data contoh dari desain dan belum
+          merupakan tarif resmi OemahPus.
+        </p>
+
+        <!-- Add-on opsional: layanan antar jemput (bukan paket, bisa digabung) -->
+        <label class="omi-addon omi-mt-24">
+          <input type="checkbox" id="antar-jemput" name="antar-jemput">
+          <span class="omi-addon-box" aria-hidden="true"></span>
+          <span class="omi-addon-text">
+            <span class="omi-addon-title">Tambahkan layanan antar jemput</span>
+            <span class="omi-addon-desc">Dijemput &amp; diantar oleh kurir OemahPus, area Surabaya.</span>
+          </span>
+          <span class="omi-addon-price">
+            <span id="antar-jemput-harga">IDR. 50.000</span>
+            <span class="omi-text-sm omi-text-muted"> /trip</span>
+          </span>
+        </label>
+      </section>
+
+      <p class="omi-alert omi-alert--danger omi-hidden omi-mt-24" id="form-error" role="alert"></p>
+
+      <div class="omi-step-footer">
+        <a class="omi-btn omi-btn--ghost" href="home.html">Batal</a>
+        <button class="omi-btn omi-btn--primary omi-btn--lg" type="submit">Selanjutnya</button>
+      </div>
+    </form>
+
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/page-reservasi.js"></script>
+</body>
+</html>

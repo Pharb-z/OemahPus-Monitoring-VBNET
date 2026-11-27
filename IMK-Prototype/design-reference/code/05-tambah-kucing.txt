@@ -1,0 +1,177 @@
+﻿export default function Component05TambahKucing() {
+  return (
+    <div className="bg-[#fff8f2] relative size-full" data-node-id="71:147" data-name="05 Tambah Kucing">
+      <div className="absolute bg-white h-[92px] left-0 shadow-[0px_4px_14px_0px_rgba(115,56,13,0.05)] top-0 w-[1440px]" data-node-id="71:148" data-name="Navbar" />
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:ExtraBold'] font-extrabold leading-[0] left-[106px] text-[#f26b21] text-[26px] top-[29.5px] whitespace-nowrap" data-node-id="71:149">
+        <p className="leading-[normal]">OMI</p>
+      </a>
+      <div className="absolute bg-[#f6ece2] h-[497.5px] left-[81.47px] rounded-[8px] top-[272.5px] w-[16px]" data-node-id="71:150" data-name="Scrollbar" />
+      <div className="absolute bg-[#f9b27c] h-[139.3px] left-[83.47px] rounded-[6px] top-[274.5px] w-[12px]" data-node-id="71:151" data-name="Scroll thumb" />
+      <div className="absolute bg-[#f26b21] left-[60px] rounded-[10px] size-[36px] top-[28px]" data-node-id="71:152" data-name="Image" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[69px] text-[18px] text-white top-[37px] whitespace-nowrap" data-node-id="71:153">
+        ð¾
+      </p>
+      <div className="absolute bg-white border border-[#eedfd1] border-solid h-[326.25px] left-[calc(8.33%+88.47px)] rounded-[16px] shadow-[0px_6px_18px_0px_rgba(115,56,13,0.07)] top-[251.25px] w-[309.631px]" data-node-id="71:154" data-name="Card" />
+      <div className="absolute h-[105px] left-[calc(8.33%+148.86px)] rounded-[14px] top-[273.75px] w-[176px]" data-node-id="71:155" style={{ backgroundImage: "linear-gradient(149.1800819427709deg, rgb(255, 227, 204) 0%, rgb(255, 243, 232) 71.429%)" }} data-name="Image" />
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(8.33%+236.86px)] text-[#f5a56b] text-[42px] text-center top-[305.25px] w-[176px]" data-node-id="71:156">
+        ð¾
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(8.33%+111.3px)] text-[#64748b] text-[14px] top-[428.13px] w-[251.13px]" data-node-id="71:157">
+        Luna Â· 1 tahun
+      </p>
+      <div className="absolute bg-[#f26b21] content-stretch drop-shadow-[0px_6px_7px_rgba(242,107,33,0.3)] flex items-center justify-center left-[calc(91.67%-64px)] rounded-[32px] size-[64px] top-[719.75px]" data-node-id="71:158" data-name="Btn: Tambah Kucing">
+        <p className="[word-break:break-word] font-['Plus_Jakarta_Sans:ExtraBold'] font-extrabold leading-[normal] relative shrink-0 text-[36px] text-center text-white whitespace-nowrap" data-node-id="71:159">
+          +
+        </p>
+      </div>
+      <div className="absolute bg-[#ffebd9] content-stretch flex h-[38px] items-center justify-center left-[calc(8.33%+101.3px)] rounded-[10px] top-[533.75px] w-[67px]" data-node-id="71:160" data-name="Btn: Edit">
+        <p className="[word-break:break-word] font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[#c2540f] text-[16px] text-center whitespace-nowrap" data-node-id="71:161">
+          Edit
+        </p>
+      </div>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(8.33%+111.3px)] text-[#64748b] text-[14px] top-[466.38px] w-[251.13px]" data-node-id="71:162">
+        Anggora Â· Betina
+      </p>
+      <div className="absolute bg-[#fee2e2] content-stretch flex h-[38px] items-center justify-center left-[calc(25%+68.77px)] rounded-[10px] top-[533.75px] w-[86px]" data-node-id="71:163" data-name="Btn: Hapus">
+        <p className="[word-break:break-word] font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[#dc2626] text-[16px] text-center whitespace-nowrap" data-node-id="71:164">
+          Hapus
+        </p>
+      </div>
+      <div className="absolute bg-white border border-[#eedfd1] border-solid h-[326.25px] left-[calc(33.33%+119.43px)] rounded-[16px] shadow-[0px_6px_18px_0px_rgba(115,56,13,0.07)] top-[253.75px] w-[309.631px]" data-node-id="71:165" data-name="Card" />
+      <div className="absolute h-[105px] left-[calc(41.67%+59.82px)] rounded-[14px] top-[276.25px] w-[176px]" data-node-id="71:166" style={{ backgroundImage: "linear-gradient(149.1800819427709deg, rgb(255, 227, 204) 0%, rgb(255, 243, 232) 71.429%)" }} data-name="Image" />
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(41.67%+147.82px)] text-[#f5a56b] text-[42px] text-center top-[307.75px] w-[176px]" data-node-id="71:167">
+        ð¾
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(41.67%+22.26px)] text-[#64748b] text-[14px] top-[430.63px] w-[251.13px]" data-node-id="71:168">
+        Mochi Â· 2 tahun
+      </p>
+      <div className="absolute bg-[#ffebd9] content-stretch flex h-[38px] items-center justify-center left-[calc(41.67%+45.98px)] rounded-[10px] top-[533.5px] w-[67px]" data-node-id="71:169" data-name="Btn: Edit">
+        <p className="[word-break:break-word] font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[#c2540f] text-[16px] text-center whitespace-nowrap" data-node-id="71:170">
+          Edit
+        </p>
+      </div>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(41.67%+22.26px)] text-[#64748b] text-[14px] top-[468.88px] w-[251.13px]" data-node-id="71:171">
+        Persia Â· Betina
+      </p>
+      <div className="absolute bg-[#fee2e2] content-stretch flex h-[38px] items-center justify-center left-[calc(50%+65.15px)] rounded-[10px] top-[533.75px] w-[86px]" data-node-id="71:172" data-name="Btn: Hapus">
+        <p className="[word-break:break-word] font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[#dc2626] text-[16px] text-center whitespace-nowrap" data-node-id="71:173">
+          Hapus
+        </p>
+      </div>
+      <div className="absolute bg-white border border-[#eedfd1] border-solid h-[326.25px] left-[calc(66.67%-6.71px)] rounded-[16px] shadow-[0px_6px_18px_0px_rgba(115,56,13,0.07)] top-[256.25px] w-[309.631px]" data-node-id="71:174" data-name="Card" />
+      <div className="absolute h-[105px] left-[calc(66.67%+53.69px)] rounded-[14px] top-[278.75px] w-[176px]" data-node-id="71:175" style={{ backgroundImage: "linear-gradient(149.1800819427709deg, rgb(255, 227, 204) 0%, rgb(255, 243, 232) 71.429%)" }} data-name="Image" />
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(66.67%+141.69px)] text-[#f5a56b] text-[42px] text-center top-[310.25px] w-[176px]" data-node-id="71:176">
+        ð¾
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(66.67%+16.12px)] text-[#64748b] text-[14px] top-[433.13px] w-[251.13px]" data-node-id="71:177">
+        Mochi Â· 2 tahun
+      </p>
+      <div className="absolute bg-[#ffebd9] content-stretch flex h-[38px] items-center justify-center left-[calc(66.67%+6.12px)] rounded-[10px] top-[538.75px] w-[67px]" data-node-id="71:178" data-name="Btn: Edit">
+        <p className="[word-break:break-word] font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[#c2540f] text-[16px] text-center whitespace-nowrap" data-node-id="71:179">
+          Edit
+        </p>
+      </div>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(66.67%+16.12px)] text-[#64748b] text-[14px] top-[471.38px] w-[251.13px]" data-node-id="71:180">
+        Persia Â· Betina
+      </p>
+      <div className="absolute bg-[#fee2e2] content-stretch flex h-[38px] items-center justify-center left-[calc(83.33%-26.4px)] rounded-[10px] top-[538.75px] w-[86px]" data-node-id="71:181" data-name="Btn: Hapus">
+        <p className="[word-break:break-word] font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[#dc2626] text-[16px] text-center whitespace-nowrap" data-node-id="71:182">
+          Hapus
+        </p>
+      </div>
+      <a className="absolute bg-[#1e2a3b] block cursor-pointer h-[1024px] left-0 opacity-45 top-0 w-[1440px]" data-node-id="71:183" data-name="Scrim" />
+      <div className="absolute bg-white border border-[#eedfd1] border-solid h-[610px] left-[calc(25%+78.19px)] rounded-[16px] shadow-[0px_16px_48px_0px_rgba(115,56,13,0.25)] top-[182.5px] w-[614.982px]" data-node-id="71:184" data-name="Card" />
+      <div className="absolute h-[137px] left-[calc(25%+130.99px)] rounded-[14px] top-[211.25px] w-[150px]" data-node-id="71:185" style={{ backgroundImage: "linear-gradient(137.59350644478906deg, rgb(255, 227, 204) 0%, rgb(255, 243, 232) 71.429%)" }} data-name="Image" />
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(25%+205.99px)] text-[#f5a56b] text-[48px] text-center top-[255.75px] w-[150px]" data-node-id="71:186">
+        ð¾
+      </p>
+      <div className="absolute bg-[#ffebd9] content-stretch flex h-[38px] items-center justify-center left-[calc(58.33%-26.82px)] rounded-[10px] top-[228.25px] w-[193px]" data-node-id="71:187" data-name="Btn: Tambah Foto Kucing">
+        <p className="[word-break:break-word] font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[#c2540f] text-[16px] text-center whitespace-nowrap" data-node-id="71:188">
+          Tambah Foto Kucing
+        </p>
+      </div>
+      <div className="absolute bg-[#ffebd9] content-stretch flex h-[38px] items-center justify-center left-[calc(58.33%-16.82px)] rounded-[10px] top-[270.75px] w-[173px]" data-node-id="71:189" data-name="Btn: Ubah Foto Kucing">
+        <p className="[word-break:break-word] font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[#c2540f] text-[16px] text-center whitespace-nowrap" data-node-id="71:190">
+          Ubah Foto Kucing
+        </p>
+      </div>
+      <div className="absolute bg-[#fee2e2] content-stretch flex h-[38px] items-center justify-center left-[calc(58.33%-20.82px)] rounded-[10px] top-[313.25px] w-[181px]" data-node-id="71:191" data-name="Btn: Hapus Foto Kucing">
+        <p className="[word-break:break-word] font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[#dc2626] text-[16px] text-center whitespace-nowrap" data-node-id="71:192">
+          Hapus Foto Kucing
+        </p>
+      </div>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(25%+138.12px)] text-[#1e2a3b] text-[15px] top-[418.5px] whitespace-nowrap" data-node-id="71:193">
+        Nama Kucing
+      </p>
+      <div className="absolute bg-white border border-[#e3d3c4] border-solid h-[42px] left-[calc(25%+138.12px)] rounded-[10px] top-[440.88px] w-[236.861px]" data-node-id="71:194" data-name="Input" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(25%+138.12px)] text-[#1e2a3b] text-[15px] top-[494.75px] whitespace-nowrap" data-node-id="71:195">
+        Usia Kucing
+      </p>
+      <div className="absolute bg-white border border-[#e3d3c4] border-solid h-[42px] left-[calc(25%+138.12px)] rounded-[10px] top-[520.5px] w-[236.861px]" data-node-id="71:196" data-name="Input" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(25%+138.12px)] text-[#1e2a3b] text-[15px] top-[575.75px] whitespace-nowrap" data-node-id="71:197">
+        Jenis Kelamin
+      </p>
+      <div className="absolute bg-white border border-[#e3d3c4] border-solid h-[42px] left-[calc(25%+138.12px)] rounded-[10px] top-[599.25px] w-[236.861px]" data-node-id="71:198" data-name="Input" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(25%+138.12px)] text-[#1e2a3b] text-[15px] top-[650.75px] whitespace-nowrap" data-node-id="71:199">
+        Ras Kucing
+      </p>
+      <div className="absolute bg-white border border-[#e3d3c4] border-solid h-[42px] left-[calc(25%+138.12px)] rounded-[10px] top-[674.25px] w-[236.861px]" data-node-id="71:200" data-name="Input" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(58.33%-9.58px)] text-[#1e2a3b] text-[15px] top-[418.5px] whitespace-nowrap" data-node-id="71:201">{`Warna & Corak Bulu`}</p>
+      <div className="absolute bg-white border border-[#e3d3c4] border-solid h-[42px] left-[calc(50%+50.65px)] rounded-[10px] top-[440.88px] w-[236.861px]" data-node-id="71:202" data-name="Input" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(50%+87.79px)] text-[#1e2a3b] text-[15px] top-[498.25px] whitespace-nowrap" data-node-id="71:203">
+        Berat Badan
+      </p>
+      <div className="absolute bg-white border border-[#e3d3c4] border-solid h-[42px] left-[calc(50%+50.65px)] rounded-[10px] top-[521.75px] w-[236.861px]" data-node-id="71:204" data-name="Input" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(58.33%-17.69px)] text-[#1e2a3b] text-[15px] top-[575.75px] whitespace-nowrap" data-node-id="71:205">
+        Catatan Penyakit
+      </p>
+      <div className="absolute bg-white border border-[#e3d3c4] border-solid h-[42px] left-[calc(50%+50.65px)] rounded-[10px] top-[599.25px] w-[236.861px]" data-node-id="71:206" data-name="Input" />
+      <a className="absolute bg-[#f26b21] content-stretch cursor-pointer drop-shadow-[0px_6px_7px_rgba(242,107,33,0.3)] flex h-[38px] items-center justify-center left-[calc(66.67%-41.55px)] rounded-[10px] top-[720px] w-[95px]" data-node-id="71:207" data-name="Btn: Simpan">
+        <p className="[word-break:break-word] font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[16px] text-center text-white whitespace-nowrap" data-node-id="71:208">
+          Simpan
+        </p>
+      </a>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[normal] left-[120px] text-[#1e2a3b] text-[28px] top-[132.5px] whitespace-nowrap" data-node-id="71:209">
+        Profil Kucing
+      </p>
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[0] left-[calc(75%+9px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:210">
+        <p className="leading-[normal]">Riwayat</p>
+      </a>
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[0] left-[calc(66.67%+24px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:211">
+        <p className="leading-[normal]">Reservasi</p>
+      </a>
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[0] left-[calc(91.67%-14px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:212">
+        <p className="leading-[normal]">Akun Saya</p>
+      </a>
+      <div className="absolute bg-[#ffebd9] h-[34px] left-[58.33%] rounded-[16px] top-[29px] w-[124px]" data-node-id="71:213" data-name="Nav aktif" />
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[0] left-[calc(50%+56px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:214">
+        <p className="leading-[normal]">Home</p>
+      </a>
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[0] left-[calc(58.33%+16px)] text-[#f26b21] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:215">
+        <p className="leading-[normal]">Profil Kucing</p>
+      </a>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[calc(83.33%-18px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:216">
+        Pet Tracking
+      </p>
+      <div className="absolute bg-[#eedfd1] h-px left-0 top-[92px] w-[1440px]" data-node-id="71:217" data-name="Nav divider" />
+    </div>
+  );
+}
+
+/* --- */
+
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+
+/* --- */
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+
+/* --- */
+
+The generated code contains image and SVG URL constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

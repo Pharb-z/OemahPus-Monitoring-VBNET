@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Kucing — OMI</title>
+  <meta name="description" content="Kelola profil kucing yang dititipkan di OMI.">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/cats.css">
+</head>
+<body>
+
+  <!-- Frame 04 Profil Kucing (node 136:75) -->
+  <header id="omi-navbar"></header>
+
+  <main class="omi-page">
+
+    <div class="omi-header-row">
+      <h1 class="omi-page-title">Profil Kucing</h1>
+      <a class="omi-btn omi-btn--primary" href="tambah-kucing.html">
+        <span aria-hidden="true">＋</span> Tambah Kucing
+      </a>
+    </div>
+
+    <div class="omi-card-grid" id="kucing-grid"></div>
+
+    <div class="omi-empty omi-hidden" id="kucing-kosong">
+      <div class="omi-empty-icon">🐾</div>
+      <p class="omi-fw-semibold">Belum ada kucing terdaftar</p>
+      <p class="omi-text-sm omi-mt-8">Tambahkan profil kucing pertamamu untuk mulai reservasi.</p>
+      <a class="omi-btn omi-btn--primary omi-mt-24" href="tambah-kucing.html">Tambah Kucing</a>
+    </div>
+
+  </main>
+
+  <!-- Tombol bulat tambah kucing (Figma: 64px, kanan bawah) -->
+  <a class="omi-fab" href="tambah-kucing.html" title="Tambah Kucing" aria-label="Tambah Kucing">＋</a>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/page-cats.js"></script>
+</body>
+</html>

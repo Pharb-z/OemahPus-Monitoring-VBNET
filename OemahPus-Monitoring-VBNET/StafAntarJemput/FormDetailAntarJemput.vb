@@ -7,9 +7,10 @@ Public Class FormDetailAntarJemput
     Private Sub FormDetailAntarJemput_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Navigator.Register("detailAntarJemput", Me)
         StandardNav.Wire(Me, btnMenuDashboard, btnMenuLayanan, btnMenuCustomer,
-                         btnMenuPemeriksaanKucing, btnMenuReservasi, btnMenuLaporan, btnLogout)
+                         btnMenuPemeriksaanKucing, btnMenuReservasi, btnMenuLaporan,
+                         btnMenuAkun, btnLogout)
         StandardNav.ApplyMenu(btnMenuDashboard, btnMenuLayanan, btnMenuCustomer,
-                        btnMenuPemeriksaanKucing, btnMenuReservasi, btnMenuLaporan)
+                        btnMenuPemeriksaanKucing, btnMenuReservasi, btnMenuLaporan, btnMenuAkun)
 
         cmbStatus.DropDownStyle = ComboBoxStyle.DropDownList
         cmbStatus.Items.Clear()

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masuk — OMI</title>
+  <meta name="description" content="OMI — OemahPus Monitoring and Information. Masuk ke akun pet hotel.">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="omi-auth-body">
+
+  <!-- Frame 01 Login (node 143:510) -->
+  <main class="omi-auth">
+
+    <!-- Panel form (kiri) -->
+    <section class="omi-auth-form">
+
+      <!-- Tombol pindah ke Sign Up: Figma menaruhnya di atas kanan area form -->
+      <a class="omi-btn omi-btn--outline omi-auth-switch" href="signup.html">Sign Up</a>
+
+      <div class="omi-auth-head">
+        <div class="omi-auth-logo">🐾</div>
+        <h1 class="omi-auth-title">Welcome!</h1>
+        <p class="omi-auth-sub">Best Pet Hotel Experience</p>
+      </div>
+
+      <form id="form-login" novalidate>
+        <div class="omi-field">
+          <label class="omi-label" for="username">Username</label>
+          <input class="omi-input" type="text" id="username" name="username"
+                 autocomplete="username" placeholder="Masukkan username" required>
+        </div>
+
+        <div class="omi-field omi-mt-16">
+          <label class="omi-label" for="password">Password</label>
+          <input class="omi-input" type="password" id="password" name="password"
+                 autocomplete="current-password" placeholder="Masukkan password" required>
+        </div>
+
+        <p class="omi-alert omi-alert--danger omi-hidden omi-mt-16" id="login-error" role="alert"></p>
+
+        <button class="omi-btn omi-btn--primary omi-btn--lg omi-btn--block omi-mt-32" type="submit">
+          Log In
+        </button>
+      </form>
+
+      <!-- Akun demo: hanya untuk keperluan demonstrasi prototipe -->
+      <div class="omi-auth-demo">
+        <p class="omi-auth-demo-title">Akun demo</p>
+        <div class="omi-auth-demo-list">
+          <button type="button" class="omi-auth-demo-item" data-user="cinta">
+            <span class="omi-avatar">C</span>
+            <span>
+              <strong>Pemilik Kucing</strong>
+              <small>cinta / 123456</small>
+            </span>
+          </button>
+          <button type="button" class="omi-auth-demo-item" data-user="owner">
+            <span class="omi-avatar">P</span>
+            <span>
+              <strong>Pemilik Pet Hotel</strong>
+              <small>owner / 123456</small>
+            </span>
+          </button>
+          <button type="button" class="omi-auth-demo-item" data-user="rina">
+            <span class="omi-avatar">R</span>
+            <span>
+              <strong>Staff Operasional</strong>
+              <small>rina / 123456</small>
+            </span>
+          </button>
+          <button type="button" class="omi-auth-demo-item" data-user="budi">
+            <span class="omi-avatar">B</span>
+            <span>
+              <strong>Staff Antar Jemput</strong>
+              <small>budi / 123456</small>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand panel (kanan) — gradien oranye -->
+    <aside class="omi-auth-brand" aria-hidden="true">
+      <div class="omi-auth-brand-logo">🐾</div>
+      <div class="omi-auth-brand-word">OMI</div>
+      <div class="omi-auth-brand-sub">Oemahpus</div>
+      <div class="omi-auth-brand-tag">Monitoring &amp; Information</div>
+    </aside>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

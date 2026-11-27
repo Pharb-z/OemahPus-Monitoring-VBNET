@@ -24,6 +24,8 @@ Partial Class FormReport
     Private Sub InitializeComponent()
         Panel1 = New Panel()
         btnMenuLaporan = New Button()
+        btnMenuAkun = New Button()
+        btnLogout = New Button()
         btnMenuReservasi = New Button()
         btnMenuPemeriksaanKucing = New Button()
         btnMenuCustomer = New Button()
@@ -33,6 +35,7 @@ Partial Class FormReport
         Panel2 = New Panel()
         Label2 = New Label()
         Panel3 = New Panel()
+        pnlCard = New Panel()
         lblTotalCaption = New Label()
         lblGrandTotal = New Label()
         lblJumlahCaption = New Label()
@@ -61,6 +64,8 @@ Partial Class FormReport
         ' 
         Panel1.BackColor = Color.SeaShell
         Panel1.Controls.Add(btnMenuLaporan)
+        Panel1.Controls.Add(btnLogout)
+        Panel1.Controls.Add(btnMenuAkun)
         Panel1.Controls.Add(btnMenuReservasi)
         Panel1.Controls.Add(btnMenuPemeriksaanKucing)
         Panel1.Controls.Add(btnMenuCustomer)
@@ -82,9 +87,35 @@ Partial Class FormReport
         btnMenuLaporan.Margin = New Padding(2)
         btnMenuLaporan.Name = "btnMenuLaporan"
         btnMenuLaporan.Size = New Size(165, 37)
-        btnMenuLaporan.TabIndex = 5
+        btnMenuLaporan.TabIndex = 1
         btnMenuLaporan.Text = "Laporan"
         btnMenuLaporan.UseVisualStyleBackColor = False
+        '
+        ' btnMenuAkun
+        '
+        btnMenuAkun.BackColor = Color.Plum
+        btnMenuAkun.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnMenuAkun.ForeColor = Color.SeaShell
+        btnMenuAkun.Location = New Point(38, 520)
+        btnMenuAkun.Margin = New Padding(2)
+        btnMenuAkun.Name = "btnMenuAkun"
+        btnMenuAkun.Size = New Size(165, 37)
+        btnMenuAkun.TabIndex = 2
+        btnMenuAkun.Text = "Akun Saya"
+        btnMenuAkun.UseVisualStyleBackColor = False
+        '
+        ' btnLogout
+        '
+        btnLogout.BackColor = Color.Plum
+        btnLogout.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnLogout.ForeColor = Color.SeaShell
+        btnLogout.Location = New Point(38, 580)
+        btnLogout.Margin = New Padding(2)
+        btnLogout.Name = "btnLogout"
+        btnLogout.Size = New Size(165, 37)
+        btnLogout.TabIndex = 3
+        btnLogout.Text = "Logout"
+        btnLogout.UseVisualStyleBackColor = False
         ' 
         ' btnMenuReservasi
         ' 
@@ -108,7 +139,7 @@ Partial Class FormReport
         btnMenuPemeriksaanKucing.Margin = New Padding(2)
         btnMenuPemeriksaanKucing.Name = "btnMenuPemeriksaanKucing"
         btnMenuPemeriksaanKucing.Size = New Size(165, 37)
-        btnMenuPemeriksaanKucing.TabIndex = 3
+        btnMenuPemeriksaanKucing.TabIndex = 5
         btnMenuPemeriksaanKucing.Text = "Pemeriksaan Kucing"
         btnMenuPemeriksaanKucing.UseVisualStyleBackColor = False
         ' 
@@ -121,7 +152,7 @@ Partial Class FormReport
         btnMenuCustomer.Margin = New Padding(2)
         btnMenuCustomer.Name = "btnMenuCustomer"
         btnMenuCustomer.Size = New Size(165, 37)
-        btnMenuCustomer.TabIndex = 2
+        btnMenuCustomer.TabIndex = 6
         btnMenuCustomer.Text = "Customer"
         btnMenuCustomer.UseVisualStyleBackColor = False
         ' 
@@ -135,7 +166,7 @@ Partial Class FormReport
         btnMenuDashboard.Margin = New Padding(2)
         btnMenuDashboard.Name = "btnMenuDashboard"
         btnMenuDashboard.Size = New Size(165, 37)
-        btnMenuDashboard.TabIndex = 36
+        btnMenuDashboard.TabIndex = 7
         btnMenuDashboard.Text = "Dashboard"
         btnMenuDashboard.UseVisualStyleBackColor = False
         btnMenuLayanan.BackColor = Color.Plum
@@ -145,7 +176,7 @@ Partial Class FormReport
         btnMenuLayanan.Margin = New Padding(2)
         btnMenuLayanan.Name = "btnMenuLayanan"
         btnMenuLayanan.Size = New Size(165, 37)
-        btnMenuLayanan.TabIndex = 1
+        btnMenuLayanan.TabIndex = 8
         btnMenuLayanan.Text = "Paket Layanan"
         btnMenuLayanan.UseVisualStyleBackColor = False
         ' 
@@ -158,7 +189,7 @@ Partial Class FormReport
         Label1.Margin = New Padding(2, 0, 2, 0)
         Label1.Name = "Label1"
         Label1.Size = New Size(181, 77)
-        Label1.TabIndex = 0
+        Label1.TabIndex = 9
         Label1.Text = "OMI"
         ' 
         ' Panel2
@@ -169,18 +200,18 @@ Partial Class FormReport
         Panel2.Margin = New Padding(2)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(890, 84)
-        Panel2.TabIndex = 1
+        Panel2.TabIndex = 10
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
+        Label2.Font = New Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.DarkOliveGreen
         Label2.Location = New Point(16, 16)
         Label2.Margin = New Padding(2, 0, 2, 0)
         Label2.Name = "Label2"
         Label2.Size = New Size(151, 46)
-        Label2.TabIndex = 0
+        Label2.TabIndex = 11
         Label2.Text = "Laporan "
         ' 
         ' Panel3
@@ -204,11 +235,21 @@ Partial Class FormReport
         Panel3.Controls.Add(lblRingkasanNilai)
         Panel3.Controls.Add(btnExport)
         Panel3.Controls.Add(btnCetak)
+        Panel3.Controls.Add(pnlCard)
         Panel3.Location = New Point(256, 94)
         Panel3.Margin = New Padding(2)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(890, 554)
-        Panel3.TabIndex = 2
+        Panel3.TabIndex = 12
+        ' 
+        ' pnlCard
+        ' 
+        pnlCard.BackColor = Color.White
+        pnlCard.BorderStyle = BorderStyle.FixedSingle
+        pnlCard.Location = New Point(16, 16)
+        pnlCard.Name = "pnlCard"
+        pnlCard.Size = New Size(858, 522)
+        pnlCard.TabIndex = 13
         ' 
         ' lblCariCaption
         ' 
@@ -218,7 +259,7 @@ Partial Class FormReport
         lblCariCaption.Location = New Point(316, 22)
         lblCariCaption.Name = "lblCariCaption"
         lblCariCaption.Size = New Size(36, 20)
-        lblCariCaption.TabIndex = 20
+        lblCariCaption.TabIndex = 14
         lblCariCaption.Text = "Cari"
         ' 
         ' txtCari
@@ -228,7 +269,7 @@ Partial Class FormReport
         txtCari.Name = "txtCari"
         txtCari.PlaceholderText = "kata kunci..."
         txtCari.Size = New Size(233, 27)
-        txtCari.TabIndex = 2
+        txtCari.TabIndex = 15
         ' 
         ' cmbJenis
         ' 
@@ -238,7 +279,7 @@ Partial Class FormReport
         cmbJenis.Margin = New Padding(2)
         cmbJenis.Name = "cmbJenis"
         cmbJenis.Size = New Size(270, 28)
-        cmbJenis.TabIndex = 1
+        cmbJenis.TabIndex = 16
         ' 
         ' lblPeriodeCaption
         ' 
@@ -248,7 +289,7 @@ Partial Class FormReport
         lblPeriodeCaption.Location = New Point(24, 62)
         lblPeriodeCaption.Name = "lblPeriodeCaption"
         lblPeriodeCaption.Size = New Size(56, 20)
-        lblPeriodeCaption.TabIndex = 22
+        lblPeriodeCaption.TabIndex = 17
         lblPeriodeCaption.Text = "Periode"
         ' 
         ' dtpDari
@@ -257,7 +298,7 @@ Partial Class FormReport
         dtpDari.Location = New Point(90, 58)
         dtpDari.Name = "dtpDari"
         dtpDari.Size = New Size(150, 27)
-        dtpDari.TabIndex = 3
+        dtpDari.TabIndex = 18
         ' 
         ' lblSampai
         ' 
@@ -267,7 +308,7 @@ Partial Class FormReport
         lblSampai.Location = New Point(252, 62)
         lblSampai.Name = "lblSampai"
         lblSampai.Size = New Size(21, 20)
-        lblSampai.TabIndex = 24
+        lblSampai.TabIndex = 19
         lblSampai.Text = "s/d"
         ' 
         ' dtpSampai
@@ -276,7 +317,7 @@ Partial Class FormReport
         dtpSampai.Location = New Point(282, 58)
         dtpSampai.Name = "dtpSampai"
         dtpSampai.Size = New Size(150, 27)
-        dtpSampai.TabIndex = 4
+        dtpSampai.TabIndex = 20
         ' 
         ' btnReset
         ' 
@@ -286,8 +327,8 @@ Partial Class FormReport
         btnReset.Location = New Point(450, 58)
         btnReset.Margin = New Padding(2)
         btnReset.Name = "btnReset"
-        btnReset.Size = New Size(110, 29)
-        btnReset.TabIndex = 5
+        btnReset.Size = New Size(110, 40)
+        btnReset.TabIndex = 21
         btnReset.Text = "Reset Filter"
         btnReset.UseVisualStyleBackColor = False
         ' 
@@ -299,7 +340,7 @@ Partial Class FormReport
         lblTotalCaption.Location = New Point(24, 100)
         lblTotalCaption.Name = "lblTotalCaption"
         lblTotalCaption.Size = New Size(135, 23)
-        lblTotalCaption.TabIndex = 7
+        lblTotalCaption.TabIndex = 22
         lblTotalCaption.Text = "Total Pendapatan"
         ' 
         ' lblGrandTotal
@@ -310,7 +351,7 @@ Partial Class FormReport
         lblGrandTotal.Location = New Point(24, 124)
         lblGrandTotal.Name = "lblGrandTotal"
         lblGrandTotal.Size = New Size(41, 23)
-        lblGrandTotal.TabIndex = 8
+        lblGrandTotal.TabIndex = 23
         lblGrandTotal.Text = "Rp 0"
         ' 
         ' lblJumlahCaption
@@ -321,7 +362,7 @@ Partial Class FormReport
         lblJumlahCaption.Location = New Point(260, 100)
         lblJumlahCaption.Name = "lblJumlahCaption"
         lblJumlahCaption.Size = New Size(99, 23)
-        lblJumlahCaption.TabIndex = 9
+        lblJumlahCaption.TabIndex = 24
         lblJumlahCaption.Text = "Jumlah Data"
         ' 
         ' lblJumlahReservasi
@@ -332,7 +373,7 @@ Partial Class FormReport
         lblJumlahReservasi.Location = New Point(260, 124)
         lblJumlahReservasi.Name = "lblJumlahReservasi"
         lblJumlahReservasi.Size = New Size(18, 23)
-        lblJumlahReservasi.TabIndex = 10
+        lblJumlahReservasi.TabIndex = 25
         lblJumlahReservasi.Text = "0"
         ' 
         ' lblRingkasanCaption
@@ -365,34 +406,42 @@ Partial Class FormReport
         btnExport.Location = New Point(650, 100)
         btnExport.Margin = New Padding(2)
         btnExport.Name = "btnExport"
-        btnExport.Size = New Size(100, 32)
-        btnExport.TabIndex = 6
+        btnExport.Size = New Size(100, 40)
+        btnExport.TabIndex = 28
         btnExport.Text = "Export"
         btnExport.UseVisualStyleBackColor = False
         ' 
         ' btnCetak
         ' 
-        btnCetak.BackColor = Color.LightGoldenrodYellow
+        btnCetak.BackColor = Color.MediumVioletRed
         btnCetak.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
-        btnCetak.ForeColor = Color.DarkOliveGreen
+        btnCetak.ForeColor = Color.SeaShell
         btnCetak.Location = New Point(762, 100)
         btnCetak.Margin = New Padding(2)
         btnCetak.Name = "btnCetak"
-        btnCetak.Size = New Size(100, 32)
-        btnCetak.TabIndex = 7
+        btnCetak.Size = New Size(100, 40)
+        btnCetak.TabIndex = 29
         btnCetak.Text = "Cetak"
         btnCetak.UseVisualStyleBackColor = False
         ' 
         ' dgvLaporan
         ' 
+        dgvLaporan.AllowUserToAddRows = False
+        dgvLaporan.AllowUserToDeleteRows = False
+        dgvLaporan.AllowUserToResizeRows = False
+        dgvLaporan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvLaporan.BackgroundColor = Color.Thistle
         dgvLaporan.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvLaporan.Location = New Point(24, 160)
         dgvLaporan.Margin = New Padding(2)
         dgvLaporan.Name = "dgvLaporan"
+        dgvLaporan.MultiSelect = False
+        dgvLaporan.ReadOnly = True
+        dgvLaporan.RowHeadersVisible = False
         dgvLaporan.RowHeadersWidth = 51
-        dgvLaporan.Size = New Size(838, 344)
-        dgvLaporan.TabIndex = 8
+        dgvLaporan.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        dgvLaporan.Size = New Size(842, 344)
+        dgvLaporan.TabIndex = 30
         ' 
         ' lblStatus
         ' 
@@ -402,7 +451,7 @@ Partial Class FormReport
         lblStatus.Location = New Point(24, 516)
         lblStatus.Name = "lblStatus"
         lblStatus.Size = New Size(0, 20)
-        lblStatus.TabIndex = 28
+        lblStatus.TabIndex = 31
         ' 
         ' FormReport
         ' 
@@ -413,6 +462,9 @@ Partial Class FormReport
         Controls.Add(Panel2)
         Controls.Add(Panel1)
         Margin = New Padding(2)
+        Me.FormBorderStyle = FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Name = "FormReport"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Laporan"
@@ -430,7 +482,10 @@ Partial Class FormReport
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
+    Friend WithEvents pnlCard As Panel
     Friend WithEvents btnMenuLaporan As Button
+    Friend WithEvents btnMenuAkun As Button
+    Friend WithEvents btnLogout As Button
     Friend WithEvents btnMenuReservasi As Button
     Friend WithEvents btnMenuPemeriksaanKucing As Button
     Friend WithEvents btnMenuCustomer As Button

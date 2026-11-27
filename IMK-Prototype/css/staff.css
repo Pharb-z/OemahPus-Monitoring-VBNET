@@ -1,0 +1,352 @@
+/* ==========================================================================
+   OMI — Gaya Modul Staff (frame 17–21)
+   Daily Report, Buat Laporan, Pilih Tanggal, Antar Jemput, Detail.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Daftar penitipan (frame 17)
+   Setiap baris: kartu horizontal berisi foto, nama, kandang, tombol aksi.
+   -------------------------------------------------------------------------- */
+.omi-penitipan-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.omi-penitipan-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 24px;
+  background: var(--omi-bg-card);
+  border: 1px solid var(--omi-border);
+  border-radius: var(--omi-r-2xl);
+  box-shadow: var(--omi-shadow-card);
+  flex-wrap: wrap;
+}
+
+.omi-penitipan-photo {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--omi-r-xl);
+  background: linear-gradient(149.18deg, var(--omi-bg-gradient-from) 0%, var(--omi-bg-gradient-to) 71.43%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  color: var(--omi-primary-mid);
+  flex-shrink: 0;
+}
+
+.omi-penitipan-info {
+  flex: 1 1 220px;
+  min-width: 0;
+}
+
+.omi-penitipan-nama {
+  font-size: var(--omi-fs-18);
+  font-weight: var(--omi-fw-semibold);
+  color: var(--omi-text);
+}
+
+.omi-penitipan-meta {
+  font-size: var(--omi-fs-13);
+  color: var(--omi-text-muted);
+  margin-top: 4px;
+}
+
+.omi-penitipan-aksi {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------------
+   Kartu tugas antar jemput (frame 20, 21)
+   -------------------------------------------------------------------------- */
+.omi-tugas-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.omi-tugas-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 24px;
+  background: var(--omi-bg-card);
+  border: 1px solid var(--omi-border);
+  border-radius: var(--omi-r-2xl);
+  box-shadow: var(--omi-shadow-card);
+}
+
+.omi-tugas-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.omi-tugas-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--omi-r-xl);
+  background: var(--omi-primary-light);
+  color: var(--omi-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.omi-tugas-nama {
+  font-size: var(--omi-fs-18);
+  font-weight: var(--omi-fw-semibold);
+  color: var(--omi-text);
+}
+
+.omi-tugas-jadwal {
+  font-size: var(--omi-fs-14);
+  color: var(--omi-text-muted);
+  margin-top: 2px;
+}
+
+.omi-tugas-alamat {
+  font-size: var(--omi-fs-14);
+  color: var(--omi-text-3);
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+
+.omi-tugas-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 14px;
+  border-top: 1px solid var(--omi-border);
+  flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------------
+   Form laporan (frame 18)
+   -------------------------------------------------------------------------- */
+.omi-laporan-form {
+  max-width: 860px;
+}
+
+.omi-laporan-form .omi-form-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px 24px;
+}
+
+.omi-laporan-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 34px;
+  padding-top: 26px;
+  border-top: 1px solid var(--omi-border);
+}
+
+/* --------------------------------------------------------------------------
+   Pemilih tanggal (frame 19)
+   -------------------------------------------------------------------------- */
+.omi-tanggal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 560px;
+}
+
+.omi-tanggal-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 22px;
+  background: var(--omi-bg-card);
+  border: 1px solid var(--omi-border);
+  border-radius: var(--omi-r-lg);
+  font-size: var(--omi-fs-15);
+  color: var(--omi-text);
+  font-weight: var(--omi-fw-medium);
+  cursor: pointer;
+  transition: border-color .15s ease, background-color .15s ease;
+  text-align: left;
+}
+
+.omi-tanggal-item:hover {
+  border-color: var(--omi-primary);
+  background: #fffaf5;
+}
+
+.omi-tanggal-item.is-active {
+  border-color: var(--omi-primary);
+  background: var(--omi-primary-light);
+  color: var(--omi-primary-dark);
+  font-weight: var(--omi-fw-bold);
+}
+
+.omi-tanggal-item-hari {
+  font-size: var(--omi-fs-12);
+  color: var(--omi-text-faint);
+  font-weight: var(--omi-fw-regular);
+  display: block;
+  margin-top: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Kartu laporan harian (frame 17) — dua kolom
+   -------------------------------------------------------------------------- */
+.omi-report-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.omi-report-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 26px;
+}
+
+.omi-report-nama {
+  font-size: var(--omi-fs-20);
+  font-weight: var(--omi-fw-bold);
+  color: var(--omi-text);
+}
+
+.omi-report-photo {
+  width: 100%;
+  height: 114px;
+  margin: 16px 0;
+  border-radius: var(--omi-r-xl);
+  background: linear-gradient(149.18deg, var(--omi-bg-gradient-from) 0%, var(--omi-bg-gradient-to) 71.43%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44px;
+  color: var(--omi-primary-mid);
+}
+
+.omi-report-meta {
+  font-size: var(--omi-fs-14);
+  color: var(--omi-text-muted);
+}
+
+.omi-report-aksi {
+  margin-top: 18px;
+}
+
+/* --------------------------------------------------------------------------
+   Kalender pemilih tanggal (frame 19)
+   -------------------------------------------------------------------------- */
+.omi-kalender-card {
+  max-width: 400px;
+}
+
+.omi-kalender-card .omi-calendar-grid {
+  gap: 6px;
+}
+
+.omi-kalender-card .omi-calendar-day {
+  border: 0;
+  background: transparent;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------
+   Detail pesanan antar jemput (frame 21)
+   -------------------------------------------------------------------------- */
+.omi-detail-antar {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.omi-detail-antar-foto {
+  width: 134px;
+  height: 124px;
+  border-radius: var(--omi-r-xl);
+  background: linear-gradient(149.18deg, var(--omi-bg-gradient-from) 0%, var(--omi-bg-gradient-to) 71.43%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: var(--omi-primary-mid);
+  flex-shrink: 0;
+}
+
+.omi-detail-antar .omi-detail-grid {
+  flex: 1 1 320px;
+}
+
+.omi-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 24px;
+  margin: 0;
+}
+
+.omi-detail-grid dt {
+  font-size: var(--omi-fs-13);
+  color: var(--omi-text-muted);
+  margin-bottom: 4px;
+}
+
+.omi-detail-grid dd {
+  margin: 0;
+  font-size: var(--omi-fs-15);
+  font-weight: var(--omi-fw-semibold);
+  color: var(--omi-text);
+}
+
+/* --------------------------------------------------------------------------
+   Responsif
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .omi-tugas-list,
+  .omi-report-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 820px) {
+  .omi-penitipan-row {
+    padding: 16px 18px;
+    gap: 14px;
+  }
+
+  .omi-penitipan-aksi {
+    width: 100%;
+  }
+
+  .omi-penitipan-aksi .omi-btn {
+    flex: 1;
+  }
+
+  .omi-laporan-form .omi-form-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .omi-laporan-footer {
+    flex-direction: column-reverse;
+  }
+
+  .omi-laporan-footer .omi-btn {
+    width: 100%;
+  }
+
+  .omi-tugas-foot .omi-btn {
+    width: 100%;
+  }
+}

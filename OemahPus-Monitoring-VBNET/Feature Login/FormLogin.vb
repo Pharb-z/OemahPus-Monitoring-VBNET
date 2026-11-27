@@ -132,6 +132,18 @@ Public Class FormLogin
 
     End Sub
 
+    Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
+        Using reg As New FormRegister()
+            If reg.ShowDialog(Me) <> DialogResult.OK Then Return
+            UserSession.CurrentUserId = reg.NewUserId
+            UserSession.CurrentUsername = reg.NewUsername
+            UserSession.CurrentFullName = reg.NewFullName
+            UserSession.CurrentRole = "Pelanggan"
+            txtPassword.Clear()
+            Navigator.Go(Me, "dashboard", Function() New FormDashboard())
+        End Using
+    End Sub
+
     ' Menampilkan pesan kesalahan database
     Private Sub ShowDatabaseError(ex As MySqlException)
 

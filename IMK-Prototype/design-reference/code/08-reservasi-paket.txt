@@ -1,0 +1,105 @@
+﻿export default function Component08ReservasiPaket() {
+  return (
+    <div className="bg-[#fff8f2] relative size-full" data-node-id="71:328" data-name="08 Reservasi - Paket">
+      <div className="absolute bg-white h-[92px] left-0 shadow-[0px_4px_14px_0px_rgba(115,56,13,0.05)] top-0 w-[1440px]" data-node-id="71:329" data-name="Navbar" />
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:ExtraBold'] font-extrabold leading-[0] left-[106px] text-[#f26b21] text-[26px] top-[29.5px] whitespace-nowrap" data-node-id="71:330">
+        <p className="leading-[normal]">OMI</p>
+      </a>
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[0] left-[calc(83.33%+13px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:331">
+        <p className="leading-[normal]">Riwayat</p>
+      </a>
+      <div className="absolute bg-[#ffebd9] h-[34px] left-[calc(75%+11px)] rounded-[16px] top-[29px] w-[102px]" data-node-id="71:332" data-name="Nav aktif" />
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[0] left-[calc(75%+27px)] text-[#f26b21] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:333">
+        <p className="leading-[normal]">Reservasi</p>
+      </a>
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[0] left-[calc(91.67%-14px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:334">
+        <p className="leading-[normal]">Akun Saya</p>
+      </a>
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[0] left-[calc(58.33%+61px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:335">
+        <p className="leading-[normal]">Home</p>
+      </a>
+      <div className="absolute bg-[#f26b21] left-[60px] rounded-[10px] size-[36px] top-[28px]" data-node-id="71:336" data-name="Image" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[69px] text-[18px] text-white top-[37px] whitespace-nowrap" data-node-id="71:337">
+        ð¾
+      </p>
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[0] left-[calc(66.67%+21px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:338">
+        <p className="leading-[normal]">Profil Kucing</p>
+      </a>
+      <a className="absolute bg-[#f26b21] content-stretch cursor-pointer drop-shadow-[0px_6px_7px_rgba(242,107,33,0.3)] flex h-[38px] items-center justify-center left-[calc(75%+6.23px)] rounded-[10px] top-[838.75px] w-[134px]" data-node-id="71:339" data-name="Btn: Selanjutnya">
+        <p className="[word-break:break-word] font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[16px] text-center text-white whitespace-nowrap" data-node-id="71:340">
+          Selanjutnya
+        </p>
+      </a>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[normal] left-[135.46px] text-[#1e2a3b] text-[28px] top-[161.25px] whitespace-nowrap" data-node-id="71:341">
+        Paket Layanan
+      </p>
+      <div className="absolute bg-white border border-[#eedfd1] border-solid h-[256.25px] left-[120px] rounded-[16px] shadow-[0px_6px_18px_0px_rgba(115,56,13,0.07)] top-[262.5px] w-[588.759px]" data-node-id="71:342" data-name="Card" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[152.32px] text-[#1e2a3b] text-[24px] top-[285px] whitespace-nowrap" data-node-id="71:343">
+        Paket Reguler
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[normal] left-[calc(33.33%+59.76px)] text-[#f26b21] text-[24px] top-[287.5px] whitespace-nowrap" data-node-id="71:344">
+        IDR. 70.000
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[157.94px] text-[#64748b] text-[14px] top-[355px] w-[514.286px]" data-node-id="71:345">{`Kandang ber-AC & area bermain luas`}</p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[157.94px] text-[#64748b] text-[14px] top-[407.5px] w-[514.286px]" data-node-id="71:346">
+        Makan 2x sehari + update foto harian
+      </p>
+      <a className="absolute bg-[#ffebd9] content-stretch cursor-pointer flex h-[38px] items-center justify-center left-[calc(33.33%+116.46px)] rounded-[10px] top-[457.5px] w-[68px]" data-node-id="71:347" data-name="Btn: Pilih">
+        <p className="[word-break:break-word] font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[#c2540f] text-[16px] text-center whitespace-nowrap" data-node-id="71:348">
+          Pilih
+        </p>
+      </a>
+      <div className="absolute bg-white border border-[#eedfd1] border-solid h-[256.25px] left-[calc(50%+11.24px)] rounded-[16px] shadow-[0px_6px_18px_0px_rgba(115,56,13,0.07)] top-[265px] w-[588.759px]" data-node-id="71:349" data-name="Card" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(50%+43.56px)] text-[#1e2a3b] text-[24px] top-[287.5px] whitespace-nowrap" data-node-id="71:350">
+        Paket Premium
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[normal] left-[calc(83.33%-59px)] text-[#f26b21] text-[24px] top-[290px] whitespace-nowrap" data-node-id="71:351">
+        IDR. 120.000
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(50%+49.18px)] text-[#64748b] text-[14px] top-[357.5px] w-[514.286px]" data-node-id="71:352">
+        Kamar premium dengan CCTV 24 jam
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(50%+49.18px)] text-[#64748b] text-[14px] top-[410px] w-[514.286px]" data-node-id="71:353">{`Grooming ringan & vitamin termasuk`}</p>
+      <a className="absolute bg-[#ffebd9] content-stretch cursor-pointer flex h-[38px] items-center justify-center left-[calc(83.33%+7.7px)] rounded-[10px] top-[460px] w-[68px]" data-node-id="71:354" data-name="Btn: Pilih">
+        <p className="[word-break:break-word] font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[#c2540f] text-[16px] text-center whitespace-nowrap" data-node-id="71:355">
+          Pilih
+        </p>
+      </a>
+      <div className="absolute bg-white border border-[#eedfd1] border-solid h-[256.25px] left-[120px] rounded-[16px] shadow-[0px_6px_18px_0px_rgba(115,56,13,0.07)] top-[547.5px] w-[588.759px]" data-node-id="71:356" data-name="Card" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[152.32px] text-[#1e2a3b] text-[20px] top-[570px] whitespace-nowrap" data-node-id="71:357">
+        Layanan Antar Jemput
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[normal] left-[calc(33.33%+58.76px)] text-[#f26b21] text-[24px] top-[572.5px] whitespace-nowrap" data-node-id="71:358">
+        IDR. 90.000
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[157.94px] text-[#64748b] text-[14px] top-[640px] w-[514.286px]" data-node-id="71:359">{`Grooming lengkap: mandi & potong kuku`}</p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[157.94px] text-[#64748b] text-[14px] top-[692.5px] w-[514.286px]" data-node-id="71:360">
+        Parfum aman khusus kucing
+      </p>
+      <a className="absolute bg-[#ffebd9] content-stretch cursor-pointer flex h-[38px] items-center justify-center left-[calc(33.33%+116.46px)] rounded-[10px] top-[742.5px] w-[68px]" data-node-id="71:361" data-name="Btn: Pilih">
+        <p className="[word-break:break-word] font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[#c2540f] text-[16px] text-center whitespace-nowrap" data-node-id="71:362">
+          Pilih
+        </p>
+      </a>
+      <div className="absolute bg-[#eedfd1] h-px left-0 top-[92px] w-[1440px]" data-node-id="71:363" data-name="Nav divider" />
+    </div>
+  );
+}
+
+/* --- */
+
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+
+/* --- */
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+
+/* --- */
+
+The generated code contains image and SVG URL constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

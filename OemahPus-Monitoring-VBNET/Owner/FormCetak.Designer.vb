@@ -55,7 +55,7 @@ Partial Class FormCetak
         btnExportPdf.Margin = New Padding(2)
         btnExportPdf.Name = "btnExportPdf"
         btnExportPdf.Size = New Size(110, 30)
-        btnExportPdf.TabIndex = 2
+        btnExportPdf.TabIndex = 1
         btnExportPdf.Text = "Export PDF"
         btnExportPdf.UseVisualStyleBackColor = False
         ' 
@@ -68,7 +68,7 @@ Partial Class FormCetak
         btnExportExcel.Margin = New Padding(2)
         btnExportExcel.Name = "btnExportExcel"
         btnExportExcel.Size = New Size(120, 30)
-        btnExportExcel.TabIndex = 3
+        btnExportExcel.TabIndex = 2
         btnExportExcel.Text = "Export Excel"
         btnExportExcel.UseVisualStyleBackColor = False
         ' 
@@ -81,7 +81,7 @@ Partial Class FormCetak
         btnPrint.Margin = New Padding(2)
         btnPrint.Name = "btnPrint"
         btnPrint.Size = New Size(80, 30)
-        btnPrint.TabIndex = 4
+        btnPrint.TabIndex = 3
         btnPrint.Text = "Print"
         btnPrint.UseVisualStyleBackColor = False
         ' 
@@ -94,20 +94,20 @@ Partial Class FormCetak
         btnKembali.Margin = New Padding(2)
         btnKembali.Name = "btnKembali"
         btnKembali.Size = New Size(110, 30)
-        btnKembali.TabIndex = 5
+        btnKembali.TabIndex = 4
         btnKembali.Text = "Kembali"
         btnKembali.UseVisualStyleBackColor = False
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
+        Label1.Font = New Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.DarkOliveGreen
         Label1.Location = New Point(16, 16)
         Label1.Margin = New Padding(2, 0, 2, 0)
         Label1.Name = "Label1"
         Label1.Size = New Size(151, 46)
-        Label1.TabIndex = 0
+        Label1.TabIndex = 5
         Label1.Text = "Cetak Laporan"
         ' 
         ' rvLaporan
@@ -115,7 +115,7 @@ Partial Class FormCetak
         rvLaporan.Location = New Point(10, 104)
         rvLaporan.Name = "rvLaporan"
         rvLaporan.Size = New Size(1136, 544)
-        rvLaporan.TabIndex = 1
+        rvLaporan.TabIndex = 6
         ' 
         ' FormCetak
         ' 
@@ -125,6 +125,9 @@ Partial Class FormCetak
         Controls.Add(rvLaporan)
         Controls.Add(Panel1)
         Margin = New Padding(2)
+        Me.FormBorderStyle = FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Name = "FormCetak"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Cetak Laporan"

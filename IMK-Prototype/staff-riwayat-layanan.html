@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riwayat Layanan — OMI</title>
+  <meta name="description" content="Riwayat layanan yang pernah dikerjakan staff.">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/staff.css">
+</head>
+<body>
+
+  <!-- Frame 26 Staff - Riwayat Layanan (node 155:978) -->
+  <header id="omi-navbar"></header>
+
+  <main class="omi-page">
+
+    <h1 class="omi-page-title">Riwayat Layanan</h1>
+    <p class="omi-page-subtitle">Lihat dan cari layanan yang pernah dikerjakan.</p>
+
+    <div class="omi-search omi-mt-24 omi-mb-24">
+      <input class="omi-input" type="search" id="cari-riwayat-layanan"
+             placeholder="Search riwayat layanan" aria-label="Cari riwayat layanan">
+    </div>
+
+    <section class="omi-card">
+      <div class="omi-table-wrap">
+        <table class="omi-table">
+          <thead>
+            <tr>
+              <th>Tanggal</th>
+              <th>Kucing</th>
+              <th>Layanan</th>
+              <th>Petugas</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="riwayat-layanan-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/page-staff.js"></script>
+</body>
+</html>

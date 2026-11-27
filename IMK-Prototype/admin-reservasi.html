@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservasi — OMI</title>
+  <meta name="description" content="Pantau reservasi dan ketersediaan kandang.">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+  <!-- Frame 18 Admin - Reservasi (node 153:595) -->
+  <header id="omi-navbar"></header>
+
+  <main class="omi-page">
+
+    <h1 class="omi-page-title">Reservasi</h1>
+
+    <div class="omi-split omi-reservasi-layout">
+      <section>
+        <h2 class="omi-reservasi-subtitle">Informasi Reservasi</h2>
+        <div class="omi-card omi-table-card">
+          <div class="omi-table-wrap">
+            <table class="omi-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Pemilik</th>
+                  <th>Kucing</th>
+                  <th>Check In</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="admin-reservasi-terkini-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <aside>
+        <h2 class="omi-reservasi-subtitle">Data Kucing &amp; Pemilik</h2>
+        <div class="omi-card omi-detail-kucing">
+          <div class="omi-detail-kucing-head">
+            <div class="omi-detail-kucing-foto">🐈‍⬛</div>
+            <div>
+              <p class="omi-detail-kucing-nama">Mochi</p>
+              <p class="omi-text-sm omi-text-muted">Persia · Betina · 2 tahun</p>
+              <span class="omi-badge omi-badge--info omi-mt-8">RSV-0042</span>
+            </div>
+          </div>
+
+          <dl class="omi-info-list omi-mt-24">
+            <div>
+              <dt>Pemilik</dt>
+              <dd>Cinta Cahyaning · 0812-3456-7890</dd>
+            </div>
+            <div>
+              <dt>Catatan Kesehatan</dt>
+              <dd>Alergi makanan seafood.</dd>
+            </div>
+          </dl>
+        </div>
+      </aside>
+    </div>
+
+    <section class="omi-card omi-slot-card">
+      <div class="omi-slot-head">
+        <h2 class="omi-reservasi-subtitle">Slot Ketersediaan Kandang</h2>
+        <button type="button" class="omi-btn omi-btn--soft" id="btn-catat-slot">Catat Slot</button>
+      </div>
+
+      <div class="omi-slot-legend">
+        <span class="omi-badge omi-badge--success">Tersedia</span>
+        <span class="omi-badge omi-badge--info">Terisi</span>
+        <span class="omi-badge omi-badge--warning">Maintenance</span>
+      </div>
+
+      <div class="omi-slot-grid" id="slot-grid"></div>
+      <p class="omi-help omi-mt-16">
+        Klik satu slot untuk mengubah statusnya (Tersedia → Terisi → Maintenance).
+      </p>
+    </section>
+
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/page-admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+﻿const imgEllipse = "https://www.figma.com/api/mcp/asset/a8d3da6f-e7d6-4396-8917-2fc16145fd2d.svg";
+const imgEllipse1 = "https://www.figma.com/api/mcp/asset/8569518d-a7c5-45d8-8c9d-a91a9266eb00.svg";
+const imgEllipse2 = "https://www.figma.com/api/mcp/asset/303c6d03-3009-4cb6-8b3c-61cc378654b8.svg";
+
+export default function Component03Home() {
+  return (
+    <div className="bg-[#fff8f2] relative size-full" data-node-id="71:43" data-name="03 Home">
+      <div className="absolute bg-white h-[92px] left-0 shadow-[0px_4px_14px_0px_rgba(115,56,13,0.05)] top-0 w-[1440px]" data-node-id="71:44" data-name="Navbar" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:ExtraBold'] font-extrabold leading-[normal] left-[106px] text-[#f26b21] text-[26px] top-[29.5px] whitespace-nowrap" data-node-id="71:45">
+        OMI
+      </p>
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[0] left-[calc(75%+9px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:46">
+        <p className="leading-[normal]">Riwayat</p>
+      </a>
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[0] left-[calc(66.67%+24px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:47">
+        <p className="leading-[normal]">Reservasi</p>
+      </a>
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[0] left-[calc(91.67%-14px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:48">
+        <p className="leading-[normal]">Akun Saya</p>
+      </a>
+      <div className="absolute bg-[#ffebd9] h-[34px] left-[calc(50%+42px)] rounded-[16px] top-[29px] w-[76px]" data-node-id="71:49" data-name="Nav aktif" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[normal] left-[calc(50%+58px)] text-[#f26b21] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:50">
+        Home
+      </p>
+      <div className="absolute bg-[#f26b21] left-[60px] rounded-[10px] size-[36px] top-[28px]" data-node-id="71:51" data-name="Image" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[69px] text-[18px] text-white top-[37px] whitespace-nowrap" data-node-id="71:52">
+        ð¾
+      </p>
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[0] left-[calc(58.33%+18px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:53">
+        <p className="leading-[normal]">Profil Kucing</p>
+      </a>
+      <div className="absolute h-[187px] left-[calc(66.67%-1.24px)] rounded-[14px] top-[184.05px] w-[320px]" data-node-id="71:54" style={{ backgroundImage: "linear-gradient(149.69905262634282deg, rgb(255, 227, 204) 0%, rgb(255, 243, 232) 71.429%)" }} data-name="Image" />
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(66.67%+158.76px)] text-[#f5a56b] text-[48px] text-center top-[253.55px] w-[320px]" data-node-id="71:55">
+        ð¾
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:ExtraBold'] font-extrabold leading-[normal] left-[195.6px] text-[#1e2a3b] text-[44px] top-[176.32px] w-[540px]" data-node-id="71:56">
+        Rumah Kedua yang Nyaman untuk Kucing Kesayanganmu
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[195.6px] text-[#64748b] text-[17px] top-[357.32px] w-[500px]" data-node-id="71:57">
+        Pet hotel dengan kandang ber-AC, monitoring real-time, dan perawatan penuh kasih. Pantau kucingmu kapan saja.
+      </p>
+      <a className="absolute bg-[#ffebd9] content-stretch cursor-pointer flex h-[48px] items-center justify-center left-[calc(16.67%+158.6px)] rounded-[12px] top-[427.32px] w-[146px]" data-node-id="71:58" data-name="Btn: Lihat Layanan">
+        <p className="[word-break:break-word] font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[#c2540f] text-[15px] text-left whitespace-nowrap" data-node-id="71:59">
+          Lihat Layanan
+        </p>
+      </a>
+      <a className="absolute bg-[#f26b21] content-stretch cursor-pointer drop-shadow-[0px_6px_7px_rgba(242,107,33,0.3)] flex h-[48px] items-center justify-center left-[195.6px] rounded-[12px] top-[427.32px] w-[189px]" data-node-id="71:60" data-name="Btn: Reservasi Sekarang">
+        <p className="[word-break:break-word] font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[15px] text-left text-white whitespace-nowrap" data-node-id="71:61">
+          Reservasi Sekarang
+        </p>
+      </a>
+      <div className="absolute bg-white border border-[#eedfd1] border-solid h-[172.037px] left-[120px] rounded-[16px] shadow-[0px_6px_18px_0px_rgba(115,56,13,0.07)] top-[1095.04px] w-[475.601px]" data-node-id="71:62" data-name="Card" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(8.33%+173.74px)] text-[#1e2a3b] text-[24px] top-[1110.22px] whitespace-nowrap" data-node-id="71:63">
+        Paket Premium
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[157.11px] text-[#64748b] text-[14px] top-[1153.85px] w-[404.124px]" data-node-id="71:64">{`Grooming lengkap: mandi & potong kuku`}</p>
+      <div className="absolute bg-[#f26b21] content-stretch drop-shadow-[0px_6px_7px_rgba(242,107,33,0.3)] flex h-[38px] items-center justify-center left-[calc(8.33%+177.49px)] rounded-[10px] top-[1221.42px] w-[122px]" data-node-id="71:65" data-name="Btn: Lihat Detail">
+        <p className="[word-break:break-word] font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[16px] text-center text-white whitespace-nowrap" data-node-id="71:66">
+          Lihat Detail
+        </p>
+      </div>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[163.99px] text-[#64748b] text-[14px] top-[1183.2px] w-[404.124px]" data-node-id="71:67">
+        Parfum aman khusus kucing
+      </p>
+      <div className="absolute bg-white border border-[#eedfd1] border-solid h-[172.037px] left-[calc(41.67%+25.84px)] rounded-[16px] shadow-[0px_6px_18px_0px_rgba(115,56,13,0.07)] top-[1094.02px] w-[475.601px]" data-node-id="71:68" data-name="Card" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(50%+79.58px)] text-[#1e2a3b] text-[24px] top-[1109.2px] whitespace-nowrap" data-node-id="71:69">
+        Paket Reguler
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(41.67%+62.96px)] text-[#64748b] text-[14px] top-[1152.84px] w-[404.124px]" data-node-id="71:70">
+        Kamar premium dengan CCTV 24 jam
+      </p>
+      <div className="absolute bg-[#f26b21] content-stretch drop-shadow-[0px_6px_7px_rgba(242,107,33,0.3)] flex h-[38px] items-center justify-center left-[calc(50%+83.33px)] rounded-[10px] top-[1220.41px] w-[122px]" data-node-id="71:71" data-name="Btn: Lihat Detail">
+        <p className="[word-break:break-word] font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[16px] text-center text-white whitespace-nowrap" data-node-id="71:72">
+          Lihat Detail
+        </p>
+      </div>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(41.67%+69.83px)] text-[#64748b] text-[14px] top-[1182.19px] w-[404.124px]" data-node-id="71:73">{`Grooming ringan & vitamin termasuk`}</p>
+      <div className="absolute bg-white border border-[#eedfd1] border-solid h-[172.037px] left-[calc(83.33%-68.32px)] rounded-[16px] shadow-[0px_6px_18px_0px_rgba(115,56,13,0.07)] top-[1092px] w-[147.079px]" data-node-id="71:74" data-name="Card" />
+      <div className="absolute left-[calc(41.67%+49.71px)] size-[10px] top-[1318.8px]" data-node-id="71:75" data-name="Ellipse">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse} />
+      </div>
+      <div className="absolute left-[calc(41.67%+78.57px)] size-[10px] top-[1318.8px]" data-node-id="71:76" data-name="Ellipse">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse1} />
+      </div>
+      <div className="absolute left-[calc(50%-9.81px)] size-[10px] top-[1318.8px]" data-node-id="71:77" data-name="Ellipse">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse1} />
+      </div>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[normal] left-[calc(91.67%-14px)] text-[#f26b21] text-[26px] top-[1146.93px] whitespace-nowrap" data-node-id="71:78">{`>`}</p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[calc(83.33%-18px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:79">
+        Pet Tracking
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[normal] left-[calc(33.33%+75px)] text-[#1e2a3b] text-[28px] top-[660px] whitespace-nowrap" data-node-id="71:80">
+        Empat Langkah Memulai
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[normal] left-[calc(33.33%+95px)] text-[#1e2a3b] text-[28px] top-[1035px] whitespace-nowrap" data-node-id="71:1235">
+        Paket Layanan di OMI
+      </p>
+      <div className="absolute bg-[#eedfd1] h-px left-0 top-[92px] w-[1440px]" data-node-id="71:81" data-name="Nav divider" />
+      <div className="absolute bg-white border border-[#eedfd1] border-solid h-[128px] left-[144px] rounded-[16px] shadow-[0px_6px_16px_0px_rgba(115,56,13,0.06)] top-[719px] w-[270px]" data-node-id="71:82" data-name="Step card" />
+      <div className="absolute left-[164px] size-[32px] top-[737px]" data-node-id="71:83" data-name="Ellipse">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse2} />
+      </div>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[normal] left-[176.5px] text-[15px] text-white top-[743.5px] whitespace-nowrap" data-node-id="71:84">
+        1
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[normal] left-[calc(8.33%+88px)] text-[#1e2a3b] text-[16px] top-[742px] whitespace-nowrap" data-node-id="71:85">
+        Pilih Paket
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[164px] text-[#64748b] text-[13px] top-[785px] w-[230px]" data-node-id="71:86">
+        Tentukan paket sesuai kebutuhan kucingmu.
+      </p>
+      <div className="absolute bg-white border border-[#eedfd1] border-solid h-[128px] left-[calc(25%+78px)] rounded-[16px] shadow-[0px_6px_16px_0px_rgba(115,56,13,0.06)] top-[719px] w-[270px]" data-node-id="71:87" data-name="Step card" />
+      <div className="absolute left-[calc(25%+98px)] size-[32px] top-[737px]" data-node-id="71:88" data-name="Ellipse">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse2} />
+      </div>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[normal] left-[calc(25%+109.5px)] text-[15px] text-white top-[743.5px] whitespace-nowrap" data-node-id="71:89">
+        2
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[normal] left-[calc(25%+142px)] text-[#1e2a3b] text-[16px] top-[742px] whitespace-nowrap" data-node-id="71:90">
+        Isi Data Kucing
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(25%+98px)] text-[#64748b] text-[13px] top-[785px] w-[230px]" data-node-id="71:91">{`Lengkapi profil & catatan kesehatan.`}</p>
+      <div className="absolute bg-white border border-[#eedfd1] border-solid h-[128px] left-[calc(50%+12px)] rounded-[16px] shadow-[0px_6px_16px_0px_rgba(115,56,13,0.06)] top-[719px] w-[270px]" data-node-id="71:92" data-name="Step card" />
+      <div className="absolute left-[calc(50%+32px)] size-[32px] top-[737px]" data-node-id="71:93" data-name="Ellipse">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse2} />
+      </div>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[normal] left-[calc(50%+43px)] text-[15px] text-white top-[743.5px] whitespace-nowrap" data-node-id="71:94">
+        3
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[normal] left-[calc(50%+76px)] text-[#1e2a3b] text-[16px] top-[742px] whitespace-nowrap" data-node-id="71:95">
+        Bayar via QRIS
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(50%+32px)] text-[#64748b] text-[13px] top-[785px] w-[230px]" data-node-id="71:96">
+        Pembayaran cepat dan aman.
+      </p>
+      <div className="absolute bg-white border border-[#eedfd1] border-solid h-[128px] left-[calc(75%-54px)] rounded-[16px] shadow-[0px_6px_16px_0px_rgba(115,56,13,0.06)] top-[719px] w-[270px]" data-node-id="71:97" data-name="Step card" />
+      <div className="absolute left-[calc(75%-34px)] size-[32px] top-[737px]" data-node-id="71:98" data-name="Ellipse">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse2} />
+      </div>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[normal] left-[calc(75%-23px)] text-[15px] text-white top-[743.5px] whitespace-nowrap" data-node-id="71:99">
+        4
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[normal] left-[calc(75%+10px)] text-[#1e2a3b] text-[16px] top-[742px] whitespace-nowrap" data-node-id="71:100">
+        Pantau Real-time
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(75%-34px)] text-[#64748b] text-[13px] top-[785px] w-[230px]" data-node-id="71:101">
+        Lihat laporan harian dari staf kami.
+      </p>
+      <div className="absolute bg-white h-[221px] left-0 top-[1405px] w-[1440px]" data-node-id="71:1237" />
+    </div>
+  );
+}
+
+/* --- */
+
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+
+/* --- */
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+
+/* --- */
+
+The generated code contains image and SVG URL constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

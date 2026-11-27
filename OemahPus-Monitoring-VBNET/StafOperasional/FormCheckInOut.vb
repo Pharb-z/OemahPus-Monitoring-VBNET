@@ -4,9 +4,10 @@ Public Class FormCheckInOut
     Private Sub FormCheckInOut_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Navigator.Register("checkInOut", Me)
         StandardNav.Wire(Me, btnMenuDashboard, btnMenuLayanan, btnMenuCustomer,
-                         btnMenuPemeriksaanKucing, btnMenuReservasi, btnMenuLaporan, btnLogout)
+                         btnMenuPemeriksaanKucing, btnMenuReservasi, btnMenuLaporan,
+                         btnMenuAkun, btnLogout)
         StandardNav.ApplyMenu(btnMenuDashboard, btnMenuLayanan, btnMenuCustomer,
-                        btnMenuPemeriksaanKucing, btnMenuReservasi, btnMenuLaporan)
+                        btnMenuPemeriksaanKucing, btnMenuReservasi, btnMenuLaporan, btnMenuAkun)
 
         cmbMode.DropDownStyle = ComboBoxStyle.DropDownList
         cmbMode.Items.Clear()

@@ -1,0 +1,153 @@
+﻿const imgEllipse = "https://www.figma.com/api/mcp/asset/e6600db7-0f92-42c7-b280-8071edb3bf6f.svg";
+const imgEllipse1 = "https://www.figma.com/api/mcp/asset/0f268ee6-4e28-4646-9831-6b952bf1d45d.svg";
+
+export default function Component10Riwayat() {
+  return (
+    <div className="bg-[#fff8f2] relative size-full" data-node-id="71:442" data-name="10 Riwayat">
+      <div className="absolute bg-white h-[92px] left-0 shadow-[0px_4px_14px_0px_rgba(115,56,13,0.05)] top-0 w-[1440px]" data-node-id="71:443" data-name="Navbar" />
+      <div className="absolute bg-[#ffebd9] h-[34px] left-[calc(83.33%-5px)] rounded-[16px] top-[29px] w-[91px]" data-node-id="71:444" data-name="Nav aktif" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[normal] left-[calc(83.33%+11px)] text-[#f26b21] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:445">
+        Riwayat
+      </p>
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[0] left-[calc(75%+26px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:446">
+        <p className="leading-[normal]">Reservasi</p>
+      </a>
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[0] left-[calc(91.67%-14px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:447">
+        <p className="leading-[normal]">Akun Saya</p>
+      </a>
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[0] left-[calc(58.33%+60px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:448">
+        <p className="leading-[normal]">Home</p>
+      </a>
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[0] left-[calc(66.67%+20px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:449">
+        <p className="leading-[normal]">Profil Kucing</p>
+      </a>
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:ExtraBold'] font-extrabold leading-[0] left-[106px] text-[#f26b21] text-[26px] top-[29.5px] whitespace-nowrap" data-node-id="71:450">
+        <p className="leading-[normal]">OMI</p>
+      </a>
+      <div className="absolute bg-[#f26b21] left-[60px] rounded-[10px] size-[36px] top-[28px]" data-node-id="71:451" data-name="Image" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[69px] text-[18px] text-white top-[37px] whitespace-nowrap" data-node-id="71:452">
+        ð¾
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[120px] text-[#1e2a3b] text-[24px] top-[136.25px] whitespace-nowrap" data-node-id="71:453">
+        Riwayat Reservasi
+      </p>
+      <div className="absolute bg-white border border-[#eedfd1] border-solid h-[217.5px] left-[131.44px] rounded-[16px] shadow-[0px_6px_18px_0px_rgba(115,56,13,0.07)] top-[203.75px] w-[463.409px]" data-node-id="71:454" data-name="Card" />
+      <div className="absolute h-[100px] left-[171.49px] rounded-[14px] top-[248.75px] w-[99px]" data-node-id="71:455" style={{ backgroundImage: "linear-gradient(134.7120839334429deg, rgb(255, 227, 204) 0%, rgb(255, 243, 232) 71.429%)" }} data-name="Image" />
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[220.99px] text-[#f5a56b] text-[40px] text-center top-[278.75px] w-[99px]" data-node-id="71:456">
+        ð¾
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(16.67%+128px)] text-[#1e2a3b] text-[20px] top-[236.25px] whitespace-nowrap" data-node-id="71:457">{`Ayen's Stay`}</p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(16.67%+104.55px)] text-[#64748b] text-[14px] top-[276.25px] w-[191.657px]" data-node-id="71:458">
+        10 â 12 Nov 2026 Â· 2 malam
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(16.67%+104.55px)] text-[#64748b] text-[14px] top-[308.75px] w-[191.657px]" data-node-id="71:459">
+        Paket Premium
+      </p>
+      <a className="absolute bg-[#ffebd9] content-stretch cursor-pointer flex h-[38px] items-center justify-center left-[calc(25%+138.47px)] rounded-[10px] top-[363.75px] w-[74px]" data-node-id="71:460" data-name="Btn: Lihat">
+        <p className="[word-break:break-word] font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[#c2540f] text-[16px] text-center whitespace-nowrap" data-node-id="71:461">
+          Lihat
+        </p>
+      </a>
+      <div className="absolute bg-white border border-[#eedfd1] border-solid h-[217.5px] left-[calc(41.67%+56.35px)] rounded-[16px] shadow-[0px_6px_18px_0px_rgba(115,56,13,0.07)] top-[203.75px] w-[463.409px]" data-node-id="71:462" data-name="Card" />
+      <div className="absolute h-[100px] left-[calc(41.67%+96.4px)] rounded-[14px] top-[248.75px] w-[99px]" data-node-id="71:463" style={{ backgroundImage: "linear-gradient(134.7120839334429deg, rgb(255, 227, 204) 0%, rgb(255, 243, 232) 71.429%)" }} data-name="Image" />
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(41.67%+145.9px)] text-[#f5a56b] text-[40px] text-center top-[278.75px] w-[99px]" data-node-id="71:464">
+        ð¾
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(58.33%+52.7px)] text-[#1e2a3b] text-[20px] top-[236.25px] whitespace-nowrap" data-node-id="71:465">{`Miku's Stay`}</p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(58.33%+29.46px)] text-[#64748b] text-[14px] top-[276.25px] w-[191.657px]" data-node-id="71:466">
+        15 â 17 Nov 2026 Â· 2 malam
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(58.33%+29.46px)] text-[#64748b] text-[14px] top-[308.75px] w-[191.657px]" data-node-id="71:467">
+        Paket Reguler
+      </p>
+      <a className="absolute bg-[#ffebd9] content-stretch cursor-pointer flex h-[38px] items-center justify-center left-[calc(75%-56.62px)] rounded-[10px] top-[363.75px] w-[74px]" data-node-id="71:468" data-name="Btn: Lihat">
+        <p className="[word-break:break-word] font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[#c2540f] text-[16px] text-center whitespace-nowrap" data-node-id="71:469">
+          Lihat
+        </p>
+      </a>
+      <div className="absolute bg-white border border-[#eedfd1] border-solid h-[217.5px] left-[calc(83.33%-47.34px)] rounded-[16px] shadow-[0px_6px_18px_0px_rgba(115,56,13,0.07)] top-[203.75px] w-[111.561px]" data-node-id="71:470" data-name="Card" />
+      <div className="absolute h-[100px] left-[calc(83.33%+14.22px)] rounded-[14px] top-[248.75px] w-[50px]" data-node-id="71:471" style={{ backgroundImage: "linear-gradient(116.56505117707799deg, rgb(255, 227, 204) 0%, rgb(255, 243, 232) 71.429%)" }} data-name="Image" />
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(83.33%+39.22px)] text-[#f5a56b] text-[40px] text-center top-[278.75px] w-[50px]" data-node-id="71:472">
+        ð¾
+      </p>
+      <div className="absolute left-[calc(41.67%+42.77px)] size-[10px] top-[477.5px]" data-node-id="71:473" data-name="Ellipse">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse} />
+      </div>
+      <div className="absolute left-[calc(41.67%+72.81px)] size-[10px] top-[477.5px]" data-node-id="71:474" data-name="Ellipse">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse1} />
+      </div>
+      <div className="absolute left-[calc(41.67%+105.7px)] size-[10px] top-[477.5px]" data-node-id="71:475" data-name="Ellipse">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse1} />
+      </div>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[normal] left-[calc(91.67%-16px)] text-[#f26b21] text-[26px] top-[266.25px] whitespace-nowrap" data-node-id="71:476">{`>`}</p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[122.86px] text-[#1e2a3b] text-[24px] top-[516.13px] whitespace-nowrap" data-node-id="71:477">
+        Riwayat Pembayaran
+      </p>
+      <div className="absolute bg-white border border-[#eedfd1] border-solid h-[316.25px] left-[134.3px] rounded-[12px] top-[572.5px] w-[1124.195px]" data-node-id="71:478" data-name="Table" />
+      <div className="absolute bg-[#fff1e3] h-[35px] left-[135.3px] rounded-tl-[11px] rounded-tr-[11px] top-[573.5px] w-[1122.195px]" data-node-id="71:479" data-name="Table header" />
+      <div className="absolute bg-[#eedfd1] h-[316.25px] left-[calc(25%+55.35px)] top-[572.5px] w-px" data-node-id="71:480" data-name="Rectangle" />
+      <div className="absolute bg-[#eedfd1] h-[316.25px] left-[calc(41.67%+96.4px)] top-[572.5px] w-px" data-node-id="71:481" data-name="Rectangle" />
+      <div className="absolute bg-[#eedfd1] h-[316.25px] left-[calc(66.67%+17.45px)] top-[572.5px] w-px" data-node-id="71:482" data-name="Rectangle" />
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[274.83px] text-[#1e2a3b] text-[14px] text-center top-[582px] w-[196.5px]" data-node-id="71:483">
+        Nama Reservasi
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(25%+195.88px)] text-[#1e2a3b] text-[14px] text-center top-[582px] w-[196.5px]" data-node-id="71:484">
+        Harga
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(50%+116.92px)] text-[#1e2a3b] text-[14px] text-center top-[582px] w-[196.5px]" data-node-id="71:485">
+        Tanggal
+      </p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(75%+37.97px)] text-[#1e2a3b] text-[14px] text-center top-[582px] w-[196.5px]" data-node-id="71:486">
+        Status
+      </p>
+      <div className="absolute bg-[#eedfd1] h-px left-[134.3px] top-[607.5px] w-[1124.195px]" data-node-id="71:487" data-name="Rectangle" />
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[274.83px] text-[#334155] text-[16px] text-center top-[618.25px] w-[196.5px]" data-node-id="71:488">{`Ayen's Stay`}</p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[normal] left-[calc(25%+195.88px)] text-[#f26b21] text-[13px] text-center top-[618.25px] w-[196.5px]" data-node-id="71:489">
+        IDR. 140.000
+      </p>
+      <div className="absolute bg-[#eedfd1] h-px left-[134.3px] top-[645px] w-[1124.195px]" data-node-id="71:490" data-name="Rectangle" />
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[normal] left-[274.83px] text-[#334155] text-[16px] text-center top-[655.75px] w-[196.5px]" data-node-id="71:491">{`Miku's Stay`}</p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[normal] left-[calc(25%+195.88px)] text-[#f26b21] text-[13px] text-center top-[655.75px] w-[196.5px]" data-node-id="71:492">
+        IDR. 70.000
+      </p>
+      <div className="absolute bg-[#eedfd1] h-px left-[134.3px] top-[682.5px] w-[1124.195px]" data-node-id="71:493" data-name="Rectangle" />
+      <div className="absolute bg-white border border-[#e3d3c4] border-solid h-[25px] left-[calc(50%+36.35px)] rounded-[10px] top-[615.63px] w-[159px]" data-node-id="71:494" data-name="Input" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(50%+44.35px)] text-[#94a3b8] text-[11px] top-[621.63px] whitespace-nowrap" data-node-id="71:495">
+        05 - 17 - 2026
+      </p>
+      <div className="absolute bg-white border border-[#e3d3c4] border-solid h-[25px] left-[calc(50%+36.35px)] rounded-[10px] top-[653.13px] w-[159px]" data-node-id="71:496" data-name="Input" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(50%+44.35px)] text-[#94a3b8] text-[11px] top-[659.13px] whitespace-nowrap" data-node-id="71:497">{`05 - 10 - 2026 `}</p>
+      <a className="absolute bg-[#fef3c7] content-stretch cursor-pointer flex h-[38px] items-center justify-center left-[calc(66.67%+54.55px)] rounded-[19px] top-[609.75px] w-[219px]" data-node-id="71:498" data-name="Btn: Menunggu Pembayaran">
+        <p className="[word-break:break-word] font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[#b45309] text-[16px] text-center whitespace-nowrap" data-node-id="71:499">
+          Menunggu Pembayaran
+        </p>
+      </a>
+      <a className="absolute bg-[#dcfce7] content-stretch cursor-pointer flex h-[38px] items-center justify-center left-[calc(75%-49.3px)] rounded-[19px] top-[648.5px] w-[191px]" data-node-id="71:500" data-name="Btn: Pembayaran Sukses">
+        <p className="[word-break:break-word] font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] relative shrink-0 text-[#15803d] text-[16px] text-center whitespace-nowrap" data-node-id="71:501">
+          Pembayaran Sukses
+        </p>
+      </a>
+      <div className="absolute bg-[#f6ece2] h-[312.5px] left-[calc(91.67%-16px)] rounded-[8px] top-[572.5px] w-[16px]" data-node-id="71:502" data-name="Scrollbar" />
+      <div className="absolute bg-[#f9b27c] h-[87.5px] left-[calc(91.67%-14px)] rounded-[6px] top-[574.5px] w-[12px]" data-node-id="71:503" data-name="Scroll thumb" />
+      <div className="absolute bg-[#eedfd1] h-px left-0 top-[92px] w-[1440px]" data-node-id="71:504" data-name="Nav divider" />
+    </div>
+  );
+}
+
+/* --- */
+
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+
+/* --- */
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+
+/* --- */
+
+The generated code contains image and SVG URL constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

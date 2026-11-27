@@ -24,10 +24,12 @@ Partial Class FormDailyReport
         Me.btnMenuPemeriksaanKucing = New Button()
         Me.btnMenuReservasi = New Button()
         Me.btnMenuLaporan = New Button()
+        Me.btnMenuAkun = New Button()
         Me.btnLogout = New Button()
         Me.Panel2 = New Panel()
         Me.Label2 = New Label()
         Me.Panel3 = New Panel()
+        Me.pnlCard = New Panel()
         Me.Label3 = New Label()
         Me.dtpTanggal = New DateTimePicker()
         Me.Label4 = New Label()
@@ -46,6 +48,7 @@ Partial Class FormDailyReport
         Me.Panel1.BackColor = Color.SeaShell
         Me.Panel1.Controls.Add(Me.btnLogout)
         Me.Panel1.Controls.Add(Me.btnMenuLaporan)
+        Me.Panel1.Controls.Add(Me.btnMenuAkun)
         Me.Panel1.Controls.Add(Me.btnMenuReservasi)
         Me.Panel1.Controls.Add(Me.btnMenuPemeriksaanKucing)
         Me.Panel1.Controls.Add(Me.btnMenuCustomer)
@@ -67,7 +70,7 @@ Partial Class FormDailyReport
         Me.Label1.Margin = New Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New Size(181, 77)
-        Me.Label1.TabIndex = 0
+        Me.Label1.TabIndex = 1
         Me.Label1.Text = "OMI"
         '
         ' btnMenuDashboard
@@ -79,7 +82,7 @@ Partial Class FormDailyReport
         Me.btnMenuDashboard.Margin = New Padding(2)
         Me.btnMenuDashboard.Name = "btnMenuDashboard"
         Me.btnMenuDashboard.Size = New Size(165, 37)
-        Me.btnMenuDashboard.TabIndex = 1
+        Me.btnMenuDashboard.TabIndex = 2
         Me.btnMenuDashboard.Text = "Dashboard"
         Me.btnMenuDashboard.UseVisualStyleBackColor = False
         '
@@ -92,7 +95,7 @@ Partial Class FormDailyReport
         Me.btnMenuLayanan.Margin = New Padding(2)
         Me.btnMenuLayanan.Name = "btnMenuLayanan"
         Me.btnMenuLayanan.Size = New Size(165, 37)
-        Me.btnMenuLayanan.TabIndex = 2
+        Me.btnMenuLayanan.TabIndex = 3
         Me.btnMenuLayanan.Text = "Riwayat Layanan"
         Me.btnMenuLayanan.UseVisualStyleBackColor = False
         '
@@ -105,7 +108,7 @@ Partial Class FormDailyReport
         Me.btnMenuCustomer.Margin = New Padding(2)
         Me.btnMenuCustomer.Name = "btnMenuCustomer"
         Me.btnMenuCustomer.Size = New Size(165, 37)
-        Me.btnMenuCustomer.TabIndex = 3
+        Me.btnMenuCustomer.TabIndex = 4
         Me.btnMenuCustomer.Text = "Customer"
         Me.btnMenuCustomer.UseVisualStyleBackColor = False
         '
@@ -118,7 +121,7 @@ Partial Class FormDailyReport
         Me.btnMenuPemeriksaanKucing.Margin = New Padding(2)
         Me.btnMenuPemeriksaanKucing.Name = "btnMenuPemeriksaanKucing"
         Me.btnMenuPemeriksaanKucing.Size = New Size(165, 37)
-        Me.btnMenuPemeriksaanKucing.TabIndex = 4
+        Me.btnMenuPemeriksaanKucing.TabIndex = 5
         Me.btnMenuPemeriksaanKucing.Text = "Pemeriksaan Kucing"
         Me.btnMenuPemeriksaanKucing.UseVisualStyleBackColor = False
         '
@@ -131,7 +134,7 @@ Partial Class FormDailyReport
         Me.btnMenuReservasi.Margin = New Padding(2)
         Me.btnMenuReservasi.Name = "btnMenuReservasi"
         Me.btnMenuReservasi.Size = New Size(165, 37)
-        Me.btnMenuReservasi.TabIndex = 5
+        Me.btnMenuReservasi.TabIndex = 6
         Me.btnMenuReservasi.Text = "Reservasi"
         Me.btnMenuReservasi.UseVisualStyleBackColor = False
         '
@@ -144,20 +147,33 @@ Partial Class FormDailyReport
         Me.btnMenuLaporan.Margin = New Padding(2)
         Me.btnMenuLaporan.Name = "btnMenuLaporan"
         Me.btnMenuLaporan.Size = New Size(165, 37)
-        Me.btnMenuLaporan.TabIndex = 6
+        Me.btnMenuLaporan.TabIndex = 7
         Me.btnMenuLaporan.Text = "Laporan Harian"
         Me.btnMenuLaporan.UseVisualStyleBackColor = False
+        '
+        ' btnMenuAkun
+        '
+        Me.btnMenuAkun.BackColor = Color.Plum
+        Me.btnMenuAkun.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Me.btnMenuAkun.ForeColor = Color.SeaShell
+        Me.btnMenuAkun.Location = New Point(38, 520)
+        Me.btnMenuAkun.Margin = New Padding(2)
+        Me.btnMenuAkun.Name = "btnMenuAkun"
+        Me.btnMenuAkun.Size = New Size(165, 37)
+        Me.btnMenuAkun.TabIndex = 8
+        Me.btnMenuAkun.Text = "Akun Saya"
+        Me.btnMenuAkun.UseVisualStyleBackColor = False
         '
         ' btnLogout
         '
         Me.btnLogout.BackColor = Color.Plum
         Me.btnLogout.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Me.btnLogout.ForeColor = Color.SeaShell
-        Me.btnLogout.Location = New Point(38, 520)
+        Me.btnLogout.Location = New Point(38, 580)
         Me.btnLogout.Margin = New Padding(2)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New Size(165, 37)
-        Me.btnLogout.TabIndex = 7
+        Me.btnLogout.TabIndex = 9
         Me.btnLogout.Text = "Logout"
         Me.btnLogout.UseVisualStyleBackColor = False
         '
@@ -169,7 +185,7 @@ Partial Class FormDailyReport
         Me.Panel2.Margin = New Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New Size(890, 84)
-        Me.Panel2.TabIndex = 1
+        Me.Panel2.TabIndex = 10
         '
         ' Label2
         '
@@ -180,7 +196,7 @@ Partial Class FormDailyReport
         Me.Label2.Margin = New Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New Size(400, 46)
-        Me.Label2.TabIndex = 0
+        Me.Label2.TabIndex = 11
         Me.Label2.Text = "Laporan Harian"
         '
         ' Panel3
@@ -193,11 +209,21 @@ Partial Class FormDailyReport
         Me.Panel3.Controls.Add(Me.Label4)
         Me.Panel3.Controls.Add(Me.dtpTanggal)
         Me.Panel3.Controls.Add(Me.Label3)
+        Me.Panel3.Controls.Add(Me.pnlCard)
         Me.Panel3.Location = New Point(256, 94)
         Me.Panel3.Margin = New Padding(2)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New Size(890, 554)
-        Me.Panel3.TabIndex = 2
+        Me.Panel3.TabIndex = 12
+        ' 
+        ' pnlCard
+        ' 
+        Me.pnlCard.BackColor = Color.White
+        Me.pnlCard.BorderStyle = BorderStyle.FixedSingle
+        Me.pnlCard.Location = New Point(16, 16)
+        Me.pnlCard.Name = "pnlCard"
+        Me.pnlCard.Size = New Size(858, 522)
+        Me.pnlCard.TabIndex = 13
         '
         ' Label3
         '
@@ -207,7 +233,7 @@ Partial Class FormDailyReport
         Me.Label3.Location = New Point(24, 18)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New Size(200, 23)
-        Me.Label3.TabIndex = 0
+        Me.Label3.TabIndex = 14
         Me.Label3.Text = "Tanggal"
         '
         ' dtpTanggal
@@ -216,7 +242,7 @@ Partial Class FormDailyReport
         Me.dtpTanggal.Location = New Point(24, 46)
         Me.dtpTanggal.Name = "dtpTanggal"
         Me.dtpTanggal.Size = New Size(240, 30)
-        Me.dtpTanggal.TabIndex = 0
+        Me.dtpTanggal.TabIndex = 15
         '
         ' Label4
         '
@@ -226,7 +252,7 @@ Partial Class FormDailyReport
         Me.Label4.Location = New Point(24, 90)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New Size(600, 23)
-        Me.Label4.TabIndex = 0
+        Me.Label4.TabIndex = 16
         Me.Label4.Text = "Kucing Dititipkan (CheckIn aktif)"
         '
         ' dgvAktif
@@ -242,7 +268,7 @@ Partial Class FormDailyReport
         Me.dgvAktif.RowHeadersVisible = False
         Me.dgvAktif.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         Me.dgvAktif.Size = New Size(842, 340)
-        Me.dgvAktif.TabIndex = 0
+        Me.dgvAktif.TabIndex = 17
         '
         ' btnBuatLaporan
         '
@@ -252,8 +278,8 @@ Partial Class FormDailyReport
         Me.btnBuatLaporan.Location = New Point(24, 476)
         Me.btnBuatLaporan.Margin = New Padding(2)
         Me.btnBuatLaporan.Name = "btnBuatLaporan"
-        Me.btnBuatLaporan.Size = New Size(200, 37)
-        Me.btnBuatLaporan.TabIndex = 0
+        Me.btnBuatLaporan.Size = New Size(200, 40)
+        Me.btnBuatLaporan.TabIndex = 18
         Me.btnBuatLaporan.Text = "Buat Laporan"
         Me.btnBuatLaporan.UseVisualStyleBackColor = False
         '
@@ -265,8 +291,8 @@ Partial Class FormDailyReport
         Me.btnCheckInOut.Location = New Point(240, 476)
         Me.btnCheckInOut.Margin = New Padding(2)
         Me.btnCheckInOut.Name = "btnCheckInOut"
-        Me.btnCheckInOut.Size = New Size(220, 37)
-        Me.btnCheckInOut.TabIndex = 0
+        Me.btnCheckInOut.Size = New Size(220, 40)
+        Me.btnCheckInOut.TabIndex = 19
         Me.btnCheckInOut.Text = "Check In / Check Out"
         Me.btnCheckInOut.UseVisualStyleBackColor = False
         '
@@ -278,8 +304,8 @@ Partial Class FormDailyReport
         Me.btnRiwayat.Location = New Point(476, 476)
         Me.btnRiwayat.Margin = New Padding(2)
         Me.btnRiwayat.Name = "btnRiwayat"
-        Me.btnRiwayat.Size = New Size(200, 37)
-        Me.btnRiwayat.TabIndex = 0
+        Me.btnRiwayat.Size = New Size(200, 40)
+        Me.btnRiwayat.TabIndex = 20
         Me.btnRiwayat.Text = "Riwayat Layanan"
         Me.btnRiwayat.UseVisualStyleBackColor = False
         '
@@ -292,6 +318,9 @@ Partial Class FormDailyReport
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Margin = New Padding(2)
+        Me.FormBorderStyle = FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "FormDailyReport"
         Me.StartPosition = FormStartPosition.CenterScreen
         Me.Text = "Laporan Harian"
@@ -308,6 +337,7 @@ Partial Class FormDailyReport
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
+    Friend WithEvents pnlCard As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents btnMenuDashboard As Button
@@ -316,6 +346,7 @@ Partial Class FormDailyReport
     Friend WithEvents btnMenuPemeriksaanKucing As Button
     Friend WithEvents btnMenuReservasi As Button
     Friend WithEvents btnMenuLaporan As Button
+    Friend WithEvents btnMenuAkun As Button
     Friend WithEvents btnLogout As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents dtpTanggal As DateTimePicker

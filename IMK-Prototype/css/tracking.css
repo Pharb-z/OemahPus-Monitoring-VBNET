@@ -1,0 +1,57 @@
+/* ==========================================================================
+   OMI — Gaya Halaman Pet Tracking (pemilik kucing)
+   Tidak ada frame Figma khusus; mengikuti komponen kartu yang sudah ada.
+   ========================================================================== */
+
+.omi-tracking-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.omi-tracking-card {
+  display: flex;
+  gap: 18px;
+  padding: 22px;
+  background: var(--omi-bg-card);
+  border: 1px solid var(--omi-border);
+  border-radius: var(--omi-r-2xl);
+  box-shadow: var(--omi-shadow-card);
+}
+
+.omi-tracking-photo {
+  width: 96px;
+  height: 96px;
+  border-radius: var(--omi-r-xl);
+  background: linear-gradient(149.18deg, var(--omi-bg-gradient-from) 0%, var(--omi-bg-gradient-to) 71.43%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+  color: var(--omi-primary-mid);
+  flex-shrink: 0;
+}
+
+.omi-tracking-nama {
+  font-size: var(--omi-fs-20);
+  font-weight: var(--omi-fw-semibold);
+  color: var(--omi-text);
+  margin-bottom: 4px;
+}
+
+.omi-tracking-meta {
+  font-size: var(--omi-fs-13);
+  color: var(--omi-text-muted);
+}
+
+@media (max-width: 1024px) {
+  .omi-tracking-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .omi-tracking-card {
+    flex-direction: column;
+  }
+}

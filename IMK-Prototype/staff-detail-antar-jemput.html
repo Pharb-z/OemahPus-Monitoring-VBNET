@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Pesanan — OMI</title>
+  <meta name="description" content="Detail dan status tugas antar jemput.">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/staff.css">
+</head>
+<body>
+
+  <!-- Frame 28 Kurir - Detail Pesanan (node 157:922) -->
+  <header id="omi-navbar"></header>
+
+  <main class="omi-page">
+
+    <div class="omi-header-row">
+      <h1 class="omi-page-title">Detail Pesanan</h1>
+    </div>
+
+    <div class="omi-split">
+      <section class="omi-card">
+        <h2 class="omi-card-title omi-mb-24">Informasi Pesanan</h2>
+        <div id="detail-tugas-info"></div>
+      </section>
+
+      <section class="omi-card">
+        <h2 class="omi-card-title omi-mb-24">Perbarui Status</h2>
+        <form id="form-tugas" novalidate>
+          <div class="omi-field">
+            <label class="omi-label" for="status">Status Tugas</label>
+            <select class="omi-select" id="status" name="status">
+              <option value="Belum Di Jemput">Belum Di Jemput</option>
+              <option value="Sudah Di Jemput">Sudah Di Jemput</option>
+            </select>
+          </div>
+
+          <p class="omi-alert omi-alert--danger omi-hidden omi-mt-16" id="form-error" role="alert"></p>
+
+          <div class="omi-flex omi-flex-col omi-gap-12 omi-mt-32">
+            <button type="button" class="omi-btn omi-btn--soft omi-btn--lg omi-btn--block"
+                    data-status="Sudah Di Jemput">Sudah Di Jemput</button>
+            <button type="button" class="omi-btn omi-btn--soft omi-btn--lg omi-btn--block"
+                    data-status="Belum Di Jemput">Belum Di Jemput</button>
+            <button type="submit" class="omi-btn omi-btn--primary omi-btn--lg omi-btn--block">Simpan</button>
+            <button type="button" class="omi-btn omi-btn--ghost omi-btn--block" id="btn-batal">Batal</button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/page-staff.js"></script>
+</body>
+</html>

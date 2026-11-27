@@ -1,0 +1,88 @@
+﻿const imgEllipse = "https://www.figma.com/api/mcp/asset/fcaec5b1-ac4b-4d2b-aa8e-081a7afa757c.svg";
+
+export default function Component14AkunSaya() {
+  return (
+    <div className="bg-[#fff8f2] relative size-full" data-node-id="71:609" data-name="14 Akun Saya">
+      <div className="absolute bg-white h-[92px] left-0 shadow-[0px_4px_14px_0px_rgba(115,56,13,0.05)] top-0 w-[1440px]" data-node-id="71:610" data-name="Navbar" />
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[0] left-[calc(83.33%+11px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:611">
+        <p className="leading-[normal]">Riwayat</p>
+      </a>
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[0] left-[calc(75%+26px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:612">
+        <p className="leading-[normal]">Reservasi</p>
+      </a>
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[0] left-[calc(58.33%+60px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:613">
+        <p className="leading-[normal]">Home</p>
+      </a>
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:Medium'] font-medium leading-[0] left-[calc(66.67%+20px)] text-[#64748b] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:614">
+        <p className="leading-[normal]">Profil Kucing</p>
+      </a>
+      <a className="[word-break:break-word] absolute block cursor-pointer font-['Plus_Jakarta_Sans:ExtraBold'] font-extrabold leading-[0] left-[106px] text-[#f26b21] text-[26px] top-[29.5px] whitespace-nowrap" data-node-id="71:615">
+        <p className="leading-[normal]">OMI</p>
+      </a>
+      <div className="absolute bg-[#f26b21] left-[60px] rounded-[10px] size-[36px] top-[28px]" data-node-id="71:616" data-name="Image" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[69px] text-[18px] text-white top-[37px] whitespace-nowrap" data-node-id="71:617">
+        ð¾
+      </p>
+      <div className="absolute bg-[#ffebd9] h-[34px] left-[calc(91.67%-32px)] rounded-[16px] top-[29px] w-[108px]" data-node-id="71:618" data-name="Nav aktif" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[normal] left-[calc(91.67%-16px)] text-[#f26b21] text-[15px] top-[36.5px] whitespace-nowrap" data-node-id="71:619">
+        Akun Saya
+      </p>
+      <div className="absolute bg-white border border-[#eedfd1] border-solid h-[586.25px] left-[120px] rounded-[16px] shadow-[0px_6px_18px_0px_rgba(115,56,13,0.07)] top-[243.75px] w-[1200px]" data-node-id="71:620" data-name="Card" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[175.71px] text-[#475569] text-[14px] top-[442.13px] whitespace-nowrap" data-node-id="71:621">
+        Nama depan
+      </p>
+      <div className="absolute bg-white border border-[#e3d3c4] border-solid h-[42px] left-[175.71px] rounded-[10px] top-[464.63px] w-[278.571px]" data-node-id="71:622" data-name="Input" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(50%+46.36px)] text-[#475569] text-[14px] top-[440.88px] whitespace-nowrap" data-node-id="71:623">
+        Nama belakang
+      </p>
+      <div className="absolute bg-white border border-[#e3d3c4] border-solid h-[42px] left-[calc(50%+24.29px)] rounded-[10px] top-[462.13px] w-[278.571px]" data-node-id="71:624" data-name="Input" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[175.71px] text-[#475569] text-[14px] top-[532.13px] whitespace-nowrap" data-node-id="71:625">
+        Alamat
+      </p>
+      <div className="absolute bg-white border border-[#e3d3c4] border-solid h-[42px] left-[175.71px] rounded-[10px] top-[554.63px] w-[278.571px]" data-node-id="71:626" data-name="Input" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(50%+40.79px)] text-[#475569] text-[14px] top-[532.13px] whitespace-nowrap" data-node-id="71:627">
+        No. telepon
+      </p>
+      <div className="absolute bg-white border border-[#e3d3c4] border-solid h-[42px] left-[calc(50%+24.29px)] rounded-[10px] top-[554.63px] w-[278.571px]" data-node-id="71:628" data-name="Input" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[175.71px] text-[#475569] text-[14px] top-[624.25px] whitespace-nowrap" data-node-id="71:629">
+        Alamat
+      </p>
+      <div className="absolute bg-white border border-[#e3d3c4] border-solid h-[42px] left-[175.71px] rounded-[10px] top-[648px] w-[278.571px]" data-node-id="71:630" data-name="Input" />
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(50%+34.14px)] text-[#475569] text-[14px] top-[624.25px] whitespace-nowrap" data-node-id="71:631">
+        Alamat
+      </p>
+      <div className="absolute bg-white border border-[#e3d3c4] border-solid h-[42px] left-[calc(50%+24.29px)] rounded-[10px] top-[648px] w-[278.571px]" data-node-id="71:632" data-name="Input" />
+      <div className="absolute left-[175.71px] size-[64px] top-[288.75px]" data-node-id="71:633" data-name="Ellipse">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse} />
+      </div>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Plus_Jakarta_Sans:Bold'] font-bold leading-[normal] left-[207.71px] text-[#f26b21] text-[26px] text-center top-[303.75px] w-[64px]" data-node-id="71:634">
+        U
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:SemiBold'] font-semibold leading-[normal] left-[calc(8.33%+141px)] text-[#1e2a3b] text-[24px] top-[295px] whitespace-nowrap" data-node-id="71:635">
+        Cinta Cahyaning
+      </p>
+      <p className="[word-break:break-word] absolute font-['Plus_Jakarta_Sans:Regular'] font-normal leading-[normal] left-[calc(8.33%+141px)] text-[#475569] text-[14px] top-[335px] whitespace-nowrap" data-node-id="71:636">
+        cinta08@gmail.com
+      </p>
+      <div className="absolute bg-[#eedfd1] h-px left-0 top-[92px] w-[1440px]" data-node-id="71:637" data-name="Nav divider" />
+    </div>
+  );
+}
+
+/* --- */
+
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+
+/* --- */
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+
+/* --- */
+
+The generated code contains image and SVG URL constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

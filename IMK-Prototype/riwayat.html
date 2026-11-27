@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riwayat — OMI</title>
+  <meta name="description" content="Riwayat reservasi dan pembayaran penitipan kucing.">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+  <!-- Frame 13 Riwayat Reservasi (node 141:405) -->
+  <header id="omi-navbar"></header>
+
+  <main class="omi-page">
+
+    <div class="omi-header-row">
+      <h1 class="omi-page-title">Riwayat Reservasi</h1>
+      <a class="omi-btn omi-btn--primary" href="reservasi-data.html">Reservasi Baru</a>
+    </div>
+
+    <div class="omi-card-grid omi-mb-32" id="riwayat-grid"></div>
+
+    <section class="omi-card">
+      <h2 class="omi-card-title omi-mb-16">Riwayat Pembayaran</h2>
+      <div class="omi-table-wrap">
+        <table class="omi-table">
+          <thead>
+            <tr>
+              <th>Nama Reservasi</th>
+              <th>Harga</th>
+              <th>Tanggal</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="riwayat-bayar-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/page-riwayat.js"></script>
+</body>
+</html>

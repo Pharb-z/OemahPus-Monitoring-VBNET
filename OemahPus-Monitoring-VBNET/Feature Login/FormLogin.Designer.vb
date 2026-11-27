@@ -117,13 +117,15 @@ Partial Class FormLogin
         ' 
         ' btnRegister
         ' 
-        btnRegister.Font = New Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnRegister.Location = New Point(1134, 489)
+        btnRegister.BackColor = Color.LightGoldenrodYellow
+        btnRegister.Font = New Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnRegister.ForeColor = Color.DarkOliveGreen
+        btnRegister.Location = New Point(692, 294)
         btnRegister.Name = "btnRegister"
-        btnRegister.Size = New Size(120, 40)
+        btnRegister.Size = New Size(160, 40)
         btnRegister.TabIndex = 8
         btnRegister.Text = "Register"
-        btnRegister.UseVisualStyleBackColor = True
+        btnRegister.UseVisualStyleBackColor = False
         ' 
         ' Panel1
         ' 
@@ -138,7 +140,7 @@ Partial Class FormLogin
         Panel1.Location = New Point(100, 161)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(953, 440)
-        Panel1.TabIndex = 6
+        Panel1.TabIndex = 9
         ' 
         ' chkShowPassword
         ' 
@@ -147,7 +149,7 @@ Partial Class FormLogin
         chkShowPassword.Location = New Point(308, 254)
         chkShowPassword.Name = "chkShowPassword"
         chkShowPassword.Size = New Size(163, 24)
-        chkShowPassword.TabIndex = 9
+        chkShowPassword.TabIndex = 10
         chkShowPassword.Text = "Tampilkan Password"
         chkShowPassword.UseVisualStyleBackColor = True
         ' 
@@ -163,6 +165,9 @@ Partial Class FormLogin
         Controls.Add(Label1)
         Font = New Font("Broadway", 36F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Margin = New Padding(15, 10, 15, 10)
+        Me.FormBorderStyle = FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Name = "FormLogin"
         StartPosition = FormStartPosition.CenterScreen
         Text = "FormLogin"

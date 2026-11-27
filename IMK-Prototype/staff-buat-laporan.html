@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buat Laporan — OMI</title>
+  <meta name="description" content="Buat laporan harian kondisi kucing yang dititipkan.">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/staff.css">
+</head>
+<body>
+
+  <!-- Frame 23 Staff - Buat Laporan (node 154:786) -->
+  <header id="omi-navbar"></header>
+
+  <main class="omi-page">
+
+    <div class="omi-header-row">
+      <div>
+        <h1 class="omi-page-title">Buat Daily Report</h1>
+        <p class="omi-page-subtitle" id="label-tanggal">—</p>
+      </div>
+    </div>
+
+    <div id="laporan-info" class="omi-mb-24"></div>
+
+    <form class="omi-card omi-laporan-form" id="form-laporan" novalidate>
+      <div class="omi-form-grid">
+
+        <div class="omi-field">
+          <label class="omi-label" for="nama">Nama Kucing</label>
+          <input class="omi-input" type="text" id="nama" name="nama" readonly>
+        </div>
+
+        <div class="omi-field">
+          <label class="omi-label" for="tanggal">Tanggal Laporan</label>
+          <input class="omi-input" type="date" id="tanggal" name="tanggal">
+        </div>
+
+        <div class="omi-field">
+          <label class="omi-label" for="makan">Makan</label>
+          <input class="omi-input" type="text" id="makan" name="makan" placeholder="Contoh: Habis">
+        </div>
+
+        <div class="omi-field">
+          <label class="omi-label" for="minum">Minum</label>
+          <input class="omi-input" type="text" id="minum" name="minum" placeholder="Contoh: Cukup">
+        </div>
+
+        <div class="omi-field">
+          <label class="omi-label" for="kondisi">Kondisi</label>
+          <input class="omi-input" type="text" id="kondisi" name="kondisi" placeholder="Contoh: Sehat & aktif">
+        </div>
+
+        <div class="omi-field">
+          <label class="omi-label" for="kandang">Nama Kandang</label>
+          <input class="omi-input" type="text" id="kandang" name="kandang" placeholder="Contoh: B-04">
+        </div>
+
+        <div class="omi-field" style="grid-column: 1 / -1;">
+          <label class="omi-label" for="catatan">Catatan</label>
+          <textarea class="omi-textarea" id="catatan" name="catatan"
+                    placeholder="Contoh: Mochi makan dengan lahap dan aktif bermain."></textarea>
+          <p class="omi-help">
+            Laporan ini adalah catatan kondisi harian, bukan diagnosis medis.
+          </p>
+        </div>
+      </div>
+
+      <p class="omi-alert omi-alert--danger omi-hidden omi-mt-24" id="form-error" role="alert"></p>
+
+      <div class="omi-laporan-footer">
+        <button type="button" class="omi-btn omi-btn--ghost" id="btn-batal">Batal</button>
+        <button type="submit" class="omi-btn omi-btn--primary omi-btn--lg">Kirim Daily Report</button>
+      </div>
+    </form>
+
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/page-staff.js"></script>
+</body>
+</html>

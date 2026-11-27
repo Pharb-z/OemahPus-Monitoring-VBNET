@@ -1,0 +1,1154 @@
+/* ==========================================================================
+   OMI — Komponen & Layout
+   Diturunkan dari Figma High Fidelity (node 71:2).
+   Struktur: reset → navbar → tombol → form → kartu → tabel → utilitas.
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+@import "tokens.css";
+
+/* ==========================================================================
+   1. RESET
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--omi-bg-page);
+  color: var(--omi-text);
+  font-family: var(--omi-font);
+  font-size: var(--omi-fs-16);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, p, figure {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: 0;
+  background: none;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* ==========================================================================
+   2. NAVBAR
+   Figma: tinggi 92px, putih, shadow 0 4px 14px rgba(115,56,13,.05),
+   divider 1px #eedfd1 di bawahnya. Logo: kotak 36x36 #f26b21 radius 10px,
+   wordmark "OMI" 26px extrabold #f26b21. Link 15px medium #64748b.
+   Link aktif: pill #ffebd9 tinggi 34px radius 16px, teks bold #f26b21.
+   ========================================================================== */
+.omi-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: var(--omi-nav-height);
+  background: var(--omi-bg-card);
+  box-shadow: var(--omi-shadow-nav);
+  border-bottom: 1px solid var(--omi-border);
+}
+
+.omi-navbar-inner {
+  height: 100%;
+  max-width: var(--omi-page-width);
+  margin: 0 auto;
+  padding: 0 60px 0 60px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* --- Brand --- */
+.omi-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.omi-brand-mark {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--omi-r-md);
+  background: var(--omi-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.omi-brand-word {
+  font-size: var(--omi-fs-26);
+  font-weight: var(--omi-fw-extrabold);
+  color: var(--omi-primary);
+  letter-spacing: -0.02em;
+}
+
+/* --- Tag peran di navbar (frame baru) --- */
+.omi-navtag {
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+  padding: 0 12px;
+  border-radius: var(--omi-r-xl);
+  background: var(--omi-primary-light);
+  color: var(--omi-primary-dark);
+  font-size: var(--omi-fs-12);
+  font-weight: var(--omi-fw-semibold);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* --- Menu --- */
+.omi-navmenu {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  flex-wrap: wrap;
+}
+
+.omi-navlink {
+  display: inline-flex;
+  align-items: center;
+  height: 34px;
+  padding: 0 18px;
+  border-radius: var(--omi-r-2xl);
+  font-size: var(--omi-fs-15);
+  font-weight: var(--omi-fw-medium);
+  color: var(--omi-text-muted);
+  transition: color .15s ease, background-color .15s ease;
+  white-space: nowrap;
+}
+
+.omi-navlink:hover {
+  color: var(--omi-primary);
+  background: var(--omi-primary-light);
+}
+
+.omi-navlink.is-active {
+  background: var(--omi-primary-light);
+  color: var(--omi-primary);
+  font-weight: var(--omi-fw-bold);
+}
+
+/* ==========================================================================
+   3. HALAMAN
+   ========================================================================== */
+.omi-page {
+  max-width: var(--omi-page-width);
+  margin: 0 auto;
+  padding: 56px var(--omi-content-x) 80px;
+}
+
+.omi-page-title {
+  font-size: var(--omi-fs-40);
+  font-weight: var(--omi-fw-bold);
+  color: var(--omi-text);
+  line-height: 1.2;
+}
+
+.omi-page-subtitle {
+  margin-top: 8px;
+  font-size: var(--omi-fs-16);
+  color: var(--omi-text-muted);
+}
+
+.omi-section-title {
+  font-size: var(--omi-fs-28);
+  font-weight: var(--omi-fw-bold);
+  color: var(--omi-text);
+  margin-bottom: 24px;
+}
+
+.omi-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   4. TOMBOL
+   ========================================================================== */
+.omi-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 38px;
+  padding: 0 22px;
+  border-radius: var(--omi-r-md);
+  font-size: var(--omi-fs-16);
+  font-weight: var(--omi-fw-semibold);
+  white-space: nowrap;
+  transition: filter .15s ease, background-color .15s ease, color .15s ease;
+}
+
+.omi-btn:hover {
+  filter: brightness(0.96);
+}
+
+/* Primary: oranye solid + drop shadow oranye */
+.omi-btn--primary {
+  background: var(--omi-primary);
+  color: #fff;
+  box-shadow: var(--omi-shadow-primary);
+}
+
+/* Soft: krem, teks oranye gelap (tombol "Edit", "Pilih", "Lihat Layanan") */
+.omi-btn--soft {
+  background: var(--omi-primary-light);
+  color: var(--omi-primary-dark);
+}
+
+.omi-btn--soft:hover {
+  background: #ffe0c6;
+  filter: none;
+}
+
+/* Outline: putih + border oranye (tombol "Sign Up"/"Sign In" di halaman auth) */
+.omi-btn--outline {
+  background: #fff;
+  border: 1.5px solid var(--omi-primary);
+  color: var(--omi-primary-dark);
+}
+
+/* Danger: krem merah (tombol "Hapus") */
+.omi-btn--danger {
+  background: var(--omi-danger-bg);
+  color: var(--omi-danger);
+}
+
+/* Ghost: tanpa latar */
+.omi-btn--ghost {
+  background: #fff;
+  border: 1px solid var(--omi-border);
+  color: var(--omi-text-3);
+  box-shadow: none;
+}
+
+/* Ukuran */
+.omi-btn--lg {
+  height: 46px;
+  font-size: var(--omi-fs-16);
+  padding: 0 32px;
+}
+
+.omi-btn--sm {
+  height: 32px;
+  font-size: var(--omi-fs-14);
+  padding: 0 14px;
+}
+
+.omi-btn--block {
+  width: 100%;
+}
+
+.omi-btn--round {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--omi-r-pill);
+  padding: 0;
+  background: #fff;
+  box-shadow: var(--omi-shadow-primary);
+  font-size: 32px;
+  color: var(--omi-primary);
+  line-height: 1;
+}
+
+/* ==========================================================================
+   5. FORM
+   Input: putih, border 1px #e3d3c4, radius 10px, tinggi 42px.
+   Label: 15px semibold #1e2a3b.
+   ========================================================================== */
+.omi-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.omi-label {
+  font-size: var(--omi-fs-15);
+  font-weight: var(--omi-fw-semibold);
+  color: var(--omi-text);
+}
+
+.omi-label--lg {
+  font-size: var(--omi-fs-20);
+}
+
+.omi-input,
+.omi-select,
+.omi-textarea {
+  width: 100%;
+  height: 42px;
+  padding: 0 14px;
+  background: var(--omi-bg-card);
+  border: 1px solid var(--omi-border-input);
+  border-radius: var(--omi-r-md);
+  color: var(--omi-text);
+  font-size: var(--omi-fs-15);
+  outline: none;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.omi-input::placeholder,
+.omi-textarea::placeholder {
+  color: var(--omi-text-faint);
+}
+
+.omi-input:focus,
+.omi-select:focus,
+.omi-textarea:focus {
+  border-color: var(--omi-primary);
+  box-shadow: 0 0 0 3px rgba(242, 107, 33, 0.12);
+}
+
+.omi-textarea {
+  height: 100px;
+  padding: 12px 14px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.omi-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%2364748b' d='M1.4.6 6 5.2 10.6.6 12 2 6 8 0 2z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 38px;
+  cursor: pointer;
+}
+
+.omi-form-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.omi-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 20px;
+}
+
+.omi-form-grid--full {
+  grid-column: 1 / -1;
+}
+
+.omi-help {
+  font-size: var(--omi-fs-12);
+  color: var(--omi-text-faint);
+}
+
+/* Kotak error / info */
+.omi-alert {
+  padding: 12px 16px;
+  border-radius: var(--omi-r-md);
+  font-size: var(--omi-fs-14);
+  font-weight: var(--omi-fw-medium);
+}
+
+.omi-alert--danger {
+  background: var(--omi-danger-bg);
+  color: var(--omi-danger);
+}
+
+.omi-alert--success {
+  background: var(--omi-success-bg);
+  color: var(--omi-success);
+}
+
+.omi-alert--warning {
+  background: var(--omi-warning-bg);
+  color: var(--omi-warning);
+}
+
+.omi-alert--info {
+  background: var(--omi-primary-light);
+  color: var(--omi-primary-dark);
+}
+
+/* ==========================================================================
+   6. KARTU
+   Kartu: putih, border 1px #eedfd1, radius 16px,
+   shadow 0 6px 18px rgba(115,56,13,.07).
+   ========================================================================== */
+.omi-card {
+  background: var(--omi-bg-card);
+  border: 1px solid var(--omi-border);
+  border-radius: var(--omi-r-2xl);
+  box-shadow: var(--omi-shadow-card);
+  padding: 24px;
+}
+
+.omi-card-title {
+  font-size: var(--omi-fs-24);
+  font-weight: var(--omi-fw-semibold);
+  color: var(--omi-text);
+}
+
+/* Grid kartu 3 kolom (profil kucing & paket layanan) */
+.omi-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.omi-card-grid--4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* --- Kartu kucing (frame 04) --- */
+.omi-cat-card {
+  padding: 22px 22px 24px;
+  text-align: center;
+}
+
+.omi-cat-photo {
+  width: 100%;
+  height: 105px;
+  border-radius: var(--omi-r-xl);
+  background: linear-gradient(149.18deg, var(--omi-bg-gradient-from) 0%, var(--omi-bg-gradient-to) 71.43%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--omi-fs-42, 42px);
+  color: var(--omi-primary-mid);
+  margin-bottom: 26px;
+  overflow: hidden;
+}
+
+.omi-cat-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.omi-cat-name {
+  font-size: var(--omi-fs-14);
+  color: var(--omi-text-muted);
+  margin-bottom: 10px;
+}
+
+.omi-cat-breed {
+  font-size: var(--omi-fs-14);
+  color: var(--omi-text-muted);
+  margin-bottom: 24px;
+}
+
+.omi-cat-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.omi-cat-actions .omi-btn {
+  min-width: 67px;
+}
+
+/* --- Kartu paket layanan (frame 08 / 15) --- */
+.omi-pkg-card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 32px 28px;
+}
+
+.omi-pkg-name {
+  font-size: var(--omi-fs-24);
+  font-weight: var(--omi-fw-semibold);
+  color: var(--omi-text);
+}
+
+.omi-pkg-price {
+  margin-top: 8px;
+  font-size: var(--omi-fs-24);
+  font-weight: var(--omi-fw-bold);
+  color: var(--omi-primary);
+}
+
+.omi-pkg-features {
+  margin: 20px 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.omi-pkg-features li {
+  font-size: var(--omi-fs-14);
+  color: var(--omi-text-muted);
+  padding-left: 18px;
+  position: relative;
+}
+
+.omi-pkg-features li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--omi-primary-mid);
+}
+
+.omi-pkg-card .omi-btn {
+  align-self: flex-start;
+}
+
+.omi-pkg-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* ==========================================================================
+   7. NAVBAR PENGGUNA (avatar kanan)
+   ========================================================================== */
+.omi-user-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 14px 4px 4px;
+  border-radius: var(--omi-r-2xl);
+  background: var(--omi-primary-light);
+  margin-left: 8px;
+}
+
+.omi-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--omi-primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--omi-fs-13);
+  font-weight: var(--omi-fw-bold);
+  flex-shrink: 0;
+}
+
+.omi-user-chip-nama {
+  font-size: var(--omi-fs-14);
+  font-weight: var(--omi-fw-semibold);
+  color: var(--omi-primary-dark);
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   8. TABEL
+   ========================================================================== */
+.omi-table-wrap {
+  overflow-x: auto;
+}
+
+.omi-table {
+  font-size: var(--omi-fs-14);
+  min-width: 640px;
+}
+
+.omi-table th {
+  text-align: left;
+  padding: 14px 18px;
+  font-weight: var(--omi-fw-semibold);
+  color: var(--omi-text-muted);
+  font-size: var(--omi-fs-13);
+  text-transform: none;
+  border-bottom: 1px solid var(--omi-border);
+  background: transparent;
+  white-space: nowrap;
+}
+
+.omi-table td {
+  padding: 16px 18px;
+  color: var(--omi-text-2);
+  border-bottom: 1px solid #f6ece2;
+  vertical-align: middle;
+}
+
+.omi-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.omi-table tbody tr:hover {
+  background: #fffaf5;
+}
+
+/* ==========================================================================
+   9. BADGE STATUS
+   ========================================================================== */
+.omi-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: var(--omi-r-2xl);
+  font-size: var(--omi-fs-13);
+  font-weight: var(--omi-fw-semibold);
+  white-space: nowrap;
+}
+
+.omi-badge--success {
+  background: var(--omi-success-bg);
+  color: var(--omi-success);
+}
+
+.omi-badge--warning {
+  background: var(--omi-warning-bg);
+  color: var(--omi-warning);
+}
+
+.omi-badge--danger {
+  background: var(--omi-danger-bg);
+  color: var(--omi-danger);
+}
+
+.omi-badge--info {
+  background: var(--omi-primary-light);
+  color: var(--omi-primary-dark);
+}
+
+.omi-badge--neutral {
+  background: #f1f5f9;
+  color: var(--omi-text-muted);
+}
+
+/* ==========================================================================
+   10. SEARCH BOX
+   ========================================================================== */
+.omi-search {
+  position: relative;
+  max-width: 340px;
+  width: 100%;
+}
+
+.omi-search .omi-input {
+  padding-left: 40px;
+}
+
+.omi-search::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2.2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-3.5-3.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   11. LANGKAH RESERVASI (stepper)
+   ========================================================================== */
+.omi-steps {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.omi-step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  border-radius: var(--omi-r-2xl);
+  font-size: var(--omi-fs-14);
+  font-weight: var(--omi-fw-medium);
+  color: var(--omi-text-faint);
+  background: #fff;
+  border: 1px solid var(--omi-border);
+}
+
+.omi-step-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  color: var(--omi-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--omi-fs-12);
+  font-weight: var(--omi-fw-bold);
+}
+
+.omi-step.is-done {
+  color: var(--omi-primary-dark);
+  border-color: var(--omi-primary-light);
+}
+
+.omi-step.is-done .omi-step-num {
+  background: var(--omi-primary-light);
+  color: var(--omi-primary-dark);
+}
+
+.omi-step.is-active {
+  background: var(--omi-primary-light);
+  border-color: var(--omi-primary-light);
+  color: var(--omi-primary-dark);
+  font-weight: var(--omi-fw-bold);
+}
+
+.omi-step.is-active .omi-step-num {
+  background: var(--omi-primary);
+  color: #fff;
+}
+
+/* ==========================================================================
+   12. KALENDER
+   ========================================================================== */
+.omi-calendar {
+  width: 100%;
+  max-width: 360px;
+}
+
+.omi-calendar-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.omi-calendar-month {
+  font-size: var(--omi-fs-15);
+  font-weight: var(--omi-fw-bold);
+  color: var(--omi-text);
+}
+
+.omi-calendar-nav {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--omi-r-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--omi-text-muted);
+  background: var(--omi-primary-light);
+  font-size: var(--omi-fs-14);
+  font-weight: var(--omi-fw-bold);
+}
+
+.omi-calendar-nav:hover {
+  background: var(--omi-primary);
+  color: #fff;
+}
+
+.omi-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.omi-calendar-dow {
+  text-align: center;
+  font-size: var(--omi-fs-12);
+  font-weight: var(--omi-fw-semibold);
+  color: var(--omi-text-faint);
+  padding-bottom: 6px;
+}
+
+.omi-calendar-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--omi-r-sm);
+  font-size: var(--omi-fs-13);
+  color: var(--omi-text-3);
+  background: transparent;
+  transition: background-color .12s ease, color .12s ease;
+}
+
+.omi-calendar-day:hover:not(.is-empty):not(.is-disabled) {
+  background: var(--omi-primary-light);
+  color: var(--omi-primary-dark);
+}
+
+.omi-calendar-day.is-empty {
+  cursor: default;
+}
+
+.omi-calendar-day.is-selected {
+  background: var(--omi-primary);
+  color: #fff;
+  font-weight: var(--omi-fw-bold);
+}
+
+.omi-calendar-day.is-in-range {
+  background: var(--omi-primary-light);
+  color: var(--omi-primary-dark);
+  font-weight: var(--omi-fw-semibold);
+}
+
+.omi-calendar-day.is-disabled {
+  color: #cbd5e1;
+  cursor: not-allowed;
+}
+
+.omi-calendar-day.is-today {
+  box-shadow: inset 0 0 0 1.5px var(--omi-primary);
+}
+
+/* ==========================================================================
+   13. RINGKASAN BIAYA (rincian kanan)
+   ========================================================================== */
+.omi-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.omi-summary-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: var(--omi-fs-14);
+}
+
+.omi-summary-row dt {
+  color: var(--omi-text-muted);
+}
+
+.omi-summary-row dd {
+  margin: 0;
+  font-weight: var(--omi-fw-semibold);
+  color: var(--omi-text);
+  text-align: right;
+}
+
+.omi-summary-total {
+  border-top: 1px solid var(--omi-border);
+  padding-top: 16px;
+  margin-top: 4px;
+  font-size: var(--omi-fs-16);
+}
+
+.omi-summary-total dd {
+  font-size: var(--omi-fs-20);
+  font-weight: var(--omi-fw-bold);
+  color: var(--omi-primary);
+}
+
+/* ==========================================================================
+   14. KARTU QRIS
+   ========================================================================== */
+.omi-qris {
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px;
+}
+
+.omi-qris-frame {
+  width: 240px;
+  height: 240px;
+  margin: 0 auto 28px;
+  border-radius: var(--omi-r-xl);
+  border: 2px dashed var(--omi-border-input);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.omi-qris-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.omi-qris-amount {
+  font-size: var(--omi-fs-32, 32px);
+  font-weight: var(--omi-fw-extrabold);
+  color: var(--omi-primary);
+  margin: 8px 0 20px;
+}
+
+.omi-timer {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  border-radius: var(--omi-r-2xl);
+  background: var(--omi-warning-bg);
+  color: var(--omi-warning);
+  font-size: var(--omi-fs-15);
+  font-weight: var(--omi-fw-bold);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ==========================================================================
+   15. EMPTY STATE & ICON BULAT
+   ========================================================================== */
+.omi-empty {
+  text-align: center;
+  padding: 64px 24px;
+  color: var(--omi-text-muted);
+}
+
+.omi-empty-icon {
+  font-size: 48px;
+  color: var(--omi-primary-mid);
+  margin-bottom: 16px;
+}
+
+.omi-icon-box {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--omi-r-xl);
+  background: var(--omi-primary-light);
+  color: var(--omi-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   16. INFO LIST (label : nilai bertumpuk)
+   ========================================================================== */
+.omi-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.omi-info-list dt {
+  font-size: var(--omi-fs-13);
+  color: var(--omi-text-muted);
+  margin-bottom: 4px;
+}
+
+.omi-info-list dd {
+  margin: 0;
+  font-size: var(--omi-fs-15);
+  font-weight: var(--omi-fw-semibold);
+  color: var(--omi-text);
+}
+
+/* ==========================================================================
+   17. UTILITAS
+   ========================================================================== */
+.omi-flex { display: flex; }
+.omi-flex-col { flex-direction: column; }
+.omi-items-center { align-items: center; }
+.omi-items-start { align-items: flex-start; }
+.omi-justify-between { justify-content: space-between; }
+.omi-justify-end { justify-content: flex-end; }
+.omi-gap-8 { gap: 8px; }
+.omi-gap-12 { gap: 12px; }
+.omi-gap-16 { gap: 16px; }
+.omi-gap-24 { gap: 24px; }
+.omi-gap-32 { gap: 32px; }
+.omi-wrap { flex-wrap: wrap; }
+.omi-mt-8 { margin-top: 8px; }
+.omi-mt-16 { margin-top: 16px; }
+.omi-mt-24 { margin-top: 24px; }
+.omi-mt-32 { margin-top: 32px; }
+.omi-mb-16 { margin-bottom: 16px; }
+.omi-mb-24 { margin-bottom: 24px; }
+.omi-mb-32 { margin-bottom: 32px; }
+.omi-w-full { width: 100%; }
+.omi-text-center { text-align: center; }
+.omi-text-muted { color: var(--omi-text-muted); }
+.omi-text-sm { font-size: var(--omi-fs-14); }
+.omi-text-xs { font-size: var(--omi-fs-13); }
+.omi-fw-semibold { font-weight: var(--omi-fw-semibold); }
+.omi-fw-bold { font-weight: var(--omi-fw-bold); }
+.omi-hidden { display: none !important; }
+
+/* Layout dua kolom: konten + sidebar ringkasan */
+.omi-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 380px;
+  gap: 32px;
+  align-items: start;
+}
+
+.omi-split--wide {
+  grid-template-columns: minmax(0, 1fr) 460px;
+}
+
+/* ==========================================================================
+   18. RESPONSIF
+   ========================================================================== */
+@media (max-width: 1280px) {
+  :root {
+    --omi-content-x: 48px;
+  }
+
+  .omi-card-grid--4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .omi-split,
+  .omi-split--wide {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .omi-navbar-inner {
+    padding: 0 24px;
+  }
+
+  .omi-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .omi-brand-word {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 820px) {
+  :root {
+    --omi-nav-height: auto;
+  }
+
+  .omi-navbar {
+    position: static;
+  }
+
+  .omi-navbar-inner {
+    height: auto;
+    padding: 14px 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .omi-navmenu {
+    width: 100%;
+    margin-left: 0;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .omi-page {
+    padding: 32px 20px 56px;
+  }
+
+  .omi-page-title {
+    font-size: 30px;
+  }
+
+  .omi-section-title {
+    font-size: 22px;
+  }
+
+  .omi-card-grid,
+  .omi-card-grid--4 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .omi-form-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .omi-header-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .omi-search {
+    max-width: none;
+  }
+
+  .omi-qris {
+    padding: 28px 20px;
+  }
+
+  .omi-qris-frame {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .omi-page-title {
+    font-size: 26px;
+  }
+
+  .omi-btn--lg {
+    height: 44px;
+    padding: 0 20px;
+  }
+
+  .omi-calendar-day {
+    font-size: var(--omi-fs-12);
+  }
+}
+
+/* ==========================================================================
+   19. CETAK (untuk "Unduh Bukti Pembayaran")
+   ========================================================================== */
+@media print {
+  .omi-navbar,
+  .omi-btn,
+  .omi-no-print {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  .omi-card {
+    box-shadow: none;
+    border-color: #ddd;
+  }
+}

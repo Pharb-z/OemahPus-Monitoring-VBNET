@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Kucing — OMI</title>
+  <meta name="description" content="Ubah profil kucing yang terdaftar di OMI.">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/cats.css">
+</head>
+<body>
+
+  <!-- Frame 06 Edit Kucing (node 136:201) -->
+  <header id="omi-navbar"></header>
+
+  <main class="omi-page">
+
+    <div class="omi-header-row">
+      <div>
+        <h1 class="omi-page-title" id="form-judul">Edit Profil Kucing</h1>
+        <p class="omi-page-subtitle">Perbarui data kucing sesuai kondisi terbaru.</p>
+      </div>
+    </div>
+
+    <form class="omi-card" id="form-kucing" novalidate>
+      <div class="omi-cat-form-layout">
+
+        <div class="omi-photo-panel">
+          <div class="omi-photo-preview" id="foto-preview">🐱</div>
+          <div class="omi-photo-actions">
+            <button type="button" class="omi-btn omi-btn--soft" id="btn-ubah-foto">Ubah Foto Kucing</button>
+            <button type="button" class="omi-btn omi-btn--danger" id="btn-hapus-foto">Hapus Foto Kucing</button>
+            <p class="omi-help">
+              Prototipe ini belum mengunggah berkas gambar. Tombol di atas
+              mengganti ilustrasi kucing saja.
+            </p>
+          </div>
+        </div>
+
+        <div class="omi-cat-fields">
+          <div class="omi-form-grid">
+            <div class="omi-field">
+              <label class="omi-label" for="nama">Nama Kucing</label>
+              <input class="omi-input" type="text" id="nama" name="nama" required>
+            </div>
+
+            <div class="omi-field">
+              <label class="omi-label" for="usia">Usia Kucing (tahun)</label>
+              <input class="omi-input" type="number" id="usia" name="usia" min="0" max="30" step="1">
+            </div>
+
+            <div class="omi-field">
+              <label class="omi-label" for="jenisKelamin">Jenis Kelamin</label>
+              <select class="omi-select" id="jenisKelamin" name="jenisKelamin">
+                <option value="">Pilih jenis kelamin</option>
+                <option value="Jantan">Jantan</option>
+                <option value="Betina">Betina</option>
+              </select>
+            </div>
+
+            <div class="omi-field">
+              <label class="omi-label" for="ras">Ras Kucing</label>
+              <input class="omi-input" type="text" id="ras" name="ras">
+            </div>
+
+            <div class="omi-field">
+              <label class="omi-label" for="warna">Warna &amp; Corak Bulu</label>
+              <input class="omi-input" type="text" id="warna" name="warna">
+            </div>
+
+            <div class="omi-field">
+              <label class="omi-label" for="berat">Berat Badan (kg)</label>
+              <input class="omi-input" type="number" id="berat" name="berat" min="0.1" max="30" step="0.1">
+            </div>
+
+            <div class="omi-field" style="grid-column: 1 / -1;">
+              <label class="omi-label" for="catatan">Catatan Penyakit</label>
+              <textarea class="omi-textarea" id="catatan" name="catatan"
+                        placeholder="Tuliskan catatan kondisi kesehatan. Kosongkan jika tidak ada."></textarea>
+              <p class="omi-help">
+                Catatan ini hanya berupa keterangan kondisi, bukan diagnosis medis.
+              </p>
+            </div>
+          </div>
+
+          <p class="omi-alert omi-alert--danger omi-hidden" id="form-error" role="alert"></p>
+        </div>
+      </div>
+
+      <div class="omi-cat-form-footer">
+        <button type="button" class="omi-btn omi-btn--ghost" id="btn-batal">Batal</button>
+        <button type="submit" class="omi-btn omi-btn--primary omi-btn--lg">Simpan</button>
+      </div>
+    </form>
+
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/page-cats.js"></script>
+</body>
+</html>

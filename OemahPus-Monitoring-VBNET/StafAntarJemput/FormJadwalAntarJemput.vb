@@ -4,9 +4,10 @@ Public Class FormJadwalAntarJemput
     Private Sub FormJadwalAntarJemput_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Navigator.Register("jadwal", Me)
         StandardNav.Wire(Me, btnMenuDashboard, btnMenuLayanan, btnMenuCustomer,
-                         btnMenuPemeriksaanKucing, btnMenuReservasi, btnMenuLaporan, btnLogout)
+                         btnMenuPemeriksaanKucing, btnMenuReservasi, btnMenuLaporan,
+                         btnMenuAkun, btnLogout)
         StandardNav.ApplyMenu(btnMenuDashboard, btnMenuLayanan, btnMenuCustomer,
-                        btnMenuPemeriksaanKucing, btnMenuReservasi, btnMenuLaporan)
+                        btnMenuPemeriksaanKucing, btnMenuReservasi, btnMenuLaporan, btnMenuAkun)
         dtpTanggal.Value = Today
         LoadData()
     End Sub
@@ -57,12 +58,6 @@ Public Class FormJadwalAntarJemput
         Dim target As New FormDetailAntarJemput()
         target.DeliveryId = id
         Navigator.GoWithInstance(Me, "detailAntarJemput", target, String.Empty)
-    End Sub
-
-    Private Sub btnLihatReservasi_Click(sender As Object, e As EventArgs) Handles btnLihatReservasi.Click
-        Dim target As New FormReservasi()
-        target.ReadOnlyMode = True
-        Navigator.GoWithInstance(Me, "reservasiView", target, String.Empty)
     End Sub
 
     Private Sub dgvJadwal_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles dgvJadwal.CellFormatting

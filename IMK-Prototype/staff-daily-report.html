@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Report — OMI</title>
+  <meta name="description" content="Laporan harian kucing yang sedang dititipkan.">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/staff.css">
+</head>
+<body>
+
+  <!-- Frame 22 Staff - Daily Report (node 154:722) -->
+  <header id="omi-navbar"></header>
+
+  <main class="omi-page">
+
+    <div class="omi-header-row">
+      <h1 class="omi-page-title">Laporan Harian</h1>
+    </div>
+
+    <div class="omi-toolbar">
+      <div class="omi-search">
+        <input class="omi-input" type="search" id="cari-penitipan"
+               placeholder="Search" aria-label="Cari penitipan">
+      </div>
+      <a class="omi-btn omi-btn--soft" href="staff-pilih-tanggal.html">Kamis, 12 November 2026</a>
+    </div>
+
+    <div class="omi-report-grid" id="penitipan-list"></div>
+
+    <div class="omi-empty omi-hidden" id="penitipan-kosong">
+      <div class="omi-empty-icon">🐾</div>
+      <p class="omi-fw-semibold">Tidak ada kucing yang cocok</p>
+      <p class="omi-text-sm omi-mt-8">Coba kata kunci lain.</p>
+    </div>
+
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/page-staff.js"></script>
+</body>
+</html>

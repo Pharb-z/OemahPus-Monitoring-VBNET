@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pembayaran — OMI</title>
+  <meta name="description" content="Rincian pembayaran reservasi penitipan kucing.">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/pembayaran.css">
+</head>
+<body>
+
+  <!-- Frame 10 Pembayaran (node 139:322) -->
+  <header id="omi-navbar"></header>
+
+  <main class="omi-page">
+
+    <div class="omi-header-row">
+      <h1 class="omi-page-title">Pembayaran</h1>
+    </div>
+
+    <div class="omi-split omi-split--wide">
+
+      <!-- Kiri: rincian reservasi -->
+      <div class="omi-flex omi-flex-col omi-gap-24">
+
+        <section class="omi-card">
+          <h2 class="omi-card-title omi-mb-16">Pet Stay Reservation</h2>
+          <div id="info-pemilik"></div>
+        </section>
+
+        <section class="omi-card">
+          <h2 class="omi-card-title omi-mb-16">Rincian Biaya Reservasi</h2>
+          <dl class="omi-summary" id="rincian-biaya"></dl>
+        </section>
+
+        <section class="omi-card">
+          <h2 class="omi-card-title omi-mb-16">Pilih Metode Pembayaran</h2>
+          <div class="omi-metode-grid" id="metode-grid">
+            <label class="omi-metode">
+              <input type="radio" name="metode" value="qris" checked>
+              <div class="omi-metode-body">
+                <span class="omi-metode-icon">🔳</span>
+                <div>
+                  <strong>QRIS</strong>
+                  <small>Pindai kode QR dengan aplikasi pembayaran</small>
+                </div>
+              </div>
+            </label>
+            <label class="omi-metode">
+              <input type="radio" name="metode" value="tunai">
+              <div class="omi-metode-body">
+                <span class="omi-metode-icon">💵</span>
+                <div>
+                  <strong>Tunai di Lokasi</strong>
+                  <small>Bayar langsung saat check-in</small>
+                </div>
+              </div>
+            </label>
+          </div>
+          <p class="omi-alert omi-alert--warning omi-mt-16">
+            Prototipe IMK: pembayaran hanya simulasi. Tidak ada transaksi nyata
+            dan tidak terhubung ke penyedia pembayaran mana pun.
+          </p>
+        </section>
+      </div>
+
+      <!-- Kanan: status + total -->
+      <aside class="omi-flex omi-flex-col omi-gap-24">
+
+        <section class="omi-card">
+          <h2 class="omi-card-title omi-mb-16">Status Pembayaran</h2>
+          <p id="status-pembayaran" class="omi-badge omi-badge--warning">Menunggu Pembayaran</p>
+
+          <dl class="omi-info-list omi-mt-24" id="ringkas-biaya"></dl>
+        </section>
+
+        <section class="omi-card">
+          <h2 class="omi-card-title omi-mb-16">Status Reservasi</h2>
+          <p id="status-reservasi" class="omi-badge omi-badge--info">Ditinjau</p>
+        </section>
+
+        <button class="omi-btn omi-btn--primary omi-btn--lg omi-btn--block" id="btn-bayar">
+          Lanjut ke Pembayaran
+        </button>
+      </aside>
+    </div>
+
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/page-pembayaran.js"></script>
+</body>
+</html>

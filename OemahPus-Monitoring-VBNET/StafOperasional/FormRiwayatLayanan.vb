@@ -5,9 +5,10 @@ Public Class FormRiwayatLayanan
     Private Sub FormRiwayatLayanan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Navigator.Register("riwayatLayanan", Me)
         StandardNav.Wire(Me, btnMenuDashboard, btnMenuLayanan, btnMenuCustomer,
-                         btnMenuPemeriksaanKucing, btnMenuReservasi, btnMenuLaporan, btnLogout)
+                         btnMenuPemeriksaanKucing, btnMenuReservasi, btnMenuLaporan,
+                         btnMenuAkun, btnLogout)
         StandardNav.ApplyMenu(btnMenuDashboard, btnMenuLayanan, btnMenuCustomer,
-                        btnMenuPemeriksaanKucing, btnMenuReservasi, btnMenuLaporan)
+                        btnMenuPemeriksaanKucing, btnMenuReservasi, btnMenuLaporan, btnMenuAkun)
         LoadData()
     End Sub
 

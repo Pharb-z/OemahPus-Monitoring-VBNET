@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pembayaran Sukses — OMI</title>
+  <meta name="description" content="Bukti pembayaran reservasi penitipan kucing.">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/pembayaran.css">
+</head>
+<body>
+
+  <!-- Frame 12 Pembayaran Sukses (node 139:519) -->
+  <header id="omi-navbar"></header>
+
+  <main class="omi-page">
+
+    <section class="omi-card">
+      <div class="omi-sukses-icon" aria-hidden="true">✓</div>
+      <h1 class="omi-sukses-title">Pembayaran Sukses</h1>
+      <p class="omi-sukses-sub">
+        Terima kasih. Reservasi penitipan kucingmu sudah tercatat.
+      </p>
+
+      <div class="omi-detail-grid omi-mb-32" id="bukti"></div>
+
+      <h2 class="omi-card-title omi-mb-16">Rincian Pembayaran</h2>
+      <dl class="omi-summary" id="rincian-final"></dl>
+
+      <div class="omi-step-footer omi-no-print">
+        <a class="omi-btn omi-btn--ghost" href="riwayat.html">Lihat Riwayat</a>
+        <button class="omi-btn omi-btn--primary omi-btn--lg" id="btn-cetak">
+          Unduh Bukti Pembayaran
+        </button>
+      </div>
+
+      <p class="omi-alert omi-alert--warning omi-mt-24 omi-no-print">
+        Bukti ini dibuat oleh prototipe dan bersifat simulasi. Bukan bukti
+        transaksi keuangan yang sah.
+      </p>
+    </section>
+
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/page-pembayaran.js"></script>
+</body>
+</html>

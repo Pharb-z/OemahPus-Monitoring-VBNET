@@ -2,498 +2,328 @@
 Partial Class FormMedisKucing
     Inherits System.Windows.Forms.Form
 
-    'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
-            If disposing AndAlso components IsNot Nothing Then
-                components.Dispose()
-            End If
+            If disposing AndAlso components IsNot Nothing Then components.Dispose()
         Finally
             MyBase.Dispose(disposing)
         End Try
     End Sub
 
-    'Required by the Windows Form Designer
     Private components As System.ComponentModel.IContainer
 
-    'NOTE: The following procedure is required by the Windows Form Designer
-    'It can be modified using the Windows Form Designer.  
-    'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        TableLayoutPanel1 = New TableLayoutPanel()
-        Panel1 = New Panel()
-        Panel2 = New Panel()
-        btnMenuReservasi = New Button()
-        btnMenuLaporan = New Button()
-        Label1 = New Label()
-        btnMenuPemeriksaanKucing = New Button()
-        btnMenuCustomer = New Button()
-        btnMenuDashboard = New Button()
-        btnMenuLayanan = New Button()
-        Panel3 = New Panel()
-        Label9 = New Label()
-        Panel4 = New Panel()
-        cmbNamaKucing = New ComboBox()
-        txtCari = New TextBox()
-        Label8 = New Label()
-        btnKosongkan = New Button()
-        btnHapus = New Button()
-        btnUbah = New Button()
-        btnSimpan = New Button()
-        cmbTemuanParasit = New ComboBox()
-        Label7 = New Label()
-        txtCatatanKesehatan = New TextBox()
-        txtBeratBadan = New TextBox()
-        dtpTanggalPemeriksaan = New DateTimePicker()
-        txtSuhuTubuh = New TextBox()
-        Label6 = New Label()
-        Label5 = New Label()
-        Label4 = New Label()
-        Label3 = New Label()
-        Label2 = New Label()
-        dgvPemeriksaan = New DataGridView()
-        Panel2.SuspendLayout()
-        Panel3.SuspendLayout()
-        Panel4.SuspendLayout()
-        CType(dgvPemeriksaan, ComponentModel.ISupportInitialize).BeginInit()
-        SuspendLayout()
-        ' 
-        ' TableLayoutPanel1
-        ' 
-        TableLayoutPanel1.ColumnCount = 2
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel1.Location = New Point(42, 20)
-        TableLayoutPanel1.Margin = New Padding(2)
-        TableLayoutPanel1.Name = "TableLayoutPanel1"
-        TableLayoutPanel1.RowCount = 2
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel1.Size = New Size(0, 0)
-        TableLayoutPanel1.TabIndex = 0
-        ' 
+        Me.components = New System.ComponentModel.Container()
+        Me.Panel1 = New Panel()
+        Me.Label1 = New Label()
+        Me.btnMenuDashboard = New Button()
+        Me.btnMenuLayanan = New Button()
+        Me.btnMenuCustomer = New Button()
+        Me.btnMenuPemeriksaanKucing = New Button()
+        Me.btnMenuReservasi = New Button()
+        Me.btnMenuLaporan = New Button()
+        Me.btnMenuAkun = New Button()
+        Me.btnLogout = New Button()
+        Me.Panel2 = New Panel()
+        Me.Label2 = New Label()
+        Me.Panel3 = New Panel()
+        Me.pnlCard = New Panel()
+        Me.dgvPemeriksaan = New DataGridView()
+        Me.txtCari = New TextBox()
+        Me.Label8 = New Label()
+        Me.btnTambah = New Button()
+        Me.btnUbah = New Button()
+        Me.btnHapus = New Button()
+        Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        CType(Me.dgvPemeriksaan, ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
         ' Panel1
-        ' 
-        Panel1.Location = New Point(298, 235)
-        Panel1.Margin = New Padding(2)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(0, 0)
-        Panel1.TabIndex = 2
-        ' 
-        ' Panel2
-        ' 
-        Panel2.BackColor = Color.SeaShell
-        Panel2.Controls.Add(btnMenuLaporan)
-        Panel2.Controls.Add(btnMenuReservasi)
-        Panel2.Controls.Add(Label1)
-        Panel2.Controls.Add(btnMenuPemeriksaanKucing)
-        Panel2.Controls.Add(btnMenuCustomer)
-        Panel2.Controls.Add(btnMenuDashboard)
-        Panel2.Controls.Add(btnMenuLayanan)
-        Panel2.Location = New Point(10, 10)
-        Panel2.Margin = New Padding(2)
-        Panel2.Name = "Panel2"
-        Panel2.Size = New Size(246, 638)
-        Panel2.TabIndex = 3
-        ' 
-        ' btnMenuReservasi
-        ' 
-        btnMenuReservasi.BackColor = Color.Plum
-        btnMenuReservasi.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnMenuReservasi.ForeColor = Color.SeaShell
-        btnMenuReservasi.Location = New Point(38, 400)
-        btnMenuReservasi.Margin = New Padding(2)
-        btnMenuReservasi.Name = "btnMenuReservasi"
-        btnMenuReservasi.Size = New Size(165, 37)
-        btnMenuReservasi.TabIndex = 34
-        btnMenuReservasi.Text = "Reservasi"
-        btnMenuReservasi.UseVisualStyleBackColor = False
-        ' 
-        ' btnMenuLaporan
-        ' 
-        btnMenuLaporan.BackColor = Color.Plum
-        btnMenuLaporan.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnMenuLaporan.ForeColor = Color.SeaShell
-        btnMenuLaporan.Location = New Point(38, 460)
-        btnMenuLaporan.Margin = New Padding(2)
-        btnMenuLaporan.Name = "btnMenuLaporan"
-        btnMenuLaporan.Size = New Size(165, 37)
-        btnMenuLaporan.TabIndex = 35
-        btnMenuLaporan.Text = "Laporan"
-        btnMenuLaporan.UseVisualStyleBackColor = False
-        ' 
+        '
+        Me.Panel1.BackColor = Color.SeaShell
+        Me.Panel1.Controls.Add(Me.btnLogout)
+        Me.Panel1.Controls.Add(Me.btnMenuAkun)
+        Me.Panel1.Controls.Add(Me.btnMenuLaporan)
+        Me.Panel1.Controls.Add(Me.btnMenuReservasi)
+        Me.Panel1.Controls.Add(Me.btnMenuPemeriksaanKucing)
+        Me.Panel1.Controls.Add(Me.btnMenuCustomer)
+        Me.Panel1.Controls.Add(Me.btnMenuLayanan)
+        Me.Panel1.Controls.Add(Me.btnMenuDashboard)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Location = New Point(10, 10)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New Size(246, 638)
+        Me.Panel1.TabIndex = 0
+        '
         ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Snap ITC", 36F)
-        Label1.ForeColor = Color.Plum
-        Label1.Location = New Point(29, 50)
-        Label1.Margin = New Padding(2, 0, 2, 0)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(181, 77)
-        Label1.TabIndex = 3
-        Label1.Text = "OMI"
-        ' 
-        ' btnMenuPemeriksaanKucing
-        ' 
-        btnMenuPemeriksaanKucing.BackColor = Color.Plum
-        btnMenuPemeriksaanKucing.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnMenuPemeriksaanKucing.ForeColor = Color.DarkOliveGreen
-        btnMenuPemeriksaanKucing.Location = New Point(38, 340)
-        btnMenuPemeriksaanKucing.Margin = New Padding(2)
-        btnMenuPemeriksaanKucing.Name = "btnMenuPemeriksaanKucing"
-        btnMenuPemeriksaanKucing.Size = New Size(165, 37)
-        btnMenuPemeriksaanKucing.TabIndex = 2
-        btnMenuPemeriksaanKucing.Text = "Pemeriksaan Kucing"
-        btnMenuPemeriksaanKucing.UseVisualStyleBackColor = False
-        ' 
-        ' btnMenuCustomer
-        ' 
-        btnMenuCustomer.BackColor = Color.Plum
-        btnMenuCustomer.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnMenuCustomer.ForeColor = Color.SeaShell
-        btnMenuCustomer.Location = New Point(38, 280)
-        btnMenuCustomer.Margin = New Padding(2)
-        btnMenuCustomer.Name = "btnMenuCustomer"
-        btnMenuCustomer.Size = New Size(165, 37)
-        btnMenuCustomer.TabIndex = 1
-        btnMenuCustomer.Text = "Customer"
-        btnMenuCustomer.UseVisualStyleBackColor = False
-        ' 
-        ' btnMenuLayanan
-        ' 
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New Font("Snap ITC", 36F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Me.Label1.ForeColor = Color.Plum
+        Me.Label1.Location = New Point(29, 50)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New Size(181, 77)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "OMI"
+        '
         ' btnMenuDashboard
-        btnMenuDashboard.BackColor = Color.Plum
-        btnMenuDashboard.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnMenuDashboard.ForeColor = Color.SeaShell
-        btnMenuDashboard.Location = New Point(38, 160)
-        btnMenuDashboard.Margin = New Padding(2)
-        btnMenuDashboard.Name = "btnMenuDashboard"
-        btnMenuDashboard.Size = New Size(165, 37)
-        btnMenuDashboard.TabIndex = 36
-        btnMenuDashboard.Text = "Dashboard"
-        btnMenuDashboard.UseVisualStyleBackColor = False
-        btnMenuLayanan.BackColor = Color.Plum
-        btnMenuLayanan.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnMenuLayanan.ForeColor = Color.SeaShell
-        btnMenuLayanan.Location = New Point(38, 220)
-        btnMenuLayanan.Margin = New Padding(2)
-        btnMenuLayanan.Name = "btnMenuLayanan"
-        btnMenuLayanan.Size = New Size(165, 37)
-        btnMenuLayanan.TabIndex = 0
-        btnMenuLayanan.Text = "Paket Layanan"
-        btnMenuLayanan.UseVisualStyleBackColor = False
-        ' 
-        ' Panel3
-        ' 
-        Panel3.BackColor = Color.LightGoldenrodYellow
-        Panel3.Controls.Add(Label9)
-        Panel3.Location = New Point(256, 10)
-        Panel3.Margin = New Padding(2)
-        Panel3.Name = "Panel3"
-        Panel3.Size = New Size(890, 84)
-        Panel3.TabIndex = 4
-        ' 
-        ' Label9
-        ' 
-        Label9.AutoSize = True
-        Label9.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
-        Label9.ForeColor = Color.DarkOliveGreen
-        Label9.Location = New Point(16, 16)
-        Label9.Margin = New Padding(2, 0, 2, 0)
-        Label9.Name = "Label9"
-        Label9.Size = New Size(342, 46)
-        Label9.TabIndex = 0
-        Label9.Text = "Pemeriksaan Kucing"
-        ' 
-        ' Panel4
-        ' 
-        Panel4.BackColor = Color.Thistle
-        Panel4.Controls.Add(cmbNamaKucing)
-        Panel4.Controls.Add(txtCari)
-        Panel4.Controls.Add(Label8)
-        Panel4.Controls.Add(btnKosongkan)
-        Panel4.Controls.Add(btnHapus)
-        Panel4.Controls.Add(btnUbah)
-        Panel4.Controls.Add(btnSimpan)
-        Panel4.Controls.Add(cmbTemuanParasit)
-        Panel4.Controls.Add(Label7)
-        Panel4.Controls.Add(txtCatatanKesehatan)
-        Panel4.Controls.Add(txtBeratBadan)
-        Panel4.Controls.Add(dtpTanggalPemeriksaan)
-        Panel4.Controls.Add(txtSuhuTubuh)
-        Panel4.Controls.Add(Label6)
-        Panel4.Controls.Add(Label5)
-        Panel4.Controls.Add(Label4)
-        Panel4.Controls.Add(Label3)
-        Panel4.Controls.Add(Label2)
-        Panel4.Controls.Add(dgvPemeriksaan)
-        Panel4.Location = New Point(256, 94)
-        Panel4.Margin = New Padding(2)
-        Panel4.Name = "Panel4"
-        Panel4.Size = New Size(890, 554)
-        Panel4.TabIndex = 5
-        ' 
-        ' cmbNamaKucing
-        ' 
-        cmbNamaKucing.FormattingEnabled = True
-        cmbNamaKucing.Location = New Point(28, 289)
-        cmbNamaKucing.Name = "cmbNamaKucing"
-        cmbNamaKucing.Size = New Size(239, 28)
-        cmbNamaKucing.TabIndex = 20
-        ' 
-        ' txtCari
-        ' 
-        txtCari.Location = New Point(76, 24)
-        txtCari.Margin = New Padding(2)
-        txtCari.Name = "txtCari"
-        txtCari.Size = New Size(191, 27)
-        txtCari.TabIndex = 19
-        ' 
-        ' Label8
-        ' 
-        Label8.AutoSize = True
-        Label8.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label8.ForeColor = Color.DarkOliveGreen
-        Label8.Location = New Point(28, 24)
-        Label8.Margin = New Padding(2, 0, 2, 0)
-        Label8.Name = "Label8"
-        Label8.Size = New Size(40, 23)
-        Label8.TabIndex = 18
-        Label8.Text = "Cari"
-        ' 
-        ' btnKosongkan
-        ' 
-        btnKosongkan.BackColor = Color.LightGoldenrodYellow
-        btnKosongkan.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
-        btnKosongkan.ForeColor = Color.DarkOliveGreen
-        btnKosongkan.Location = New Point(540, 498)
-        btnKosongkan.Margin = New Padding(2)
-        btnKosongkan.Name = "btnKosongkan"
-        btnKosongkan.Size = New Size(96, 27)
-        btnKosongkan.TabIndex = 17
-        btnKosongkan.Text = "Kosongkan"
-        btnKosongkan.UseVisualStyleBackColor = False
-        ' 
-        ' btnHapus
-        ' 
-        btnHapus.BackColor = Color.LightGoldenrodYellow
-        btnHapus.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
-        btnHapus.ForeColor = Color.DarkOliveGreen
-        btnHapus.Location = New Point(436, 498)
-        btnHapus.Margin = New Padding(2)
-        btnHapus.Name = "btnHapus"
-        btnHapus.Size = New Size(90, 27)
-        btnHapus.TabIndex = 16
-        btnHapus.Text = "Hapus"
-        btnHapus.UseVisualStyleBackColor = False
-        ' 
-        ' btnUbah
-        ' 
-        btnUbah.BackColor = Color.LightGoldenrodYellow
-        btnUbah.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
-        btnUbah.ForeColor = Color.DarkOliveGreen
-        btnUbah.Location = New Point(331, 498)
-        btnUbah.Margin = New Padding(2)
-        btnUbah.Name = "btnUbah"
-        btnUbah.Size = New Size(90, 27)
-        btnUbah.TabIndex = 15
-        btnUbah.Text = "Ubah"
-        btnUbah.UseVisualStyleBackColor = False
-        ' 
-        ' btnSimpan
-        ' 
-        btnSimpan.BackColor = Color.LightGoldenrodYellow
-        btnSimpan.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
-        btnSimpan.ForeColor = Color.DarkOliveGreen
-        btnSimpan.Location = New Point(229, 498)
-        btnSimpan.Margin = New Padding(2)
-        btnSimpan.Name = "btnSimpan"
-        btnSimpan.Size = New Size(90, 27)
-        btnSimpan.TabIndex = 14
-        btnSimpan.Text = "Simpan"
-        btnSimpan.UseVisualStyleBackColor = False
-        ' 
-        ' cmbTemuanParasit
-        ' 
-        cmbTemuanParasit.FormattingEnabled = True
-        cmbTemuanParasit.Location = New Point(498, 354)
-        cmbTemuanParasit.Margin = New Padding(2)
-        cmbTemuanParasit.Name = "cmbTemuanParasit"
-        cmbTemuanParasit.Size = New Size(239, 28)
-        cmbTemuanParasit.TabIndex = 13
-        ' 
-        ' Label7
-        ' 
-        Label7.AutoSize = True
-        Label7.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label7.ForeColor = Color.DarkOliveGreen
-        Label7.Location = New Point(498, 330)
-        Label7.Margin = New Padding(2, 0, 2, 0)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(125, 23)
-        Label7.TabIndex = 12
-        Label7.Text = "Temuan Parasit"
-        ' 
-        ' txtCatatanKesehatan
-        ' 
-        txtCatatanKesehatan.Location = New Point(498, 431)
-        txtCatatanKesehatan.Margin = New Padding(2)
-        txtCatatanKesehatan.Name = "txtCatatanKesehatan"
-        txtCatatanKesehatan.Size = New Size(302, 27)
-        txtCatatanKesehatan.TabIndex = 11
-        ' 
-        ' txtBeratBadan
-        ' 
-        txtBeratBadan.Location = New Point(498, 288)
-        txtBeratBadan.Margin = New Padding(2)
-        txtBeratBadan.Name = "txtBeratBadan"
-        txtBeratBadan.Size = New Size(239, 27)
-        txtBeratBadan.TabIndex = 10
-        ' 
-        ' dtpTanggalPemeriksaan
-        ' 
-        dtpTanggalPemeriksaan.Location = New Point(28, 355)
-        dtpTanggalPemeriksaan.Margin = New Padding(2)
-        dtpTanggalPemeriksaan.Name = "dtpTanggalPemeriksaan"
-        dtpTanggalPemeriksaan.Size = New Size(239, 27)
-        dtpTanggalPemeriksaan.TabIndex = 9
-        ' 
-        ' txtSuhuTubuh
-        ' 
-        txtSuhuTubuh.Location = New Point(28, 431)
-        txtSuhuTubuh.Margin = New Padding(2)
-        txtSuhuTubuh.Name = "txtSuhuTubuh"
-        txtSuhuTubuh.Size = New Size(239, 27)
-        txtSuhuTubuh.TabIndex = 8
-        ' 
-        ' Label6
-        ' 
-        Label6.AutoSize = True
-        Label6.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label6.ForeColor = Color.DarkOliveGreen
-        Label6.Location = New Point(498, 406)
-        Label6.Margin = New Padding(2, 0, 2, 0)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(154, 23)
-        Label6.TabIndex = 5
-        Label6.Text = "Catatan Kesehatan"
-        ' 
-        ' Label5
-        ' 
-        Label5.AutoSize = True
-        Label5.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label5.ForeColor = Color.DarkOliveGreen
-        Label5.Location = New Point(498, 263)
-        Label5.Margin = New Padding(2, 0, 2, 0)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(103, 23)
-        Label5.TabIndex = 4
-        Label5.Text = "Berat Badan"
-        ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label4.ForeColor = Color.DarkOliveGreen
-        Label4.Location = New Point(28, 406)
-        Label4.Margin = New Padding(2, 0, 2, 0)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(103, 23)
-        Label4.TabIndex = 3
-        Label4.Text = "Suhu Tubuh"
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.ForeColor = Color.DarkOliveGreen
-        Label3.Location = New Point(28, 330)
-        Label3.Margin = New Padding(2, 0, 2, 0)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(169, 23)
-        Label3.TabIndex = 2
-        Label3.Text = "Tanggal Pemeriksaan"
-        ' 
+        '
+        Me.btnMenuDashboard.BackColor = Color.Plum
+        Me.btnMenuDashboard.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Me.btnMenuDashboard.ForeColor = Color.SeaShell
+        Me.btnMenuDashboard.Location = New Point(38, 160)
+        Me.btnMenuDashboard.Name = "btnMenuDashboard"
+        Me.btnMenuDashboard.Size = New Size(165, 37)
+        Me.btnMenuDashboard.TabIndex = 2
+        Me.btnMenuDashboard.Text = "Dashboard"
+        Me.btnMenuDashboard.UseVisualStyleBackColor = False
+        '
+        ' btnMenuLayanan
+        '
+        Me.btnMenuLayanan.BackColor = Color.Plum
+        Me.btnMenuLayanan.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Me.btnMenuLayanan.ForeColor = Color.SeaShell
+        Me.btnMenuLayanan.Location = New Point(38, 220)
+        Me.btnMenuLayanan.Name = "btnMenuLayanan"
+        Me.btnMenuLayanan.Size = New Size(165, 37)
+        Me.btnMenuLayanan.TabIndex = 3
+        Me.btnMenuLayanan.Text = "Paket Layanan"
+        Me.btnMenuLayanan.UseVisualStyleBackColor = False
+        '
+        ' btnMenuCustomer
+        '
+        Me.btnMenuCustomer.BackColor = Color.Plum
+        Me.btnMenuCustomer.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Me.btnMenuCustomer.ForeColor = Color.SeaShell
+        Me.btnMenuCustomer.Location = New Point(38, 280)
+        Me.btnMenuCustomer.Name = "btnMenuCustomer"
+        Me.btnMenuCustomer.Size = New Size(165, 37)
+        Me.btnMenuCustomer.TabIndex = 4
+        Me.btnMenuCustomer.Text = "Customer"
+        Me.btnMenuCustomer.UseVisualStyleBackColor = False
+        '
+        ' btnMenuPemeriksaanKucing
+        '
+        Me.btnMenuPemeriksaanKucing.BackColor = Color.Plum
+        Me.btnMenuPemeriksaanKucing.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Me.btnMenuPemeriksaanKucing.ForeColor = Color.DarkOliveGreen
+        Me.btnMenuPemeriksaanKucing.Location = New Point(38, 340)
+        Me.btnMenuPemeriksaanKucing.Name = "btnMenuPemeriksaanKucing"
+        Me.btnMenuPemeriksaanKucing.Size = New Size(165, 37)
+        Me.btnMenuPemeriksaanKucing.TabIndex = 5
+        Me.btnMenuPemeriksaanKucing.Text = "Pemeriksaan Kucing"
+        Me.btnMenuPemeriksaanKucing.UseVisualStyleBackColor = False
+        '
+        ' btnMenuReservasi
+        '
+        Me.btnMenuReservasi.BackColor = Color.Plum
+        Me.btnMenuReservasi.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Me.btnMenuReservasi.ForeColor = Color.SeaShell
+        Me.btnMenuReservasi.Location = New Point(38, 400)
+        Me.btnMenuReservasi.Name = "btnMenuReservasi"
+        Me.btnMenuReservasi.Size = New Size(165, 37)
+        Me.btnMenuReservasi.TabIndex = 6
+        Me.btnMenuReservasi.Text = "Reservasi"
+        Me.btnMenuReservasi.UseVisualStyleBackColor = False
+        '
+        ' btnMenuLaporan
+        '
+        Me.btnMenuLaporan.BackColor = Color.Plum
+        Me.btnMenuLaporan.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Me.btnMenuLaporan.ForeColor = Color.SeaShell
+        Me.btnMenuLaporan.Location = New Point(38, 460)
+        Me.btnMenuLaporan.Name = "btnMenuLaporan"
+        Me.btnMenuLaporan.Size = New Size(165, 37)
+        Me.btnMenuLaporan.TabIndex = 7
+        Me.btnMenuLaporan.Text = "Laporan"
+        Me.btnMenuLaporan.UseVisualStyleBackColor = False
+        '
+        ' btnMenuAkun
+        '
+        Me.btnMenuAkun.BackColor = Color.Plum
+        Me.btnMenuAkun.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Me.btnMenuAkun.ForeColor = Color.SeaShell
+        Me.btnMenuAkun.Location = New Point(38, 520)
+        Me.btnMenuAkun.Name = "btnMenuAkun"
+        Me.btnMenuAkun.Size = New Size(165, 37)
+        Me.btnMenuAkun.TabIndex = 8
+        Me.btnMenuAkun.Text = "Akun Saya"
+        Me.btnMenuAkun.UseVisualStyleBackColor = False
+        '
+        ' btnLogout
+        '
+        Me.btnLogout.BackColor = Color.Plum
+        Me.btnLogout.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Me.btnLogout.ForeColor = Color.SeaShell
+        Me.btnLogout.Location = New Point(38, 580)
+        Me.btnLogout.Name = "btnLogout"
+        Me.btnLogout.Size = New Size(165, 37)
+        Me.btnLogout.TabIndex = 9
+        Me.btnLogout.Text = "Logout"
+        Me.btnLogout.UseVisualStyleBackColor = False
+        '
+        ' Panel2
+        '
+        Me.Panel2.BackColor = Color.LightGoldenrodYellow
+        Me.Panel2.Controls.Add(Me.Label2)
+        Me.Panel2.Location = New Point(256, 10)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New Size(890, 84)
+        Me.Panel2.TabIndex = 10
+        '
         ' Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Me.Label2.ForeColor = Color.DarkOliveGreen
+        Me.Label2.Location = New Point(16, 16)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New Size(400, 46)
+        Me.Label2.TabIndex = 11
+        Me.Label2.Text = "Pemeriksaan Kucing"
+        '
+        ' Panel3
+        '
+        Me.Panel3.BackColor = Color.Thistle
+        Me.Panel3.Controls.Add(Me.btnHapus)
+        Me.Panel3.Controls.Add(Me.btnUbah)
+        Me.Panel3.Controls.Add(Me.btnTambah)
+        Me.Panel3.Controls.Add(Me.dgvPemeriksaan)
+        Me.Panel3.Controls.Add(Me.txtCari)
+        Me.Panel3.Controls.Add(Me.Label8)
+        Me.Panel3.Controls.Add(Me.pnlCard)
+        Me.Panel3.Location = New Point(256, 94)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New Size(890, 554)
+        Me.Panel3.TabIndex = 12
         ' 
-        Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.ForeColor = Color.DarkOliveGreen
-        Label2.Location = New Point(28, 263)
-        Label2.Margin = New Padding(2, 0, 2, 0)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(56, 23)
-        Label2.TabIndex = 1
-        Label2.Text = "Nama"
+        ' pnlCard
         ' 
+        Me.pnlCard.BackColor = Color.White
+        Me.pnlCard.BorderStyle = BorderStyle.FixedSingle
+        Me.pnlCard.Location = New Point(16, 16)
+        Me.pnlCard.Name = "pnlCard"
+        Me.pnlCard.Size = New Size(858, 522)
+        Me.pnlCard.TabIndex = 13
+        '
         ' dgvPemeriksaan
-        ' 
-        dgvPemeriksaan.BackgroundColor = Color.Thistle
-        dgvPemeriksaan.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvPemeriksaan.Location = New Point(28, 65)
-        dgvPemeriksaan.Margin = New Padding(2)
-        dgvPemeriksaan.Name = "dgvPemeriksaan"
-        dgvPemeriksaan.RowHeadersWidth = 62
-        dgvPemeriksaan.Size = New Size(833, 175)
-        dgvPemeriksaan.TabIndex = 0
-        ' 
+        '
+        Me.dgvPemeriksaan.AllowUserToAddRows = False
+        Me.dgvPemeriksaan.AllowUserToDeleteRows = False
+        Me.dgvPemeriksaan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvPemeriksaan.BackColor = Color.Thistle
+        Me.dgvPemeriksaan.BackgroundColor = Color.Thistle
+        Me.dgvPemeriksaan.Location = New Point(24, 70)
+        Me.dgvPemeriksaan.Name = "dgvPemeriksaan"
+        Me.dgvPemeriksaan.ReadOnly = True
+        Me.dgvPemeriksaan.RowHeadersVisible = False
+        Me.dgvPemeriksaan.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        Me.dgvPemeriksaan.Size = New Size(842, 460)
+        Me.dgvPemeriksaan.TabIndex = 14
+        '
+        ' txtCari
+        '
+        Me.txtCari.BackColor = Color.White
+        Me.txtCari.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Me.txtCari.ForeColor = Color.DarkOliveGreen
+        Me.txtCari.Location = New Point(157, 20)
+        Me.txtCari.Name = "txtCari"
+        Me.txtCari.Size = New Size(300, 30)
+        Me.txtCari.TabIndex = 15
+        '
+        ' Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Me.Label8.ForeColor = Color.DarkOliveGreen
+        Me.Label8.Location = New Point(24, 20)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New Size(127, 28)
+        Me.Label8.TabIndex = 16
+        Me.Label8.Text = "Cari Pemeriksaan"
+        '
+        ' btnTambah
+        '
+        Me.btnTambah.BackColor = Color.MediumVioletRed
+        Me.btnTambah.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Me.btnTambah.ForeColor = Color.SeaShell
+        Me.btnTambah.Location = New Point(544, 18)
+        Me.btnTambah.Name = "btnTambah"
+        Me.btnTambah.Size = New Size(100, 34)
+        Me.btnTambah.TabIndex = 17
+        Me.btnTambah.Text = "Tambah"
+        Me.btnTambah.UseVisualStyleBackColor = False
+        '
+        ' btnUbah
+        '
+        Me.btnUbah.BackColor = Color.LightGoldenrodYellow
+        Me.btnUbah.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Me.btnUbah.ForeColor = Color.DarkOliveGreen
+        Me.btnUbah.Location = New Point(654, 18)
+        Me.btnUbah.Name = "btnUbah"
+        Me.btnUbah.Size = New Size(100, 34)
+        Me.btnUbah.TabIndex = 18
+        Me.btnUbah.Text = "Ubah"
+        Me.btnUbah.UseVisualStyleBackColor = False
+        '
+        ' btnHapus
+        '
+        Me.btnHapus.BackColor = Color.LightGoldenrodYellow
+        Me.btnHapus.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Me.btnHapus.ForeColor = Color.DarkOliveGreen
+        Me.btnHapus.Location = New Point(764, 18)
+        Me.btnHapus.Name = "btnHapus"
+        Me.btnHapus.Size = New Size(100, 34)
+        Me.btnHapus.TabIndex = 19
+        Me.btnHapus.Text = "Hapus"
+        Me.btnHapus.UseVisualStyleBackColor = False
+        '
         ' FormMedisKucing
-        ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1156, 658)
-        Controls.Add(Panel4)
-        Controls.Add(Panel3)
-        Controls.Add(Panel2)
-        Controls.Add(Panel1)
-        Controls.Add(TableLayoutPanel1)
-        Margin = New Padding(2)
-        Name = "FormMedisKucing"
-        StartPosition = FormStartPosition.CenterScreen
-        Text = "FormMedisKucing"
-        Panel2.ResumeLayout(False)
-        Panel2.PerformLayout()
-        Panel3.ResumeLayout(False)
-        Panel3.PerformLayout()
-        Panel4.ResumeLayout(False)
-        Panel4.PerformLayout()
-        CType(dgvPemeriksaan, ComponentModel.ISupportInitialize).EndInit()
-        ResumeLayout(False)
+        '
+        Me.AutoScaleDimensions = New SizeF(8F, 20F)
+        Me.AutoScaleMode = AutoScaleMode.Font
+        Me.ClientSize = New Size(1156, 658)
+        Me.Controls.Add(Me.Panel3)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
+        Me.Name = "FormMedisKucing"
+        Me.StartPosition = FormStartPosition.CenterScreen
+        Me.Text = "Pemeriksaan Kucing"
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        CType(Me.dgvPemeriksaan, ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
     End Sub
 
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents Panel4 As Panel
-    Friend WithEvents btnMenuPemeriksaanKucing As Button
-    Friend WithEvents btnMenuCustomer As Button
+    Friend WithEvents pnlCard As Panel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
     Friend WithEvents btnMenuDashboard As Button
     Friend WithEvents btnMenuLayanan As Button
-    Friend WithEvents Label1 As Label
-    Friend WithEvents dgvPemeriksaan As DataGridView
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents txtSuhuTubuh As TextBox
-    Friend WithEvents txtBeratBadan As TextBox
-    Friend WithEvents dtpTanggalPemeriksaan As DateTimePicker
-    Friend WithEvents txtCatatanKesehatan As TextBox
-    Friend WithEvents Label7 As Label
-    Friend WithEvents cmbTemuanParasit As ComboBox
-    Friend WithEvents btnKosongkan As Button
-    Friend WithEvents btnHapus As Button
-    Friend WithEvents btnUbah As Button
-    Friend WithEvents btnSimpan As Button
-    Friend WithEvents txtCari As TextBox
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents cmbNamaKucing As ComboBox
+    Friend WithEvents btnMenuCustomer As Button
+    Friend WithEvents btnMenuPemeriksaanKucing As Button
     Friend WithEvents btnMenuReservasi As Button
     Friend WithEvents btnMenuLaporan As Button
+    Friend WithEvents btnMenuAkun As Button
+    Friend WithEvents btnLogout As Button
+    Friend WithEvents dgvPemeriksaan As DataGridView
+    Friend WithEvents txtCari As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents btnTambah As Button
+    Friend WithEvents btnUbah As Button
+    Friend WithEvents btnHapus As Button
 End Class

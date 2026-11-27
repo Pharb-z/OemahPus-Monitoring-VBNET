@@ -3,7 +3,7 @@
 Dokumen ini merangkum seluruh fitur prototipe **OMI** (pet hotel kucing) yang ada di folder `IMK-Prototype/`. Dipakai sebagai acuan untuk membangun ulang proyek serupa di folder lain.
 
 - **Sumber kebenaran tampilan:** folder `IMK-Prototype/` (HTML/CSS/JS).
-- **Sumber kebenaran desain:** Figma High Fidelity, page `New High Fidelity`, 29 frame.
+- **Sumber kebenaran desain:** Figma High Fidelity, page `New High Fidelity`, 28 frame.
 - **Jenis proyek:** prototipe tugas IMK. Vanilla HTML + CSS + JavaScript, tanpa framework, tanpa build tool, tanpa backend.
 
 ---
@@ -20,7 +20,7 @@ Seluruh data bersifat **contoh (mock)** dan disimpan di `localStorage` browser. 
 
 | Aspek | Nilai |
 |---|---|
-| Halaman | 29 file HTML |
+| Halaman | 28 file HTML |
 | Gaya | 11 file CSS (`app`, `tokens`, `auth`, `home`, `cats`, `tracking`, `reservasi`, `pembayaran`, `admin`, `staff`, `akun`) |
 | Logika | 13 file JS (`data`, `common`, `auth`, 10 `page-*`) |
 | Penyimpanan | `localStorage`, key `omi_imk_prototype_v2` |
@@ -136,12 +136,13 @@ Struktur navbar (kecuali customer, memakai tag peran): brand (link ke beranda pe
 - Empty state + tombol **Reservasi Sekarang**.
 - Catatan kejujuran: laporan = data contoh, tidak real-time.
 
-### 5.5 Reservasi — 3 Langkah
-1. **Data Pemesan** (`reservasi-data.html`): Nama, No. HP, Alamat, Catatan Kesehatan, pilih kucing. Tombol **Batal** (→ Home) + **Selanjutnya**.
-2. **Paket Layanan** (`reservasi-paket.html`): pilih paket. Tombol **Kembali** + **Selanjutnya**. Catatan: harga contoh, bukan tarif resmi.
-3. **Konfirmasi** (`reservasi-konfirmasi.html`): kalender pilih check-in & check-out, rincian biaya (harga paket, jumlah malam, layanan tambahan, total), status pengajuan, ringkasan. Tombol **Kembali** + **Ajukan**.
+### 5.5 Reservasi — 2 Langkah
+1. **Data & Paket** (`reservasi-data.html`): Nama, No. HP, Alamat, Catatan Kesehatan, pilih kucing; section **Pilih Paket Layanan** (2 kartu: Reguler & Premium); baris add-on **Tambahkan layanan antar jemput** (checkbox, Rp50.000/trip). Tombol **Batal** (→ Home) + **Selanjutnya**.
+2. **Konfirmasi** (`reservasi-konfirmasi.html`): kalender pilih check-in & check-out, rincian biaya (harga paket, jumlah malam, layanan tambahan, total), status pengajuan, ringkasan. Tombol **Kembali** (→ Data & Paket) + **Ajukan**.
 
-Validasi: nama/telepon/alamat wajib; minimal 1 kucing dipilih; minimal 1 paket dipilih; tanggal masuk & keluar wajib.
+Catatan: harga contoh, bukan tarif resmi. Layanan antar jemput disimpan sebagai `tambahan: [{ nama, harga }]` sehingga otomatis muncul di **Biaya Layanan Tambahan** pada halaman Pembayaran/Sukses/Riwayat.
+
+Validasi: nama/telepon/alamat wajib; minimal 1 kucing dipilih; minimal 1 paket dipilih; antar jemput opsional; tanggal masuk & keluar wajib (tanggal keluar harus setelah masuk, tanpa bentrok jadwal kucing).
 
 ### 5.6 Pembayaran
 - **Pembayaran** (`pembayaran.html`): info pemilik, rincian biaya, pilih metode **QRIS** / **Tunai di Lokasi**, status, tombol **Lanjut ke Pembayaran**. Catatan: hanya simulasi.
@@ -237,38 +238,37 @@ Validasi: nama/telepon/alamat wajib; minimal 1 kucing dipilih; minimal 1 paket d
 | 06 | Edit Kucing | `edit-kucing.html` |
 | 07 | Pet Tracking | `pet-tracking.html` |
 | 08 | Reservasi Data | `reservasi-data.html` |
-| 09 | Reservasi Paket | `reservasi-paket.html` |
-| 10 | Reservasi Konfirmasi | `reservasi-konfirmasi.html` |
-| 11 | Pembayaran | `pembayaran.html` |
-| 12 | Pembayaran QRIS | `pembayaran-qris.html` |
-| 13 | Pembayaran Sukses | `pembayaran-sukses.html` |
-| 14 | Riwayat Reservasi | `riwayat.html` |
-| 15 | Akun Saya | `akun-saya.html` |
-| 16 | Ubah Password | `ubah-password.html` |
-| 17 | Admin - Kelola Layanan | `admin-kelola-layanan.html` |
-| 18 | Admin - Tambah Layanan | `admin-tambah-layanan.html` |
-| 19 | Admin - Reservasi | `admin-reservasi.html` |
-| 20 | Admin - Riwayat Reservasi | `admin-riwayat-reservasi.html` |
-| 21 | Admin - Riwayat Pembayaran | `admin-riwayat-pembayaran.html` |
-| 22 | Admin - Riwayat Medis | `admin-riwayat-medis.html` |
-| 23 | Staff - Daily Report | `staff-daily-report.html` |
-| 24 | Staff - Buat Laporan | `staff-buat-laporan.html` |
-| 25 | Staff - Pilih Tanggal | `staff-pilih-tanggal.html` |
-| 26 | Staff - Check In & Out | `staff-checkin-out.html` |
-| 27 | Staff - Riwayat Layanan | `staff-riwayat-layanan.html` |
-| 28 | Kurir - Jadwal | `staff-antar-jemput.html` |
-| 29 | Kurir - Detail Pesanan | `staff-detail-antar-jemput.html` |
+| 09 | Reservasi Konfirmasi | `reservasi-konfirmasi.html` |
+| 10 | Pembayaran | `pembayaran.html` |
+| 11 | Pembayaran QRIS | `pembayaran-qris.html` |
+| 12 | Pembayaran Sukses | `pembayaran-sukses.html` |
+| 13 | Riwayat Reservasi | `riwayat.html` |
+| 14 | Akun Saya | `akun-saya.html` |
+| 15 | Ubah Password | `ubah-password.html` |
+| 16 | Admin - Kelola Layanan | `admin-kelola-layanan.html` |
+| 17 | Admin - Tambah Layanan | `admin-tambah-layanan.html` |
+| 18 | Admin - Reservasi | `admin-reservasi.html` |
+| 19 | Admin - Riwayat Reservasi | `admin-riwayat-reservasi.html` |
+| 20 | Admin - Riwayat Pembayaran | `admin-riwayat-pembayaran.html` |
+| 21 | Admin - Riwayat Medis | `admin-riwayat-medis.html` |
+| 22 | Staff - Daily Report | `staff-daily-report.html` |
+| 23 | Staff - Buat Laporan | `staff-buat-laporan.html` |
+| 24 | Staff - Pilih Tanggal | `staff-pilih-tanggal.html` |
+| 25 | Staff - Check In & Out | `staff-checkin-out.html` |
+| 26 | Staff - Riwayat Layanan | `staff-riwayat-layanan.html` |
+| 27 | Kurir - Jadwal | `staff-antar-jemput.html` |
+| 28 | Kurir - Detail Pesanan | `staff-detail-antar-jemput.html` |
 
 ---
 
 ## 10. Alur Utama (Happy Path)
 
 - **Login → peran:** `index.html` → (demo/isi form) → beranda sesuai peran.
-- **Reservasi:** `08 → 09 → 10` (data → paket → konfirmasi) → `11 Pembayaran` → `12 QRIS` → `13 Sukses` → `14 Riwayat`.
+- **Reservasi:** `08` (data + kucing + paket + antar jemput) → `09 Konfirmasi` → `10 Pembayaran` → `11 QRIS` → `12 Sukses` → `13 Riwayat`.
 - **Kelola kucing:** `04` → `05`/`06` (tambah/edit) → kembali `04`.
-- **Daily Report:** `23` → `25` (pilih tanggal) → `24` (buat laporan) → kembali `23`.
-- **Antar jemput:** `28` → `29` (detail + update status) → kembali `28`.
-- **Akun:** `15` → `16` (ubah password) → kembali `15`; **Keluar** → `01 Login`.
+- **Daily Report:** `22` → `24` (pilih tanggal) → `23` (buat laporan) → kembali `22`.
+- **Antar jemput:** `27` → `28` (detail + update status) → kembali `27`.
+- **Akun:** `14` → `15` (ubah password) → kembali `14`; **Keluar** → `01 Login`.
 
 ---
 
@@ -292,7 +292,7 @@ Key `localStorage`: `omi_imk_prototype_v2`. `OMI_DEFAULT_STATE`:
 | `kandang` | 16 slot A/B (Tersedia/Terisi/Maintenance) |
 | `laporan` | `[]` (diisi saat submit laporan) |
 | `sesi` | `null` → `{ userId, role, nama, email, inisial }` |
-| `draftReservasi` | `null` → data sementara 3 langkah reservasi |
+| `draftReservasi` | `null` → data sementara 2 langkah reservasi (+ `tambahan` untuk antar jemput) |
 
 Helper state: `omiState()`, `omiUpdate(mutator)`, `omiResetState()`.
 
@@ -330,7 +330,7 @@ Helper state: `omiState()`, `omiUpdate(mutator)`, `omiResetState()`.
 - Notifikasi & data real-time.
 - Filter/search yang persisten antar halaman.
 - Tombol **Reset Data Demo** (sengaja dihapus dari Akun Saya).
-- Halaman kurir lama yang redundan (fokus pada 29 halaman di atas).
+- Halaman kurir lama yang redundan (fokus pada 28 halaman di atas).
 
 ---
 

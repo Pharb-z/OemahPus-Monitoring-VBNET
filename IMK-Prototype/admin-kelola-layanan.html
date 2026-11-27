@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kelola Layanan — OMI</title>
+  <meta name="description" content="Kelola paket layanan pet hotel OMI.">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+  <!-- Frame 16 Admin - Kelola Layanan (node 151:545) -->
+  <header id="omi-navbar"></header>
+
+  <main class="omi-page">
+
+    <div class="omi-header-row">
+      <h1 class="omi-page-title">Paket Layanan</h1>
+      <a class="omi-btn omi-btn--primary" href="admin-tambah-layanan.html">
+        <span aria-hidden="true">＋</span> Tambah Layanan
+      </a>
+    </div>
+
+    <div class="omi-toolbar">
+      <div class="omi-search">
+        <input class="omi-input" type="search" id="cari-layanan"
+               placeholder="Cari nama layanan…" aria-label="Cari layanan">
+      </div>
+      <p class="omi-text-sm omi-text-muted" id="jumlah-layanan">—</p>
+    </div>
+
+    <div class="omi-card-grid omi-card-grid--4" id="layanan-grid"></div>
+
+    <div class="omi-empty omi-hidden" id="layanan-kosong">
+      <div class="omi-empty-icon">🗂</div>
+      <p class="omi-fw-semibold">Tidak ada layanan yang cocok</p>
+      <p class="omi-text-sm omi-mt-8">Coba kata kunci lain atau tambah layanan baru.</p>
+    </div>
+
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/page-admin.js"></script>
+</body>
+</html>

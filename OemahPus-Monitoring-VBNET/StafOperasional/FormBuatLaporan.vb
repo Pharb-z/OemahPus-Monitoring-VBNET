@@ -12,9 +12,10 @@ Public Class FormBuatLaporan
     Private Sub FormBuatLaporan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Navigator.Register("buatLaporan", Me)
         StandardNav.Wire(Me, btnMenuDashboard, btnMenuLayanan, btnMenuCustomer,
-                         btnMenuPemeriksaanKucing, btnMenuReservasi, btnMenuLaporan, btnLogout)
+                         btnMenuPemeriksaanKucing, btnMenuReservasi, btnMenuLaporan,
+                         btnMenuAkun, btnLogout)
         StandardNav.ApplyMenu(btnMenuDashboard, btnMenuLayanan, btnMenuCustomer,
-                        btnMenuPemeriksaanKucing, btnMenuReservasi, btnMenuLaporan)
+                        btnMenuPemeriksaanKucing, btnMenuReservasi, btnMenuLaporan, btnMenuAkun)
 
         cmbSesi.DropDownStyle = ComboBoxStyle.DropDownList
         cmbSesi.Items.Clear()

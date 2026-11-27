@@ -5,9 +5,10 @@ Public Class FormRiwayatOwner
     Private Sub FormRiwayatOwner_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Navigator.Register("riwayatOwner", Me)
         StandardNav.Wire(Me, btnMenuDashboard, btnMenuLayanan, btnMenuCustomer,
-                         btnMenuPemeriksaanKucing, btnMenuReservasi, btnMenuLaporan, btnLogout)
+                         btnMenuPemeriksaanKucing, btnMenuReservasi, btnMenuLaporan,
+                         btnMenuAkun, btnLogout)
         StandardNav.ApplyMenu(btnMenuDashboard, btnMenuLayanan, btnMenuCustomer,
-                        btnMenuPemeriksaanKucing, btnMenuReservasi, btnMenuLaporan)
+                        btnMenuPemeriksaanKucing, btnMenuReservasi, btnMenuLaporan, btnMenuAkun)
         cmbJenis.DropDownStyle = ComboBoxStyle.DropDownList
         cmbJenis.Items.Clear()
         cmbJenis.Items.Add("Reservasi")

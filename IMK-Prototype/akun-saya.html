@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akun Saya — OMI</title>
+  <meta name="description" content="Kelola informasi akun OMI Anda.">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/akun.css">
+</head>
+<body>
+
+  <!-- Frame 14 Akun Saya (node 141:484) -->
+  <header id="omi-navbar"></header>
+
+  <main class="omi-page">
+
+    <div class="omi-header-row">
+      <h1 class="omi-page-title">Akun Saya</h1>
+    </div>
+
+    <div class="omi-akun-layout">
+
+      <!-- Kartu identitas -->
+      <aside class="omi-card omi-akun-card">
+        <div class="omi-akun-avatar" id="akun-inisial">C</div>
+        <p class="omi-akun-nama" id="akun-nama">—</p>
+        <p class="omi-akun-email" id="akun-email">—</p>
+        <p class="omi-badge omi-badge--info omi-mt-16" id="akun-peran">—</p>
+
+        <button type="button" class="omi-btn omi-btn--danger omi-btn--block omi-mt-32" id="btn-keluar">
+          Keluar dari Akun
+        </button>
+
+        <button type="button" class="omi-btn omi-btn--ghost omi-btn--block omi-mt-8" id="btn-reset">
+          Reset Data Demo
+        </button>
+      </aside>
+
+      <!-- Form data akun -->
+      <section class="omi-card">
+        <h2 class="omi-card-title omi-mb-24">Informasi Akun</h2>
+
+        <form id="form-akun" novalidate>
+          <div class="omi-form-grid">
+            <div class="omi-field">
+              <label class="omi-label" for="namaDepan">Nama depan</label>
+              <input class="omi-input" type="text" id="namaDepan" name="namaDepan">
+            </div>
+
+            <div class="omi-field">
+              <label class="omi-label" for="namaBelakang">Nama belakang</label>
+              <input class="omi-input" type="text" id="namaBelakang" name="namaBelakang">
+            </div>
+
+            <div class="omi-field">
+              <label class="omi-label" for="telepon">No. telepon</label>
+              <input class="omi-input" type="tel" id="telepon" name="telepon">
+            </div>
+
+            <div class="omi-field">
+              <label class="omi-label" for="email">Email</label>
+              <input class="omi-input" type="email" id="email" name="email">
+            </div>
+
+            <div class="omi-field" style="grid-column: 1 / -1;">
+              <label class="omi-label" for="alamat">Alamat</label>
+              <input class="omi-input" type="text" id="alamat" name="alamat">
+            </div>
+          </div>
+
+          <p class="omi-alert omi-alert--danger omi-hidden omi-mt-16" id="akun-error" role="alert"></p>
+          <p class="omi-alert omi-alert--success omi-hidden omi-mt-16" id="akun-sukses" role="status"></p>
+
+          <div class="omi-akun-footer">
+            <a class="omi-btn omi-btn--soft" href="ubah-password.html">Ubah Password</a>
+            <button type="submit" class="omi-btn omi-btn--primary omi-btn--lg">Simpan Perubahan</button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/page-akun.js"></script>
+</body>
+</html>

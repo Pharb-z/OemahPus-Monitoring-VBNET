@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check In &amp; Out — OMI</title>
+  <meta name="description" content="Catat check-in dan check-out kucing yang dititipkan.">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/staff.css">
+</head>
+<body>
+
+  <!-- Frame 25 Staff - Check In & Out (node 155:908) -->
+  <header id="omi-navbar"></header>
+
+  <main class="omi-page">
+
+    <div class="omi-header-row">
+      <div>
+        <h1 class="omi-page-title">Check In &amp; Out</h1>
+        <p class="omi-page-subtitle">
+          Kucing yang sedang menginap. Catat check-out setelah masa penitipan berakhir.
+        </p>
+      </div>
+    </div>
+
+    <div class="omi-penitipan-list" id="checkinout-list"></div>
+
+    <p class="omi-alert omi-alert--warning omi-mt-32">
+      Catatan kejujuran: check-in baru pada prototipe ini belum membuat antrean
+      sendiri. Data penitipan diambil dari data contoh, dan check-out hanya
+      menghapus baris dari daftar aktif. Riwayat tidak ikut terhapus.
+    </p>
+
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/page-staff.js"></script>
+</body>
+</html>

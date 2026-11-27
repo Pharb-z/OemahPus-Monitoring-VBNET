@@ -1,0 +1,113 @@
+/* ==========================================================================
+   OMI — Design Tokens
+   Sumber: Figma "IMK-ADSI-PEMDEKS" → halaman High Fidelity (node 71:2)
+   Semua nilai diambil langsung dari hasil export Figma, bukan perkiraan.
+
+   File ini HANYA berisi variabel. Tidak ada aturan layout di sini.
+   ========================================================================== */
+
+:root {
+  /* ---------------------------------------------------------------
+     WARNA MEREK (dari frame Login/Sign Up/Home)
+     --------------------------------------------------------------- */
+  --omi-primary: #f26b21;        /* oranye utama — tombol, wordmark, harga */
+  --omi-primary-dark: #c2540f;   /* teks tombol sekunder (di atas krem) */
+  --omi-primary-light: #ffebd9;  /* latar tombol sekunder, pill nav aktif */
+  --omi-primary-mid: #f5a56b;    /* ikon/emoji besar di kartu */
+
+  /* ---------------------------------------------------------------
+     LATAR
+     --------------------------------------------------------------- */
+  --omi-bg-page: #fff8f2;        /* latar semua halaman (bg-[#fff8f2]) */
+  --omi-bg-card: #ffffff;
+  --omi-bg-soft: #f6ece2;        /* track scrollbar */
+  --omi-bg-cream: #ffe3cc;       /* teks "Oemahpus" di brand panel */
+  --omi-bg-cream-2: #fff1e3;
+  --omi-bg-gradient-from: #ffe3cc; /* gradien kartu kucing & hero image */
+  --omi-bg-gradient-to: #fff3e8;
+
+  /* ---------------------------------------------------------------
+     BORDER
+     --------------------------------------------------------------- */
+  --omi-border: #eedfd1;         /* border kartu */
+  --omi-border-input: #e3d3c4;   /* border input */
+  --omi-border-thumb: #f9b27c;   /* thumb scrollbar */
+
+  /* ---------------------------------------------------------------
+     TEKS
+     --------------------------------------------------------------- */
+  --omi-text: #1e2a3b;           /* heading & label kuat */
+  --omi-text-2: #334155;         /* teks tabel */
+  --omi-text-3: #475569;
+  --omi-text-muted: #64748b;     /* deskripsi, nav tidak aktif */
+  --omi-text-faint: #94a3b8;
+  --omi-text-body: #252729;
+
+  /* ---------------------------------------------------------------
+     STATUS
+     --------------------------------------------------------------- */
+  --omi-success: #15803d;
+  --omi-success-bg: #dcfce7;
+  --omi-warning: #b45309;
+  --omi-warning-bg: #fef3c7;
+  --omi-danger: #dc2626;
+  --omi-danger-bg: #fee2e2;
+  --omi-accent-peach: #ffa97b;
+  --omi-accent-apricot: #f9c9a5;
+
+  /* ---------------------------------------------------------------
+     RADIUS
+     --------------------------------------------------------------- */
+  --omi-r-sm: 8px;
+  --omi-r-md: 10px;   /* input, tombol */
+  --omi-r-lg: 12px;   /* tombol besar beranda */
+  --omi-r-xl: 14px;   /* gambar di dalam kartu */
+  --omi-r-2xl: 16px;  /* kartu, pill nav */
+  --omi-r-full: 26px; /* gambar bulat logo */
+  --omi-r-pill: 32px; /* tombol tambah kucing */
+
+  /* ---------------------------------------------------------------
+     BAYANGAN
+     --------------------------------------------------------------- */
+  --omi-shadow-nav: 0 4px 14px 0 rgba(115, 56, 13, 0.05);
+  --omi-shadow-card: 0 6px 18px 0 rgba(115, 56, 13, 0.07);
+  --omi-shadow-card-sm: 0 6px 16px 0 rgba(115, 56, 13, 0.06);
+  --omi-shadow-primary: 0 6px 7px rgba(242, 107, 33, 0.3);
+  --omi-shadow-logo: 0 10px 30px 0 rgba(115, 56, 13, 0.2);
+
+  /* ---------------------------------------------------------------
+     UKURAN & SPASI
+     --------------------------------------------------------------- */
+  --omi-nav-height: 92px;
+  --omi-page-width: 1440px;
+  --omi-content-x: 120px;        /* margin kiri konten utama */
+  --omi-card-w: 317.561px;       /* kartu 3 kolom: profil & paket */
+  --omi-step-w: 270px;           /* kartu langkah beranda */
+
+  /* ---------------------------------------------------------------
+     TIPOGRAFI — Plus Jakarta Sans
+     --------------------------------------------------------------- */
+  --omi-font: "Plus Jakarta Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --omi-fw-regular: 400;
+  --omi-fw-medium: 500;
+  --omi-fw-semibold: 600;
+  --omi-fw-bold: 700;
+  --omi-fw-extrabold: 800;
+
+  /* Skala font yang benar-benar dipakai di desain */
+  --omi-fs-11: 11px;
+  --omi-fs-12: 12px;
+  --omi-fs-13: 13px;
+  --omi-fs-14: 14px;
+  --omi-fs-15: 15px;   /* nav, label form */
+  --omi-fs-16: 16px;   /* tombol, body */
+  --omi-fs-17: 17px;
+  --omi-fs-18: 18px;
+  --omi-fs-20: 20px;   /* label besar form reservasi */
+  --omi-fs-24: 24px;   /* judul kartu paket */
+  --omi-fs-26: 26px;   /* wordmark OMI */
+  --omi-fs-28: 28px;   /* judul section */
+  --omi-fs-40: 40px;   /* judul halaman */
+  --omi-fs-44: 44px;   /* heading hero */
+  --omi-fs-76: 76px;   /* OMI di brand panel login */
+}

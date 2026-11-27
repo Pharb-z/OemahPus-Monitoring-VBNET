@@ -20,6 +20,7 @@ Partial Class FormReservasiWizard
         Me.Label1 = New Label()
         Me.btnMenuDashboard = New Button()
         Me.btnMenuProfil = New Button()
+        Me.btnMenuTracking = New Button()
         Me.btnMenuReservasiPelanggan = New Button()
         Me.btnMenuRiwayat = New Button()
         Me.btnMenuAkun = New Button()
@@ -27,6 +28,7 @@ Partial Class FormReservasiWizard
         Me.Panel2 = New Panel()
         Me.Label2 = New Label()
         Me.Panel3 = New Panel()
+        Me.pnlCard = New Panel()
         Me.lblStep1 = New Label()
         Me.Label3 = New Label()
         Me.txtNamaPemesan = New TextBox()
@@ -68,6 +70,7 @@ Partial Class FormReservasiWizard
         Me.Panel1.Controls.Add(Me.btnMenuRiwayat)
         Me.Panel1.Controls.Add(Me.btnMenuReservasiPelanggan)
         Me.Panel1.Controls.Add(Me.btnMenuProfil)
+        Me.Panel1.Controls.Add(Me.btnMenuTracking)
         Me.Panel1.Controls.Add(Me.btnMenuDashboard)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New Point(10, 10)
@@ -85,7 +88,7 @@ Partial Class FormReservasiWizard
         Me.Label1.Margin = New Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New Size(181, 77)
-        Me.Label1.TabIndex = 0
+        Me.Label1.TabIndex = 1
         Me.Label1.Text = "OMI"
         '
         ' btnMenuDashboard
@@ -97,7 +100,7 @@ Partial Class FormReservasiWizard
         Me.btnMenuDashboard.Margin = New Padding(2)
         Me.btnMenuDashboard.Name = "btnMenuDashboard"
         Me.btnMenuDashboard.Size = New Size(165, 37)
-        Me.btnMenuDashboard.TabIndex = 1
+        Me.btnMenuDashboard.TabIndex = 2
         Me.btnMenuDashboard.Text = "Dashboard"
         Me.btnMenuDashboard.UseVisualStyleBackColor = False
         '
@@ -110,20 +113,33 @@ Partial Class FormReservasiWizard
         Me.btnMenuProfil.Margin = New Padding(2)
         Me.btnMenuProfil.Name = "btnMenuProfil"
         Me.btnMenuProfil.Size = New Size(165, 37)
-        Me.btnMenuProfil.TabIndex = 2
+        Me.btnMenuProfil.TabIndex = 3
         Me.btnMenuProfil.Text = "Profil Kucing"
         Me.btnMenuProfil.UseVisualStyleBackColor = False
+        '
+        ' btnMenuTracking
+        '
+        Me.btnMenuTracking.BackColor = Color.Plum
+        Me.btnMenuTracking.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Me.btnMenuTracking.ForeColor = Color.SeaShell
+        Me.btnMenuTracking.Location = New Point(38, 280)
+        Me.btnMenuTracking.Margin = New Padding(2)
+        Me.btnMenuTracking.Name = "btnMenuTracking"
+        Me.btnMenuTracking.Size = New Size(165, 37)
+        Me.btnMenuTracking.TabIndex = 4
+        Me.btnMenuTracking.Text = "Pet Tracking"
+        Me.btnMenuTracking.UseVisualStyleBackColor = False
         '
         ' btnMenuReservasiPelanggan
         '
         Me.btnMenuReservasiPelanggan.BackColor = Color.Plum
         Me.btnMenuReservasiPelanggan.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Me.btnMenuReservasiPelanggan.ForeColor = Color.SeaShell
-        Me.btnMenuReservasiPelanggan.Location = New Point(38, 280)
+        Me.btnMenuReservasiPelanggan.Location = New Point(38, 340)
         Me.btnMenuReservasiPelanggan.Margin = New Padding(2)
         Me.btnMenuReservasiPelanggan.Name = "btnMenuReservasiPelanggan"
         Me.btnMenuReservasiPelanggan.Size = New Size(165, 37)
-        Me.btnMenuReservasiPelanggan.TabIndex = 3
+        Me.btnMenuReservasiPelanggan.TabIndex = 5
         Me.btnMenuReservasiPelanggan.Text = "Reservasi"
         Me.btnMenuReservasiPelanggan.UseVisualStyleBackColor = False
         '
@@ -132,11 +148,11 @@ Partial Class FormReservasiWizard
         Me.btnMenuRiwayat.BackColor = Color.Plum
         Me.btnMenuRiwayat.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Me.btnMenuRiwayat.ForeColor = Color.SeaShell
-        Me.btnMenuRiwayat.Location = New Point(38, 340)
+        Me.btnMenuRiwayat.Location = New Point(38, 400)
         Me.btnMenuRiwayat.Margin = New Padding(2)
         Me.btnMenuRiwayat.Name = "btnMenuRiwayat"
         Me.btnMenuRiwayat.Size = New Size(165, 37)
-        Me.btnMenuRiwayat.TabIndex = 4
+        Me.btnMenuRiwayat.TabIndex = 6
         Me.btnMenuRiwayat.Text = "Riwayat"
         Me.btnMenuRiwayat.UseVisualStyleBackColor = False
         '
@@ -145,11 +161,11 @@ Partial Class FormReservasiWizard
         Me.btnMenuAkun.BackColor = Color.Plum
         Me.btnMenuAkun.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Me.btnMenuAkun.ForeColor = Color.SeaShell
-        Me.btnMenuAkun.Location = New Point(38, 400)
+        Me.btnMenuAkun.Location = New Point(38, 460)
         Me.btnMenuAkun.Margin = New Padding(2)
         Me.btnMenuAkun.Name = "btnMenuAkun"
         Me.btnMenuAkun.Size = New Size(165, 37)
-        Me.btnMenuAkun.TabIndex = 5
+        Me.btnMenuAkun.TabIndex = 7
         Me.btnMenuAkun.Text = "Akun Saya"
         Me.btnMenuAkun.UseVisualStyleBackColor = False
         '
@@ -162,7 +178,7 @@ Partial Class FormReservasiWizard
         Me.btnLogout.Margin = New Padding(2)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New Size(165, 37)
-        Me.btnLogout.TabIndex = 6
+        Me.btnLogout.TabIndex = 8
         Me.btnLogout.Text = "Logout"
         Me.btnLogout.UseVisualStyleBackColor = False
         '
@@ -174,7 +190,7 @@ Partial Class FormReservasiWizard
         Me.Panel2.Margin = New Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New Size(890, 84)
-        Me.Panel2.TabIndex = 1
+        Me.Panel2.TabIndex = 9
         '
         ' Label2
         '
@@ -185,7 +201,7 @@ Partial Class FormReservasiWizard
         Me.Label2.Margin = New Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New Size(400, 46)
-        Me.Label2.TabIndex = 0
+        Me.Label2.TabIndex = 10
         Me.Label2.Text = "Reservasi"
         '
         ' Panel3
@@ -218,11 +234,21 @@ Partial Class FormReservasiWizard
         Me.Panel3.Controls.Add(Me.txtNamaPemesan)
         Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.lblStep1)
+        Me.Panel3.Controls.Add(Me.pnlCard)
         Me.Panel3.Location = New Point(256, 94)
         Me.Panel3.Margin = New Padding(2)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New Size(890, 554)
-        Me.Panel3.TabIndex = 2
+        Me.Panel3.TabIndex = 11
+        ' 
+        ' pnlCard
+        ' 
+        Me.pnlCard.BackColor = Color.White
+        Me.pnlCard.BorderStyle = BorderStyle.FixedSingle
+        Me.pnlCard.Location = New Point(16, 16)
+        Me.pnlCard.Name = "pnlCard"
+        Me.pnlCard.Size = New Size(858, 522)
+        Me.pnlCard.TabIndex = 12
         '
         ' lblStep1
         '
@@ -232,7 +258,7 @@ Partial Class FormReservasiWizard
         Me.lblStep1.Location = New Point(24, 18)
         Me.lblStep1.Name = "lblStep1"
         Me.lblStep1.Size = New Size(500, 23)
-        Me.lblStep1.TabIndex = 0
+        Me.lblStep1.TabIndex = 13
         Me.lblStep1.Text = "Langkah 1 / 3 - Data Pemesan"
         '
         ' Label3
@@ -243,7 +269,7 @@ Partial Class FormReservasiWizard
         Me.Label3.Location = New Point(24, 58)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New Size(250, 23)
-        Me.Label3.TabIndex = 0
+        Me.Label3.TabIndex = 14
         Me.Label3.Text = "Nama Pemesan"
         '
         ' txtNamaPemesan
@@ -254,7 +280,7 @@ Partial Class FormReservasiWizard
         Me.txtNamaPemesan.Location = New Point(24, 86)
         Me.txtNamaPemesan.Name = "txtNamaPemesan"
         Me.txtNamaPemesan.Size = New Size(400, 30)
-        Me.txtNamaPemesan.TabIndex = 0
+        Me.txtNamaPemesan.TabIndex = 15
         Me.txtNamaPemesan.Text = ""
         '
         ' Label4
@@ -265,7 +291,7 @@ Partial Class FormReservasiWizard
         Me.Label4.Location = New Point(24, 126)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New Size(250, 23)
-        Me.Label4.TabIndex = 0
+        Me.Label4.TabIndex = 16
         Me.Label4.Text = "No. Telepon"
         '
         ' txtTelepon
@@ -276,7 +302,7 @@ Partial Class FormReservasiWizard
         Me.txtTelepon.Location = New Point(24, 154)
         Me.txtTelepon.Name = "txtTelepon"
         Me.txtTelepon.Size = New Size(250, 30)
-        Me.txtTelepon.TabIndex = 0
+        Me.txtTelepon.TabIndex = 17
         Me.txtTelepon.Text = ""
         '
         ' Label5
@@ -287,7 +313,7 @@ Partial Class FormReservasiWizard
         Me.Label5.Location = New Point(24, 194)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New Size(250, 23)
-        Me.Label5.TabIndex = 0
+        Me.Label5.TabIndex = 18
         Me.Label5.Text = "Alamat"
         '
         ' txtAlamat
@@ -298,7 +324,7 @@ Partial Class FormReservasiWizard
         Me.txtAlamat.Location = New Point(24, 222)
         Me.txtAlamat.Name = "txtAlamat"
         Me.txtAlamat.Size = New Size(540, 60)
-        Me.txtAlamat.TabIndex = 0
+        Me.txtAlamat.TabIndex = 19
         Me.txtAlamat.Text = ""
         '
         ' Label6
@@ -309,7 +335,7 @@ Partial Class FormReservasiWizard
         Me.Label6.Location = New Point(24, 292)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New Size(250, 23)
-        Me.Label6.TabIndex = 0
+        Me.Label6.TabIndex = 20
         Me.Label6.Text = "Catatan Kesehatan"
         '
         ' txtCatatan
@@ -320,7 +346,7 @@ Partial Class FormReservasiWizard
         Me.txtCatatan.Location = New Point(24, 320)
         Me.txtCatatan.Name = "txtCatatan"
         Me.txtCatatan.Size = New Size(540, 60)
-        Me.txtCatatan.TabIndex = 0
+        Me.txtCatatan.TabIndex = 21
         Me.txtCatatan.Text = ""
         '
         ' Label7
@@ -331,7 +357,7 @@ Partial Class FormReservasiWizard
         Me.Label7.Location = New Point(600, 58)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New Size(250, 23)
-        Me.Label7.TabIndex = 0
+        Me.Label7.TabIndex = 22
         Me.Label7.Text = "Pilih Kucing"
         '
         ' cmbKucing
@@ -342,7 +368,7 @@ Partial Class FormReservasiWizard
         Me.cmbKucing.Location = New Point(600, 86)
         Me.cmbKucing.Name = "cmbKucing"
         Me.cmbKucing.Size = New Size(260, 30)
-        Me.cmbKucing.TabIndex = 0
+        Me.cmbKucing.TabIndex = 23
         '
         ' chkPickup
         '
@@ -352,7 +378,7 @@ Partial Class FormReservasiWizard
         Me.chkPickup.Location = New Point(600, 130)
         Me.chkPickup.Name = "chkPickup"
         Me.chkPickup.Size = New Size(260, 24)
-        Me.chkPickup.TabIndex = 0
+        Me.chkPickup.TabIndex = 24
         Me.chkPickup.Text = "Butuh Antar Jemput"
         Me.chkPickup.UseVisualStyleBackColor = True
         '
@@ -364,8 +390,8 @@ Partial Class FormReservasiWizard
         Me.btnNext1.Location = New Point(700, 480)
         Me.btnNext1.Margin = New Padding(2)
         Me.btnNext1.Name = "btnNext1"
-        Me.btnNext1.Size = New Size(160, 37)
-        Me.btnNext1.TabIndex = 0
+        Me.btnNext1.Size = New Size(160, 40)
+        Me.btnNext1.TabIndex = 25
         Me.btnNext1.Text = "Selanjutnya"
         Me.btnNext1.UseVisualStyleBackColor = False
         '
@@ -377,7 +403,7 @@ Partial Class FormReservasiWizard
         Me.lblStep2.Location = New Point(24, 18)
         Me.lblStep2.Name = "lblStep2"
         Me.lblStep2.Size = New Size(500, 23)
-        Me.lblStep2.TabIndex = 0
+        Me.lblStep2.TabIndex = 26
         Me.lblStep2.Text = "Langkah 2 / 3 - Paket Layanan"
         '
         ' dgvLayanan
@@ -393,7 +419,7 @@ Partial Class FormReservasiWizard
         Me.dgvLayanan.RowHeadersVisible = False
         Me.dgvLayanan.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         Me.dgvLayanan.Size = New Size(540, 380)
-        Me.dgvLayanan.TabIndex = 0
+        Me.dgvLayanan.TabIndex = 27
         '
         ' lblTotal2
         '
@@ -403,7 +429,7 @@ Partial Class FormReservasiWizard
         Me.lblTotal2.Location = New Point(590, 70)
         Me.lblTotal2.Name = "lblTotal2"
         Me.lblTotal2.Size = New Size(270, 30)
-        Me.lblTotal2.TabIndex = 0
+        Me.lblTotal2.TabIndex = 28
         Me.lblTotal2.Text = "Total: Rp 0"
         '
         ' btnBack2
@@ -414,8 +440,8 @@ Partial Class FormReservasiWizard
         Me.btnBack2.Location = New Point(590, 480)
         Me.btnBack2.Margin = New Padding(2)
         Me.btnBack2.Name = "btnBack2"
-        Me.btnBack2.Size = New Size(160, 37)
-        Me.btnBack2.TabIndex = 0
+        Me.btnBack2.Size = New Size(160, 40)
+        Me.btnBack2.TabIndex = 29
         Me.btnBack2.Text = "Kembali"
         Me.btnBack2.UseVisualStyleBackColor = False
         '
@@ -427,8 +453,8 @@ Partial Class FormReservasiWizard
         Me.btnNext2.Location = New Point(590, 430)
         Me.btnNext2.Margin = New Padding(2)
         Me.btnNext2.Name = "btnNext2"
-        Me.btnNext2.Size = New Size(160, 37)
-        Me.btnNext2.TabIndex = 0
+        Me.btnNext2.Size = New Size(160, 40)
+        Me.btnNext2.TabIndex = 30
         Me.btnNext2.Text = "Selanjutnya"
         Me.btnNext2.UseVisualStyleBackColor = False
         '
@@ -440,7 +466,7 @@ Partial Class FormReservasiWizard
         Me.lblStep3.Location = New Point(24, 18)
         Me.lblStep3.Name = "lblStep3"
         Me.lblStep3.Size = New Size(500, 23)
-        Me.lblStep3.TabIndex = 0
+        Me.lblStep3.TabIndex = 31
         Me.lblStep3.Text = "Langkah 3 / 3 - Konfirmasi"
         '
         ' Label8
@@ -451,7 +477,7 @@ Partial Class FormReservasiWizard
         Me.Label8.Location = New Point(24, 60)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New Size(200, 23)
-        Me.Label8.TabIndex = 0
+        Me.Label8.TabIndex = 32
         Me.Label8.Text = "Check In"
         '
         ' dtpCheckIn
@@ -460,7 +486,7 @@ Partial Class FormReservasiWizard
         Me.dtpCheckIn.Location = New Point(24, 88)
         Me.dtpCheckIn.Name = "dtpCheckIn"
         Me.dtpCheckIn.Size = New Size(260, 30)
-        Me.dtpCheckIn.TabIndex = 0
+        Me.dtpCheckIn.TabIndex = 33
         '
         ' Label9
         '
@@ -470,7 +496,7 @@ Partial Class FormReservasiWizard
         Me.Label9.Location = New Point(24, 130)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New Size(200, 23)
-        Me.Label9.TabIndex = 0
+        Me.Label9.TabIndex = 34
         Me.Label9.Text = "Check Out"
         '
         ' dtpCheckOut
@@ -479,7 +505,7 @@ Partial Class FormReservasiWizard
         Me.dtpCheckOut.Location = New Point(24, 158)
         Me.dtpCheckOut.Name = "dtpCheckOut"
         Me.dtpCheckOut.Size = New Size(260, 30)
-        Me.dtpCheckOut.TabIndex = 0
+        Me.dtpCheckOut.TabIndex = 35
         '
         ' Label10
         '
@@ -489,7 +515,7 @@ Partial Class FormReservasiWizard
         Me.Label10.Location = New Point(320, 60)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New Size(200, 23)
-        Me.Label10.TabIndex = 0
+        Me.Label10.TabIndex = 36
         Me.Label10.Text = "Ringkasan"
         '
         ' txtRingkasan
@@ -500,7 +526,7 @@ Partial Class FormReservasiWizard
         Me.txtRingkasan.Location = New Point(320, 88)
         Me.txtRingkasan.Name = "txtRingkasan"
         Me.txtRingkasan.Size = New Size(540, 220)
-        Me.txtRingkasan.TabIndex = 0
+        Me.txtRingkasan.TabIndex = 37
         Me.txtRingkasan.Text = ""
         '
         ' btnBack3
@@ -511,21 +537,21 @@ Partial Class FormReservasiWizard
         Me.btnBack3.Location = New Point(590, 480)
         Me.btnBack3.Margin = New Padding(2)
         Me.btnBack3.Name = "btnBack3"
-        Me.btnBack3.Size = New Size(160, 37)
-        Me.btnBack3.TabIndex = 0
+        Me.btnBack3.Size = New Size(160, 40)
+        Me.btnBack3.TabIndex = 38
         Me.btnBack3.Text = "Kembali"
         Me.btnBack3.UseVisualStyleBackColor = False
         '
         ' btnAjukan
         '
-        Me.btnAjukan.BackColor = Color.LightGoldenrodYellow
+        Me.btnAjukan.BackColor = Color.MediumVioletRed
         Me.btnAjukan.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Me.btnAjukan.ForeColor = Color.DarkOliveGreen
+        Me.btnAjukan.ForeColor = Color.SeaShell
         Me.btnAjukan.Location = New Point(590, 430)
         Me.btnAjukan.Margin = New Padding(2)
         Me.btnAjukan.Name = "btnAjukan"
-        Me.btnAjukan.Size = New Size(160, 37)
-        Me.btnAjukan.TabIndex = 0
+        Me.btnAjukan.Size = New Size(160, 40)
+        Me.btnAjukan.TabIndex = 39
         Me.btnAjukan.Text = "Ajukan Reservasi"
         Me.btnAjukan.UseVisualStyleBackColor = False
         '
@@ -538,6 +564,9 @@ Partial Class FormReservasiWizard
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Margin = New Padding(2)
+        Me.FormBorderStyle = FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "FormReservasiWizard"
         Me.StartPosition = FormStartPosition.CenterScreen
         Me.Text = "Reservasi"
@@ -554,10 +583,12 @@ Partial Class FormReservasiWizard
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
+    Friend WithEvents pnlCard As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents btnMenuDashboard As Button
     Friend WithEvents btnMenuProfil As Button
+    Friend WithEvents btnMenuTracking As Button
     Friend WithEvents btnMenuReservasiPelanggan As Button
     Friend WithEvents btnMenuRiwayat As Button
     Friend WithEvents btnMenuAkun As Button

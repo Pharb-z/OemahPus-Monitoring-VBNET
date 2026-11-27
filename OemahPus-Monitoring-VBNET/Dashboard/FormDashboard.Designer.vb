@@ -29,6 +29,7 @@ Partial Class FormDashboard
         Me.btnMenuReservasiPelanggan = New Button()
         Me.btnMenuRiwayat = New Button()
         Me.btnMenuAkun = New Button()
+        Me.btnMenuTracking = New Button()
         Me.Label9 = New Label()
         Me.btnLogout = New Button()
         Me.Panel2 = New Panel()
@@ -37,6 +38,7 @@ Partial Class FormDashboard
         Me.Panel3 = New Panel()
         Me.pnlChartBox = New Panel()
         Me.chrTopLayanan = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.dgvDashboard = New DataGridView()
         Me.pnlCardRevenue = New Panel()
         Me.lblTotalRevenue = New Label()
         Me.lblCaptionRevenue = New Label()
@@ -48,6 +50,7 @@ Partial Class FormDashboard
         Me.Panel3.SuspendLayout()
         Me.pnlChartBox.SuspendLayout()
         CType(Me.chrTopLayanan, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvDashboard, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlCardRevenue.SuspendLayout()
         Me.pnlCardTrx.SuspendLayout()
         Me.SuspendLayout()
@@ -66,6 +69,7 @@ Partial Class FormDashboard
         Me.Panel1.Controls.Add(Me.btnMenuReservasiPelanggan)
         Me.Panel1.Controls.Add(Me.btnMenuRiwayat)
         Me.Panel1.Controls.Add(Me.btnMenuAkun)
+        Me.Panel1.Controls.Add(Me.btnMenuTracking)
         Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Location = New Point(10, 10)
         Me.Panel1.Margin = New Padding(2)
@@ -82,7 +86,7 @@ Partial Class FormDashboard
         Me.btnMenuLaporan.Margin = New Padding(2)
         Me.btnMenuLaporan.Name = "btnMenuLaporan"
         Me.btnMenuLaporan.Size = New Size(165, 37)
-        Me.btnMenuLaporan.TabIndex = 5
+        Me.btnMenuLaporan.TabIndex = 1
         Me.btnMenuLaporan.Text = "Laporan"
         Me.btnMenuLaporan.UseVisualStyleBackColor = False
         '
@@ -95,7 +99,7 @@ Partial Class FormDashboard
         Me.btnMenuReservasi.Margin = New Padding(2)
         Me.btnMenuReservasi.Name = "btnMenuReservasi"
         Me.btnMenuReservasi.Size = New Size(165, 37)
-        Me.btnMenuReservasi.TabIndex = 4
+        Me.btnMenuReservasi.TabIndex = 2
         Me.btnMenuReservasi.Text = "Reservasi"
         Me.btnMenuReservasi.UseVisualStyleBackColor = False
         '
@@ -121,7 +125,7 @@ Partial Class FormDashboard
         Me.btnMenuCustomer.Margin = New Padding(2)
         Me.btnMenuCustomer.Name = "btnMenuCustomer"
         Me.btnMenuCustomer.Size = New Size(165, 37)
-        Me.btnMenuCustomer.TabIndex = 2
+        Me.btnMenuCustomer.TabIndex = 4
         Me.btnMenuCustomer.Text = "Customer"
         Me.btnMenuCustomer.UseVisualStyleBackColor = False
         '
@@ -134,7 +138,7 @@ Partial Class FormDashboard
         Me.btnMenuLayanan.Margin = New Padding(2)
         Me.btnMenuLayanan.Name = "btnMenuLayanan"
         Me.btnMenuLayanan.Size = New Size(165, 37)
-        Me.btnMenuLayanan.TabIndex = 1
+        Me.btnMenuLayanan.TabIndex = 5
         Me.btnMenuLayanan.Text = "Paket Layanan"
         Me.btnMenuLayanan.UseVisualStyleBackColor = False
         '
@@ -147,7 +151,7 @@ Partial Class FormDashboard
         Me.btnMenuDashboard.Margin = New Padding(2)
         Me.btnMenuDashboard.Name = "btnMenuDashboard"
         Me.btnMenuDashboard.Size = New Size(165, 37)
-        Me.btnMenuDashboard.TabIndex = 0
+        Me.btnMenuDashboard.TabIndex = 6
         Me.btnMenuDashboard.Text = "Dashboard"
         Me.btnMenuDashboard.UseVisualStyleBackColor = False
         '
@@ -163,7 +167,7 @@ Partial Class FormDashboard
         Me.btnMenuProfil.Margin = New Padding(2)
         Me.btnMenuProfil.Name = "btnMenuProfil"
         Me.btnMenuProfil.Size = New Size(165, 37)
-        Me.btnMenuProfil.TabIndex = 8
+        Me.btnMenuProfil.TabIndex = 7
         Me.btnMenuProfil.Text = "Profil Kucing"
         Me.btnMenuProfil.UseVisualStyleBackColor = False
         '
@@ -176,7 +180,7 @@ Partial Class FormDashboard
         Me.btnMenuReservasiPelanggan.Margin = New Padding(2)
         Me.btnMenuReservasiPelanggan.Name = "btnMenuReservasiPelanggan"
         Me.btnMenuReservasiPelanggan.Size = New Size(165, 37)
-        Me.btnMenuReservasiPelanggan.TabIndex = 9
+        Me.btnMenuReservasiPelanggan.TabIndex = 8
         Me.btnMenuReservasiPelanggan.Text = "Reservasi"
         Me.btnMenuReservasiPelanggan.UseVisualStyleBackColor = False
         '
@@ -189,7 +193,7 @@ Partial Class FormDashboard
         Me.btnMenuRiwayat.Margin = New Padding(2)
         Me.btnMenuRiwayat.Name = "btnMenuRiwayat"
         Me.btnMenuRiwayat.Size = New Size(165, 37)
-        Me.btnMenuRiwayat.TabIndex = 10
+        Me.btnMenuRiwayat.TabIndex = 9
         Me.btnMenuRiwayat.Text = "Riwayat"
         Me.btnMenuRiwayat.UseVisualStyleBackColor = False
         '
@@ -198,13 +202,26 @@ Partial Class FormDashboard
         Me.btnMenuAkun.BackColor = Color.Plum
         Me.btnMenuAkun.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Me.btnMenuAkun.ForeColor = Color.SeaShell
-        Me.btnMenuAkun.Location = New Point(38, 400)
+        Me.btnMenuAkun.Location = New Point(38, 520)
         Me.btnMenuAkun.Margin = New Padding(2)
         Me.btnMenuAkun.Name = "btnMenuAkun"
         Me.btnMenuAkun.Size = New Size(165, 37)
-        Me.btnMenuAkun.TabIndex = 11
+        Me.btnMenuAkun.TabIndex = 10
         Me.btnMenuAkun.Text = "Akun Saya"
         Me.btnMenuAkun.UseVisualStyleBackColor = False
+        '
+        ' btnMenuTracking
+        '
+        Me.btnMenuTracking.BackColor = Color.Plum
+        Me.btnMenuTracking.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Me.btnMenuTracking.ForeColor = Color.SeaShell
+        Me.btnMenuTracking.Location = New Point(38, 460)
+        Me.btnMenuTracking.Margin = New Padding(2)
+        Me.btnMenuTracking.Name = "btnMenuTracking"
+        Me.btnMenuTracking.Size = New Size(165, 37)
+        Me.btnMenuTracking.TabIndex = 11
+        Me.btnMenuTracking.Text = "Pet Tracking"
+        Me.btnMenuTracking.UseVisualStyleBackColor = False
         '
         ' Label9
         '
@@ -215,7 +232,7 @@ Partial Class FormDashboard
         Me.Label9.Margin = New Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New Size(181, 77)
-        Me.Label9.TabIndex = 6
+        Me.Label9.TabIndex = 12
         Me.Label9.Text = "OMI"
         '
         ' btnLogout
@@ -223,11 +240,11 @@ Partial Class FormDashboard
         Me.btnLogout.BackColor = Color.Plum
         Me.btnLogout.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Me.btnLogout.ForeColor = Color.SeaShell
-        Me.btnLogout.Location = New Point(38, 520)
+        Me.btnLogout.Location = New Point(38, 580)
         Me.btnLogout.Margin = New Padding(2)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New Size(165, 37)
-        Me.btnLogout.TabIndex = 7
+        Me.btnLogout.TabIndex = 13
         Me.btnLogout.Text = "Logout"
         Me.btnLogout.UseVisualStyleBackColor = False
         '
@@ -240,7 +257,7 @@ Partial Class FormDashboard
         Me.Panel2.Margin = New Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New Size(890, 84)
-        Me.Panel2.TabIndex = 1
+        Me.Panel2.TabIndex = 14
         '
         ' lblPageTitle
         '
@@ -251,7 +268,7 @@ Partial Class FormDashboard
         Me.lblPageTitle.Margin = New Padding(2, 0, 2, 0)
         Me.lblPageTitle.Name = "lblPageTitle"
         Me.lblPageTitle.Size = New Size(150, 46)
-        Me.lblPageTitle.TabIndex = 0
+        Me.lblPageTitle.TabIndex = 15
         Me.lblPageTitle.Text = "Dashboard"
         '
         ' lblUserInfo
@@ -264,20 +281,21 @@ Partial Class FormDashboard
         Me.lblUserInfo.Margin = New Padding(2, 0, 2, 0)
         Me.lblUserInfo.Name = "lblUserInfo"
         Me.lblUserInfo.Size = New Size(120, 23)
-        Me.lblUserInfo.TabIndex = 1
+        Me.lblUserInfo.TabIndex = 16
         Me.lblUserInfo.Text = "User: - | Role: -"
         '
         ' Panel3
         '
         Me.Panel3.BackColor = Color.Thistle
         Me.Panel3.Controls.Add(Me.pnlChartBox)
+        Me.Panel3.Controls.Add(Me.dgvDashboard)
         Me.Panel3.Controls.Add(Me.pnlCardRevenue)
         Me.Panel3.Controls.Add(Me.pnlCardTrx)
         Me.Panel3.Location = New Point(256, 94)
         Me.Panel3.Margin = New Padding(2)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New Size(890, 554)
-        Me.Panel3.TabIndex = 2
+        Me.Panel3.TabIndex = 17
         '
         ' pnlCardTrx
         '
@@ -288,7 +306,7 @@ Partial Class FormDashboard
         Me.pnlCardTrx.Margin = New Padding(2)
         Me.pnlCardTrx.Name = "pnlCardTrx"
         Me.pnlCardTrx.Size = New Size(260, 110)
-        Me.pnlCardTrx.TabIndex = 0
+        Me.pnlCardTrx.TabIndex = 18
         '
         ' lblCaptionTrx
         '
@@ -299,7 +317,7 @@ Partial Class FormDashboard
         Me.lblCaptionTrx.Margin = New Padding(2, 0, 2, 0)
         Me.lblCaptionTrx.Name = "lblCaptionTrx"
         Me.lblCaptionTrx.Size = New Size(160, 23)
-        Me.lblCaptionTrx.TabIndex = 0
+        Me.lblCaptionTrx.TabIndex = 19
         Me.lblCaptionTrx.Text = "RESERVASI HARI INI"
         '
         ' lblTotalTrx
@@ -311,7 +329,7 @@ Partial Class FormDashboard
         Me.lblTotalTrx.Margin = New Padding(2, 0, 2, 0)
         Me.lblTotalTrx.Name = "lblTotalTrx"
         Me.lblTotalTrx.Size = New Size(60, 51)
-        Me.lblTotalTrx.TabIndex = 1
+        Me.lblTotalTrx.TabIndex = 20
         Me.lblTotalTrx.Text = "0"
         '
         ' pnlCardRevenue
@@ -323,7 +341,7 @@ Partial Class FormDashboard
         Me.pnlCardRevenue.Margin = New Padding(2)
         Me.pnlCardRevenue.Name = "pnlCardRevenue"
         Me.pnlCardRevenue.Size = New Size(300, 110)
-        Me.pnlCardRevenue.TabIndex = 1
+        Me.pnlCardRevenue.TabIndex = 21
         '
         ' lblCaptionRevenue
         '
@@ -334,7 +352,7 @@ Partial Class FormDashboard
         Me.lblCaptionRevenue.Margin = New Padding(2, 0, 2, 0)
         Me.lblCaptionRevenue.Name = "lblCaptionRevenue"
         Me.lblCaptionRevenue.Size = New Size(220, 23)
-        Me.lblCaptionRevenue.TabIndex = 0
+        Me.lblCaptionRevenue.TabIndex = 22
         Me.lblCaptionRevenue.Text = "PENDAPATAN VALID HARI INI"
         '
         ' lblTotalRevenue
@@ -346,7 +364,7 @@ Partial Class FormDashboard
         Me.lblTotalRevenue.Margin = New Padding(2, 0, 2, 0)
         Me.lblTotalRevenue.Name = "lblTotalRevenue"
         Me.lblTotalRevenue.Size = New Size(90, 51)
-        Me.lblTotalRevenue.TabIndex = 1
+        Me.lblTotalRevenue.TabIndex = 23
         Me.lblTotalRevenue.Text = "Rp 0"
         '
         ' pnlChartBox
@@ -357,13 +375,28 @@ Partial Class FormDashboard
         Me.pnlChartBox.Margin = New Padding(2)
         Me.pnlChartBox.Name = "pnlChartBox"
         Me.pnlChartBox.Size = New Size(820, 360)
-        Me.pnlChartBox.TabIndex = 2
+        Me.pnlChartBox.TabIndex = 24
         '
         ' chrTopLayanan
         '
         Me.chrTopLayanan.BackColor = Color.SeaShell
         Me.chrTopLayanan.Dock = DockStyle.Fill
         Me.chrTopLayanan.Name = "chrTopLayanan"
+        '
+        ' dgvDashboard
+        '
+        Me.dgvDashboard.AllowUserToAddRows = False
+        Me.dgvDashboard.AllowUserToDeleteRows = False
+        Me.dgvDashboard.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvDashboard.BackgroundColor = Color.Thistle
+        Me.dgvDashboard.Location = New Point(24, 160)
+        Me.dgvDashboard.Name = "dgvDashboard"
+        Me.dgvDashboard.ReadOnly = True
+        Me.dgvDashboard.RowHeadersVisible = False
+        Me.dgvDashboard.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        Me.dgvDashboard.Size = New Size(820, 360)
+        Me.dgvDashboard.TabIndex = 25
+        Me.dgvDashboard.Visible = False
         '
         ' FormDashboard
         '
@@ -374,6 +407,9 @@ Partial Class FormDashboard
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Margin = New Padding(2)
+        Me.FormBorderStyle = FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "FormDashboard"
         Me.StartPosition = FormStartPosition.CenterScreen
         Me.Text = "FormDashboard"
@@ -385,6 +421,7 @@ Partial Class FormDashboard
         Me.Panel3.PerformLayout()
         Me.pnlChartBox.ResumeLayout(False)
         CType(Me.chrTopLayanan, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvDashboard, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlCardRevenue.ResumeLayout(False)
         Me.pnlCardRevenue.PerformLayout()
         Me.pnlCardTrx.ResumeLayout(False)
@@ -401,6 +438,7 @@ Partial Class FormDashboard
     Friend WithEvents btnMenuReservasiPelanggan As Button
     Friend WithEvents btnMenuRiwayat As Button
     Friend WithEvents btnMenuAkun As Button
+    Friend WithEvents btnMenuTracking As Button
     Friend WithEvents btnMenuLayanan As Button
     Friend WithEvents btnMenuCustomer As Button
     Friend WithEvents btnMenuPemeriksaanKucing As Button
@@ -417,4 +455,5 @@ Partial Class FormDashboard
     Friend WithEvents lblTotalRevenue As Label
     Friend WithEvents pnlChartBox As Panel
     Friend WithEvents chrTopLayanan As System.Windows.Forms.DataVisualization.Charting.Chart
+    Friend WithEvents dgvDashboard As DataGridView
 End Class
